@@ -7,7 +7,6 @@ session_start();
 <head>
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="mystylephp.css">
         <title> Sign in page </title>
 </head>
 </head>
