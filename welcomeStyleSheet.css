@@ -18,6 +18,9 @@ h4 {
   font-weight: 400;
   margin-bottom: 30px;
 }
+form {
+  font-size: 12px !important;
+}
 .jumbotron {
   background-color: #660099;
   color: #fff;
