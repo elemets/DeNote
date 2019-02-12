@@ -63,7 +63,7 @@ session_start();
     		</div>
     		
             <div class="form-body">
-              <form role="form" method="post" action='validateFunction()'>
+              <form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
     			
     		  <div class="form-group username">
                 <label for="username"> Username</label>
