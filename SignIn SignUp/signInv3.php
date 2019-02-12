@@ -77,6 +77,7 @@ session_start();
     			
               <br>
 	      <input type="submit" value="Submit">
+<button type="button" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" action="<?php echo $_SERVER['PHP_SELF'];?>"> Signin</button>
               </form>
             </div>
           </div>
