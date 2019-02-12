@@ -51,6 +51,10 @@ session_start();
         <div class="container">
         </div>
       </nav>
+<?php
+	require_once("database.php");
+      ?>
+
  <!-- Signin -->
           <div id="main-signin" class="col-sm">			
           <div class="form-content">
@@ -91,6 +95,7 @@ session_start();
 		 echo 'hello';
 	 } else {
 		 // Incorrect Login
+		echo 'not found'
 	 }
 	}
 ?>
