@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
     <html>
     <head>
@@ -42,6 +46,9 @@
     </head>
 
 <body>
+      <?php
+	require_once("database.php");
+      ?>
 
       <nav class="navbar">
         <div class="container">
@@ -55,7 +62,7 @@
     		</div>
     		
             <div class="form-body">
-              <form role="form">
+              <form role="form" method="post" action='validateFunction()'>
     			
     		  <div class="form-group username">
                 <label for="username"> Username</label>
@@ -73,6 +80,20 @@
             </div>
           </div>
           </div>
+<?php
+	if ($_SERVER["REQUEST_METHOD"] == "POST")
+ {
+	 $username = $_POST["Username"];
+	 $password = $_POST["password"];
+
+	 if(validate_user($username, $password)) {
+		 // Login Session
+		 echo 'hello';
+	 } else {
+		 // Incorrect Login
+	 }
+	}
+?>
 
 </body>
 
