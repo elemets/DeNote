@@ -82,8 +82,6 @@ session_start();
           </div>
           </div>
 <?php
-	
-	require_once("database.php");
       
 	if ($_SERVER["REQUEST_METHOD"] == "POST")
  {
@@ -95,7 +93,7 @@ session_start();
 		 echo 'hello';
 	 } else {
 		 // Incorrect Login
-		echo 'not found'
+		echo 'not found';
 	 }
 	}
 ?>
