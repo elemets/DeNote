@@ -46,9 +46,6 @@ session_start();
     </head>
 
 <body>
-      <?php
-	require_once("database.php");
-      ?>
 
       <nav class="navbar">
         <div class="container">
@@ -75,13 +72,15 @@ session_start();
               </div>
     			
               <br>
-    	      <button type="button" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" onclick="validateFunction()"> Signin</button>
 	      <input type="submit" value="Submit">
               </form>
             </div>
           </div>
           </div>
 <?php
+	
+	require_once("database.php");
+      
 	if ($_SERVER["REQUEST_METHOD"] == "POST")
  {
 	 $username = $_POST["Username"];
