@@ -76,6 +76,7 @@ session_start();
     			
               <br>
     	      <button type="button" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" onclick="validateFunction()"> Signin</button>
+	      <input type="submit" value="Submit">
               </form>
             </div>
           </div>
