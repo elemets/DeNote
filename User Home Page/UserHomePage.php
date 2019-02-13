@@ -2,7 +2,6 @@
 <html>
 <head>
 <title>Page Title</title>
-<link rel="stylesheet" href="../Welcome Page/welcomeStyleSheet.css">
 </head>
 <body>
 <?php
