@@ -59,8 +59,8 @@ session_start();
 	<div class="container-fluid">
           <div id="main-signin" class="col-sm">			
           <div class="form-content">
-    	    <div class="form-top-left">
-    		  <h2>Log in</h2>
+    	    <div class="form-center">
+    		  <h2>Login</h2>
     		</div>
     		
             <div class="form-body">
