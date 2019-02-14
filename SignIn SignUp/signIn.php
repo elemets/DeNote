@@ -10,6 +10,11 @@ session_start();
       <link rel="stylesheet" href="/universalStyleSheet.css">
     
       <style>
+	.div1 {
+  width: 1000px;
+  height: 100px;
+  border: 1px solid blue;
+}
           body {
               background-color: white;
           }
@@ -42,9 +47,6 @@ session_start();
           .navbar {
               background-color: #660099;
           }
-	   .grid-container {
-  display: grid;
-}
       </style>
     </head>
 
