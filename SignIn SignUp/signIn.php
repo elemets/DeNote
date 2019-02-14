@@ -42,6 +42,13 @@ session_start();
           .navbar {
               background-color: #660099;
           }
+ 	.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
       </style>
     </head>
 
@@ -62,7 +69,7 @@ session_start();
     <div class="col-sm">
     </div>
     <div class="col-sm">
-      	<div class="container-fluid vertical-center">
+      	<div class="container-fluid">
           <div id="main-signin" class="col-sm">			
           <div class="form-content">
     	    <div class="form-center">
