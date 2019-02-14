@@ -84,7 +84,7 @@ function register($username, $password, $email)
       //send activation message
       $to = $email;
       $subject = "Activate your account";
-      $headers = "From: DENOTES@activation.com";
+      $headers = "From: salim909090@hotmail.com";
       $body = "Hello $username, \n\nYou regeisterd and need to activate your account. Click the link below\n\nhttps://web.cs.manchester.ac.uk/a64508sa/Z3_Y1_Project/SignIn SignUp/activate.php?code=$code\n\nThanks";
       if (!mail($to,$subject,$body,$headers))
         return false;
