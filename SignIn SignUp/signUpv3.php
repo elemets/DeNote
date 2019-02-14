@@ -47,6 +47,10 @@
         <div class="container">
         </div>
       </nav>
+<?php
+	require_once("database.php");
+      ?>
+
  <!-- Signup -->
           <div id="main-signup" class="col-sm">
           <div class="form-content">
@@ -55,7 +59,7 @@
     		</div>
     
             <div class="form-body">
-    			<form role="form">
+    			<form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
     			
     			<div class="form-group username">
                   <label for="username"> Username</label>
@@ -78,12 +82,28 @@
                 </div>
     			
                 <br>
-                <button type="button" class="btn btn-default btn-lg submit-btn btn-block submit-font"> Signup</button>
+                <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="register">
     			</form>
             </div>
           </div>
     	  </div>
 
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+ {
+	 $username = $_POST["Username"];
+	 $password = $_POST["password"];
+	 $email = $_POST["email"];
+
+	 if(register($username, $password, $email)) {
+
+ header('Location: ../User Home Page/UserHomePage.php');
+	 } else {
+		 // Incorrect Login
+echo "incorrect regestration";
+	 }
+	}
+?>
 </body>
 
 </html>

@@ -90,7 +90,6 @@ session_start();
 
 	 if(validate_user($username, $password)) {
 		 // Login Session
-		 echo 'hello';
 		 header('Location: ../User Home Page/UserHomePage.php');
 	 } else {
 		 // Incorrect Login
