@@ -60,10 +60,6 @@ session_start();
  <!-- Signin -->
 
 <div class="container vertical-center">
-  <div class="row">
-    <div class="col-bg">
-    </div>
-    <div class="col-bg">
       	<div class="container-fluid">
           <div id="main-signin" class="col-bg">			
           <div class="form-content">
@@ -91,10 +87,6 @@ session_start();
           </div>
           </div>
 	</div>
-    </div>
-    <div class="col-bg">
-    </div>
-  </div>
 </div>
 <?php
       
