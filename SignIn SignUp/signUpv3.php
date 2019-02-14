@@ -73,12 +73,7 @@
     
                 <div class="form-group password">
                   <label for="password"> Password</label>
-    			  <input  type="password" class="form-control form-element" name="password" placeholder="Password" data-validation="false">
-                </div>
-    			
-                 <div class="form-group confirm-password">
-                  <label for="confirm-password"> Confirm Password</label>
-    			  <input  type="password" class="form-control form-element" name="password1" placeholder="Confirm Password" data-validation="false">
+    			  <input  type="password" class="form-control form-element" name="password" placeholder="Password">
                 </div>
     			
                 <br>
