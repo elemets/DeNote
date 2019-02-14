@@ -96,7 +96,7 @@ function register($username, $password, $email)
     } else {
       // SQL Error
       return false;
-    // }
+    }
 
 }
 
