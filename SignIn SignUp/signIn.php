@@ -56,11 +56,11 @@ session_start();
       ?>
 
  <!-- Signin -->
-	<div class="grid-container">
+	<div class="container-fluid">
           <div id="main-signin" class="col-sm">			
           <div class="form-content">
     	    <div class="form-top-left">
-    		  <h2>Signin</h2>
+    		  <h2>Log in</h2>
     		</div>
     		
             <div class="form-body">
