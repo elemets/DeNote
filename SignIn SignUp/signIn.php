@@ -66,11 +66,11 @@ session_start();
 
 <div class="container vertical-center">
   <div class="row">
-    <div class="col-sm">
+    <div class="col-bg">
     </div>
-    <div class="col-sm">
+    <div class="col-bg">
       	<div class="container-fluid">
-          <div id="main-signin" class="col-sm">			
+          <div id="main-signin" class="col-bg">			
           <div class="form-content">
     	    <div class="form-center">
     		  <h2>Login</h2>
