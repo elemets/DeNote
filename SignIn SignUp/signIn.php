@@ -57,7 +57,7 @@ session_start();
 
  <!-- Signin -->
 
-<div class="container">
+<div class="container vertical-center">
   <div class="row">
     <div class="col-sm">
     </div>
