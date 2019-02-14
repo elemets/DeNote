@@ -11,6 +11,16 @@ h2 {
   font-weight: 600;
   margin-bottom: 30px;
 }
+.Profile-Icon-Small{
+  width: 20%;
+  height: 20%;
+}
+.Profile-Icon-Center{
+  width: 20%;
+  height: 20%;
+  align: center;
+}
+
 h4 {
   font-size: 19px;
   line-height: 1.375em;
