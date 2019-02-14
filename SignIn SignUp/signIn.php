@@ -56,7 +56,7 @@ session_start();
       ?>
 
  <!-- Signin -->
-	
+	<fieldset>
           <div id="main-signin" class="col-sm">			
           <div class="form-content">
     	    <div class="form-top-left">
@@ -82,6 +82,7 @@ session_start();
             </div>
           </div>
           </div>
+	</fieldset>
 <?php
       
 	if ($_SERVER["REQUEST_METHOD"] == "POST")
