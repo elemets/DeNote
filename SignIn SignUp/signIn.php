@@ -56,9 +56,10 @@ session_start();
       ?>
 
  <!-- Signin -->
+	
           <div id="main-signin" class="col-sm">			
           <div class="form-content">
-    	    <div class="form-top-left">
+    	    <div class="form-center">
     		  <h2>Signin</h2>
     		</div>
     		
