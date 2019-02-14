@@ -51,7 +51,7 @@ function validate_user($username, $password)
 
       }
     }
-  
+
   //   return ($user_row["PasswordHash"] == $password_hash);
   // } else {
   //   return false;
@@ -85,12 +85,12 @@ function register($username, $password, $email)
       $to = $email;
       $subject = "Activate your account";
       $headers = "From: DENOTES@activation.com";
-      $body = "Hello $username, \n\nYou regeisterd and need to activate your account. Click the link below\n\nhttps://web.cs.manchester.ac.uk/a64508sa/Z3_Y1_Project/SignIn SignUp/activate.php?code=$code\n\nThanks"
+      $body = "Hello $username, \n\nYou regeisterd and need to activate your account. Click the link below\n\nhttps://web.cs.manchester.ac.uk/a64508sa/Z3_Y1_Project/SignIn SignUp/activate.php?code=$code\n\nThanks";
       if (!mail($to,$subject,$body,$headers))
         return false;
       else {
         $register = mysql_query("INSERT INTO `Users` VALUES ('',$email', '$username', '$password_hash','$code','0','','','')");
-        echo "you have been registered succefuly please check yoir email $email to activate your account."
+        echo "you have been registered succefuly please check yoir email $email to activate your account.";
       }
       return true;
     } else {
