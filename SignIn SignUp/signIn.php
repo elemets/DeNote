@@ -30,7 +30,7 @@ session_start();
           }
           .form-element{
               display: inline;
-        	  width:100%;
+        	  width:50%;
           }
           .navbar {
               background-color: #660099;
