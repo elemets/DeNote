@@ -38,6 +38,14 @@
           .navbar {
               background-color: #660099;
           }
+ 	  .formcenter {
+ 	      min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+ 	      min-height: 100vh; /* These two lines are counted as one :-)       */
+ 	      min-width: 100%;
+              min-width: 100vh;
+  	      display: flex;
+  	      align-items: center;
+	  }
       </style>
     </head>
 
@@ -52,6 +60,8 @@
       ?>
 
  <!-- Signup -->
+	<div class="container formcenter">
+	<div class="container-fluid">
           <div id="main-signup" class="col-sm">
           <div class="form-content">
     	    <div class="form-top-left">
@@ -82,6 +92,8 @@
             </div>
           </div>
     	  </div>
+</div>
+</div>
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST")
