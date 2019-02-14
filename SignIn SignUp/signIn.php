@@ -14,10 +14,10 @@ session_start();
               background-color: white;
           }
           .top-buffer { 
-              margin-top:100px; 
+              margin-top:20px; 
           }
           .bottom-buffer { 
-              margin-bottom:100px; 
+              margin-bottom:20px; 
           }
           .submit-btn {
               background-color: #660099;
@@ -26,14 +26,18 @@ session_start();
               color:#ffffff;
           }
           .multi-form-wrapper{
-	          margin-bottom: 100px;
+	          margin-bottom: 20px;
           }
           .form-element{
               display: inline;
-        	  width:50%;
+        	  width:100%;
+          }
+          .form-top-right{
+	          width : 50%;
+              font-size: 66px;
           }
           .form-top-left{
-              width : 75%;
+              width : 50%;
           }
           .navbar {
               background-color: #660099;
