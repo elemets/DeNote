@@ -59,7 +59,7 @@ session_start();
 	
           <div id="main-signin" class="col-sm">			
           <div class="form-content">
-    	    <div class="form-center">
+    	    <div class="form-top-left">
     		  <h2>Signin</h2>
     		</div>
     		
