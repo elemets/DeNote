@@ -10,11 +10,6 @@ session_start();
       <link rel="stylesheet" href="/universalStyleSheet.css">
     
       <style>
-	.div1 {
-  width: 1000px;
-  height: 100px;
-  border: 1px solid blue;
-}
           body {
               background-color: white;
           }
@@ -61,7 +56,14 @@ session_start();
       ?>
 
  <!-- Signin -->
-	<div class="container-fluid">
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      	<div class="container-fluid">
           <div id="main-signin" class="col-sm">			
           <div class="form-content">
     	    <div class="form-center">
@@ -88,6 +90,12 @@ session_start();
           </div>
           </div>
 	</div>
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div>
 <?php
       
 	if ($_SERVER["REQUEST_METHOD"] == "POST")
