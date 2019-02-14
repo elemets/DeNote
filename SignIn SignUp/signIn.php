@@ -33,11 +33,11 @@ session_start();
         	  width:100%;
           }
           .form-top-right{
-	          width : 50%;
+	          width : 25%;
               font-size: 66px;
           }
           .form-top-left{
-              width : 50%;
+              width : 25%;
           }
           .navbar {
               background-color: #660099;
