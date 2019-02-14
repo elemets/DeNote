@@ -14,7 +14,7 @@ session_start();
               background-color: white;
           }
           .top-buffer { 
-              margin-top:20px; 
+              margin-top:100px; 
           }
           .bottom-buffer { 
               margin-bottom:20px; 
@@ -60,7 +60,6 @@ session_start();
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      One of three columns
     </div>
     <div class="col-sm">
       	<div class="container-fluid">
@@ -92,7 +91,6 @@ session_start();
 	</div>
     </div>
     <div class="col-sm">
-      One of three columns
     </div>
   </div>
 </div>
