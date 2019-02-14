@@ -32,11 +32,16 @@ form {
   font-size: 12px !important;
 }
 .jumbotron {
-  background-color: #660099;
+  background-image: url(De-note-poster.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   color: #fff;
-  padding: 250px 25px;
+  padding: 230px 25px;
+  max-height: 1020px;
   font-family: Montserrat, sans-serif;
 }
+
 .container-fluid {
   padding: 60px 50px;
 }
