@@ -97,7 +97,7 @@ session_start();
           </div>
 	</div>
     </div>
-    <div class="col-sm">
+    <div class="col-bg">
     </div>
   </div>
 </div>
