@@ -62,7 +62,7 @@ session_start();
     <div class="col-sm">
     </div>
     <div class="col-sm">
-      	<div class="container-fluid">
+      	<div class="container-fluid vertical-center">
           <div id="main-signin" class="col-sm">			
           <div class="form-content">
     	    <div class="form-center">
