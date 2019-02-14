@@ -42,7 +42,7 @@ function validate_user($username, $password)
           if($active==0)
           {
             echo "not activated yet please active via $email";
-            return false
+            return false;
           }
           else {
             return true;
