@@ -26,7 +26,7 @@ function validate_user($username, $password)
   {
     $login = mysql_query("SELECT * FROM Users WHERE Username = '$username'");
     if(mysql_num_rows($login)==0)
-      return false
+      return false;
     else{
       while($login_row = mysql_fetch_assoc($login))
       {
@@ -51,6 +51,7 @@ function validate_user($username, $password)
 
       }
     }
+  }
   //   return ($user_row["PasswordHash"] == $password_hash);
   // } else {
   //   return false;

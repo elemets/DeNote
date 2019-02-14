@@ -13,6 +13,6 @@ else {
     $activate = mysql_query("UPDATE Users SET active='1' WHERE code='$code'");
     echo"your account has been activated.";
   }
-  
+
 }
  ?>
