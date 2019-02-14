@@ -30,12 +30,12 @@ session_start();
           }
           .form-element{
               display: inline;
-        	  width:50%;
+        	  width:100%;
           }
           .navbar {
               background-color: #660099;
           }
- 	.vertical-center {
+ 	.formcenter {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
   min-width: 100%;
@@ -59,7 +59,7 @@ session_start();
 
  <!-- Signin -->
 
-<div class="container vertical-center">
+<div class="container formcenter">
       	<div class="container-fluid">
           <div id="main-signin" class="col-bg">			
           <div class="form-content">
