@@ -51,7 +51,7 @@ function validate_user($username, $password)
 
       }
     }
-  }
+  
   //   return ($user_row["PasswordHash"] == $password_hash);
   // } else {
   //   return false;
