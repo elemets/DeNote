@@ -93,7 +93,7 @@ function register($username, $password, $email)
         echo "you have been registered succefuly please check yoir email $email to activate your account.";
       }
       return true;
-    } else {
+     else {
       // SQL Error
       return false;
     }
