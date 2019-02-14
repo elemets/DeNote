@@ -42,6 +42,9 @@ session_start();
           .navbar {
               background-color: #660099;
           }
+	   .grid-container {
+  display: grid;
+}
       </style>
     </head>
 
