@@ -5,6 +5,9 @@
 </head>
 <body>
 
+<?php
+require_once("../Header - Footer/header.html");
+?>
 
 
 </body>
