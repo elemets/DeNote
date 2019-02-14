@@ -17,7 +17,7 @@ session_start();
               margin-top:100px; 
           }
           .bottom-buffer { 
-              margin-bottom:1000px; 
+              margin-bottom:100px; 
           }
           .submit-btn {
               background-color: #660099;
@@ -31,10 +31,6 @@ session_start();
           .form-element{
               display: inline;
         	  width:50%;
-          }
-          .form-top-right{
-	          width : 50%;
-              font-size: 66px;
           }
           .form-top-left{
               width : 75%;
