@@ -47,11 +47,15 @@ function register($username, $password, $email)
     if ($result->num_rows > 0) return false;
 
     $password_hash = crypt($password, $username);
-     $query = "INSERT INTO `Users`(`Email`, `Username`, `PasswordHash`) VALUES ('$email', '$username', '$password_hash')";
-     $result = $conn->query($query);
+    $query = "INSERT INTO `Users`(`Email`, `Username`, `PasswordHash`) VALUES ('$email', '$username', '$password_hash')";
+    $result = $conn->query($query);
 
-     if ($result) 
+    if ($result) {
       return true;
+    } else {
+      // SQL Error
+      return false;
+    }
 
 }
 
