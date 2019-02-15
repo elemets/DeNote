@@ -43,7 +43,7 @@ function register($username, $password, $email)
     $result = $conn->query($query);
 
 
-    if ($result->num_rows > 0) return false;
+    if ($result->num_rows > 0) return true;
 
     $query = "SELECT * FROM Users WHERE Email = '$email' LIMIT 1";
     $result = $conn->query($query);
