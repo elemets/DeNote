@@ -57,7 +57,7 @@ function register($username, $password, $email)
       return true;
     } else {
       // SQL Error
-      return true;
+      return false;
     }
 
 }
