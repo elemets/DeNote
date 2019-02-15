@@ -24,37 +24,10 @@ function validate_user($username, $password)
 
   if ($result && $user_row = $result->fetch_assoc())
   {
-    $login = mysql_query("SELECT * FROM Users WHERE Username = '$username'");
-    if(mysql_num_rows($login)==0)
-      return false;
-    else{
-      while($login_row = mysql_fetch_assoc($login))
-      {
-        //get pass
-        $password_db = $login_row['password'];
 
-        if($password_hash!=$password_db)
-          {echo "incorrect pass";
-          return false;}
-        else {
-          $active = $login_row['active'];
-          $email = $login_row['Email'];
-          if($active==0)
-          {
-            echo "not activated yet please active via $email";
-            return false;
-          }
-          else {
-            return true;
-          }
-        }
-
-      }
-    }
-
-  //   return ($user_row["PasswordHash"] == $password_hash);
-  // } else {
-  //   return false;
+    return ($user_row["PasswordHash"] == $password_hash);
+  } else {
+    return false;
   }
 }
 //var_dump(validate_user("1234", "Helo"));// ? "Login\n" : "No\n";
@@ -74,24 +47,10 @@ function register($username, $password, $email)
     if ($result->num_rows > 0) return false;
 
     $password_hash = crypt($password, $username);
-    // $query = "INSERT INTO `Users`(`Email`, `Username`, `PasswordHash`) VALUES ('$email', '$username', '$password_hash')";
-    // $result = $conn->query($query);
-    //
-    // if ($result) {
-    //   //genarate code
-      $code = rand(1111111111, 9999999999);
+     $query = "INSERT INTO `Users`(`Email`, `Username`, `PasswordHash`) VALUES ('$email', '$username', '$password_hash')";
+     $result = $conn->query($query);
 
-      //send activation message
-      $to = $email;
-      $subject = "Activate your account";
-      $headers = "From: salim909090@hotmail.com";
-      $body = "Hello $username, \n\nYou regeisterd and need to activate your account. Click the link below\n\nhttps://web.cs.manchester.ac.uk/a64508sa/Z3_Y1_Project/SignIn SignUp/activate.php?code=$code\n\nThanks";
-      if (!mail($to,$subject,$body,$headers))
-        return false;
-      else {
-        $register = mysql_query("INSERT INTO `Users` VALUES ('',$email', '$username', '$password_hash','$code','0','','','')");
-        echo "you have been registered succefuly please check yoir email $email to activate your account.";
-      }
+     if ($result) 
       return true;
 
 }
