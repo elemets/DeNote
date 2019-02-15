@@ -9,7 +9,11 @@ if($conn -> connect_error)
     die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
 
 
+// $sql = "SELECT user_name FROM project demo";
+// $result = $conn->query($sql);
+function add_user($username, $password, $email) {
 
+}
 
 
 function validate_user($username, $password)
@@ -24,7 +28,6 @@ function validate_user($username, $password)
 
   if ($result && $user_row = $result->fetch_assoc())
   {
-
     return ($user_row["PasswordHash"] == $password_hash);
   } else {
     return false;
