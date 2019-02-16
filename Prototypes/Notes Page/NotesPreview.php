@@ -9,7 +9,7 @@ require_once("../../Header - Footer/header.html");
 <body>
 
 <!-- Insert PDF -->
-<embed src="PSYC 10431 - Introduction to Cognition.pdf" width="50%" height="500"
+<embed src="test.pdf" width="50%" height="500"
        text-align="center" type="application/pdf">
 
 <!-- begin wwww.htmlcommentbox.com -->
