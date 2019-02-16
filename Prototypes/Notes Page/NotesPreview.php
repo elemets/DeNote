@@ -9,8 +9,8 @@ require_once("../../Header - Footer/header.html");
 <body>
 
 <!-- Insert PDF -->
-<embed src="PSYC\ 10431\ -\ Introduction\ to\ Cognition.pdf" width="500" height="375"
-       type="application/pdf">
+<embed src="PSYC 10431 - Introduction to Cognition.pdf" width="50%" height="500"
+       text-align="center" type="application/pdf">
 
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
