@@ -8,8 +8,8 @@ require_once("../../Header - Footer/header.html");
 </head>
 <body>
 
+<!-- Insert PDF -->
 <div id="PDF_Box" style="text-align:center">
-  <!-- Insert PDF -->
   <embed src="test.pdf" width="75%" height="600px" type="application/pdf">
 </div>
 
