@@ -105,7 +105,8 @@ session_start();
 		<div class="alert alert-warning alert-dismissible fade show" role="alert">
 		 This is a danger alert—check it out!
 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
+  <span aria-hidden="true">&times;</span>
+</button>
 		</div>
                 </div>
 <?php
