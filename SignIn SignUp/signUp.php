@@ -12,11 +12,11 @@
           body {
               background-color: white;
           }
-          .top-buffer { 
-              margin-top:20px; 
+          .top-buffer {
+              margin-top:20px;
           }
-          .bottom-buffer { 
-              margin-bottom:20px; 
+          .bottom-buffer {
+              margin-bottom:20px;
           }
           .submit-btn {
               background-color: #660099;
@@ -70,25 +70,35 @@
     	    <div class="form-top-left">
     		  <h2>Signup</h2>
     		</div>
-    
+
             <div class="form-body">
     			<form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-    			
+
     			<div class="form-group username">
                   <label for="username"> Username</label>
             	  <input type="textbox" class="form-control form-element" name="username" placeholder="Username">
                 </div>
-    			
+
                 <div class="form-group email">
                   <label for="email"> University Email</label>
             	  <input type="textbox" class="form-control form-element" name="email" placeholder="University Email">
                 </div>
-    
+
+                <div class="form-group year">
+                  <label for="year"> Year of Study</label>
+            	  <select class="form-control form-element" id="year">
+                  <option1>Year 0</option>
+                  <option1>Year 1</option>
+                  <option1>Year 2</option>
+                  <option1>Year 3</option>
+                  <option1>Other</option>
+                </div>
+
                 <div class="form-group password">
                   <label for="password"> Password</label>
     			  <input  type="password" class="form-control form-element" name="password" placeholder="Password">
                 </div>
-    			
+
                 <br>
                 <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="register">
     			</form>
