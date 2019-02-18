@@ -99,9 +99,11 @@ session_start();
 		 header('Location: ../User Home Page/UserHomePage.php');
 	 } else {
 ?>
-		<div class="alert alert-danger w3-display-topmiddle" role="alert">
+		<div class="w3-display-topmiddle">
+		<div class="alert alert-danger" role="alert">
 		 This is a danger alert—check it out!
 		</div>
+                </div>
 <?php
 	 }
 	}
