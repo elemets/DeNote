@@ -93,7 +93,7 @@
                   <option>Year 3</option>
                   <option>Other</option>
                 </div>
-\n
+<br><br>
                 <div class="form-group password">
                   <label for="password"> Password</label>
     			  <input  type="password" class="form-control form-element" name="password" placeholder="Password">
