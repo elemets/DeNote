@@ -106,8 +106,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
  header('Location: ../User Home Page/UserHomePage.php');
 	 } else {
-		 // Incorrect Login
-echo "incorrect regestration";
+?>
+		<div class="fixed-top">
+	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Error:</strong>please fill all fields correctly.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+                </div>
+<?php
 	 }
 	}
 ?>
