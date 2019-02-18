@@ -98,8 +98,9 @@ session_start();
 		 // Login Session
 		 header('Location: ../User Home Page/UserHomePage.php');
 	 } else {
-		 // Incorrect Login
-		echo 'not found';
+		<div class="alert alert-danger" role="alert">
+		 This is a danger alert—check it out!
+		</div>
 	 }
 	}
 ?>
