@@ -104,8 +104,8 @@ session_start();
 	 } else {
 ?>
 		<div class="fixed-top">
-	<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Error:</strong> check that you entered that right username and password.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
