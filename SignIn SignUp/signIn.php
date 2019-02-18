@@ -101,7 +101,7 @@ session_start();
 		 header('Location: ../User Home Page/UserHomePage.php');
 	 } else {
 ?>
-		<div class="w3-display-topmiddle">
+		<div class="w3-padding w3-display-middle">
 		<div class="alert alert-danger" role="alert">
 		 This is a danger alert—check it out!
 		</div>
