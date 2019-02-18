@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <html>
     <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="/universalStyleSheet.css">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -86,14 +86,15 @@
 
                 <div class="form-group year">
                   <label for="year"> Year of Study</label>
-            	  <select class="form-control form-element" id="year" placeholder="Year of Study">
+            	  <select class="form-control form-element" name="year" placeholder="Year of Study">
                   <option>Year 0</option>
                   <option>Year 1</option>
                   <option>Year 2</option>
                   <option>Year 3</option>
                   <option>Other</option>
+                </select>
                 </div>
-<br><br>
+
                 <div class="form-group password">
                   <label for="password"> Password</label>
     			  <input  type="password" class="form-control form-element" name="password" placeholder="Password">
@@ -134,5 +135,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	}
 ?>
 </body>
-
+</meta>
 </html>
