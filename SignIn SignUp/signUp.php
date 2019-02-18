@@ -87,13 +87,13 @@
                 <div class="form-group year">
                   <label for="year"> Year of Study</label>
             	  <select class="form-control form-element" id="year" placeholder="Year of Study">
-                  <option1>Year 0</option>
-                  <option1>Year 1</option>
-                  <option1>Year 2</option>
-                  <option1>Year 3</option>
-                  <option1>Other</option>
+                  <option>Year 0</option>
+                  <option>Year 1</option>
+                  <option>Year 2</option>
+                  <option>Year 3</option>
+                  <option>Other</option>
                 </div>
-
+\n
                 <div class="form-group password">
                   <label for="password"> Password</label>
     			  <input  type="password" class="form-control form-element" name="password" placeholder="Password">
