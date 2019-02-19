@@ -24,6 +24,7 @@ session_start();
       $type = $_FILES['requiredFile']['type'];
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
       $sectionName = $_POST["sectionName"];
+      $parentID = $_POST["parentID"];
       $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionName`, `UserID`) VALUES (?, ?, ?,?, ?)");
       $stmt->bindParam(1, $name);
       $stmt->bindParam(2, $type);
@@ -38,6 +39,14 @@ session_start();
       <input type="textbox" name="sectionName"/>
       <label for="uploadedFile"> Choose file:</label>
       <input type="file" name="requiredFile"/>
+      <label for="Unit"> Section:</label>
+      <select  name="courses" placeholder="parentID">
+                  <option>COMP</option>
+                  <option>BIO</option>
+                  <option>PHY</option>
+                  <option>FIE</option>
+                  <option>Other</option>
+      </select>
       <button name="btn"> Upload </button>
     </form>
 
