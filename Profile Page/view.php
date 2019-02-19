@@ -7,6 +7,7 @@ $stat = $conn->prepare("SELECT * FROM Notes WHERE NoteID = ?");
 $stat->bindParam(1, $id);
 $stat->execute();
 
+$row = $stat->fetch();
 header('Content-Type:'.$row['dataType']);
 echo $row['Data'];
  ?>
