@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <html>
     <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="/universalStyleSheet.css">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -12,11 +12,11 @@
           body {
               background-color: white;
           }
-          .top-buffer { 
-              margin-top:20px; 
+          .top-buffer {
+              margin-top:20px;
           }
-          .bottom-buffer { 
-              margin-bottom:20px; 
+          .bottom-buffer {
+              margin-bottom:20px;
           }
           .submit-btn {
               background-color: #660099;
@@ -70,25 +70,36 @@
     	    <div class="form-top-left">
     		  <h2>Signup</h2>
     		</div>
-    
+
             <div class="form-body">
     			<form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-    			
+
     			<div class="form-group username">
                   <label for="username"> Username</label>
             	  <input type="textbox" class="form-control form-element" name="username" placeholder="Username">
                 </div>
-    			
+
                 <div class="form-group email">
                   <label for="email"> University Email</label>
             	  <input type="textbox" class="form-control form-element" name="email" placeholder="University Email">
                 </div>
-    
+
+                <div class="form-group year">
+                  <label for="year"> Year of Study</label>
+            	  <select class="form-control form-element" name="year" placeholder="Year of Study">
+                  <option>Year 0</option>
+                  <option>Year 1</option>
+                  <option>Year 2</option>
+                  <option>Year 3</option>
+                  <option>Other</option>
+                </select>
+                </div>
+
                 <div class="form-group password">
                   <label for="password"> Password</label>
     			  <input  type="password" class="form-control form-element" name="password" placeholder="Password">
                 </div>
-    			
+
                 <br>
                 <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="register">
     			</form>
@@ -112,7 +123,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 ?>
 		<div class="fixed-top">
 	<div class="alert alert-danger alert-dismissible fade show" role="alert">
-  <strong>Error:</strong>please fill all fields correctly.
+  <strong>Error:</strong> Please fill in all the fields correctly.
+                          Already a member? <a href="signIn.php" class="alert-link"> Sign In Here!</a>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -123,5 +135,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	}
 ?>
 </body>
-
+</meta>
 </html>
