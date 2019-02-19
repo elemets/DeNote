@@ -12,6 +12,8 @@
     // Connect to the database
      $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
 
+     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
     if(isset($_POST['btn'])){
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
