@@ -30,7 +30,6 @@ session_start();
       $stmt->bindParam(4, $sectionId);
       $stmt->bindParam(5, $userID);
       $stmt->execute();
-      echo $_SESSION["username"]
     }
      ?>
     <form method="post" enctype="multipart/form-data">
@@ -47,8 +46,10 @@ session_start();
     while ($row = $stat->fetch()){
       echo "<li>".$row['FileName']."</li>";
     }
+   echo $_SESSION['username'];
 
      ?>
+
 </body>
 <footer>
 <?php
