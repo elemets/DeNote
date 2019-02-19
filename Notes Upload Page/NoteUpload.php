@@ -10,7 +10,7 @@
     <?php
     require_once('config.inc.php');
     // Connect to the database
-    $conn = new PDO($database_host, $database_user, $database_pass, "2018_comp10120_z3");
+    $conn = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
     // Check for errors before doing anything else
     if($conn -> connect_error)
       die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
@@ -20,9 +20,9 @@
       $type = $_FILES['requiredFile']['type'];
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
       $stmt = $conn->prepare("INSERT INTO `Notes`(`FileName`, `dataType`, `Data`) VALUES (?,?,?)");
-      $stmt->bindParam(1, $name);
-      $stmt->bindParam(2, $type);
-      $stmt->bindParam(3, $data);
+      $stmt->bind_param(1, $name);
+      $stmt->bind_param(2, $type);
+      $stmt->bind_param(3, $data);
       $stmt->execute();
     }
 
