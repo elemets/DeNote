@@ -10,7 +10,7 @@
     <?php
     require_once('config.inc.php');
     // Connect to the database
-    $conn = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
+    $conn = new PDO($database_host, $database_user, $database_pass, "2018_comp10120_z3");
     // Check for errors before doing anything else
     if($conn -> connect_error)
       die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
