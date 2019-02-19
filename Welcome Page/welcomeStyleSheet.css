@@ -37,9 +37,27 @@ form {
   background-repeat: no-repeat;
   background-position: center center;
   color: #fff;
-  padding: 230px 25px;
-  max-height: 1020px;
+  padding: 40px 25px;
+  max-height: 100%;
   font-family: Montserrat, sans-serif;
+}
+
+@media screen and (min-width: 601px) { /* Getting overridden by Bootstrap */
+  div.screenResizeBg {                 /* Solution can be making the title an image */
+    font-size: 250px;
+  }
+  div.screenResizeSm {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.screenResizeBg {
+    font-size: 80px;
+  }  
+  div.screenResizeSm {
+    font-size: 25px;
+  }
 }
 
 .container-fluid {
