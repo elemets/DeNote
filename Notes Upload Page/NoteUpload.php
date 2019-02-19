@@ -24,7 +24,7 @@ session_start();
       $type = $_FILES['requiredFile']['type'];
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
       $sectionName = $_POST["sectionName"];
-      $parentID = $_POST["parentID"];
+      $parentID = $_POST["courses"];
       $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionName`, `UserID`) VALUES (?, ?, ?,?, ?)");
       $stmt->bindParam(1, $name);
       $stmt->bindParam(2, $type);
