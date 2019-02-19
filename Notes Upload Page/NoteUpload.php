@@ -23,19 +23,19 @@ session_start();
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
-      $sectionId = $_POST["sectionID"];
+      $sectionName = $_POST["sectionName"];
       $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionID`, `UserID`) VALUES (?, ?, ?,?, ?)");
       $stmt->bindParam(1, $name);
       $stmt->bindParam(2, $type);
       $stmt->bindParam(3, $data);
-      $stmt->bindParam(4, $sectionId);
+      $stmt->bindParam(4, $sectionName);
       $stmt->bindParam(5, $userID);
       $stmt->execute();
     }
      ?>
     <form method="post" enctype="multipart/form-data">
       <label for="sectionID"> Section:</label>
-      <input type="textbox" name="sectionID"/>
+      <input type="textbox" name="sectionName"/>
       <label for="uploadedFile"> Choose file:</label>
       <input type="file" name="requiredFile"/>
       <button name="btn"> Upload </button>
@@ -44,11 +44,6 @@ session_start();
     <?php
     $stat = $conn->prepare("SELECT * FROM `Notes`");
     $stat->execute();
-    while ($row = $stat->fetch()){
-      echo "<li>".$row['FileName']."</li>";
-    }
-   echo $_SESSION['username'];
-
      ?>
 
 </body>
