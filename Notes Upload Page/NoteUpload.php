@@ -52,8 +52,5 @@ session_start();
 
 </body>
 <footer>
-<?php
-require_once("../Header - Footer/footer.html");
-?>
 </footer>
 </html>

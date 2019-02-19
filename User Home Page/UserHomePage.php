@@ -10,8 +10,9 @@ require_once("../Header - Footer/header.html");
 ?>
 </head>
 <body>
-
-
+<?php
+$_SESSION["username"] = $_SESSION["username"]
+?>
 
 
 </body>
