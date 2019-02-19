@@ -30,7 +30,7 @@ session_start();
       $stmt->bindParam(4, $sectionId);
       $stmt->bindParam(5, $userID);
       $stmt->execute();
-      echo $userID
+      echo $_SESSION["username"]
     }
      ?>
     <form method="post" enctype="multipart/form-data">
