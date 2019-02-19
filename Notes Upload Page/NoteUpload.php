@@ -18,7 +18,7 @@ session_start();
      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if(isset($_POST['btn'])){
-      $userID = $conn->query("SELECT UserID FROM Users WHERE UserName = $_SESSION[username]");
+      $userID = $conn->query("SELECT UserID FROM Users WHERE Username = $_SESSION[username]");
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
