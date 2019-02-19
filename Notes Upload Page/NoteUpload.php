@@ -17,8 +17,8 @@
     if(isset($_POST['btn'])){
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
-      $sectionId = $_POST["sectionID"]
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
+      $sectionId = $_POST["sectionID"];
       $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionID`) VALUES (?, ?, ?,?)");
       $stmt->bindParam(1, $name);
       $stmt->bindParam(2, $type);
