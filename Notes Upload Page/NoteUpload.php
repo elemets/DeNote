@@ -16,7 +16,7 @@
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
-      $stmt = $conn->prepare("INSERT INTO `Notes` VALUES ('', ?, ?, ?);
+      $stmt = $conn->prepare("INSERT INTO `Notes` VALUES ('', ?, ?, ?)");
       $stmt->bindParam(1, $name);
       $stmt->bindParam(2, $type);
       $stmt->bindParam(3, $data);
@@ -25,8 +25,6 @@
 
 
      ?>
-
-
     <form method="post" enctype="multipart/form-data">
       <label for="sectionID"> Section:</label>
       <input type="textbox" name="sectionID"/>
