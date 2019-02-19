@@ -19,7 +19,7 @@
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
-      $stmt = $dbh->prepare("INSERT INTO `Notes`(`FileName`, `dataType`, `Data`) VALUES (?,?,?)");
+      $stmt = $conn->prepare("INSERT INTO `Notes`(`FileName`, `dataType`, `Data`) VALUES (?,?,?)");
       $stmt->bindParam(1, $name);
       $stmt->bindParam(2, $type);
       $stmt->bindParam(3, $data);
