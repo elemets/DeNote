@@ -20,7 +20,6 @@ session_start();
 
     if(isset($_POST['btn'])){
       $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->current_field;
-      $userID = $userID[0];
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
