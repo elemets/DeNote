@@ -25,12 +25,13 @@ session_start();
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
       $sectionName = $_POST["sectionName"];
       $parentID = $_POST["courses"];
-      $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionName`, `UserID`) VALUES (?, ?, ?,?, ?)");
+      $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionName`, `UserID`, `ParentID`) VALUES (?, ?, ?,?, ?,?)");
       $stmt->bindParam(1, $name);
       $stmt->bindParam(2, $type);
       $stmt->bindParam(3, $data);
       $stmt->bindParam(4, $sectionName);
       $stmt->bindParam(5, $userID);
+      $stmt->bindParam(6, $parentID);
       $stmt->execute();
     }
      ?>
