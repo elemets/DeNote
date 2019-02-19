@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,15 +18,17 @@
      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if(isset($_POST['btn'])){
+      $userID = $conn->query("SELECT UserID FROM Users WHERE UserName = `$_SESSION["username"]`")
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
       $sectionId = $_POST["sectionID"];
-      $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionID`) VALUES (?, ?, ?,?)");
+      $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionID`, `UserID`) VALUES (?, ?, ?,?, ?)");
       $stmt->bindParam(1, $name);
       $stmt->bindParam(2, $type);
       $stmt->bindParam(3, $data);
       $stmt->bindParam(4, $sectionId);
+      $stmt->bindParam(5, $userID);
       $stmt->execute();
     }
      ?>

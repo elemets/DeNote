@@ -100,6 +100,7 @@ session_start();
 
 	 if(validate_user($username, $password)) {
 		 // Login Session
+		 $_SESSION["username"] = $username;
 		 header('Location: ../User Home Page/UserHomePage.php');
 	 } else {
 ?>
