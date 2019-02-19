@@ -10,7 +10,7 @@ require_once("../Header - Footer/header.html");
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="Welcome Page/welcomeStyleSheet.css">
+
   <link rel="stylesheet" href="ProfilePageCss.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -28,7 +28,7 @@ require_once("../Header - Footer/header.html");
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#WelcomePage"><img src="Welcome Page/logo_white.png"  height="23.5"> </a>
+        <a class="navbar-brand" href="#WelcomePage"><img src="/Icons/logo_white.png"  height="23.5"> </a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-center">
