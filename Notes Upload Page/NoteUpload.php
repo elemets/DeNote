@@ -28,7 +28,7 @@ session_start();
       $stmt->bindParam(2, $type);
       $stmt->bindParam(3, $data);
       $stmt->bindParam(4, $sectionId);
-      echo userID;
+      echo $userID;
       //$stmt->bindParam(5, $userID);
       $stmt->execute();
     }
