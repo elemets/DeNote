@@ -12,7 +12,7 @@
     $stat->execute();
 
     while($row = $stat->fetch()){
-      echo "<li><a target='_blank' href='profile-showingNotes.php?id=".$row['NoteID']."'>".$row['FileName']."/a></li>";
+      echo "<li><a target='_blank' href='profile-showingNotes.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
     }
      ?>
   </body>
