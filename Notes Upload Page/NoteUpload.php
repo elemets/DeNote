@@ -20,9 +20,9 @@
       $type = $_FILES['requiredFile']['type'];
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
       $stmt = $conn->prepare("INSERT INTO `Notes`(`FileName`, `dataType`, `Data`) VALUES (?,?,?)");
-      $stmt->bind_param(1, $name);
-      $stmt->bind_param(2, $type);
-      $stmt->bind_param(3, $data);
+      $stmt->bind_param(0, $name);
+      $stmt->bind_param(1, $type);
+      $stmt->bind_param(2, $data);
       $stmt->execute();
     }
 
