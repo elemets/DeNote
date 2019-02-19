@@ -20,7 +20,7 @@ session_start();
 
     if(isset($_POST['btn'])){
       $userID = mysqli_fetch_assoc($conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'"));
-      $userID = $userID[0]
+      $userID = $userID[0];
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
