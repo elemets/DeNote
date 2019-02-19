@@ -14,7 +14,7 @@
     $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
     echo $userID;
     $stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
-    $stat->bindParam(1, $userID)
+    $stat->bindParam(1, $userID);
     $stat->execute();
 
     while($row = $stat->fetch()){
