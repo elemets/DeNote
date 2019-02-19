@@ -11,8 +11,7 @@
     $stat->execute();
 
     while($row = $stat->fetch()){
-      echo "<li><a target='_blank' href='profile-showingNotes.php?id=".$row['NoteID']."'>".$row['FileName']."</a><br/>
-      <embed src='Data:'.$row['dataType'].";base64,".base64_encode($row['Data'])."' width='200'/></li>";
+      echo "<li><a target='_blank' href='profile-showingNotes.php?id=".$row['NoteID']."'>".$row['FileName']."/a></li>";
     }
      ?>
   </body>
