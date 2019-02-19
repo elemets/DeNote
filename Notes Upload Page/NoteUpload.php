@@ -11,10 +11,7 @@
     require_once('config.inc.php');
     // Connect to the database
      $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
-    // Check for errors before doing anything else
-    if($conn -> connect_error)
-      die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
-
+    
     if(isset($_POST['btn'])){
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
