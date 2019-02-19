@@ -6,6 +6,7 @@
   </head>
   <body>
     <?php
+    require_once('config.inc.php');
     $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
     $stat = $conn->prepare("SELECT * FROM Notes");
     $stat->execute();
