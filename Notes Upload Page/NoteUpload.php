@@ -19,7 +19,7 @@ session_start();
      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if(isset($_POST['btn'])){
-      $userID = mysqli_fetch_assoc($conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'"));
+      $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->current_field;
       $userID = $userID[0];
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
