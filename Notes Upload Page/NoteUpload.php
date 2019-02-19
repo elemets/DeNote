@@ -22,8 +22,6 @@
       $stmt->bindParam(3, $data);
       $stmt->execute();
     }
-
-
      ?>
     <form method="post" enctype="multipart/form-data">
       <label for="sectionID"> Section:</label>
@@ -32,6 +30,15 @@
       <input type="file" name="requiredFile"/>
       <button name="btn"> Upload </button>
     </form>
+
+    <?php
+    $stat = $conn->prepare("SELECT * FROM `Notes`");
+    $stat->execute();
+    while ($row = $stat->fetch()){
+      echo "<li>".$row['name']."</li>";
+    }
+
+     ?>
 </body>
 <footer>
 <?php
