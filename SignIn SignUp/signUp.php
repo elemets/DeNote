@@ -66,7 +66,7 @@
           <div class="col-sm">
           <div class="form-content">
     	    <div class="form-top-left">
-    		  <h2>Signup</h2>
+    		  <h2>Sign Up</h2>
     		</div>
 
             <div class="form-body">

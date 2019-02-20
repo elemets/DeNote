@@ -101,7 +101,7 @@ session_start();
 ?>
 		<div class="fixed-top">
 	<div class="alert alert-danger alert-dismissible fade show" role="alert">
-  <strong>Error:</strong> check that you entered that right username and password.
+  <strong>Error:</strong> Check that you entered the correct username and password. Not a member? <a href="signUp.php" class="alert-link"> Sign up Here!</a>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
