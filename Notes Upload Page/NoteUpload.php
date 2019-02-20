@@ -41,12 +41,61 @@ session_start();
       <label for="uploadedFile"> Choose file:</label>
       <input type="file" name="requiredFile"/>
       <label for="Unit"> Section:</label>
-      <select  name="courses" placeholder="parentID">
-                  <option>COMP</option>
-                  <option>BIO</option>
-                  <option>PHY</option>
-                  <option>FIE</option>
-                  <option>Other</option>
+      <select name="courses" placeholder="parentID">
+              <option>AHCP</option>
+              <option>AMER</option>
+              <option>ARGY</option>
+              <option>BIOL</option>
+              <option>BMAN</option>
+              <option>CHEM</option>
+              <option>CHEN</option>
+              <option>CHIN</option>
+              <option>CLAH</option>
+              <option>COMP</option>
+              <option>DENT</option>
+              <option>DRAM</option>
+              <option>EART</option>
+              <option>ECON</option>
+              <option>EDUC</option>
+              <option>EEEN</option>
+              <option>ENGL</option>
+              <option>FOUN</option>
+              <option>FREN</option>
+              <option>GEOG</option>
+              <option>GERM</option>
+              <option>HCDI</option>
+              <option>HIST</option>
+              <option>HSTM</option>
+              <option>IIDS</option>
+              <option>ITAL</option>
+              <option>JAPA</option>
+              <option>LAWS</option>
+              <option>LELA</option>
+              <option>MACE</option>
+              <option>MATH</option>
+              <option>MATS</option>
+              <option>MCEL</option>
+              <option>MEDN</option>
+              <option>MEST</option>
+              <option>MGDI</option>
+              <option>MUSC</option>
+              <option>NURS</option>
+              <option>OPTO</option>
+              <option>PHAR</option>
+              <option>PHIL</option>
+              <option>PHYS</option>
+              <option>PLAN</option>
+              <option>POLI</option>
+              <option>PSYC</option>
+              <option>RELT</option>
+              <option>RUSS</option>
+              <option>SALC</option>
+              <option>SOAN</option>
+              <option>SOCY</option>
+              <option>SOST</option>
+              <option>SPLA</option>
+              <option>UCIL</option>
+              <option>Other</option>
       </select>
       <button name="btn"> Upload </button>
     </form>
