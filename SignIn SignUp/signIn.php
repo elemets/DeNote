@@ -64,7 +64,8 @@ session_start();
       ?>
 
  <!-- Signin -->
-      	<div class="container-fluid formcenter">
+             <div class="container formcenter">
+             <div class="container-fluid">
             <div class="col-sm-10">
           <div class="form-content">
                <div class="form-top-left">
