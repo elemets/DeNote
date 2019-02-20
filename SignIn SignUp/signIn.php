@@ -48,6 +48,7 @@ session_start();
 	      }
       input {
       max-width: 100%;
+      width: auto;
       }
       </style>
     </head>
@@ -77,10 +78,10 @@ session_start();
                 <label for="password"> Password</label>
     		    <input type="password" class="form-control form-element" name="password" placeholder="Password">
               </div>
-
+<!--
               <br>
 	      <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign In">
-
+-->
               </form>
             </div>
        </div>
