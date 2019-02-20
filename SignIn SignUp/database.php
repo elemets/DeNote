@@ -50,7 +50,7 @@ function register($username, $password, $email, $year)
     if ($result->num_rows > 0) return false;
 
     $password_hash = crypt($password, $username);
-    $query = "INSERT INTO `Users`(`Email`, `Username`, `PasswordHash`, `YearOfStudent`) VALUES ('$email', '$username', '$password_hash', `$year`)";
+    $query = "INSERT INTO `Users`(`Email`, `Username`, `PasswordHash`, `YearOfStudent`) VALUES ('$email', '$username', '$password_hash', '$year')";
     $result = $conn->query($query);
 
     if ($result) {
