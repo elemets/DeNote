@@ -45,10 +45,7 @@ session_start();
   	    display: flex;
   	    align-items: center;
 	      }
-      input {
-      max-width: 100%;
-      width: auto;
-      }
+
       </style>
     </head>
 
