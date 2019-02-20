@@ -64,12 +64,12 @@ session_start();
       ?>
 
  <!-- Signin -->
-      	<div class="container-fluid">
+      	<div class="container-fluid formcenter">
             <div class="col-sm-10">
           <div class="form-content">
-                	    <div class="form-top-left">
-                  		  <h2>Sign In</h2>
-                        </div>
+               <div class="form-top-left">
+                <h2>Sign In</h2>
+                </div>
 
             <div class="form-body">
               <form class="form-horizontal" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
