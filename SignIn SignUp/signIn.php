@@ -66,6 +66,8 @@ session_start();
 
 <div class="container formcenter">
       	<div class="container-fluid">
+          <div class="row">
+           <div class="col-sm-8">
             <div class="form-body">
               <form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 
@@ -84,6 +86,8 @@ session_start();
 
               </form>
             </div>
+          </div>
+        </div>
        </div>
 </div>
 <?php
