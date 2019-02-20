@@ -66,7 +66,7 @@ session_start();
       	<div class="container-fluid">
             <div class="col-sm-10">
             <div class="form-body">
-              <form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+              <form class="form-horizontal" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 
     		  <div class="form-group">
                 <label for="username"> Username</label>
