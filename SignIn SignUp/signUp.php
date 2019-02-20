@@ -44,8 +44,7 @@
  	  .formcenter {
  	      min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
  	      min-height: 100vh; /* These two lines are counted as one :-)       */
- 	      min-width: 100%;
-              min-width: 100vh;
+              width: auto;
   	      display: flex;
   	      align-items: center;
 	  }
@@ -64,27 +63,26 @@
 
  <!-- Signup -->
 	<div class="container formcenter">
-	<div class="container-fluid">
-          <div id="main-signup" class="col-sm">
+          <div class="col-sm">
           <div class="form-content">
     	    <div class="form-top-left">
     		  <h2>Signup</h2>
     		</div>
 
             <div class="form-body">
-    			<form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+    		<form class="form-horizontal" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 
-    			<div class="form-group username">
+    		<div class="form-group">
                   <label for="username"> Username</label>
             	  <input type="textbox" class="form-control form-element" name="username" placeholder="Username">
                 </div>
 
-                <div class="form-group email">
+                <div class="form-group">
                   <label for="email"> University Email</label>
             	  <input type="textbox" class="form-control form-element" name="email" placeholder="University Email">
                 </div>
 
-                <div class="form-group year">
+                <div class="form-group">
                   <label for="year"> Year of Study</label>
             	  <select class="form-control form-element" name="year" placeholder="Year of Study">
                   <option>Year 0</option>
@@ -95,7 +93,7 @@
                 </select>
                 </div>
 
-                <div class="form-group password">
+                <div class="form-group">
                   <label for="password"> Password</label>
     			  <input  type="password" class="form-control form-element" name="password" placeholder="Password">
                 </div>
@@ -106,8 +104,8 @@
             </div>
           </div>
     	  </div>
-</div>
-</div>
+  </div>
+
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST")
