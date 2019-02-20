@@ -54,10 +54,14 @@ form {
 @media screen and (max-width: 600px) {
   div.screenResizeBg {
     font-size: 80px;
-  }  
+  }
   div.screenResizeSm {
     font-size: 25px;
   }
+}
+
+.glyphicon.glyphicon-certificate, .glyphicon.glyphicon-wrench {
+    font-size: 110.5px;
 }
 
 .container-fluid {
