@@ -16,11 +16,11 @@ session_start();
           body {
               background-color: white;
           }
-          .top-buffer { 
-              margin-top:100px; 
+          .top-buffer {
+              margin-top:100px;
           }
-          .bottom-buffer { 
-              margin-bottom:20px; 
+          .bottom-buffer {
+              margin-bottom:20px;
           }
           .submit-btn {
               background-color: #660099;
@@ -63,36 +63,28 @@ session_start();
 
 <div class="container formcenter">
       	<div class="container-fluid">
-          <div id="main-signin" class="col-bg">			
-          <div class="form-content">
-    	    <div class="form-center">
-    		  <h2>LOGIN</h2>
-    		</div>
-    		
             <div class="form-body">
               <form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-    			
+
     		  <div class="form-group username">
                 <label for="username"> Username</label>
                 <input type="textbox" class="form-control form-element" name="username" placeholder="Username">
               </div>
-    			
+
               <div class="form-group password">
                 <label for="password"> Password</label>
     		    <input type="password" class="form-control form-element" name="password" placeholder="Password">
               </div>
-    			
+
               <br>
 	      <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit">
 
               </form>
             </div>
           </div>
-          </div>
-	</div>
 </div>
 <?php
-      
+
 	if ($_SERVER["REQUEST_METHOD"] == "POST")
  {
 	 $username = $_POST["username"];
