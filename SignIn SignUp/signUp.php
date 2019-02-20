@@ -114,9 +114,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
  {
 	 $username = $_POST["username"];
 	 $password = $_POST["password"];
+	 $year = $_POST["year"];
 	 $email = $_POST["email"];
 
-	 if(register($username, $password, $email)) {
+	 if(register($username, $password, $email, $year)) {
 
  header('Location: ../User Home Page/UserHomePage.php');
 	 } else {

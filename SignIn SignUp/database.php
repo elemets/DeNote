@@ -36,7 +36,7 @@ function validate_user($username, $password)
 //var_dump(validate_user("1234", "Helo"));// ? "Login\n" : "No\n";
 
 
-function register($username, $password, $email)
+function register($username, $password, $email, $year)
 {
     global $conn;
     $query = "SELECT * FROM Users WHERE Username = '$username' LIMIT 1";
@@ -50,7 +50,7 @@ function register($username, $password, $email)
     if ($result->num_rows > 0) return false;
 
     $password_hash = crypt($password, $username);
-    $query = "INSERT INTO `Users`(`Email`, `Username`, `PasswordHash`) VALUES ('$email', '$username', '$password_hash')";
+    $query = "INSERT INTO `Users`(`Email`, `Username`, `PasswordHash`, `YearOfStudent`) VALUES ('$email', '$username', '$password_hash', `$year`)";
     $result = $conn->query($query);
 
     if ($result) {
