@@ -46,6 +46,9 @@ session_start();
   	      display: flex;
   	      align-items: center;
 	  }
+    input {
+    max-width: 100%;
+    }
       </style>
     </head>
 
@@ -81,7 +84,7 @@ session_start();
 
               </form>
             </div>
-          </div>
+       </div>
 </div>
 <?php
 
