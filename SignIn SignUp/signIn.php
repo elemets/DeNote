@@ -66,7 +66,7 @@ session_start();
  <!-- Signin -->
              <div class="container formcenter">
              <div class="container-fluid">
-            <div class="col-sm-10">
+            <div class="col-sm">
           <div class="form-content">
                <div class="form-top-left">
                 <h2>Sign In</h2>
