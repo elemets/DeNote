@@ -31,34 +31,16 @@ h4 {
 form {
   font-size: 12px !important;
 }
-.jumbotron {
-  background-image: url(De-note-poster.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  color: #fff;
-  padding: 40px 25px;
-  max-height: 100%;
-  font-family: Montserrat, sans-serif;
+
+.jumbotron-Image {
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
-@media screen and (min-width: 601px) { /* Getting overridden by Bootstrap */
-  div.screenResizeBg {                 /* Solution can be making the title an image */
-    font-size: 250px;
-  }
-  div.screenResizeSm {
-    font-size: 70px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  div.screenResizeBg {
-    font-size: 80px;
-  }
-  div.screenResizeSm {
-    font-size: 25px;
-  }
-}
 
 .glyphicon.glyphicon-certificate, .glyphicon.glyphicon-wrench {
     font-size: 110.5px;
