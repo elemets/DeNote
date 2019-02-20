@@ -45,12 +45,10 @@ session_start();
   	    display: flex;
   	    align-items: center;
 	      }
-
       </style>
     </head>
 
 <body>
-
       <nav class="navbar">
         <div class="container">
         </div>
@@ -61,7 +59,6 @@ session_start();
 
  <!-- Signin -->
              <div class="container formcenter">
-             <div class="container-fluid">
             <div class="col-sm">
           <div class="form-content">
                <div class="form-top-left">
