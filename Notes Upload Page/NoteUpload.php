@@ -25,6 +25,8 @@ session_start();
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
       $sectionNumber = $_POST["sectionNumber"];
       $unitID = $_POST["UnitID"];
+      if(validateUpload)
+      {
       $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`) VALUES (?, ?, ?,?, ?,?)");
       $stmt->bindParam(1, $name);
       $stmt->bindParam(2, $type);
@@ -33,6 +35,9 @@ session_start();
       $stmt->bindParam(5, $userID);
       $stmt->bindParam(6, $unitID);
       $stmt->execute();
+      }
+      else
+        echo "empty field of section number or unit is ----";
     }
      ?>
     <form method="post" enctype="multipart/form-data">
@@ -102,10 +107,15 @@ session_start();
     </form>
 
     <?php
-    //$stat = $conn->prepare("SELECT * FROM `Notes`");
-    //$stat->execute();
-
-
+    function validateUpload($Unit, $Number)
+    {
+      if $unit == "----"
+        return false;
+      else if $Number == null
+        return false;
+      else
+        return true;
+    }
      ?>
 
 </body>
