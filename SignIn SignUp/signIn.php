@@ -62,7 +62,7 @@ session_start();
             <div class="col-sm">
           <div class="form-content">
                <div class="form-top-left">
-                <h2>Login</h2>
+                <h2>Sign in</h2>
                 </div>
 
             <div class="form-body">
@@ -80,6 +80,7 @@ session_start();
 
               <br>
 	      <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign In">
+        <a href="./signUp.php" style="color:#660098; text-align:center;">Don't have an account? Sign up here</a>
 
               </form>
             </div>
