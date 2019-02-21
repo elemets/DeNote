@@ -101,7 +101,7 @@ session_start();
 		 header('Location: ../User Home Page/UserHomePage.php');
 	 } else {
 ?>
-		<div class="fixed-top" style="padding-top: 60px">
+		<div class="fixed-top" style="padding-top: 57px">
 	<div class="alert alert-danger alert-dismissible fade show" role="alert">
   <strong>Error:</strong> Check that you entered the correct username and password.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
