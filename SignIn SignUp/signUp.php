@@ -26,14 +26,14 @@
               color:#ecaa33;
           }
           .multi-form-wrapper{
-	          margin-bottom: 20px;
+	            margin-bottom: 20px;
           }
           .form-element{
               display: inline;
-        	  width:100%;
+        	    width:100%;
           }
           .form-top-right{
-	          width : 25%;
+	            width : 25%;
               font-size: 66px;
           }
           .form-top-left{
@@ -42,23 +42,21 @@
           .navbar {
               background-color: #660099;
           }
- 	  .formcenter {
- 	      min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
- 	      min-height: 100vh; /* These two lines are counted as one :-)       */
+ 	        .formcenter {
+ 	            min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+ 	            min-height: 100vh; /* These two lines are counted as one :-)       */
               width: auto;
-  	      display: flex;
-  	      align-items: center;
-	  }
+  	          display: flex;
+  	          align-items: center;
+	        }
       </style>
     </head>
 
 <body>
 
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <nav class="navbar">
         <div class="container">
-          <div class="navbar-header">
         <a class="navbar-brand" href="../index.html"><img src="../Welcome Page/logo_white.png"  height="23.5"> </a>
-          </div>
         </div>
       </nav>
 <?php

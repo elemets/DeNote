@@ -31,22 +31,22 @@ session_start();
               color:#ecaa33;
           }
           .multi-form-wrapper{
-	          margin-bottom: 20px;
+	            margin-bottom: 20px;
           }
           .form-element{
               display: inline;
-        	  width:100%;
+        	    width:100%;
           }
           .navbar {
               background-color: #660099;
           }
- 	      .formcenter {
-          min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-   	      min-height: 100vh; /* These two lines are counted as one :-)       */
-        width: auto;
-  	    display: flex;
-  	    align-items: center;
-	      }
+ 	        .formcenter {
+              min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+   	          min-height: 100vh; /* These two lines are counted as one :-)       */
+              width: auto;
+  	          display: flex;
+  	          align-items: center;
+	        }
       </style>
     </head>
 
