@@ -25,7 +25,7 @@ session_start();
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
       $sectionNumber = $_POST["sectionNumber"];
       $unitID = $_POST["UnitID"];
-      if(validateUpload($unitID, $sectionNumber)
+      if(validateUpload($unitID, $sectionNumber))
       {
       $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`) VALUES (?, ?, ?,?, ?,?)");
       $stmt->bindParam(1, $name);
