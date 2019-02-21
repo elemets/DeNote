@@ -99,8 +99,8 @@
                 </div>
 
                 <br>
-                <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign Up">
-                <a href="./signIn.php" style="color:#660098; text-align:center;">Already have an account? Sign in here</a>
+                <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign Up"
+                <p style="text-align: center">Already a member? <a href="./signUp.php" style="color:#660098;">Sign in here</a></p>
     			</form>
             </div>
           </div>
@@ -125,7 +125,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		<div class="fixed-top">
 	<div class="alert alert-danger alert-dismissible fade show" role="alert">
   <strong>Error:</strong> Please fill in all the fields correctly.
-                          Already a member? <a href="signIn.php" class="alert-link"> Sign In Here!</a>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
