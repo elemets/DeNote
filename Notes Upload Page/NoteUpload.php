@@ -22,11 +22,11 @@ session_start();
       $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
+      if(validateUpload($unitID, $sectionNumber))
+      {
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
       $sectionNumber = $_POST["sectionNumber"];
       $unitID = $_POST["UnitID"];
-      if(validateUpload($unitID, $sectionNumber))
-      {
       $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`) VALUES (?, ?, ?,?, ?,?)");
       $stmt->bindParam(1, $name);
       $stmt->bindParam(2, $type);
