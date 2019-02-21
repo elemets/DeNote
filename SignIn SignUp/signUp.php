@@ -104,8 +104,9 @@
             </div>
           </div>
     	  </div>
-    <a href="./signIn.php">Already have an account? Sign in here</a>
   </div>
+
+<a href="./signIn.php" style="color:#660098; text-align:center;">Already have an account? Sign in here</a>
 
 
 <?php
