@@ -55,6 +55,7 @@
 
       <nav class="navbar">
         <div class="container">
+        <a class="navbar-brand" href="../index.html"><img src="../Welcome Page/logo_white.png"  height="23.5"> </a>
         </div>
       </nav>
 <?php
@@ -122,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
  header('Location: ../User Home Page/UserHomePage.php');
 	 } else {
 ?>
-		<div class="fixed-top">
+		<div class="fixed-top" style="padding-top: 53px">
 	<div class="alert alert-danger alert-dismissible fade show" role="alert">
   <strong>Error:</strong> Please fill in all the fields correctly.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
