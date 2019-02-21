@@ -94,7 +94,7 @@ session_start();
               <option>UCIL</option>
               <option>Other</option>
       </select>
-      <label for="sectionID"> number:</label>
+      <label for="sectionID"> Number:</label>
       <input type="textbox" name="sectionName"/>
       <label for="uploadedFile"> Choose file:</label>
       <input type="file" name="requiredFile" accept=".pdf,.png,.jpg"/>
@@ -102,8 +102,10 @@ session_start();
     </form>
 
     <?php
-    $stat = $conn->prepare("SELECT * FROM `Notes`");
-    $stat->execute();
+    //$stat = $conn->prepare("SELECT * FROM `Notes`");
+    //$stat->execute();
+
+
      ?>
 
 </body>
