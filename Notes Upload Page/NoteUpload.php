@@ -36,11 +36,7 @@ session_start();
     }
      ?>
     <form method="post" enctype="multipart/form-data">
-      <label for="sectionID"> Section:</label>
-      <input type="textbox" name="sectionName"/>
-      <label for="uploadedFile"> Choose file:</label>
-      <input type="file" name="requiredFile" accept=".pdf,.png,.jpg"/>
-      <label for="Unit"> Section:</label>
+       <label for="Unit"> Unit:</label>
       <select name="courses" placeholder="parentID">
               <option>----</option>
               <option>AHCP</option>
@@ -98,6 +94,10 @@ session_start();
               <option>UCIL</option>
               <option>Other</option>
       </select>
+      <label for="sectionID"> number:</label>
+      <input type="textbox" name="sectionName"/>
+      <label for="uploadedFile"> Choose file:</label>
+      <input type="file" name="requiredFile" accept=".pdf,.png,.jpg"/>
       <button name="btn"> Upload </button>
     </form>
 
