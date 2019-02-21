@@ -23,21 +23,21 @@ session_start();
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
-      $sectionName = $_POST["sectionName"];
-      $parentID = $_POST["courses"];
+      $sectionNumber = $_POST["sectionNumber"];
+      $unitID = $_POST["UnitID"];
       $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`) VALUES (?, ?, ?,?, ?,?)");
       $stmt->bindParam(1, $name);
       $stmt->bindParam(2, $type);
       $stmt->bindParam(3, $data);
-      $stmt->bindParam(4, $sectionName);
+      $stmt->bindParam(4, $sectionNumber);
       $stmt->bindParam(5, $userID);
-      $stmt->bindParam(6, $parentID);
+      $stmt->bindParam(6, $unitID);
       $stmt->execute();
     }
      ?>
     <form method="post" enctype="multipart/form-data">
        <label for="Unit"> Unit:</label>
-      <select name="courses" placeholder="parentID">
+      <select name="UnitID" placeholder="parentID">
               <option>----</option>
               <option>AHCP</option>
               <option>AMER</option>
@@ -95,7 +95,7 @@ session_start();
               <option>Other</option>
       </select>
       <label for="sectionID"> Number:</label>
-      <input type="textbox" name="sectionName"/>
+      <input type="textbox" name="sectionNumber"/>
       <label for="uploadedFile"> Choose file:</label>
       <input type="file" name="requiredFile" accept=".pdf,.png,.jpg"/>
       <button name="btn"> Upload </button>
