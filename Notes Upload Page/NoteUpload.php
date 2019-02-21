@@ -111,7 +111,7 @@ session_start();
     {
       if ($Unit == "----")
         return false;
-      else if ($Number == null)
+      else if ($Number == "")
         return false;
       else
         return true;
