@@ -99,11 +99,12 @@
                 </div>
 
                 <br>
-                <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="register">
+                <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign Up">
     			</form>
             </div>
           </div>
     	  </div>
+    <a href="./signIn.php">Already have an account? Sign in here</a>
   </div>
 
 
