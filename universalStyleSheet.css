@@ -145,7 +145,7 @@ footer .glyphicon {
   -webkit-animation-duration: 1s;
   visibility: visible;
 }
-input .btn.submit-btn.submit-font:hover{
+.btn.submit-font:hover{
   color: #fdba15 !important;
 }
 @keyframes slide {
