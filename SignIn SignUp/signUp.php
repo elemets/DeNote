@@ -99,7 +99,7 @@
                 </div>
 
                 <br>
-                <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign Up"
+                <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign Up">
                 <p style="text-align: center">Already a member? <a href="./signUp.php" style="color:#660098;">Sign in here</a></p>
     			</form>
             </div>
