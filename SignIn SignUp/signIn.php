@@ -52,7 +52,7 @@ session_start();
     </head>
 
 <body>
-      <nav class="navbar" style="position:fixed">
+      <nav class="navbar">
         <div class="container">
           <a class="navbar-brand" href="../index.html"><img src="../Welcome Page/logo_white.png"  height="23.5"> </a>
         </div>
