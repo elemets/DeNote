@@ -56,7 +56,7 @@
 
 <body>
 
-      <nav class="navbar">
+      <nav class="navbar navbar-fixed-top">
         <div class="container">
         <a class="navbar-brand" href="../index.html"><img src="../Welcome Page/logo_white.png"  height="23.5"> </a>
         </div>
