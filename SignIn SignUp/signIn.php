@@ -80,7 +80,7 @@ session_start();
 
               <br>
 	      <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign In">
-        <a href="./signUp.php" style="color:#660098; text-align:center;">Don't have an account? Sign up here</a>
+        <p>Not a member? <a href="./signUp.php" style="text-align:center">Sign up here</a></p>
 
               </form>
             </div>
