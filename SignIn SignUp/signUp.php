@@ -24,7 +24,7 @@
           .submit-font {
               color:#ffffff;
           }
-          .submit-font :hover {
+          .submit-font:hover {
               color:#ecaa33;
           }
           .multi-form-wrapper{
