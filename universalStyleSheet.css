@@ -146,7 +146,7 @@ footer .glyphicon {
   visibility: visible;
 }
 input .btn:hover{
-  color: yellow !important;
+  color: #fdba15 !important;
 }
 @keyframes slide {
   0% {
