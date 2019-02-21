@@ -113,6 +113,8 @@ session_start();
         return false;
       else if ($Number == "")
         return false;
+      else if(is_string($number)
+        return false;
       else
         return true;
     }
