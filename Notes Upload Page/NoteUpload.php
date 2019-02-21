@@ -39,9 +39,10 @@ session_start();
       <label for="sectionID"> Section:</label>
       <input type="textbox" name="sectionName"/>
       <label for="uploadedFile"> Choose file:</label>
-      <input type="file" name="requiredFile"/>
+      <input type="file" name="requiredFile" accept=".pdf,.png,.jpg"/>
       <label for="Unit"> Section:</label>
       <select name="courses" placeholder="parentID">
+              <option>----</option>
               <option>AHCP</option>
               <option>AMER</option>
               <option>ARGY</option>
