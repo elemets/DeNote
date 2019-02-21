@@ -100,13 +100,13 @@
 
                 <br>
                 <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign Up">
+                <a href="./signIn.php" style="color:#660098; text-align:center;">Already have an account? Sign in here</a>
     			</form>
             </div>
           </div>
     	  </div>
   </div>
 
-<a href="./signIn.php" style="color:#660098; text-align:center;">Already have an account? Sign in here</a>
 
 
 <?php
