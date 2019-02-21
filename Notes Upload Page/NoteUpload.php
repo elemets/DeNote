@@ -109,7 +109,7 @@ session_start();
     <?php
     function validateUpload($Unit, $Number)
     {
-      if ($unit == "----")
+      if ($Unit == "----")
         return false;
       else if ($Number == null)
         return false;
