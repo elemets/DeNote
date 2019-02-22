@@ -22,26 +22,28 @@ session_start();
       $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
+      $unitID = $_POST["UnitID"];
+      $sectionNumber = $_POST["sectionNumber"];
+      if(validateUpload($unitID, $sectionNumber))
+      {
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
-      $sectionName = $_POST["sectionName"];
-      $parentID = $_POST["courses"];
-      $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionName`, `UserID`, `ParentID`) VALUES (?, ?, ?,?, ?,?)");
+      $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`) VALUES (?, ?, ?,?, ?,?)");
       $stmt->bindParam(1, $name);
       $stmt->bindParam(2, $type);
       $stmt->bindParam(3, $data);
-      $stmt->bindParam(4, $sectionName);
+      $stmt->bindParam(4, $sectionNumber);
       $stmt->bindParam(5, $userID);
-      $stmt->bindParam(6, $parentID);
+      $stmt->bindParam(6, $unitID);
       $stmt->execute();
+      }
+      else
+        echo "empty field of section number or unit is ---- or number is string";
     }
      ?>
     <form method="post" enctype="multipart/form-data">
-      <label for="sectionID"> Section:</label>
-      <input type="textbox" name="sectionName"/>
-      <label for="uploadedFile"> Choose file:</label>
-      <input type="file" name="requiredFile"/>
-      <label for="Unit"> Section:</label>
-      <select name="courses" placeholder="parentID">
+       <label for="Unit"> Unit:</label>
+      <select name="UnitID" placeholder="parentID">
+              <option>----</option>
               <option>AHCP</option>
               <option>AMER</option>
               <option>ARGY</option>
@@ -97,12 +99,25 @@ session_start();
               <option>UCIL</option>
               <option>Other</option>
       </select>
+      <label for="sectionID"> Number:</label>
+      <input type="textbox" name="sectionNumber"/>
+      <label for="uploadedFile"> Choose file:</label>
+      <input type="file" name="requiredFile" accept=".pdf,.png,.jpg"/>
       <button name="btn"> Upload </button>
     </form>
 
     <?php
-    $stat = $conn->prepare("SELECT * FROM `Notes`");
-    $stat->execute();
+    function validateUpload($Unit, $Number)
+    {
+      if ($Unit == "----")
+        return false;
+      else if ($Number == "")
+        return false;
+      else if(is_string($Number))
+        return false;
+      else
+        return true;
+    }
      ?>
 
 </body>

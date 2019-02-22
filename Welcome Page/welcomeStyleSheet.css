@@ -38,12 +38,16 @@ form {
   display: block;
   margin-left: auto;
   margin-right: auto;
-
 }
 
-
 .glyphicon.glyphicon-certificate, .glyphicon.glyphicon-wrench {
-    font-size: 110.5px;
+    font-size: 95px;
+}
+
+@media (max-width: 5px) {
+    .glyphicon.glyphicon-certificate, .glyphicon.glyphicon-wrench {
+    font-size: 20px;
+  }
 }
 
 .container-fluid {
@@ -186,7 +190,6 @@ footer .glyphicon {
 @media screen and (max-width: 768px) {
   .col-sm-4 {
     text-align: center;
-    margin: 25px 0;
   }
   .btn-lg {
     width: 100%;

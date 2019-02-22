@@ -8,8 +8,7 @@ session_start();
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-      <link rel="stylesheet" href="/universalStyleSheet.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
       <style>
@@ -28,29 +27,33 @@ session_start();
           .submit-font {
               color:#ffffff;
           }
+          .submit-font:hover {
+              color:#ecaa33;
+          }
           .multi-form-wrapper{
-	          margin-bottom: 20px;
+	            margin-bottom: 20px;
           }
           .form-element{
               display: inline;
-        	  width:100%;
+        	    width:100%;
           }
           .navbar {
               background-color: #660099;
           }
- 	      .formcenter {
-          min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-   	      min-height: 100vh; /* These two lines are counted as one :-)       */
-        width: auto;
-  	    display: flex;
-  	    align-items: center;
-	      }
+ 	        .formcenter {
+              min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+   	          min-height: 100vh; /* These two lines are counted as one :-)       */
+              width: auto;
+  	          display: flex;
+  	          align-items: center;
+	        }
       </style>
     </head>
 
 <body>
       <nav class="navbar">
         <div class="container">
+          <a class="navbar-brand" href="../index.html"><img src="../Welcome Page/logo_white.png"  height="23.5"> </a>
         </div>
       </nav>
 <?php
@@ -62,7 +65,7 @@ session_start();
             <div class="col-sm">
           <div class="form-content">
                <div class="form-top-left">
-                <h2>Login</h2>
+                <h2>Sign in</h2>
                 </div>
 
             <div class="form-body">
@@ -80,6 +83,7 @@ session_start();
 
               <br>
 	      <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign In">
+        <p style="text-align: center">Not a member? <a href="./signUp.php" style="color:#660098;">Sign up here</a></p>
 
               </form>
             </div>
@@ -99,9 +103,9 @@ session_start();
 		 header('Location: ../User Home Page/UserHomePage.php');
 	 } else {
 ?>
-		<div class="fixed-top">
+		<div class="fixed-top" style="padding-top: 53px">
 	<div class="alert alert-danger alert-dismissible fade show" role="alert">
-  <strong>Error:</strong> Check that you entered the correct username and password. Not a member? <a href="signUp.php" class="alert-link"> Sign up Here!</a>
+  <strong>Error:</strong> Check that you entered the correct username and password.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>

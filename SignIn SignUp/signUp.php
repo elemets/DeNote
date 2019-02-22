@@ -3,9 +3,7 @@
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
-      <link rel="stylesheet" href="/universalStyleSheet.css">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-      <link rel="stylesheet" href="/universalStyleSheet.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
       <style>
@@ -24,15 +22,18 @@
           .submit-font {
               color:#ffffff;
           }
+          .submit-font:hover {
+              color:#ecaa33;
+          }
           .multi-form-wrapper{
-	          margin-bottom: 20px;
+	            margin-bottom: 20px;
           }
           .form-element{
               display: inline;
-        	  width:100%;
+        	    width:100%;
           }
           .form-top-right{
-	          width : 25%;
+	            width : 25%;
               font-size: 66px;
           }
           .form-top-left{
@@ -41,13 +42,13 @@
           .navbar {
               background-color: #660099;
           }
- 	  .formcenter {
- 	      min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
- 	      min-height: 100vh; /* These two lines are counted as one :-)       */
+ 	        .formcenter {
+ 	            min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+ 	            min-height: 100vh; /* These two lines are counted as one :-)       */
               width: auto;
-  	      display: flex;
-  	      align-items: center;
-	  }
+  	          display: flex;
+  	          align-items: center;
+	        }
       </style>
     </head>
 
@@ -55,6 +56,7 @@
 
       <nav class="navbar">
         <div class="container">
+        <a class="navbar-brand" href="../index.html"><img src="../Welcome Page/logo_white.png"  height="23.5"> </a>
         </div>
       </nav>
 <?php
@@ -99,12 +101,14 @@
                 </div>
 
                 <br>
-                <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="register">
+                <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign Up">
+                <p style="text-align: center">Already a member? <a href="./signIn.php" style="color:#660098;">Sign in here</a></p>
     			</form>
             </div>
           </div>
     	  </div>
   </div>
+
 
 
 <?php
@@ -120,10 +124,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
  header('Location: ../User Home Page/UserHomePage.php');
 	 } else {
 ?>
-		<div class="fixed-top">
+		<div class="fixed-top" style="padding-top: 53px">
 	<div class="alert alert-danger alert-dismissible fade show" role="alert">
   <strong>Error:</strong> Please fill in all the fields correctly.
-                          Already a member? <a href="signIn.php" class="alert-link"> Sign In Here!</a>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
