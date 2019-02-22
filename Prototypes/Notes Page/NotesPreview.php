@@ -10,7 +10,7 @@ require_once("../../Header - Footer/header.html");
 
 <!-- Insert PDF -->
 <div id="PDF_Box" style="text-align:center">
-  <embed src="test.pdf" width="75%" height="600px" type="application/pdf">
+  <embed src="test.pdf" width="75%" height="100vh" type="application/pdf">
 </div>
 
 <!-- begin wwww.htmlcommentbox.com -->
