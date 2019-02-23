@@ -36,8 +36,8 @@ session_start();
       $stmt->bindParam(6, $unitID);
       $stmt->execute();
       //}
-      else
-        echo "empty field of section number or unit is ---- or number is string";
+      //else
+        //echo "empty field of section number or unit is ---- or number is string";
     }
      ?>
     <form method="post" enctype="multipart/form-data">
