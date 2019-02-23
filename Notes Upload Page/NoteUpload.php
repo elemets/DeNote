@@ -24,8 +24,8 @@ session_start();
       $type = $_FILES['requiredFile']['type'];
       $unitID = $_POST["UnitID"];
       $sectionNumber = $_POST["sectionNumber"];
-      if(validateUpload($unitID, $sectionNumber))
-      {
+      //if(validateUpload($unitID, $sectionNumber))
+      //{
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
       $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`) VALUES (?, ?, ?,?, ?,?)");
       $stmt->bindParam(1, $name);
@@ -35,7 +35,7 @@ session_start();
       $stmt->bindParam(5, $userID);
       $stmt->bindParam(6, $unitID);
       $stmt->execute();
-      }
+      //}
       else
         echo "empty field of section number or unit is ---- or number is string";
     }
