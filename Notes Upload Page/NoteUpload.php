@@ -18,7 +18,8 @@ session_start();
 
      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    if(isset($_POST['btn'])){
+    if(isset($_POST['btn']))
+    {
       $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
@@ -110,11 +111,11 @@ session_start();
     function validateUpload($Unit, $Number)
     {
       if ($Unit == "----")
-        return true;
+        return false;
       else if ($Number == "")
         return false;
-      else if(is_string($Number))
-        return false;
+     // else if(is_string($Number))
+       // return false;
       else
         return true;
     }
