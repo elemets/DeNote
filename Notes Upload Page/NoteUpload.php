@@ -115,7 +115,7 @@ session_start();
       else if ($Number == "")
         return false;
       else if(is_string($Number))
-        return false;
+        return true;
       else
         return true;
     }
