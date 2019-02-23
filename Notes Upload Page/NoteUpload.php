@@ -110,7 +110,7 @@ session_start();
     function validateUpload($Unit, $Number)
     {
       if ($Unit == "----")
-        return false;
+        return true;
       //else if ($Number == "")
         //return false;
       else if(is_string($Number))
