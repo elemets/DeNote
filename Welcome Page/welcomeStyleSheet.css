@@ -51,13 +51,13 @@ h4 {
 }
 
 .About-Icon{
-  width: 40%;
-  height: 40%;
+  width: 60%;
+  height: 60%;
 }
 
 .Feature-Icon{
-  width: 35%;
-  height: 35%;
+  width: 30%;
+  height: 30%;
 }
 
 .Team-Icon{
@@ -109,11 +109,22 @@ footer .glyphicon {
     -webkit-transform: translateY(0%);
   }
 }
+
+@media screen and (min-width: 768px) {
+  .Team-Center-Left{
+    margin-left: 12.5%;
+  }
+  .Team-Center-Right{
+    margin-right: 12.5%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .col-sm-4, col-sm-8 {
     text-align: center;
     margin: 25px 0;
   }
+}
 
 @media screen and (max-width: 768px) {
   .col-sm-3 {
