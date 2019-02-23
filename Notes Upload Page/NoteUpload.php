@@ -6,7 +6,7 @@ session_start();
 <head>
 <title>Page Title</title>
 <?php
-//require_once("../Header - Footer/header.html");
+require_once("../Header - Footer/header.html");
 ?>
 </head>
 <body>
@@ -122,6 +122,7 @@ session_start();
      ?>
 
 </body>
-<footer>
-</footer>
+<?php
+require_once("../Header - Footer/footer.html");
+?>
 </html>
