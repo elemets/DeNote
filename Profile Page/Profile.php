@@ -4,7 +4,6 @@
 <title>Profile Page</title>
 <?php
 require_once("../Header - Footer/header.html");
-require_once('../Signin%Signup/config.inc.php');
 ?>
 <!-- Bootstrap CSS -->
 
@@ -21,7 +20,11 @@ require_once('../Signin%Signup/config.inc.php');
 
 </head>
 <body> <!-- Nav Bar -->
-  <?php include_once ("../Signin%SignUp/database.php")
+
+  <?php
+  require_once('../Signin%Signup/config.inc.php');
+
+  include_once ("../Signin%SignUp/database.php");
 
   $sql = "SELECT * FROM users;";
   $results = mysqli_query($conn, $sql);
