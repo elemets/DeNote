@@ -20,6 +20,18 @@ require_once("../Header - Footer/header.html");
 
 </head>
 <body> <!-- Nav Bar -->
+  <?php require_once("../Signin SignUp/database.php")
+
+  $sql = "SELECT * FROM users;";
+  $results = mysqli_query($conn, $sql);
+  $resultCheck = mysqli_num_rows($result);
+  if($resultCheck > 0)
+  {
+    echo $row['Username'];
+  }
+
+  ?>
+
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
