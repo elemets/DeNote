@@ -20,7 +20,7 @@ require_once("../Header - Footer/header.html");
 
 </head>
 <body> <!-- Nav Bar -->
-  <?php include_once ("../Signin SignUp/database.php")
+  <?php include_once ("../Signin%SignUp/database.php")
 
   $sql = "SELECT * FROM users;";
   $results = mysqli_query($conn, $sql);
