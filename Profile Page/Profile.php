@@ -4,6 +4,7 @@
 <title>Profile Page</title>
 <?php
 require_once("../Header - Footer/header.html");
+require_once('../Signin%Signup/config.inc.php');
 ?>
 <!-- Bootstrap CSS -->
 
