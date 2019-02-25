@@ -41,9 +41,22 @@ require_once("../Header - Footer/header.html");
         echo "empty field of section number or unit is ---- or number is string";
     }
      ?>
-    <form method="post" enctype="multipart/form-data">
-       <label for="Unit"> Unit:</label>
-      <select name="UnitID" placeholder="parentID">
+     <div class="container formcenter">
+    <div class="col-sm">
+  <div class="form-content">
+       <div class="form-top-left">
+        <h2>Uplopad</h2>
+        </div>
+<form>
+        <div class="form-group">
+              <label for="title"> Username</label>
+              <input type="textbox" class="form-control form-element" name="title" placeholder="Title">
+            </div>
+
+
+            <div class="form-group">
+              <label for="unit"> Unit</label>
+            <select class="form-control form-element" name="UnitID" placeholder="Unit">
               <option>----</option>
               <option>AHCP</option>
               <option>AMER</option>
@@ -99,12 +112,21 @@ require_once("../Header - Footer/header.html");
               <option>SPLA</option>
               <option>UCIL</option>
               <option>Other</option>
-      </select>
-      <label for="sectionID"> Number:</label>
-      <input type="textbox" name="sectionNumber"/>
-      <label for="uploadedFile"> Choose file:</label>
-      <input type="file" name="requiredFile" accept=".pdf,.png,.jpg"/>
-      <button name="btn"> Upload </button>
+            </select>
+            </div>
+
+            <div class="form-group">
+                  <label for="sectionID"> Section ID</label>
+                  <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID">
+                </div>
+
+       <div class="form-group">
+      <label for="uploadedFile"> Choose File</label>
+      <input type="file" name="requiredFile" accept= ".pdf,.png,.jpg"/>
+      </div>
+
+      <br>
+      <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
     </form>
 
     <?php
