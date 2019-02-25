@@ -129,7 +129,7 @@ require_once("../Header - Footer/header.html");
 
                         <div class="form-group">
                             <label for="requiredFile"> Choose File</label>
-                            <input type="file" name="requiredFile" accept=".pdf,.png,.jpg" />
+                            <input type="file" name="requiredFile"/>
                         </div>
 
                         <br>
