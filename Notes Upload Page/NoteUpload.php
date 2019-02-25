@@ -134,6 +134,11 @@ require_once("../Header - Footer/header.html");
                             <input type="file" name="requiredFile" accept=".pdf,.png,.jpg" />
                         </div>
 
+                        <div>
+                            <label for="file"> Choose File</label>
+                            <input type="file" name="file" />
+                        </div>
+
                         <br>
                         <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
                     </form>
