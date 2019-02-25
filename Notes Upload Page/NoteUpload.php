@@ -129,10 +129,15 @@ require_once("../Header - Footer/header.html");
                             <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID">
                         </div>
 
-                        <div class="form-group">
-                            <label for="requiredFile"> Choose File</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="requiredFile">Upload</span>
+                          </div>
+                          <div class="custom-file">
                             <input type="file" name="requiredFile" accept=".pdf,.png,.jpg">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                         </div>
+                      </div>
 
                         <br>
                         <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
