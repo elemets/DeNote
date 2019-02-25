@@ -48,7 +48,6 @@ require_once("../Header - Footer/header.html");
       else
         echo "empty field of section number or unit is ---- or number is string";
     }
-    echo isset($_POST['btn']);
 
      ?>
         <div class="container formcenter">
@@ -130,7 +129,7 @@ require_once("../Header - Footer/header.html");
                             <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID">
                         </div>
 
-                        <div class="form-group">
+                        <div>
                             <label for="requiredFile"> Choose File</label>
                             <input type="file" name="requiredFile" accept=".pdf,.png,.jpg" />
                         </div>
