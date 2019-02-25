@@ -22,12 +22,16 @@ require_once("../Header - Footer/header.html");
 
     if(isset($_POST['btn']))
     {
+
       $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
       $titleNote = $_POST["title"];
       $unitID = $_POST["UnitID"];
       $sectionNumber = $_POST["sectionNumber"];
+
+      echo $titleNote;
+      echo $sectionNumber;
       if(validateUpload($unitID, $sectionNumber))
       {
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
@@ -44,9 +48,8 @@ require_once("../Header - Footer/header.html");
       else
         echo "empty field of section number or unit is ---- or number is string";
     }
-    else {
-      echo "ebi si maikata";
-    }
+    echo isset($_POST['btn']);
+
      ?>
         <div class="container formcenter">
             <div class="col-sm">
@@ -129,7 +132,7 @@ require_once("../Header - Footer/header.html");
 
                         <div class="form-group">
                             <label for="requiredFile"> Choose File</label>
-                            <input type="file" name="requiredFile"/>
+                            <input type="file" name="requiredFile" accept=".pdf,.png,.jpg" />
                         </div>
 
                         <br>
