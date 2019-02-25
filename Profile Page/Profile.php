@@ -22,9 +22,9 @@ require_once("../Header - Footer/header.html");
 <body> <!-- Nav Bar -->
 
   <?php
-  require_once($_SERVER['DOCUMENT_ROOT'].'/Signin%Signup/config.inc.php');
+  require_once('../Signin%Signup/config.inc.php');
 
-  include_once ($_SERVER['DOCUMENT_ROOT'].'/Signin%SignUp/database.php');
+  include_once ('../Signin%SignUp/database.php');
 
   $sql = "SELECT * FROM users;";
   $results = mysqli_query($conn, $sql);
