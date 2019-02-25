@@ -131,13 +131,16 @@ require_once("../Header - Footer/header.html");
 
                         <div class="form-group">
                             <label for="requiredFile"> Choose File</label>
-                            <input type="file" name="requiredFile" accept=".pdf,.png,.jpg" />
+                            <input type="file" name="requiredFile" accept=".pdf,.png,.jpg">
                         </div>
 
                         <br>
-                        <button type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
+                        <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
                     </form>
 
+                    <form>
+                      <input type="file">
+                    </form>
                     <?php
     function validateUpload($Unit, $Number)
     {
