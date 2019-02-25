@@ -129,7 +129,7 @@ require_once("../Header - Footer/header.html");
                             <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID">
                         </div>
 
-                            <input type="file" name="requiredFile" accept=".pdf,.png,.jpg">
+                            <input type="file" name="requiredFile" accept=".pdf,.png,.jpg" id="requiredFile">
                         <br>
                         <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
                     </form>
