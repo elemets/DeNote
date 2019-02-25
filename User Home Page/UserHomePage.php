@@ -19,7 +19,7 @@ $_SESSION["username"] = $_SESSION["username"]
 </br>
 </br>
 </br>
-<?php echo $_SESSION["username"]; ?>
+<?php echo $_SESSION["username"]."</br>"; ?>
 <?php
 	require_once('config.inc.php');
     	// Connect to the database
@@ -30,7 +30,7 @@ $_SESSION["username"] = $_SESSION["username"]
    	$stat->bindParam(1, $UnitYear);
    	$stat->execute();
 	while($row = $stat->fetch()){
-      echo $row['UnitID']."</br>";
+      echo "<li><a target='_blank' href='ShowNotes.php?id=".$row['UnitID']."'>".$row['UnitID']."</a></li>";
     }
 	
 
