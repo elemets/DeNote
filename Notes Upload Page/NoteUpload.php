@@ -3,12 +3,14 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Page Title</title>
-<?php
+    <title>Page Title</title>
+    <?php
 require_once("../Header - Footer/header.html");
 ?>
 </head>
+
 <body>
     <?php
     require_once('config.inc.php');
@@ -41,22 +43,22 @@ require_once("../Header - Footer/header.html");
         echo "empty field of section number or unit is ---- or number is string";
     }
      ?>
-     <div class="container formcenter">
-    <div class="col-sm">
-  <div class="form-content">
-       <div class="form-top-left">
-        <h2>Uplopad</h2>
-        </div>
-<form>
-        <div class="form-group">
-              <label for="title"> Username</label>
-              <input type="textbox" class="form-control form-element" name="title" placeholder="Title">
-            </div>
+        <div class="container formcenter">
+            <div class="col-sm">
+                <div class="form-content">
+                    <div class="form-top-left">
+                        <h2>Uplopad</h2>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="title"> Username</label>
+                            <input type="textbox" class="form-control form-element" name="title" placeholder="Title">
+                        </div>
 
 
-            <div class="form-group">
-              <label for="unit"> Unit</label>
-            <select class="form-control form-element" name="UnitID" placeholder="Unit">
+                        <div class="form-group">
+                            <label for="unit"> Unit</label>
+                            <select class="form-control form-element" name="UnitID" placeholder="Unit">
               <option>----</option>
               <option>AHCP</option>
               <option>AMER</option>
@@ -113,23 +115,23 @@ require_once("../Header - Footer/header.html");
               <option>UCIL</option>
               <option>Other</option>
             </select>
-            </div>
+                        </div>
 
-            <div class="form-group">
-                  <label for="sectionID"> Section ID</label>
-                  <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID">
-                </div>
+                        <div class="form-group">
+                            <label for="sectionID"> Section ID</label>
+                            <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID">
+                        </div>
 
-       <div class="form-group">
-      <label for="uploadedFile"> Choose File</label>
-      <input type="file" name="requiredFile" accept= ".pdf,.png,.jpg"/>
-      </div>
+                        <div class="form-group">
+                            <label for="uploadedFile"> Choose File</label>
+                            <input type="file" name="requiredFile" accept=".pdf,.png,.jpg" />
+                        </div>
 
-      <br>
-      <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
-    </form>
+                        <br>
+                        <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
+                    </form>
 
-    <?php
+                    <?php
     function validateUpload($Unit, $Number)
     {
       if ($Unit == "----")
@@ -148,48 +150,49 @@ require_once("../Header - Footer/header.html");
 require_once("../Header - Footer/footer.html");
 ?>
 
-<style>
-    body {
-        background-color: white;
-    }
-    .top-buffer {
-        margin-top:20px;
-    }
-    .bottom-buffer {
-        margin-bottom:20px;
-    }
-    .submit-btn {
-        background-color: #660099;
-    }
-    .submit-font {
-        color:#ffffff;
-    }
-    .submit-font:hover {
-        color:#ecaa33;
-    }
-    .multi-form-wrapper{
-        margin-bottom: 20px;
-    }
-    .form-element{
-        display: inline;
-        width:100%;
-    }
-    .form-top-right{
-        width : 25%;
-        font-size: 66px;
-    }
-    .form-top-left{
-        width : 75%;
-    }
-    .navbar {
-        background-color: #660099;
-    }
-    .formcenter {
-        min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-        min-height: 100vh; /* These two lines are counted as one :-)       */
-        width: auto;
-        display: flex;
-        align-items: center;
-    }
-</style>
+    <style>
+        body {
+            background-color: white;
+        }
+        .top-buffer {
+            margin-top:20px;
+        }
+        .bottom-buffer {
+            margin-bottom:20px;
+        }
+        .submit-btn {
+            background-color: #660099;
+        }
+        .submit-font {
+            color:#ffffff;
+        }
+        .submit-font:hover {
+            color:#ecaa33;
+        }
+        .multi-form-wrapper{
+            margin-bottom: 20px;
+        }
+        .form-element{
+            display: inline;
+            width:100%;
+        }
+        .form-top-right{
+            width : 25%;
+            font-size: 66px;
+        }
+        .form-top-left{
+            width : 75%;
+        }
+        .navbar {
+            background-color: #660099;
+        }
+        .formcenter {
+            min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+            min-height: 100vh; /* These two lines are counted as one :-)       */
+            width: auto;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
 </html>
