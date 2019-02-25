@@ -22,19 +22,20 @@ require_once("../Header - Footer/header.html");
 <body> <!-- Nav Bar -->
 
   <?php
-  require_once('../Signin%Signup/config.inc.php');
+  session_start();
+  require_once('config.inc.php');
+  $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
+  $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
+  echo $_SESSION['username'];
+  $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
+  $stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
+  $stat->bindParam(1, $userID);
+  $stat->execute();
 
-  include_once ('../Signin%SignUp/database.php');
-
-  $sql = "SELECT * FROM users;";
-  $results = mysqli_query($conn, $sql);
-  $resultCheck = mysqli_num_rows($result);
-  if($resultCheck > 0)
-  {
-    echo $row['Username'];
+  while($row = $stat->fetch()){
+    echo "<li><a target='_blank' href='view.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
   }
-
-  ?>
+   ?>
 
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
