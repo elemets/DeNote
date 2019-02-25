@@ -25,18 +25,20 @@ require_once("../Header - Footer/header.html");
       $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
       $name = $_FILES['requiredFile']['name'];
       $type = $_FILES['requiredFile']['type'];
+      $titleNote = $_POST["title"];
       $unitID = $_POST["UnitID"];
       $sectionNumber = $_POST["sectionNumber"];
       if(validateUpload($unitID, $sectionNumber))
       {
       $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
-      $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`) VALUES (?, ?, ?,?, ?,?)");
+      $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`) VALUES (?,?,?,?,?,?,?)");
       $stmt->bindParam(1, $name);
       $stmt->bindParam(2, $type);
       $stmt->bindParam(3, $data);
       $stmt->bindParam(4, $sectionNumber);
       $stmt->bindParam(5, $userID);
       $stmt->bindParam(6, $unitID);
+      $stmt->bindParam(7, $titleNote);
       $stmt->execute();
       }
       else
@@ -51,7 +53,7 @@ require_once("../Header - Footer/header.html");
                     </div>
                     <form>
                         <div class="form-group">
-                            <label for="title"> Username</label>
+                            <label for="title"> Note Name</label>
                             <input type="textbox" class="form-control form-element" name="title" placeholder="Title">
                         </div>
 
