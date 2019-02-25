@@ -147,4 +147,49 @@ require_once("../Header - Footer/header.html");
 <?php
 require_once("../Header - Footer/footer.html");
 ?>
+
+<style>
+    body {
+        background-color: white;
+    }
+    .top-buffer {
+        margin-top:20px;
+    }
+    .bottom-buffer {
+        margin-bottom:20px;
+    }
+    .submit-btn {
+        background-color: #660099;
+    }
+    .submit-font {
+        color:#ffffff;
+    }
+    .submit-font:hover {
+        color:#ecaa33;
+    }
+    .multi-form-wrapper{
+        margin-bottom: 20px;
+    }
+    .form-element{
+        display: inline;
+        width:100%;
+    }
+    .form-top-right{
+        width : 25%;
+        font-size: 66px;
+    }
+    .form-top-left{
+        width : 75%;
+    }
+    .navbar {
+        background-color: #660099;
+    }
+    .formcenter {
+        min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+        min-height: 100vh; /* These two lines are counted as one :-)       */
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+</style>
 </html>
