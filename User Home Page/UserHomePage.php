@@ -30,7 +30,7 @@ $_SESSION["username"] = $_SESSION["username"]
    	$stat->bindParam(1, $UnitYear);
    	$stat->execute();
 	while($row = $stat->fetch()){
-      echo $row['NoteID'];
+      echo $row['UnitID']."</br>";
     }
 	
 
