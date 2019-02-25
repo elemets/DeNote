@@ -129,14 +129,9 @@ require_once("../Header - Footer/header.html");
                             <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID">
                         </div>
 
-                        <div>
+                        <div class="form-group">
                             <label for="requiredFile"> Choose File</label>
-                            <input type="file" name="requiredFile" accept=".pdf,.png,.jpg" />
-                        </div>
-
-                        <div>
-                            <label for="file"> Choose File</label>
-                            <input type="file" name="file" />
+                            <input type="file" name="requiredFile" accept=".pdf,.png,.jpg">
                         </div>
 
                         <br>
