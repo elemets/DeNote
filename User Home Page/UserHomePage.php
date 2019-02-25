@@ -25,7 +25,7 @@ $_SESSION["username"] = $_SESSION["username"]
     	// Connect to the database
      	$conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
      	$conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
-	$UnitYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query	
+	$UnitYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->YearOfStudent;//userID query	
 	$stat = $conn->prepare("SELECT * FROM Notes WHERE UniYear = ?");
    	$stat->bindParam(1, $UnitYear);
    	$stat->execute();
