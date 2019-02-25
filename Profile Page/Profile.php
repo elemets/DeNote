@@ -21,21 +21,7 @@ require_once("../Header - Footer/header.html");
 </head>
 <body> <!-- Nav Bar -->
 
-  <?php
-  session_start();
-  require_once('config.inc.php');
-  $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
-  $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
-  echo $_SESSION['username'];
-  $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
-  $stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
-  $stat->bindParam(1, $userID);
-  $stat->execute();
 
-  while($row = $stat->fetch()){
-    echo "<li><a target='_blank' href='view.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
-  }
-   ?>
 
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,6 +49,21 @@ require_once("../Header - Footer/header.html");
 <!-- Title and profile icon -->
 <div id="My_Profile" class="text-center">
   <h1 style="font-size:60px;padding-top: 55px;">My Profile</h1>
+  <?php
+  session_start();
+  require_once('config.inc.php');
+  $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
+  $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
+  echo $_SESSION['username'];
+  $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
+  $stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
+  $stat->bindParam(1, $userID);
+  $stat->execute();
+
+  while($row = $stat->fetch()){
+    echo "<li><a target='_blank' href='view.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
+  }
+   ?>
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 </div>
 <!-- My notes Section -->
