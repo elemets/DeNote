@@ -54,7 +54,7 @@ require_once("../Header - Footer/header.html");
                     <div class="form-top-left">
                         <h2>Uplopad</h2>
                     </div>
-                    <form>
+                    <form method="post" action="<?php $_SERVER["PHP_SELF"]; ?>">
                         <div class="form-group">
                             <label for="title"> Note Name</label>
                             <input type="textbox" class="form-control form-element" name="title" placeholder="Title">
