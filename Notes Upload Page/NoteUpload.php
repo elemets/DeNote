@@ -56,7 +56,7 @@ require_once("../Header - Footer/header.html");
                     <div class="form-top-left">
                         <h2>Uplopad</h2>
                     </div>
-                    <form method="post" action="<?php $_POST["PHP_SELF"]; ?>">
+                    <form method="post" action="<?php $_SERVER["PHP_SELF"]; ?>">
                         <div class="form-group">
                             <label for="title"> Note Name</label>
                             <input type="textbox" class="form-control form-element" name="title" placeholder="Title">
@@ -129,9 +129,13 @@ require_once("../Header - Footer/header.html");
                             <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID">
                         </div>
 
-                            <input type="file" name="requiredFile" accept=".pdf,.png,.jpg" id="requiredFile">
+                        <div class="form-group">
+                            <label for="requiredFile"> Choose File</label>
+                            <input type="file" name="requiredFile" accept=".pdf,.png,.jpg" />
+                        </div>
+
                         <br>
-                        <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
+                        <button type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
                     </form>
 
                     <?php
