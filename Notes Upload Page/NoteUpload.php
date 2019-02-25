@@ -130,7 +130,7 @@ require_once("../Header - Footer/header.html");
                         </div>
 
                         <br>
-                        <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
+                        <input type="button" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
                     </form>
 
                     <?php
