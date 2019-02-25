@@ -67,7 +67,7 @@ require_once("../Header - Footer/header.html");
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 </div>
 <!-- My notes Section -->
-<div id="My_notes" class="Container-fluid"></div>
+<div id="My_notes" class="grid-container"></div>
       <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">My notes</h3>
         <div class="jumbotron Container-fluid">
           <img src="Icons/Notes_Icons/PurpleNoHover.png" class="hoverable">
