@@ -44,6 +44,9 @@ require_once("../Header - Footer/header.html");
       else
         echo "empty field of section number or unit is ---- or number is string";
     }
+    else {
+      echo "ebi si maikata";
+    }
      ?>
         <div class="container formcenter">
             <div class="col-sm">
@@ -130,7 +133,7 @@ require_once("../Header - Footer/header.html");
                         </div>
 
                         <br>
-                        <input type="button" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
+                        <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
                     </form>
 
                     <?php
