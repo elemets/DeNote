@@ -30,7 +30,7 @@ $_SESSION["username"] = $_SESSION["username"]
    	$stat->bindParam(1, $UnitYear);
    	$stat->execute();
 	while($row = $stat->fetch()){
-      echo "<li><a target='_blank' href='ShowNotes.php?id=".$row['UnitID']."'>".$row['UnitID']."</a></li>";
+      echo "<li><a target='_blank' href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>".$row['UnitID']."</a></li>";
     }
 	
 
