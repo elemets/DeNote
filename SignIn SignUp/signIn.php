@@ -3,22 +3,55 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Theme Made By www.w3schools.com -->
-    <title>DeNOTE</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../universalStyleSheet.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  </head>
+    <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <style>
+          body {
+              background-color: white;
+          }
+          .top-buffer {
+              margin-top:100px;
+          }
+          .bottom-buffer {
+              margin-bottom:20px;
+          }
+          .submit-btn {
+              background-color: #660099;
+          }
+          .submit-font {
+              color:#ffffff;
+          }
+          .submit-font:hover {
+              color:#ecaa33;
+          }
+          .multi-form-wrapper{
+	            margin-bottom: 20px;
+          }
+          .form-element{
+              display: inline;
+        	    width:100%;
+          }
+          .navbar {
+              background-color: #660099;
+          }
+ 	        .formcenter {
+              min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+   	          min-height: 100vh; /* These two lines are counted as one :-)       */
+              width: auto;
+  	          display: flex;
+  	          align-items: center;
+	        }
+      </style>
+    </head>
 
 <body>
-      <nav class="navbarForm">
+      <nav class="navbar">
         <div class="container">
           <a class="navbar-brand" href="../index.html"><img src="../Welcome Page/logo_white.png"  height="23.5"> </a>
         </div>
