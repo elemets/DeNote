@@ -51,7 +51,7 @@ session_start();
     <title>Upload Page</title>
 
 <?php
-require_once("../Header - Footer/header.html");
+//require_once("../Header - Footer/header.html");
 
 require_once('config.inc.php');
 // Connect to the database
@@ -65,6 +65,7 @@ if(isset($_POST['btn']))
 
   $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
   $unitYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->YearOfStudent;
+  echo "unitYear";
   $name = $_FILES['requiredFile']['name'];
   $type = $_FILES['requiredFile']['type'];
   $titleNote = $_POST["title"];
