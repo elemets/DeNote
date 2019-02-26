@@ -23,7 +23,7 @@ require_once("../Header - Footer/header.html");
 
 
 
-  <nav class="navbar navbar-default navbar-fixed-top">
+<!--  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -45,7 +45,7 @@ require_once("../Header - Footer/header.html");
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
 <!-- Title and profile icon -->
 <div id="My_Profile" class="text-center">
   <h1 style="font-size:60px;padding-top: 55px;">My Profile</h1>
