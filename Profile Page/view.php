@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 require_once('config.inc.php');
@@ -10,12 +9,6 @@ $stat->execute();
 
 $row = $stat->fetch();
 header('Content-Type:'.$row['dataType']);
-//echo $row['Data'];
+echo $row['Data'];
  ?>
-
-<div style="width:80%">
-  <?php
-     echo $row['Data'];
-  ?>
-</div>
 
