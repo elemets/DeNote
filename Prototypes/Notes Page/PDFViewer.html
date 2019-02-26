@@ -11,13 +11,15 @@
 </head>
 
 <body>
+<p>testing</p>
 
-<script src="jquery.min.js"></script>
-<script src="pdfobject.min.js"></script>
+<div id="viewpdf">
+<script src="pdfobject.js"></script>
 <script>
-var viewer = $('#viewpdf');
-PDFObject.embed('test.pdf', viewer);
+PDFObject.embed("test.pdf", "#viewpdf");
 </script>
+</div>
+
 </body>
 
 </html>
