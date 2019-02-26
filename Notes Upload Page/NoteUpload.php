@@ -97,11 +97,8 @@ if(isset($_POST['btn']))
                 <div class="form-top-left">
                     <h2>Upload</h2>
                 </div>
-<<<<<<< HEAD
-                <form method="post" role="form" action="<?php echo $_SERVER['PHP_SELF'];?>">
-=======
+   
                 <form method="post" action="<?php $_SERVER[" PHP_SELF "]; ?>" enctype="multipart/form-data">
->>>>>>> parent of 82fcb8d... moved styling from singin to universalstylesheet
                     <div class="form-group">
                         <label for="title"> Note Name</label>
                         <input type="textbox" class="form-control form-element" name="title" placeholder="Title">
