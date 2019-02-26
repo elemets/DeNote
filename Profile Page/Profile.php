@@ -62,9 +62,15 @@ require_once("../Header - Footer/header.html");
         <div class="jumbotron Container-fluid">
           <img src="Icons/Notes_Icons/PurpleNoHover.png" class="hoverable">
           <div class="centered">COMP16212</div>
-          <img src="Icons/Notes_Icons/PurpleNoHover.png" class="hoverable">
-          <div class="">COMP1020</div>
         </div>
+
+  <div class="">
+    <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">My Followers</h3>
+    <div class="jumbotron Container-fluid">
+      <?php  ?>
+
+    </div>
+  </div>
 
 
 </body>
