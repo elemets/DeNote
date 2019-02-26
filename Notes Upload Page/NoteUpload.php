@@ -98,7 +98,7 @@ if(isset($_POST['btn']))
                     <h2>Upload</h2>
                 </div>
    
-                <form method="post" action="<?php $_SERVER[" PHP_SELF "]; ?>" enctype="multipart/form-data">
+                <form method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="title"> Note Name</label>
                         <input type="textbox" class="form-control form-element" name="title" placeholder="Title">
