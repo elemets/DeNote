@@ -64,6 +64,7 @@ if(isset($_POST['btn']))
 {
 
   $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
+  $unitYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->YearOfStudent;
   $name = $_FILES['requiredFile']['name'];
   $type = $_FILES['requiredFile']['type'];
   $titleNote = $_POST["title"];
@@ -73,7 +74,7 @@ if(isset($_POST['btn']))
   if(validateUpload($unitID, $sectionNumber))
   {
   $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
-  $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`) VALUES (?,?,?,?,?,?,?)");
+  $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`, `UnitYear`) VALUES (?,?,?,?,?,?,?,?)");
   $stmt->bindParam(1, $name);
   $stmt->bindParam(2, $type);
   $stmt->bindParam(3, $data);
@@ -81,6 +82,7 @@ if(isset($_POST['btn']))
   $stmt->bindParam(5, $userID);
   $stmt->bindParam(6, $unitID);
   $stmt->bindParam(7, $titleNote);
+  $stmt->bindParam(8, $unitYear);
   $stmt->execute();
   echo $stmt->error;
   }
