@@ -1,5 +1,3 @@
-<p>Test</p>
-<div style="height:80%">
 <?php
 session_start();
 require_once('config.inc.php');
@@ -11,10 +9,7 @@ $stat->execute();
 
 $row = $stat->fetch();
 header('Content-Type:'.$row['dataType']);
-//echo $row['Data'];
-<embed src="$row['Data']">
+echo $row['Data'];
  ?>
-</div>
-
 
 
