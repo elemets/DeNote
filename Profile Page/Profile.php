@@ -65,11 +65,18 @@ require_once("../Header - Footer/header.html");
         </div>
 
   <div class="">
-    <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">My Followers</h3>
+    <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">Following</h3>
     <div class="jumbotron Container-fluid">
-      <?php  ?>
+      <?php
+      Bobi
+
+      ?>
 
     </div>
+  </div>
+  <div class="">
+    <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">My Followers</h3>
+
   </div>
 
 
