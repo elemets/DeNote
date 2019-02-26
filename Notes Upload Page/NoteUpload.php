@@ -120,14 +120,8 @@ if(isset($_POST['btn']))
                         <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID">
                     </div>
 
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="requiredFile">Upload</span>
-                        </div>
-                        <div class="custom-file">
+                    <div class="form-group">
                             <input type="file" name="requiredFile" accept=".pdf,.png,.jpg">
-                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                        </div>
                     </div>
 
                     <br>
