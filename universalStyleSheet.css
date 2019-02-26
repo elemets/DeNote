@@ -3,6 +3,7 @@ body {
   font: 400 15px Lato, sans-serif;
   line-height: 1.8;
   color: #818181;
+  background-color: white;
 }
 h2 {
   font-size: 24px;
@@ -107,4 +108,43 @@ footer .glyphicon {
   .logo {
     font-size: 150px;
   }
+}
+
+
+
+
+
+
+
+
+
+
+.top-buffer {
+    margin-top:100px;
+}
+.bottom-buffer {
+    margin-bottom:20px;
+}
+.submit-btn {
+    background-color: #660099;
+}
+.submit-font {
+    color:#ffffff;
+}
+.submit-font:hover {
+    color:#ecaa33;
+}
+.form-element{
+    display: inline;
+    width:100%;
+}
+.navbarForm {
+    background-color: #660099;
+}
+.formcenter {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    width: auto;
+    display: flex;
+    align-items: center;
 }
