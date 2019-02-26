@@ -54,7 +54,7 @@ require_once("../Header - Footer/header.html");
             <div class="col-sm">
                 <div class="form-content">
                     <div class="form-top-left">
-                        <h2>Uplopad</h2>
+                        <h2>Upload</h2>
                     </div>
                     <form method="post" action="<?php $_SERVER["PHP_SELF"]; ?>">
                         <div class="form-group">
