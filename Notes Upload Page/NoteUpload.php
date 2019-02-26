@@ -70,8 +70,6 @@ if(isset($_POST['btn']))
   $unitID = $_POST["UnitID"];
   $sectionNumber = $_POST["sectionNumber"];
 
-  echo $titleNote;
-  echo $sectionNumber;
   if(validateUpload($unitID, $sectionNumber))
   {
   $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
@@ -84,6 +82,7 @@ if(isset($_POST['btn']))
   $stmt->bindParam(6, $unitID);
   $stmt->bindParam(7, $titleNote);
   $stmt->execute();
+  echo $stmt->error;
   }
   else
     echo "empty field of section number or unit is ---- or number is string";
