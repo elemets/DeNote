@@ -100,7 +100,7 @@ if(isset($_POST['btn']))
 <<<<<<< HEAD
                 <form method="post" role="form" action="<?php echo $_SERVER['PHP_SELF'];?>">
 =======
-                <form method="post" action="<?php $_SERVER[" PHP_SELF "]; ?>">
+                <form method="post" action="<?php $_SERVER[" PHP_SELF "]; ?>" enctype="multipart/form-data">
 >>>>>>> parent of 82fcb8d... moved styling from singin to universalstylesheet
                     <div class="form-group">
                         <label for="title"> Note Name</label>
