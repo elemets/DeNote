@@ -2,15 +2,14 @@
 session_start();
 ?>
 
-
-
 <?php
 include "../Header - Footer/header.php";
 ?>
+
 <title>Upload Page</title>
 <style>
     body {
-          color: #818181 !important;
+        color: #818181 !important;
     }
     .top-buffer {
         margin-top:20px !important;
@@ -90,49 +89,49 @@ if(isset($_POST['btn']))
   }
 ?>
 <div class="container formcenter">
-        <div class="col-sm">
-        <div class="form-content">
-        <div class="form-top-left">
-        <h2>Sign Up</h2>
-      </div>
+            <div class="form-content">
+                <div class="form-top-left">
+                    <h2>Upload</h2>
+                </div>
 
-          <div class="form-body">
-      <form class="form-horizontal" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+   <div class="form-body">
+                <form method="post" enctype="multipart/form-data">
 
-      <div class="form-group">
-                <label for="username"> Username</label>
-              <input type="textbox" class="form-control form-element" name="username" placeholder="Username">
-              </div>
+                    <div class="form-group">
+                        <label for="title"> Note Name</label>
+                        <input type="textbox" class="form-control" name="title" placeholder="Title">
+                    </div>
 
-              <div class="form-group">
-                <label for="email"> University Email</label>
-              <input type="textbox" class="form-control form-element" name="email" placeholder="University Email">
-              </div>
+                    <div class="form-group">
+                        <label for="unit"> Unit</label>
+                        <select class="form-control" name="UnitID" placeholder="Unit">
+              <option>----</option>
+              <option>AHCP</option>
+              <option>AMER</option>
+              <option>ARGY</option>
+              <option>BIOL</option>
 
-              <div class="form-group">
-                <label for="year"> Year of Study</label>
-              <select class="form-control form-element" name="year" placeholder="Year of Study">
-                <option>Year 0</option>
-                <option>Year 1</option>
-                <option>Year 2</option>
-                <option>Year 3</option>
-                <option>Other</option>
-              </select>
-              </div>
+            </select>
+                    </div>
 
-              <div class="form-group">
-                <label for="password"> Password</label>
-          <input  type="password" class="form-control form-element" name="password" placeholder="Password">
-              </div>
+                    <div class="form-group">
+                        <label for="sectionID"> Section ID</label>
+                        <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID">
+                    </div>
 
-              <br>
-              <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign Up">
-              <p style="text-align: center">Already a member? <a href="./signIn.php" style="color:#660098;">Sign in here</a></p>
-        </form>
+                    <div class="form-group">
+                            <input type="file" name="requiredFile" accept=".pdf,.png,.jpg">
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                    <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
+                  </div>
+                </form>
+            </div>
           </div>
-        </div>
       </div>
-</div>
+
 <?php
     function validateUpload($Unit, $Number)
     {
