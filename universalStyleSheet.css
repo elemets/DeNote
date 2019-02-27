@@ -1,31 +1,4 @@
 
-body {
-  font: 400 15px Lato, sans-serif;
-  line-height: 1.8;
-  color: #818181;
-  background-color: white;
-}
-h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #303030;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-h4 {
-  font-size: 19px;
-  line-height: 1.375em;
-  color: #303030;
-  font-weight: 400;
-  margin-bottom: 30px;
-}
-.form-style {
-  font-size: 12px !important;
-  color: #fff;
-}
-input .btn.submit-btn.submit-font:hover{
-  background-color: yellow !important;
-}
 
 .navbar {
   margin-bottom: 0;
