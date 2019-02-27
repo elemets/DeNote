@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,7 +8,7 @@ session_start();
     <?php
     require_once('config.inc.php');
     $conn = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
-    echo $_SESSION['searchWord'];
+    echo $_GET['searchWord'];
     ?>
   </body>
 </html>
