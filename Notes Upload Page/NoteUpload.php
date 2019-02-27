@@ -45,6 +45,9 @@ session_start();
         min-height: 100vh; /* These two lines are counted as one :-)       */
         align-items: center !important;
     }
+    form label{
+      color: #000000 !important;
+    }
 </style>
 
     <title>Upload Page</title>
