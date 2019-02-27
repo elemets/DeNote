@@ -8,7 +8,7 @@ session_start();
     <title>Upload Page</title>
 
 <?php
-include "../Header - Footer/header.php");
+include "../Header - Footer/header.php";
 ?>
 <style>
     body {
