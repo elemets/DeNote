@@ -2,54 +2,13 @@
 session_start();
 ?>
 
-    
+
 
 <?php
 include "../Header - Footer/header.php";
 ?>
 <title>Upload Page</title>
-<style>
-    body {
-          color: #818181 !important;
-    }
-    .top-buffer {
-        margin-top:20px !important;
-    }
-    .bottom-buffer {
-        margin-bottom:20px !important;
-    }
-    .submit-btn {
-        background-color: #660099 !important;
-    }
-    .submit-font {
-        color:#ffffff !important;
-    }
-    .submit-font:hover {
-        color:#ecaa33 !important;
-    }
-    .multi-form-wrapper{
-        margin-bottom: 20px !important;
-    }
-    .form-element{
-        display: inline !important;
-        width:100% !important;
-    }
-    .form-top-right{
-        width : 25% !important;
-        font-size: 66px !important;
-    }
-    .form-top-left{
-        width : 75% !important;
-    }
-    .navbar {
-        background-color: #660099 !important;
-    }
-    .formcenter {
-        min-height: 100% !important;  /* Fallback for browsers do NOT support vh unit */
-        min-height: 100vh; /* These two lines are counted as one :-)       */
-        align-items: center !important;
-    }
-</style>
+
 <body>
 <div>
 <?php
