@@ -12,7 +12,7 @@ include "../Header - Footer/header.php";
 ?>
 <style>
     body {
-        background-color: white !important;
+          color: #818181;
     }
     .top-buffer {
         margin-top:20px !important;
