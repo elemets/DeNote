@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,6 +8,10 @@
     <title></title>
   </head>
   <body>
-    <h1>SEARCH!</h1>
+    <?php
+    require_once('config.inc.php');
+    $conn = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
+    echo $_SESSION['searchWord'];
+    ?>
   </body>
 </html>
