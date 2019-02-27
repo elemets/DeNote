@@ -1,15 +1,13 @@
 <?php
 session_start();
 ?>
-<!DOCTYPE html>
-<html>
 
-
-    <title>Upload Page</title>
+    
 
 <?php
 include "../Header - Footer/header.php";
 ?>
+<title>Upload Page</title>
 <style>
     body {
           color: #818181 !important;
