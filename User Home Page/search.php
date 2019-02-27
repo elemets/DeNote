@@ -24,7 +24,7 @@ session_start();
       {
         echo "<li><a target='_blank' href='view.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
       }
-      elseif ($searchWord == $conn2->query("SELECT Username FROM Users WHERE UserID = $row['UnitID']")->fetch_object()->Username)
+      if ($searchWord == $conn2->query("SELECT Username FROM Users WHERE UserID = $row['UnitID']")->fetch_object()->Username)
       {
           echo "<li><a target='_blank' href='view.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
       }
