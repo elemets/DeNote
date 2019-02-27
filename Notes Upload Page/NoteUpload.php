@@ -2,18 +2,14 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
-    <!-- Theme Made By www.w3schools.com -->
-    <title>DeNOTE</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<html>
+
+
     <title>Upload Page</title>
 
+<?php
+include "../Header - Footer/header.php";
+?>
 <style>
     body {
           color: #818181 !important;
