@@ -47,12 +47,13 @@ session_start();
         align-items: center;
     }
 </style>
-<head>
+
     <title>Upload Page</title>
 
 <?php
 require_once("../Header - Footer/header.php");
 
+<body>
 require_once('config.inc.php');
 // Connect to the database
  $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
@@ -89,16 +90,16 @@ if(isset($_POST['btn']))
     echo "empty field of section number or unit is ---- or number is string";
   }
 ?>
-</head>
-
-<body>
+<div class="container formcenter">
         <div class="col-sm">
             <div class="form-content">
                 <div class="form-top-left">
                     <h2>Upload</h2>
                 </div>
-   
+
+   <div class="form-body">
                 <form method="post" enctype="multipart/form-data">
+
                     <div class="form-group">
                         <label for="title"> Note Name</label>
                         <input type="textbox" class="form-control form-element" name="title" placeholder="Title">
@@ -132,6 +133,9 @@ if(isset($_POST['btn']))
                 </form>
             </div>
           </div>
+        </div>
+      </div>
+
 <?php
     function validateUpload($Unit, $Number)
     {
