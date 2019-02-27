@@ -52,8 +52,10 @@ session_start();
 
 <?php
 require_once("../Header - Footer/header.php");
-
+?>
 <body>
+
+<?php
 require_once('config.inc.php');
 // Connect to the database
  $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
