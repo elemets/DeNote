@@ -1,9 +1,7 @@
 <?php
 session_start();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-    <link rel="stylesheet" href="../universalStyleSheet.css">
+
 <?php
 include "../Header - Footer/header.php";
 ?>
@@ -11,7 +9,7 @@ include "../Header - Footer/header.php";
 <title>Upload Page</title>
 <style>
     body {
-      color: #818181 !important;
+    color: #818181 !important;
     }
     .top-buffer {
         margin-top:20px !important;
@@ -117,7 +115,7 @@ if(isset($_POST['btn']))
                     </div>
 
                     <div class="form-group">
-                        <label> Section ID</label>
+                        <label for="sectionID"> Section ID</label>
                         <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID">
                     </div>
 
