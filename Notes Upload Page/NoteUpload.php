@@ -3,16 +3,14 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</head>
-<style>
 
+
+    <title>Upload Page</title>
+
+<?php
+include "../Header - Footer/header.php");
+?>
+<style>
     body {
         background-color: white !important;
     }
@@ -49,17 +47,13 @@ session_start();
         background-color: #660099 !important;
     }
     .formcenter {
-        padding-top: 50px !important;
         min-height: 100% !important;  /* Fallback for browsers do NOT support vh unit */
         min-height: 100vh; /* These two lines are counted as one :-)       */
         align-items: center !important;
     }
 </style>
-
-    <title>Upload Page</title>
-
 <body>
-
+<div>
 <?php
 require_once('config.inc.php');
 // Connect to the database
@@ -155,5 +149,10 @@ if(isset($_POST['btn']))
     }
      ?>
 
+</div>
 </body>
+
+<?php
+require_once("../Header - Footer/footer.html");
+?>
 </html>
