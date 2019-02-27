@@ -51,7 +51,7 @@ session_start();
     <title>Upload Page</title>
 
 <?php
-require_once("../Header - Footer/header.html");
+require_once("../Header - Footer/header.php");
 
 require_once('config.inc.php');
 // Connect to the database

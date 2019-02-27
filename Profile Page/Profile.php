@@ -3,7 +3,7 @@
 <head>
 <title>Profile Page</title>
 <?php
-require_once("../Header - Footer/header.html");
+require_once("../Header - Footer/header.php");
 ?>
 <!-- Bootstrap CSS -->
 
