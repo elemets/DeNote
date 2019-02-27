@@ -48,6 +48,10 @@ include "../Header - Footer/header.php";
         min-height: 100vh; /* These two lines are counted as one :-)       */
         align-items: center !important;
     }
+    label {
+        color: #818181;
+        font: 400 15px Lato, sans-serif;
+    }
 </style>
 <body>
 <div>
