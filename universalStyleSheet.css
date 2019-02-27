@@ -11,6 +11,10 @@ h2 {
   font-weight: 600;
   margin-bottom: 30px;
 }
+label {
+    color: #818181;
+      font: 400 15px Lato, sans-serif;
+}
 h4 {
   font-size: 19px;
   line-height: 1.375em;
