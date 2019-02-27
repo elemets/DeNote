@@ -89,18 +89,17 @@ if(isset($_POST['btn']))
   }
 ?>
 <div class="container formcenter">
-            <div class="form-content">
                 <div class="form-top-left">
                     <h2>Upload</h2>
                 </div>
 
-   <div class="form-body">
+
                 <form method="post" enctype="multipart/form-data">
 
-
+                    <div class="form-group">
                         <label for="title"> Note Name</label>
                         <input type="textbox" class="form-control" name="title" placeholder="Title">
-
+                    </div>
 
                     <div class="form-group">
                         <label for="unit"> Unit</label>
@@ -128,8 +127,6 @@ if(isset($_POST['btn']))
                     <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
                   </div>
                 </form>
-            </div>
-          </div>
       </div>
 
 <?php
