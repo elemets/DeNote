@@ -50,7 +50,7 @@ session_start();
     <title>Upload Page</title>
 
 <?php
-require_once("../Header - Footer/header.php");
+include "../Header - Footer/header.php";
 ?>
 <body>
 
@@ -152,6 +152,6 @@ if(isset($_POST['btn']))
 </body>
 
 <?php
-require_once("../Header - Footer/footer.html");
+include "../Header - Footer/footer.html";
 ?>
 </html>
