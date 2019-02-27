@@ -92,7 +92,7 @@ if(isset($_POST['btn']))
     echo "empty field of section number or unit is ---- or number is string";
   }
 ?>
-<div class="container formcenter">
+<div class="container">
         <div class="col-sm">
             <div class="form-content">
                 <div class="form-top-left">
