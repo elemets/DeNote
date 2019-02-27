@@ -29,8 +29,11 @@ $_SESSION["username"] = $_SESSION["username"]
 	$stat = $conn->prepare("SELECT * FROM Notes WHERE UnitYear = ?");
    	$stat->bindParam(1, $UnitYear);
    	$stat->execute();
+        $UnitIDInField = array();
 	while($row = $stat->fetch()){
+	if ($row['UnitID'] == 
       echo "<li><a target='_blank' href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>".$row['UnitID']."</a></li>";
+      array_push($UnitIDInField, $row['UnitID']);
     }
 	
 
