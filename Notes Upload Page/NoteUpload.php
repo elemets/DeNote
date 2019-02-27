@@ -97,10 +97,10 @@ if(isset($_POST['btn']))
    <div class="form-body">
                 <form method="post" enctype="multipart/form-data">
 
-                    <div class="form-group">
+
                         <label for="title"> Note Name</label>
                         <input type="textbox" class="form-control" name="title" placeholder="Title">
-                    </div>
+
 
                     <div class="form-group">
                         <label for="unit"> Unit</label>
