@@ -9,7 +9,7 @@ include "../Header - Footer/header.php";
 <title>Upload Page</title>
 <style>
     body {
-        color: #818181 !important;
+      color: #818181 !important;
     }
     .top-buffer {
         margin-top:20px !important;
@@ -89,11 +89,12 @@ if(isset($_POST['btn']))
   }
 ?>
 <div class="container formcenter">
+            <div class="form-content">
                 <div class="form-top-left">
                     <h2>Upload</h2>
                 </div>
 
-
+   <div class="form-body">
                 <form method="post" enctype="multipart/form-data">
 
                     <div class="form-group">
@@ -114,7 +115,7 @@ if(isset($_POST['btn']))
                     </div>
 
                     <div class="form-group">
-                        <label for="sectionID"> Section ID</label>
+                        <label> Section ID</label>
                         <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID">
                     </div>
 
@@ -127,6 +128,8 @@ if(isset($_POST['btn']))
                     <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
                   </div>
                 </form>
+            </div>
+          </div>
       </div>
 
 <?php
