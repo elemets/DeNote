@@ -28,9 +28,9 @@
             <li><a href="../Feed Page/Feed.php"><span class="glyphicon glyphicon-list"></span> FEED</a></li>
             <li><a href="../Notes Upload Page/NoteUpload.php"><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
           </ul>
-          <form method="post" class="navbar-form navbar-left" action="search.php" name="searchWord">
+          <form method="post" class="navbar-form navbar-left" action="search.php">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Looking for Something?">
+              <input type="text" class="form-control" placeholder="Looking for Something?" name="searchWord">
             </div>
             <button type="submit" class="btn"><a>
             <span class="glyphicon glyphicon-search"></span>
