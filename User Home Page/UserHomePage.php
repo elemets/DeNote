@@ -31,7 +31,7 @@ $_SESSION["username"] = $_SESSION["username"]
    	$stat->execute();
         $UnitIDInField = array();
 	while($row = $stat->fetch()){
-	if (in_array($row['UnitID'], $UnitIDInField))
+	if (!in_array($row['UnitID'], $UnitIDInField))
       {
       echo "<li><a target='_blank' href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>".$row['UnitID']."</a></li>";
       array_push($UnitIDInField, $row['UnitID']);
