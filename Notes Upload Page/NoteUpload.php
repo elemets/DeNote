@@ -5,45 +5,45 @@ session_start();
 <html>
 <style>
     body {
-        background-color: white;
+        background-color: white !important;
     }
     .top-buffer {
-        margin-top:20px;
+        margin-top:20px !important;
     }
     .bottom-buffer {
-        margin-bottom:20px;
+        margin-bottom:20px !important;
     }
     .submit-btn {
-        background-color: #660099;
+        background-color: #660099 !important;
     }
     .submit-font {
-        color:#ffffff;
+        color:#ffffff !important;
     }
     .submit-font:hover {
-        color:#ecaa33;
+        color:#ecaa33 !important;
     }
     .multi-form-wrapper{
-        margin-bottom: 20px;
+        margin-bottom: 20px !important;
     }
     .form-element{
-        display: inline;
-        width:100%;
+        display: inline !important;
+        width:100% !important;
     }
     .form-top-right{
-        width : 25%;
-        font-size: 66px;
+        width : 25% !important;
+        font-size: 66px !important;
     }
     .form-top-left{
-        width : 75%;
+        width : 75% !important;
     }
     .navbar {
-        background-color: #660099;
+        background-color: #660099 !important;
     }
     .formcenter {
-        padding-top: 50px;
-        min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+        padding-top: 50px !important;
+        min-height: 100% !important;  /* Fallback for browsers do NOT support vh unit */
         min-height: 100vh; /* These two lines are counted as one :-)       */
-        align-items: center;
+        align-items: center !important;
     }
 </style>
 
