@@ -16,7 +16,7 @@
 
     while($row = $stat->fetch())
     {
-      if ($row['FileName'] == $searchWord || $row['titleNote'] == $searchWord || $row['UnitID'] == $searchWord)
+      if ($row['FileName'] == $searchWord || $row['TitleNote'] == $searchWord || $row['UnitID'] == $searchWord)
       {
               echo "<li><a target='_blank' href='view.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
       }
