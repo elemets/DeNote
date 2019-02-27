@@ -58,7 +58,7 @@ session_start();
       </nav>
 <?php
 	require_once("database.php");
-      ?>
+?>
 
  <!-- Signin -->
              <div class="container formcenter">
