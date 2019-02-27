@@ -7,7 +7,8 @@
   <body>
     <?php
     require_once('config.inc.php');
-    $conn = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
+    $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
+    // $conn = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
     $searchWord = $_POST['searchWord'];
     $stat = $conn->prepare("SELECT * FROM Notes WHERE * = ?");
     $stat->bindParam(1, $searchWord);
