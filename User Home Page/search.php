@@ -14,7 +14,7 @@ session_start();
     $conn = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
     $searchWord = $_POST['searchWord'];
     //$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]")->fetch_object()->UserID;//userID query
-    $stat = $conn2->prepare("SELECT * FROM Notes");
+    $stat = $conn->prepare("SELECT * FROM Notes");
     $stat->bindParam(1, $searchWord);
     $stat->execute();
 
