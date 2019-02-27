@@ -45,9 +45,6 @@ session_start();
         min-height: 100vh; /* These two lines are counted as one :-)       */
         align-items: center !important;
     }
-    form label{
-      color: #000000 !important;
-    }
 </style>
 
     <title>Upload Page</title>
@@ -95,7 +92,6 @@ if(isset($_POST['btn']))
   }
 ?>
 <div class="container formcenter">
-        <div class="col-sm">
             <div class="form-content">
                 <div class="form-top-left">
                     <h2>Upload</h2>
@@ -106,12 +102,12 @@ if(isset($_POST['btn']))
 
                     <div class="form-group">
                         <label for="title"> Note Name</label>
-                        <input type="textbox" class="form-control form-element" name="title" placeholder="Title">
+                        <input type="textbox" class="form-control" name="title" placeholder="Title">
                     </div>
 
                     <div class="form-group">
                         <label for="unit"> Unit</label>
-                        <select class="form-control form-element" name="UnitID" placeholder="Unit">
+                        <select class="form-control" name="UnitID" placeholder="Unit">
               <option>----</option>
               <option>AHCP</option>
               <option>AMER</option>
@@ -137,7 +133,6 @@ if(isset($_POST['btn']))
                 </form>
             </div>
           </div>
-        </div>
       </div>
 
 <?php
