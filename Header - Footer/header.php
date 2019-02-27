@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
     <!-- Theme Made By www.w3schools.com -->
     <title>DeNOTE</title>
     <meta charset="utf-8">
@@ -11,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  </head>
-  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <head id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -43,3 +42,4 @@
         </div>
       </div>
     </nav>
+  </head>
