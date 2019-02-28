@@ -10,7 +10,7 @@ $stat->bindParam(2, $UnitYear);
 $stat->execute();
 
 while($row = $stat->fetch()){
-      echo "<li><a target='_blank' href='view.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
+      echo "<li><a target='_blank' href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
     }
 
  ?>
