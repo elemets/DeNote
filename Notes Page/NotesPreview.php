@@ -17,7 +17,7 @@ $stat->bindParam(1, $id);
 $stat->execute();
 
 $row = $stat->fetch();
-$URL = URL.createObjectURL('$row['Data']');
+$URL = URL.createObjectURL($row['Data']);
 ?>
 
 <iframe id="iframepdf" src= "<?php $URL ?>"></iframe>
