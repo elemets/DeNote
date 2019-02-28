@@ -33,7 +33,8 @@ include "../Header - Footer/header.php";
         font: 400 15px Lato, sans-serif;
     }
 </style>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" style="opacity: 0; filter: alpha(opacity=50);">
+  <div class="container-fluid"></div>
 </nav>
 <body>
 <div>
