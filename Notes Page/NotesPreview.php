@@ -7,10 +7,10 @@
 </head>
 <body>
     <?php
-$id = $_GET['id'];
+$id = "view.php?id=" . $_GET['id'];
 ?>
 
-<iframe src='view.php?id= " .$id. "'  width="960" height="900">
+<iframe src="<?php echo $id ?>"  width="960" height="900">
  </iframe>
 <?php echo $_GET['id'] ?>
 
