@@ -29,7 +29,7 @@ include "../Header - Footer/header.php";
         align-items: center !important;
     }
     label {
-        color: #21529;
+        color: #212529;
         font: 400 15px Lato, sans-serif;
     }
 </style>
