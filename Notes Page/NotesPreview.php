@@ -3,6 +3,7 @@
 <head>
 <title>Page Title</title>
 <?php
+require_once("../Header - Footer/header.php");
 ?>
 </head>
 <body>
@@ -12,7 +13,6 @@ $id = "view.php?id=" . $_GET['id'];
 
 <iframe src="<?php echo $id ?>"  width="960" height="900">
  </iframe>
-<?php echo $_GET['id'] ?>
 
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:80%;margin-left:10%"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
