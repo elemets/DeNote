@@ -33,6 +33,9 @@ include "../Header - Footer/header.php";
         font: 400 15px Lato, sans-serif;
     }
 </style>
+<nav class="navbar navbar-default">
+  <div class="container-fluid"></div>
+</nav>
 <body>
 <div>
 <?php
