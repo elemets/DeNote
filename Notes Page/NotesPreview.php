@@ -21,9 +21,9 @@ $row = $stat->fetch();
 
 <script>
 var URL = URL.createObjectURL(<?php $row['Data']?>));
-document.getElementById("URL").innerHTML = URL.toString();
+document.getElementById('URL').innerHTML = URL.toString();
 </script>
-<iframe id="iframepdf" src= "id = URL"></iframe>
+<iframe id="iframepdf" src= "id = "URL""></iframe>
 
 
 <!-- begin wwww.htmlcommentbox.com -->
