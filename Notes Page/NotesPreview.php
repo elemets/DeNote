@@ -19,7 +19,7 @@ $stat->execute();
 $row = $stat->fetch();
 ?>
 
-<iframe id="iframepdf" src="<?php $row['Data'] ?>"></iframe>
+<iframe id="iframepdf" src="$row['Data']"></iframe>
 
 </body>
 <footer>
