@@ -10,7 +10,7 @@
 $id = $_GET['id'];
 ?>
 
-<iframe src="view.php?id=".$id  width="960" height="900">
+<iframe src="view.php?id=55"  width="960" height="900">
  </iframe>
 <?php echo $_GET['id'] ?>
 
