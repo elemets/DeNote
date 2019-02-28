@@ -7,6 +7,35 @@ include "../Header - Footer/header.php";
 ?>
 
 <title>Upload Page</title>
+<style>
+    .bottom-buffer {
+        margin-bottom:20px !important;
+    }
+    .submit-btn {
+        background-color: #660099 !important;
+    }
+    .submit-font {
+        color:#ffffff !important;
+    }
+    .submit-font:hover {
+        color:#ecaa33 !important;
+    }
+    .form-top-left{
+        width : 75% !important;
+    }
+    .formcenter {
+        min-height: 100% !important;  /* Fallback for browsers do NOT support vh unit */
+        min-height: 100vh; /* These two lines are counted as one :-)       */
+        align-items: center !important;
+    }
+    body {
+      padding-top: 50px;
+    }
+    label {
+        color: #212529;
+        font: 400 15px Lato, sans-serif;
+    }
+</style>
 
 <body>
 <div id="top">
