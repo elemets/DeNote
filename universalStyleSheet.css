@@ -1,8 +1,36 @@
+.bottom-buffer {
+    margin-bottom:20px !important;
+}
+.submit-btn {
+    background-color: #660099 !important;
+}
+.submit-font {
+    color:#ffffff !important;
+}
+.submit-font:hover {
+    color:#ecaa33 !important;
+}
+.form-top-left{
+    width : 75% !important;
+}
+.formcenter {
+    min-height: 100% !important;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    align-items: center !important;
+}
+
+label {
+    color: #212529;
+    font: 400 15px Lato, sans-serif;
+}
+
+
 body {
   font: 400 15px Lato, sans-serif;
   line-height: 1.8;
   color: #818181;
   background-color: white;
+  padding-top: 50px;
 }
 h2 {
   font-size: 24px;
