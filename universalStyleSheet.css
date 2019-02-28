@@ -66,12 +66,7 @@ footer .glyphicon {
   margin-bottom: 20px;
   color: #660099;
 }
-.footer-position {
-  position: absolute;
-  color:  #ffffff;
-  width: 100%;
-  bottom: 0; 
-}
+
 .container-fluid {
   padding: 60px 50px;
 }
