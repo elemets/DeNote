@@ -1,13 +1,4 @@
-<style>
-  footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-  }
-</style>
-
-<footer class="container-fluid text-center footer-position">
+<footer id="footer" class="container-fluid text-center footer-position">
   <a href="#top" title="To Top">
   <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
@@ -35,6 +26,26 @@
           window.location.hash = hash;
         });
       } // End if
+    });
+
+    // function to set the height on fly
+    function autoHeight() {
+      $('#content').css('min-height', 0);
+      $('#content').css('min-height', (
+        $(document).height()
+        - $('#header').height()
+        - $('#footer').height()
+      ));
+    }
+
+    // onDocumentReady function bind
+    $(document).ready(function() {
+      autoHeight();
+    });
+
+    // onResize bind of the function
+    $(window).resize(function() {
+      autoHeight();
     });
 
     $(window).scroll(function() {
