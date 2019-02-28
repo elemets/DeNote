@@ -1,4 +1,4 @@
-<footer id="#footer" class="container-fluid text-center footer-position">
+<footer class="container-fluid text-center footer-position-bottom">
   <a href="#top" title="To Top">
   <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
@@ -27,17 +27,6 @@
         });
       } // End if
     });
-
-    function autoHeight() {
-      var h = $(document).height() - $('body').height();
-      if (h > 0) {
-          $('#footer').css({
-              marginTop: h
-          });
-      }
-  }
-  $(window).on('load', autoHeight);
-
 
     $(window).scroll(function() {
       $(".slideanim").each(function(){
