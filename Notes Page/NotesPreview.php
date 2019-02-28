@@ -20,10 +20,10 @@ $row = $stat->fetch();
 ?>
 
 <script>
-var URL = URL.createObjectURL(<?php $row['Data']?>));
-document.getElementById('URL').innerHTML = URL.toString();
+var blob = new Blob([html], {type: 'text/html'});
+var iframe = document.querySelector("iframe");
+iframe.src = URL.createObjectURL(blob);
 </script>
-<iframe id="iframepdf" src= "id = "URL""></iframe>
 
 
 <!-- begin wwww.htmlcommentbox.com -->
