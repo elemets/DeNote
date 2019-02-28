@@ -6,7 +6,17 @@
 ?>
 </head>
 <body>
-<iframe src="view.php?id=".$_GET['id']  width="960" height="900">
+<?php
+session_start();
+require_once('config.inc.php');
+$conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
+$id = isset($_GET['id'])? $_GET['id'] : "";
+$stat = $conn->prepare("SELECT * FROM Notes WHERE NoteID = ?");
+$stat->bindParam(1, $id);
+$stat->execute();
+$row = $stat->fetch();
+?>
+<iframe src="view.php?id=".$row['NoteID']  width="960" height="900">
  </iframe>
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:80%;margin-left:10%"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
