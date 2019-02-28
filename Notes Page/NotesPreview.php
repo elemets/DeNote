@@ -3,7 +3,6 @@
 <head>
 <title>Page Title</title>
 <?php
-require_once("../Header - Footer/header.php");
 ?>
 </head>
 <body>
