@@ -18,13 +18,7 @@ $stat->execute();
 
 $row = $stat->fetch();
 ?>
-
-<script>
-var blob = new Blob([html], {type: 'text/html'});
-var iframe = document.querySelector("iframe");
-iframe.src = URL.createObjectURL(blob);
-</script>
-
+<iframe src="view.php?id=" + "<?php $row['Data'] ?>"></iframe>
 
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:80%;margin-left:10%"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
