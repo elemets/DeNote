@@ -26,7 +26,7 @@ include "../Header - Footer/header.php";
     .formcenter {
         min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
         min-height: 100vh; /* These two lines are counted as one :-)       */
-        display: flex;
+        width: auto;
         align-items: center;
     }
     body {
