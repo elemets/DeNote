@@ -8,7 +8,7 @@
 <body>
     <?php
 ?>
-<iframe src="view.php?id=".$_GET['id']  width="960" height="900">
+<iframe src="view.php?id=57"  width="960" height="900">
  </iframe>
 <?php echo $_GET['id'] ?>
 <!-- begin wwww.htmlcommentbox.com -->
