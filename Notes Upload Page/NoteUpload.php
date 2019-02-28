@@ -24,9 +24,11 @@ include "../Header - Footer/header.php";
         width : 75% !important;
     }
     .formcenter {
-        min-height: 100% !important;  /* Fallback for browsers do NOT support vh unit */
+        min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
         min-height: 100vh; /* These two lines are counted as one :-)       */
-        align-items: center !important;
+        width: auto;
+        display: flex;
+        align-items: center;
     }
     body {
       padding-top: 50px;
