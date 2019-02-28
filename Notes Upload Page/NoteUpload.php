@@ -8,9 +8,6 @@ include "../Header - Footer/header.php";
 
 <title>Upload Page</title>
 <style>
-    .top-buffer {
-        margin-top:20px !important;
-    }
     .bottom-buffer {
         margin-bottom:20px !important;
     }
@@ -23,22 +20,8 @@ include "../Header - Footer/header.php";
     .submit-font:hover {
         color:#ecaa33 !important;
     }
-    .multi-form-wrapper{
-        margin-bottom: 20px !important;
-    }
-    .form-element{
-        display: inline !important;
-        width:100% !important;
-    }
-    .form-top-right{
-        width : 25% !important;
-        font-size: 66px !important;
-    }
     .form-top-left{
         width : 75% !important;
-    }
-    .navbar {
-        background-color: #660099 !important;
     }
     .formcenter {
         min-height: 100% !important;  /* Fallback for browsers do NOT support vh unit */
@@ -46,7 +29,7 @@ include "../Header - Footer/header.php";
         align-items: center !important;
     }
     label {
-        color: #818181;
+        color: #21529;
         font: 400 15px Lato, sans-serif;
     }
 </style>
