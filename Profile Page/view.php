@@ -8,10 +8,8 @@ $stat->bindParam(1, $id);
 $stat->execute();
 
 $row = $stat->fetch();
-//header('Content-Type:'.$row['dataType']);
+header('Content-Type:'.$row['dataType']);
+echo $row['Data'];
 ?>
-<embed src="<?php echo $row['Data']; ?>" style="width:80%">
-<!--echo $row['Data'];
- ?> -->
 
 
