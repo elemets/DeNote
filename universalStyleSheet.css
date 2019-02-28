@@ -109,7 +109,7 @@ footer .glyphicon {
     font-size: 150px;
   }
 }
-@media (max-width: 985px) {
+@media (max-width: 990px) {
     .navbar-header {
         float: none;
     }
