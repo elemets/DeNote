@@ -28,16 +28,17 @@ include "../Header - Footer/header.php";
         min-height: 100vh; /* These two lines are counted as one :-)       */
         align-items: center !important;
     }
+    body {
+      padding-top: 50px;
+    }
     label {
         color: #212529;
         font: 400 15px Lato, sans-serif;
     }
 </style>
-<nav class="navbar navbar-default" style="opacity: 0; filter: alpha(opacity=50);">
-  <div class="container-fluid"></div>
-</nav>
+
 <body>
-<div>
+
 <?php
 require_once('config.inc.php');
 // Connect to the database
@@ -117,7 +118,7 @@ if(isset($_POST['btn']))
                 </form>
             </div>
           </div>
-      </div>
+
 
 <?php
     function validateUpload($Unit, $Number)
