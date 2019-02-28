@@ -10,7 +10,7 @@ $stat->execute();
 $row = $stat->fetch();
 header('Content-Type:'.$row['dataType']);
 ?>
-<embed src=<?php echo $row['Data']; ?>>
+<embed src="<?php echo $row['Data']; ?>" style="width:80%">
 <!--echo $row['Data'];
  ?> -->
 
