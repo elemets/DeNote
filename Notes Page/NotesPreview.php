@@ -14,11 +14,9 @@ $id = isset($_GET['id'])? $_GET['id'] : "";
 $stat = $conn->prepare("SELECT * FROM Notes WHERE NoteID = ?");
 $stat->bindParam(1, $id);
 $stat->execute();
-
 $row = $stat->fetch();
 ?>
-<iframe src="view.php?id=".$row['Data']></iframe>
-<embed src="view.php?id=".$row['Data']  width="960" height="900">
+<embed src="view.php?id=".<?php $row['Data']?>  width="960" height="900">
  </embed>
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:80%;margin-left:10%"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
