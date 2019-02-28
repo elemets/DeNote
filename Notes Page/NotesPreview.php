@@ -16,7 +16,7 @@ $stat->bindParam(1, $id);
 $stat->execute();
 $row = $stat->fetch();
 ?>
-<iframe src="view.php?id=".row['NoteId']  width="960" height="900">
+<iframe src="view.php?id=".$id  width="960" height="900">
  </iframe>
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:80%;margin-left:10%"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
