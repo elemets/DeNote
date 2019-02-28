@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
 session_start();
 require_once('config.inc.php');
@@ -9,8 +11,8 @@ $stat->bindParam(1, $id);
 $stat->bindParam(2, $UnitYear);
 $stat->execute();
 
-while($row = $stat->fetch()){
-      echo "<li><a target='_blank' href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
-    }
-
+$row = $stat->fetch()
  ?>
+<iframe src=""view.php?id=" + "<?php $row['Data'] ?>""></iframe>
+</body>
+</html>
