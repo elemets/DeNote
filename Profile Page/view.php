@@ -9,7 +9,9 @@ $stat->execute();
 
 $row = $stat->fetch();
 header('Content-Type:'.$row['dataType']);
-echo $row['Data'];
- ?>
+?>
+<embed src=<?php echo $row['Data']; ?>>
+<!--echo $row['Data'];
+ ?> -->
 
 
