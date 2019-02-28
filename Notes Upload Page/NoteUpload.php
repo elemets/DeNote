@@ -34,7 +34,6 @@ include "../Header - Footer/header.php";
     }
 </style>
 <nav class="navbar navbar-default">
-  <div class="container-fluid"></div>
 </nav>
 <body>
 <div>
