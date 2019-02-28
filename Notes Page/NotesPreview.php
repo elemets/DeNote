@@ -18,7 +18,7 @@ $stat->execute();
 
 $row = $stat->fetch();
 ?>
-<iframe src="view.php?id=" + "<?php $row['Data'] ?>"></iframe>
+<iframe src="view.php?id=".$row['Data']></iframe>
 
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:80%;margin-left:10%"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
