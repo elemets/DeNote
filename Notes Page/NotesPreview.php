@@ -10,7 +10,7 @@
 $id = $_GET['id'];
 ?>
 
-<iframe src='view.pho?id=".$row['NoteID']  width="960" height="900">
+<iframe src='view.php?id=".$row['NoteID']  width="960" height="900">
  </iframe>
 <?php echo $_GET['id'] ?>
 <!-- begin wwww.htmlcommentbox.com -->
