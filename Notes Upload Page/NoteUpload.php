@@ -38,7 +38,7 @@ include "../Header - Footer/header.php";
 </style>
 
 <body>
-
+<div id="top">
 <?php
 require_once('config.inc.php');
 // Connect to the database
@@ -118,7 +118,7 @@ if(isset($_POST['btn']))
                 </form>
             </div>
           </div>
-
+</div>
 
 <?php
     function validateUpload($Unit, $Number)
