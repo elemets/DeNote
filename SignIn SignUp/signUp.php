@@ -137,6 +137,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	 }
 	}
 ?>
-</meta>
 </body>
 </html>
