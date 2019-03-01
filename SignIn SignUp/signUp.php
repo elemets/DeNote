@@ -82,7 +82,7 @@
 
                 <div class="form-group">
                   <label for="email"> University Email</label>
-            	  <input type="textbox" class="form-control form-element" name="email" placeholder="University Email">
+            	  <input type="email" class="form-control form-element" name="email" placeholder="University Email">
                 </div>
 
                 <div class="form-group">
