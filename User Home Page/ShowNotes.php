@@ -9,5 +9,5 @@ $stat->bindParam(1, $id);
 $stat->bindParam(2, $UnitYear);
 $stat->execute();
     while($row = $stat->fetch()){
-      echo "<li><a target='_blank' href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";}
+      echo "<li><a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";}
  ?>
