@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Profile Page</title>
 <?php
@@ -60,7 +60,7 @@ require_once("../Header - Footer/header.php");
 <div id="My_notes" class="grid-container"></div>
       <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">My notes</h3>
         <div class="jumbotron Container-fluid">
-          <img src="Icons/Notes_Icons/PurpleNoHover.png" class="hoverable">
+          <img src="Icons/Notes_Icons/PurpleNoHover.png" class="hoverable" alt="Purple background for note thumbnail">
           <div class="centered">COMP16212</div>
         </div>
 
