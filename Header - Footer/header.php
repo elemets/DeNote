@@ -23,7 +23,7 @@
           <a class="navbar-brand" href="../User Home Page/UserHomePage.php"><img src="../Header - Footer/logo_white.png"  height="23.5"> </a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-center nav-pills">
+          <ul class="nav navbar-nav navbar-center">
             <li><a href="../Feed Page/Feed.php"><span class="glyphicon glyphicon-list active"></span> FEED</a></li>
             <li><a href="../Notes Upload Page/NoteUpload.php"><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
           </ul>
