@@ -33,9 +33,7 @@ $_SESSION["username"] = $_SESSION["username"]
 	while($row = $stat->fetch()){
 	if (!in_array($row['UnitID'], $UnitIDInField))
       {
-?>
-     <button target='_blank' href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"</button>;
-<?php
+      echo "<li><a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>".$row['UnitID']."</a></li>";
       array_push($UnitIDInField, $row['UnitID']);
       }    
 }
