@@ -34,7 +34,7 @@ $_SESSION["username"] = $_SESSION["username"]
 	if (!in_array($row['UnitID'], $UnitIDInField))
       {
 ?>
-     <button target='_blank' href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'" ;
+     <button target='_blank' href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"</button>;
 <?php
       array_push($UnitIDInField, $row['UnitID']);
       }    
