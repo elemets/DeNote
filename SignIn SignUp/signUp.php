@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-    <html>
+    <html lang="en">
     <head>
+      <title>Sign up to DeNOTE</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -56,7 +57,7 @@
 
       <nav class="navbar">
         <div class="container">
-        <a class="navbar-brand" href="../index.html"><img src="../Welcome Page/logo_white.png"  height="23.5"> </a>
+        <a class="navbar-brand" href="../index.html"><img src="../Welcome Page/logo_white.png"  height="23.5" alt="DeNOTE logo"> </a>
         </div>
       </nav>
 <?php
@@ -86,7 +87,7 @@
 
                 <div class="form-group">
                   <label for="year"> Year of Study</label>
-            	  <select class="form-control form-element" name="year" placeholder="Year of Study">
+            	  <select class="form-control form-element" name="year">
                   <option>Year 0</option>
                   <option>Year 1</option>
                   <option>Year 2</option>
@@ -136,6 +137,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	 }
 	}
 ?>
-</body>
 </meta>
+</body>
 </html>
