@@ -5,14 +5,23 @@
   <p style="font-size:20px; color: #818181;">Project by Z3</p>
 </footer>
 <script>
-$(function() {
-     var pgurl = window.location.href.substr(window.location.href
-.lastIndexOf("/")+1);
-     $("#nav ul li a").each(function(){
-          if(($(this).attr("href")).includes(pgurl))
-          $(this).addClass("active");
-     })
-});
+let switchNavMenuItem = (menuItems) => {
+
+    var current = location.pathname
+
+    $.each(menuItems, (index, item) => {
+
+        $(item).removeClass('active')
+
+        if ((current.includes($(item).attr('href')) && $(item).attr('href') !== "/") || ($(item).attr('href') === "/" && current === "/")){
+            $(item).addClass('active')
+        }
+    })
+}
+
+$(document).ready(() => {
+    switchNavMenuItem($('#nav li a, #nav li link'))
+})
   $(document).ready(function(){
     // Add smooth scrolling to all links in navbar + footer link
     $(".navbar a, footer a[href='#top']").on('click', function(event) {
