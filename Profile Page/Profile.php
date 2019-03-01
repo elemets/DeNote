@@ -9,7 +9,7 @@ require_once("../Header - Footer/header.php");
 
 
 </head>
-<body> <!-- Nav Bar -->
+<body id="top"> <!-- Nav Bar -->
 
 
 

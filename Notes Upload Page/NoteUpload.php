@@ -148,7 +148,6 @@ if(isset($_POST['btn']))
                           <option>SPLA</option>
                           <option>UCIL</option>
                           <option>Other</option>
-
             </select>
                     </div>
 
