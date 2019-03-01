@@ -5,23 +5,6 @@
   <p style="font-size:20px; color: #818181;">Project by Z3</p>
 </footer>
 <script>
-let switchNavMenuItem = (menuItems) => {
-
-    var current = location.pathname
-
-    $.each(menuItems, (index, item) => {
-
-        $(item).removeClass('active')
-
-        if ((current.includes($(item).attr('href')) && $(item).attr('href') !== "/") || ($(item).attr('href') === "/" && current === "/")){
-            $(item).addClass('active')
-        }
-    })
-}
-
-$(document).ready(() => {
-    switchNavMenuItem($('#nav li a, #nav li link'))
-})
   $(document).ready(function(){
     // Add smooth scrolling to all links in navbar + footer link
     $(".navbar a, footer a[href='#top']").on('click', function(event) {
