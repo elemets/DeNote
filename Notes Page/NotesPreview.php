@@ -12,7 +12,7 @@ $id = "view.php?id=" . $_GET['id'];
 ?>
 
 <div id="iframe" class="container-center">
-  <div class="col-sm">
+  <div class="col-sm-12">
 
 <iframe src="<?php echo $id ?>"  width="960" height="900" align = "middle">
  </iframe>
