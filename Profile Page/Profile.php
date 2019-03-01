@@ -51,7 +51,7 @@ require_once("../Header - Footer/header.php");
   $stat->execute();
 
   while($row = $stat->fetch()){
-    echo "<li><a target='_blank' href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
+    echo "<li><a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
   }
    ?>
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
