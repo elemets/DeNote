@@ -15,14 +15,6 @@
   <head id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 
-    <script type="javascript">
-
-
-
-
-
-    </script>
-
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -47,7 +39,7 @@
             </a></button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../Profile Page/Profile.php" class=""><span class="glyphicon glyphicon-user"></span>PROFILE</a></li>
+            <li><a href="../Profile Page/Profile.php" class="" id="profileNav"><span class="glyphicon glyphicon-user"></span>PROFILE</a></li>
             <li><a href="../index.html"><span class="glyphicon glyphicon-log-out"></span>LOGOUT</a></li>
           </ul>
         </div>
