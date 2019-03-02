@@ -16,15 +16,7 @@
 
 
     <script type="javascript">
-  /*  $(document).ready(function(){
-        var full_path = location.pathname.split("../")[0];
-        $("#nav li").each(function(){
-            var $this = $(this);
-            if($this.prop("href").split("../")[0] == full_path) {
-                $this.addClass("active");
-            }
-        });
-    }); */
+
 
 
 
