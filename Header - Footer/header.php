@@ -20,7 +20,7 @@
         var full_path = location.href.split("#")[0];
         $("#nav li a").each(function(){
             var $this = $(this);
-            if($this.prop("href").split("#")[0] == full_path) {
+            if(all_links[i].href.split('#')[0].substr(-1 * full_path.length) == full_path) {
                 $this.addClass("active");
             }
         });
