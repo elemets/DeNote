@@ -28,6 +28,7 @@
 
     $(function(){
       var current = window.location.pathname;
+      window.alert(current);
       if(current == "/Notes Upload Page/NoteUpload.php")  {
         var element = getElementById('noteNav');
         element.classList.add(" active");
