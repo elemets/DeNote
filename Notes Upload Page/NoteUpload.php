@@ -30,6 +30,7 @@ include "../Header - Footer/header.php";
     }
     body {
       padding-top: 50px;
+      height: 100vh;
     }
     label {
         color: #212529;
