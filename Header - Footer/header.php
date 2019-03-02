@@ -16,18 +16,13 @@
 
 
     <script type="javascript">
-/*    $(document).ready(function(){
-        var full_path = location.href.split("..")[0];
-        $("#nav li").each(function(){
-            var $this = $(this);
-            if($this.prop("href").split("..")[0] == full_path) {
-                $this.addClass("active");
-            }
-        });
-    }); */
 
-    $(function(){
-        var current = window.location.href;
+
+
+
+
+    /*$(function(){
+        var current = window.location.pathname;
         $('#nav li a').each(function(){
             var $this = $(this);
             // if the current path is like this link, make it active
@@ -50,8 +45,8 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-center" id="nav">
-            <li><a href="../Feed Page/Feed.php"><span class="glyphicon glyphicon-list"></span> FEED</a></li>
-            <li><a href="../Notes Upload Page/NoteUpload.php" class=""><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
+            <li><a href="../Feed Page/Feed.php" id="feedNav"><span class="glyphicon glyphicon-list"></span> FEED</a></li>
+            <li><a href="../Notes Upload Page/NoteUpload.php" id="noteNav"><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
           </ul>
           <form method="post" class="navbar-form navbar-left form-style" action="../Search/search.php">
             <div class="form-group">

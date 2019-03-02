@@ -5,22 +5,27 @@
   <p style="font-size:20px; color: #818181;">Project by Z3</p>
 </footer>
 <script>
-$(function () {
-    setNavigation();
-});
+  $(function(){
+    var current = window.location.pathname;
+    console.log(current);
+    if(current == '/Notes Upload Page/NoteUpload.php')  {
+      var element = getElementById('noteNav');
+      element.classList.add(' active');
+    }
+  });
 
-function setNavigation() {
-    var path = window.location.pathname;
-    path = path.replace(/\/$/.., "");
-    path = decodeURIComponent(path);
+  $(document).ready(function(){
+      var full_path = location.pathname.split("#")[0];
+      $("#nav li").each(function(){
+          var $this = $(this);
+          if($this.prop("href").split("#")[0] == full_path) {
+              $this.addClass("active");
+          }
+      });
+  });
 
-    $(".nav a").each(function () {
-        var href = $(this).attr('href');
-        if (path.substring(0, href.length) === href) {
-            $(this).closest('li').addClass('active');
-        }
-    });
-}
+
+
   $(document).ready(function(){
     // Add smooth scrolling to all links in navbar + footer link
     $(".navbar a, footer a[href='#top']").on('click', function(event) {
