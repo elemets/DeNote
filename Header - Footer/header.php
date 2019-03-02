@@ -10,6 +10,18 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    var current = location.pathname;
+    $('#nav li a').each(function(){
+        var $this = $(this);
+        // if the current path is like this link, make it active
+        if($this.attr('href').indexOf(current) !== -1){
+            $this.addClass('active');
+        }
+    })
+})  
+</script>
 
   <head id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -24,8 +36,8 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-center">
-            <li><a href="../Feed Page/Feed.php" class="active"><span class="glyphicon glyphicon-list"></span> FEED</a></li>
-            <li><a href="../Notes Upload Page/NoteUpload.php"><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
+            <li><a href="../Feed Page/Feed.php" class=""><span class="glyphicon glyphicon-list"></span> FEED</a></li>
+            <li><a href="../Notes Upload Page/NoteUpload.php" class=""><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
           </ul>
           <form method="post" class="navbar-form navbar-left form-style" action="../Search/search.php">
             <div class="form-group">
@@ -36,7 +48,7 @@
             </a></button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../Profile Page/Profile.php"><span class="glyphicon glyphicon-user"></span>PROFILE</a></li>
+            <li><a href="../Profile Page/Profile.php" class=""><span class="glyphicon glyphicon-user"></span>PROFILE</a></li>
             <li><a href="../index.html"><span class="glyphicon glyphicon-log-out"></span>LOGOUT</a></li>
           </ul>
         </div>
