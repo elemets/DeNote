@@ -8,8 +8,6 @@
 
   $(function(){
     var current = window.location.pathname;
-    current = current.slice(10, current.length);
-    console.log(current);
     if(current.includes('NoteUpload.php')) {
       var element = document.getElementById('noteNav');
       element.classList.add("active");
