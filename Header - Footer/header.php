@@ -13,6 +13,21 @@
 
 
   <head id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+    <script type="text/javascript">
+    $(function(){
+        var current = location.pathname;
+        $('#nav li a').each(function(){
+            var $this = $(this);
+            // if the current path is like this link, make it active
+            if($this.attr('href').indexOf(current) !== -1){
+                $this.addClass('active');
+            }
+        })
+    })
+    </script>
+
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -44,15 +59,3 @@
       </div>
     </nav>
   </head>
-  <script type="text/javascript">
-  $(function(){
-      var current = location.pathname;
-      $('#nav li a').each(function(){
-          var $this = $(this);
-          // if the current path is like this link, make it active
-          if($this.attr('href').indexOf(current) !== -1){
-              $this.addClass('active');
-          }
-      })
-  })
-  </script>
