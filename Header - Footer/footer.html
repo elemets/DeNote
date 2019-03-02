@@ -5,24 +5,16 @@
   <p style="font-size:20px; color: #818181;">Project by Z3</p>
 </footer>
 <script>
+
   $(function(){
     var current = window.location.pathname;
     console.log(current);
-    if(current == '/Notes Upload Page/NoteUpload.php')  {
+    if(current == '/w81454af/Z3_Y1_Project/Notes%20Upload%20Page/NoteUpload.php')  {
       var element = getElementById('noteNav');
       element.classList.add(' active');
     }
   });
 
-  $(document).ready(function(){
-      var full_path = location.pathname.split("#")[0];
-      $("#nav li").each(function(){
-          var $this = $(this);
-          if($this.prop("href").split("#")[0] == full_path) {
-              $this.addClass("active");
-          }
-      });
-  });
 
 
 
