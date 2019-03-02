@@ -41,13 +41,18 @@ input .btn.submit-btn.submit-font:hover{
 .navbar li a, .navbar .navbar-brand {
   color: #fff !important;
 }
-.navbar-nav li a:hover, .navbar-nav, li a.active {
+.navbar-nav li a:hover{
   color: #660099 !important;
   background-color: #fff !important;
 }
 .navbar-default .navbar-toggle {
   border-color: transparent;
   color: #fff !important;
+}
+
+.navbar-nav li a:active {
+  color: #660099 !important;
+  background-color: #fff !important;
 }
 
 .thumbnail {
