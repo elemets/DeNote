@@ -15,6 +15,17 @@
   <head id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 
+    <script type="javascript">
+    $(document).ready(function(){
+        var full_path = location.href.split("../")[0];
+        $("#nav li a").each(function(){
+            var $this = $(this);
+            if($this.prop("href").split("../")[0] == full_path) {
+                $this.addClass("active");
+            }
+        });
+    });
+    </script>
 
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -46,16 +57,5 @@
         </div>
       </div>
     </nav>
-    <script type="text/javascript">
-    $(document).ready(function(){
-        var full_path = location.href.split("#")[0];
-        $("#nav li a").each(function(){
-            var $this = $(this);
-            if($this.prop("href").split("#")[0] == full_path) {
-                $this.addClass("active");
-            }
-        });
-    });
-    </script>
 
   </head>
