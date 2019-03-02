@@ -37,21 +37,9 @@
           </form>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../Profile Page/Profile.php"><span class="glyphicon glyphicon-user"></span>PROFILE</a></li>
-            <form method="post">
-            <li><a name="logout" onclick="<?php echo $_SERVER['PHP_SELF'];?> "><span class="glyphicon glyphicon-log-out"></span>LOGOUT</a></li>
-            </form>
+            <li><a href="../index.html"><span class="glyphicon glyphicon-log-out"></span>LOGOUT</a></li>
           </ul>
         </div>
       </div>
     </nav>
-  <script>
-  if (isset($_POST["logout"]))
-  {
-    <?php
-    session_start();
-    $_SESSION = array();
-    session_destroy();
-    header('Location: ../index.html');
-    ?>
-  }
   </head>
