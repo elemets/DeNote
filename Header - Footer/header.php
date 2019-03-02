@@ -15,17 +15,6 @@
   <head id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 
-    <script type="text/javascript">
-    $(document).ready(function(){
-        var full_path = location.href.split("#")[0];
-        $("#nav li a").each(function(){
-            var $this = $(this);
-            if(all_links[i].href.split('#')[0].substr(-1 * full_path.length) == full_path) {
-                $this.addClass("active");
-            }
-        });
-    });
-    </script>
 
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -39,8 +28,8 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-center" id="nav">
-            <li><a href="#../Feed Page/Feed.php" class=""><span class="glyphicon glyphicon-list"></span> FEED</a></li>
-            <li><a href="#../Notes Upload Page/NoteUpload.php" class=""><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
+            <li><a href="../Feed Page/Feed.php" class=""><span class="glyphicon glyphicon-list"></span> FEED</a></li>
+            <li><a href="../Notes Upload Page/NoteUpload.php" class=""><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
           </ul>
           <form method="post" class="navbar-form navbar-left form-style" action="../Search/search.php">
             <div class="form-group">
@@ -57,4 +46,16 @@
         </div>
       </div>
     </nav>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var full_path = location.href.split("#")[0];
+        $("#nav li a").each(function(){
+            var $this = $(this);
+            if($this.prop("href").split("#")[0] == full_path) {
+                $this.addClass("active");
+            }
+        });
+    });
+    </script>
+
   </head>
