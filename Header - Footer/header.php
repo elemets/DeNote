@@ -16,22 +16,18 @@
 
 
     <script type="text/javascript">
-    $(function () {
-        setNavigation();
-    });
+    window.onload = function() {
+      var all_links = document.getElementById("nav").getElementsByTagName("a"),
+          i=0, len=all_links.length,
+          full_path = location.href.split('#')[0]; //Ignore hashes?
 
-    function setNavigation() {
-        var path = window.location.pathname;
-        path = path.replace(/\/$/, "");
-        path = decodeURIComponent(path);
-
-        $(".navbar-nav a").each(function () {
-            var href = $(this).attr('href');
-            if (path.substring(0, href.length) === href) {
-                $(this).closest('li').addClass('active');
-            }
-        });
-    }
+      // Loop through each link.
+      for(; i<len; i++) {
+          if(all_links[i].href.split("#")[0] == full_path) {
+              all_links[i].className += " active";
+          }
+      }
+  }
     </script>
 
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -45,7 +41,7 @@
           <a class="navbar-brand" href="../User Home Page/UserHomePage.php"><img src="../Header - Footer/logo_white.png"  height="23.5"> </a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-center">
+          <ul class="nav navbar-nav navbar-center" id="nav">
             <li><a href="../Feed Page/Feed.php" class=""><span class="glyphicon glyphicon-list"></span> FEED</a></li>
             <li><a href="../Notes Upload Page/NoteUpload.php" class=""><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
           </ul>
