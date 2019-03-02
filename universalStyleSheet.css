@@ -50,7 +50,7 @@ input .btn.submit-btn.submit-font:hover{
   color: #fff !important;
 }
 
-.navbar-nav li a.active {
+.navbar-nav li.active a {
   color: #660099 !important;
   background-color: #fff !important;
 }

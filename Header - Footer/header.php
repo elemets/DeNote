@@ -16,16 +16,22 @@
 
 
     <script type="text/javascript">
-    $(function(){
-        var current = location.pathname;
-        $('#myNavbar li a').each(function(){
-            var $this = $(this);
-            // if the current path is like this link, make it active
-            if($this.attr('href').indexOf(current) !== -1){
-                $this.addClass('active');
+    $(function () {
+        setNavigation();
+    });
+
+    function setNavigation() {
+        var path = window.location.pathname;
+        path = path.replace(/\/$/, "");
+        path = decodeURIComponent(path);
+
+        $(".navbar-nav a").each(function () {
+            var href = $(this).attr('href');
+            if (path.substring(0, href.length) === href) {
+                $(this).closest('li').addClass('active');
             }
-        })
-    })
+        });
+    }
     </script>
 
     <nav class="navbar navbar-default navbar-fixed-top">
