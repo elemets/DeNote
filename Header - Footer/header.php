@@ -16,18 +16,15 @@
 
 
     <script type="text/javascript">
-    window.onload = function() {
-      var all_links = document.getElementById("nav").getElementsByTagName("li a"),
-          i=0, len=all_links.length,
-          full_path = location.href.split('')[0]; //Ignore hashes?
-
-      // Loop through each link.
-      for(; i<len; i++) {
-          if(all_links[i].href.split("#")[0] == full_path) {
-              all_links[i].className += " active";
-          }
-      }
-  }
+    $(document).ready(function(){
+        var full_path = location.href.split("#")[0];
+        $("#nav li a").each(function(){
+            var $this = $(this);
+            if($this.prop("href").split("#")[0] == full_path) {
+                $this.addClass("active");
+            }
+        });
+    });
     </script>
 
     <nav class="navbar navbar-default navbar-fixed-top">
