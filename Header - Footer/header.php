@@ -17,7 +17,7 @@
 
     <script type="text/javascript">
     window.onload = function() {
-      var all_links = document.getElementById("nav").getElementsByTagName("a"),
+      var all_links = document.getElementById("nav").getElementsByTagName("li a"),
           i=0, len=all_links.length,
           full_path = location.href.split('#')[0]; //Ignore hashes?
 
@@ -42,7 +42,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-center" id="nav">
-            <li><a href="../Feed Page/Feed.php" class=""><span class="glyphicon glyphicon-list"></span> FEED</a></li>
+            <a href="../Feed Page/Feed.php" class=""><span class="glyphicon glyphicon-list"></span> FEED</a>
             <li><a href="../Notes Upload Page/NoteUpload.php" class=""><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
           </ul>
           <form method="post" class="navbar-form navbar-left form-style" action="../Search/search.php">
