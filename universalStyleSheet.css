@@ -67,7 +67,7 @@ input .btn.submit-btn.submit-font:hover{
 }
 
 footer .glyphicon {
-  position: relative;
+  position: absolute;
   font-size: 20px;
   margin-bottom: 20px;
   color: #660099;
