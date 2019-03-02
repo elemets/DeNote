@@ -38,10 +38,10 @@ input .btn.submit-btn.submit-font:hover{
   border-radius: 0;
   font-family: Montserrat, sans-serif;
 }
-.navbar li a, .navbar .navbar-brand {
+.navbar a, .navbar .navbar-brand {
   color: #fff !important;
 }
-.navbar-nav li a:hover{
+.navbar-nav a:hover{
   color: #660099 !important;
   background-color: #fff !important;
 }
