@@ -27,7 +27,15 @@
     }); */
 
     $(function(){
-        var current = window.location.href;
+      var current = window.location.href;
+      if(current == )
+    }
+
+    )
+
+
+    $(function(){
+        var current = window.location.pathname;
         $('#nav li a').each(function(){
             var $this = $(this);
             // if the current path is like this link, make it active
