@@ -8,12 +8,13 @@
 
   $(function(){
     var current = window.location.pathname;
-    current = current.slice(10, 60);
+    current = current - current.slice(0, 10);
     console.log(current);
     if(current == 'Z3_Y1_Project/Notes%20Upload%20Page/NoteUpload.php')  {
       var element = document.getElementById('noteNav');
       element.classList.add("active");
     }
+    else if (current == 'Z3_Y1_Project/Feed Page/Feed.php')
   });
 
 
