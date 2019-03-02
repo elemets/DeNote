@@ -37,9 +37,19 @@
           </form>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../Profile Page/Profile.php"><span class="glyphicon glyphicon-user"></span>PROFILE</a></li>
-            <li><a href="../index.html"><span class="glyphicon glyphicon-log-out"></span>LOGOUT</a></li>
+            <li><a onclick="exit()"><span class="glyphicon glyphicon-log-out"></span>LOGOUT</a></li>
           </ul>
         </div>
       </div>
     </nav>
+  <script>
+  function exit()
+  {
+    <?php
+    session_start();
+    $_SESSION = array();
+    session_destroy();
+    header('Location: ../index.html');
+    ?>
+  }
   </head>
