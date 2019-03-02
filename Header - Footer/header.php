@@ -16,7 +16,7 @@
 
 
     <script type="javascript">
-    $(document).ready(function(){
+/*    $(document).ready(function(){
         var full_path = location.href.split("..")[0];
         $("#nav li").each(function(){
             var $this = $(this);
@@ -24,17 +24,18 @@
                 $this.addClass("active");
             }
         });
-    });
+    }); */
 
     $(function(){
-    var current = location.pathname;
-    $('#nav li a').each(function(){
-        var $this = $(this);
-        // if the current path is like this link, make it active
-        if($this.attr('href').indexOf(current) !== -1){
-            $this.addClass('active');
-        }
-    })
+        var current = location.pathname;
+        $('#nav li a').each(function(){
+            var $this = $(this);
+            // if the current path is like this link, make it active
+            if($this.attr('href').indexOf(current) !== -1){
+                $this.addClass('active');
+            }
+        });
+    });
     </script>
 
     <nav class="navbar navbar-default navbar-fixed-top">
