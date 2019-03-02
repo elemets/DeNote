@@ -67,7 +67,7 @@ input .btn.submit-btn.submit-font:hover{
 }
 
 .footer{
-      position:relative;
+      position:absolute;
   		bottom:0;
   		width:100%;			/* Height of the footer */
 }
