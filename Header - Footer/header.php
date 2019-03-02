@@ -16,18 +16,18 @@
 
 
     <script type="javascript">
-/*    $(document).ready(function(){
-        var full_path = location.href.split("..")[0];
+    $(document).ready(function(){
+        var full_path = location.pathname.split("../")[0];
         $("#nav li").each(function(){
             var $this = $(this);
-            if($this.prop("href").split("..")[0] == full_path) {
+            if($this.prop("href").split("../")[0] == full_path) {
                 $this.addClass("active");
             }
         });
-    }); */
+    });
 
     $(function(){
-      var current = window.location.href;
+      var current = window.location.pathname;
       if(current == )
     }
 
