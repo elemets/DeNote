@@ -18,7 +18,7 @@
     <script type="javascript">
     $(document).ready(function(){
         var full_path = location.href.split("../")[0];
-        $("#nav li a").each(function(){
+        $("#nav li").each(function(){
             var $this = $(this);
             if($this.prop("href").split("../")[0] == full_path) {
                 $this.addClass("active");
@@ -39,7 +39,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-center" id="nav">
-            <li class="active"><a href="../Feed Page/Feed.php"><span class="glyphicon glyphicon-list"></span> FEED</a></li>
+            <li><a href="../Feed Page/Feed.php"><span class="glyphicon glyphicon-list"></span> FEED</a></li>
             <li><a href="../Notes Upload Page/NoteUpload.php" class=""><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
           </ul>
           <form method="post" class="navbar-form navbar-left form-style" action="../Search/search.php">
