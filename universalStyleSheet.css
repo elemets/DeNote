@@ -66,7 +66,7 @@ input .btn.submit-btn.submit-font:hover{
   margin-bottom: 10px;
 }
 
-.specialFooter{
+.smallFooter{
       position:absolute;
   		bottom:0;
   		width:100%;			/* Height of the footer */

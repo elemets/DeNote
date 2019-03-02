@@ -23,10 +23,10 @@
   });
 
   $(function(){
-    var body = document.getElementById('body')[0];
-    if(body.height() < 10){
+    var body = document.body;
+    if(body.height() < 100){
       var footer = document.getElementById('footer');
-      footer.classList.add("specialFooter");
+      footer.classList.add("smallFooter");
     }
   }
   )
