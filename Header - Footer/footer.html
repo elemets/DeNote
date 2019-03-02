@@ -8,17 +8,15 @@
 
   $(function(){
     var current = window.location.pathname;
-    current = current.slice(10, current.length);
-    console.log(current);
-    if(current.includes('NoteUpload.php') {
+    if(current.includes('NoteUpload.php')) {
       var element = document.getElementById('noteNav');
       element.classList.add("active");
     }
-    else if (current == 'Z3_Y1_Project/Feed Page/Feed.php'){
+    else if (current.includes('Feed.php')){
       var element = document.getElementById('feedNav');
       element.classList.add("active");
     }
-    else if (current == 'Z3_Y1_Project/Profile Page/Profile.php'){
+    else if (current.includes('Profile.php')){
       var element = document.getElementById('profileNav');
       element.classList.add("active");
     }
