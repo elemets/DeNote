@@ -39,7 +39,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-center" id="nav">
-            <li><a href="../Feed Page/Feed.php" class=""><span class="glyphicon glyphicon-list"></span> FEED</a></li>
+            <li><a href="web.cs.manchester.ac.uk/w81454af/Z3_Y1_Project/Feed%20Page/Feed.php" class=""><span class="glyphicon glyphicon-list"></span> FEED</a></li>
             <li><a href="../Notes Upload Page/NoteUpload.php" class=""><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
           </ul>
           <form method="post" class="navbar-form navbar-left form-style" action="../Search/search.php">
