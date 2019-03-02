@@ -30,22 +30,14 @@ include "../Header - Footer/header.php";
     }
     body {
       padding-top: 50px;
-      height: 100vh;
     }
     label {
         color: #212529;
         font: 400 15px Lato, sans-serif;
     }
-    .main{
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      flex-shrink: 0;
-      flex-basis: auto;
-    }
 </style>
 
-<body class="main">
+<body>
 <div id="top">
 <?php
 require_once('config.inc.php');
