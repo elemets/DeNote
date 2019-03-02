@@ -38,14 +38,14 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../Profile Page/Profile.php"><span class="glyphicon glyphicon-user"></span>PROFILE</a></li>
             <form method="post">
-            <li><a onclick="<?php echo $_SERVER['PHP_SELF'];?> "><span class="glyphicon glyphicon-log-out"></span>LOGOUT</a></li>
+            <li><a name="logout" onclick="<?php echo $_SERVER['PHP_SELF'];?> "><span class="glyphicon glyphicon-log-out"></span>LOGOUT</a></li>
             </form>
           </ul>
         </div>
       </div>
     </nav>
   <script>
-  if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["logout"]))
+  if (isset($_POST["logout"]))
   {
     <?php
     session_start();
