@@ -16,7 +16,7 @@
 
 
     <script type="javascript">
-    $(document).ready(function(){
+  /*  $(document).ready(function(){
         var full_path = location.pathname.split("../")[0];
         $("#nav li").each(function(){
             var $this = $(this);
@@ -24,17 +24,18 @@
                 $this.addClass("active");
             }
         });
-    });
+    }); */
 
     $(function(){
       var current = window.location.pathname;
-      if(current == )
-    }
+      if(current == "/Notes Upload Page/NoteUpload.php")  {
+        var element = getElementById('noteNav');
+        element.classList.add(" active");
+      }
+    });
 
-    )
 
-
-    $(function(){
+    /*$(function(){
         var current = window.location.pathname;
         $('#nav li a').each(function(){
             var $this = $(this);
@@ -58,8 +59,8 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-center" id="nav">
-            <li><a href="../Feed Page/Feed.php"><span class="glyphicon glyphicon-list"></span> FEED</a></li>
-            <li><a href="../Notes Upload Page/NoteUpload.php" class=""><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
+            <li><a href="../Feed Page/Feed.php" id="feedNav"><span class="glyphicon glyphicon-list"></span> FEED</a></li>
+            <li><a href="../Notes Upload Page/NoteUpload.php" id="noteNav"><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
           </ul>
           <form method="post" class="navbar-form navbar-left form-style" action="../Search/search.php">
             <div class="form-group">
