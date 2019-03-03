@@ -42,26 +42,6 @@ p {
 
 	<h2>Hello <?php echo $_SESSION["username"]; ?></h2>
 
-    <div id="top" class="container-fluid">
-			<div class="row">
-
-
-		<div class="col-sm-3">
-			    <div class="thumbnail">
-			      <a href="asdkjfbksdlkjgsdfiljkn">
-			        <img src="squareElement.png" style="width:100%">
-			        <div class="caption">
-			          <p>Lorem ipsum...</p>
-			        </div>
-			      </a>
-			    </div>
-	 </div>
-
-
-
-
-	  </div>
-
 <?php
 	require_once('config.inc.php');
     	// Connect to the database
@@ -72,9 +52,6 @@ p {
    	$stat->bindParam(1, $UnitYear);
    	$stat->execute();
         $UnitIDInField = array();
-	$start = '<div class="col-sm-3"><span><img src="squareElement.png" style="width:100%" href="';
-	$middle = '"></span><div class="centered">';
-	$end = '</div></div>';
 ?>
        <div id="top" class="container-fluid">
 			<div class="row">
@@ -82,16 +59,12 @@ p {
 	while($row = $stat->fetch()){
 	if (!in_array($row['UnitID'], $UnitIDInField))
       {
-      echo "<li><a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>".$row['UnitID']."</a></li>";
-			$href = "ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear'];
-			$section = $row['UnitID'];
-			//echo "$start.$href.$middle.$section.$end";
 ?>
 
 
 		<div class="col-sm-3">
 			    <div class="thumbnail">
-<?php echo"			      <a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
+<?php echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
 			        <img src="squareElement.png" style="width:100%">
 			        <div class="caption">
 			          <p><?php echo $row['UnitID'] ?></p>
