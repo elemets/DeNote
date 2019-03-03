@@ -57,10 +57,17 @@ body {
    	$stat->bindParam(1, $UnitYear);
    	$stat->execute();
         $UnitIDInField = array();
+	$start = '<div class="col-sm-3"><span><img src="squareElement.png" style="width:100%" href="';
+	$middle = '"></span><div class="centered">';
+	$end = '</div></div>';
+
 	while($row = $stat->fetch()){
 	if (!in_array($row['UnitID'], $UnitIDInField))
       {
       echo "<li><a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>".$row['UnitID']."</a></li>";
+			$href = "ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear'];
+			$section = $row['UnitID'];
+			echo $start.$href.$middle.$section.$end;
       array_push($UnitIDInField, $row['UnitID']);
       }
 }
