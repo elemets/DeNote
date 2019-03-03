@@ -13,10 +13,11 @@ body {
 
 <body>
 	<div id="top">
+		      <div class="row">
 <?php
 $_SESSION["username"] = $_SESSION["username"]
 ?>
-<h2>Hello THE TEAM <?php echo $_SESSION["username"]; ?></h2>
+<h2>Hello <?php echo $_SESSION["username"]; ?></h2>
 <?php echo $_SESSION["username"]."</br>"; ?>
 <?php
 	require_once('config.inc.php');
@@ -36,6 +37,7 @@ $_SESSION["username"] = $_SESSION["username"]
       }
 }
 ?>
+</div>
 </div>
 </body>
 <?php
