@@ -75,7 +75,10 @@ p {
 	$start = '<div class="col-sm-3"><span><img src="squareElement.png" style="width:100%" href="';
 	$middle = '"></span><div class="centered">';
 	$end = '</div></div>';
-
+?>
+       <div id="top" class="container-fluid">
+			<div class="row">
+<?php
 	while($row = $stat->fetch()){
 	if (!in_array($row['UnitID'], $UnitIDInField))
       {
@@ -84,8 +87,6 @@ p {
 			$section = $row['UnitID'];
 			//echo "$start.$href.$middle.$section.$end";
 ?>
-       <div id="top" class="container-fluid">
-			<div class="row">
 
 
 		<div class="col-sm-3">
@@ -101,13 +102,12 @@ p {
 
 
 
-
-	  </div>
 <?php
       array_push($UnitIDInField, $row['UnitID']);
       }
 }
 ?>
+</div>
 </div>
 </body>
 <?php
