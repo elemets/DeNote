@@ -70,7 +70,7 @@ body {
 			//echo "$start.$href.$middle.$section.$end";
 ?>
  <?php
-echo"      <a href= 'ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>
+echo "      <a href= 'ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>
           <div id="top" class="container-fluid">
             <div class="row">
 	      <div class="col-sm-3">
@@ -79,8 +79,7 @@ echo"      <a href= 'ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYe
 	      </div>
 	    </div>
       
-      </a>
-";
+      </a>";
 ?>
 <?php
       array_push($UnitIDInField, $row['UnitID']);
