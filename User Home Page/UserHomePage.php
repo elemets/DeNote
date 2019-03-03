@@ -12,8 +12,9 @@ body {
 </style>
 
 <body>
+	<div class="row">
 	<div id="top">
-		      <div class="row">
+
 <?php
 $_SESSION["username"] = $_SESSION["username"]
 ?>
