@@ -21,7 +21,6 @@ $stat->bindParam(1, $id);
 $stat->bindParam(2, $UnitYear);
 $stat->execute();
     while($row = $stat->fetch()){
-      echo "<li><a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
 ?>
 	<div class="col-sm-3">
 			    <div class="thumbnail">
