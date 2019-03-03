@@ -9,6 +9,9 @@ require_once("../Header - Footer/header.php");
 body {
 	padding-top: 50px;
 }
+p {
+	text-align: center;
+}
 .container {
   position: relative;
   text-align: center;
