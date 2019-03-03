@@ -98,28 +98,8 @@
 
                 <!-- Password validation based on www.w3schools.com/howto/howto_js_password_validation.asp -->
                 <div class="form-group">
-                  <label for="password"> Password</label>
+                  <label for="password">Password (must not contain < or >, must be 8 or more characters long</label>
     			        <input type="password" class="form-control form-element" name="password" placeholder="Password" id="password" pattern="([^<>]\w{8,})" required>
-
-                  <script>
-                    var passInput = document.getElementById("password");
-                    var length = document.getElementById("length");
-                    var characters = document.getElementById("characters");
-          
-                    // Show message when clicking on the password field
-                    passInput.onfocus = function() {
-                      document.getElementById("message").style.display = "block";
-                    }
-                    // Hide message when clicking outside of the password field
-                    passInput.onblur = function() {
-                      document.getElementById("message").style.display = "none";
-                    }
-                  </script>
-                </div>
-                <div id="message">
-                  <p id="characters" class="invalid">Password must not contain these characters: <></b></p>
-                  <p id="length" class="invalid">Password must contain at least 8 characters</b></p>
-                </div>
 
                 <br>
                 <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign Up">
