@@ -33,18 +33,21 @@ body {
 </style>
 
 <body>
-    <div id="top" class="container-fluid row">
-		<div class="col-sm-4">
-     <div class="container">
-			   <span><img src="squareElement.png" class="img-responsive"></span>
-			   <div class="centered">Centered</div>
-     </div>
-	  </div>
 <?php
 $_SESSION["username"] = $_SESSION["username"]
 ?>
 <h2>Hello <?php echo $_SESSION["username"]; ?></h2>
 <?php echo $_SESSION["username"]."</br>"; ?>
+
+<div id="top" class="container-fluid row">
+<div class="col-sm-4">
+ <div class="container">
+		 <span><img src="squareElement.png" class="img-responsive"></span>
+		 <div class="centered">Centered</div>
+ </div>
+</div>
+
+
 <?php
 	require_once('config.inc.php');
     	// Connect to the database
