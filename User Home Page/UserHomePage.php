@@ -12,7 +12,7 @@ body {
 </style>
 
 <body>
-	<div class="col-12">
+    <div class="container-fluid text-center">
 	<div id="top">
 
 <?php
