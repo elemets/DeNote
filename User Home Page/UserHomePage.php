@@ -34,13 +34,13 @@ body {
 
 <body>
     <div id="top" class="container-fluid row">
-		<div class="col-sm-3">
+		<div class="col-sm-4">
      <div class="container">
 			   <span><img src="squareElement.png" style="width:100%;"></span>
 			   <div class="centered">Centered</div>
      </div>
 	  </div>
-		<div class="col-sm-3 Team-Center-Right">
+		<div class="col-sm-4 Team-Center-Right">
 			<span><img src="../Welcome Page/Team Images/Abdullah.png" class="Team-Icon" alt="Abdullah image"></span>
 			<h4>ABDULLAH ALI</h4>
 			<p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry"</p>
