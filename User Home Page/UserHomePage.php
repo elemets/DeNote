@@ -41,10 +41,22 @@ body {
 
     <div id="top" class="container-fluid">
 			<div class="row">
+
+
 		<div class="col-sm-3">
-			   <span><img src="squareElement.png" style="width:100%"></span>
-			   <div class="centered">Centered</div>
+			    <div class="thumbnail">
+			      <a href="asdkjfbksdlkjgsdfiljkn">
+			        <img src="squareElement.png" style="width:100%">
+			        <div class="caption">
+			          <p>Lorem ipsum...</p>
+			        </div>
+			      </a>
+			    </div>
 	 </div>
+
+
+
+
 	  </div>
 
 <?php
@@ -77,7 +89,7 @@ body {
 	          <div class="centered"><?php echo $row['UnitID']?></div>
 	      </div>
 	    </div>
-      
+
       </a>"
 <?php
       array_push($UnitIDInField, $row['UnitID']);
