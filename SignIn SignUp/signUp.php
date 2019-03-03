@@ -76,17 +76,17 @@
     		<form class="form-horizontal" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 
     		<div class="form-group">
-                  <label for="username"> Username</label>
-            	  <input type="textbox" class="form-control form-element" name="username" placeholder="Username">
+                  <label for="username">Username (must not contain <>)</label>
+            	  <input type="textbox" class="form-control form-element" name="username" placeholder="Username" pattern="([^<>])" required>
                 </div>
 
                 <div class="form-group">
-                  <label for="email"> University Email</label>
+                  <label for="email">University Email</label>
             	  <input type="email" class="form-control form-element" name="email" placeholder="University Email">
                 </div>
 
                 <div class="form-group">
-                  <label for="year"> Year of Study</label>
+                  <label for="year">Year of Study</label>
             	  <select class="form-control form-element" name="year">
                   <option>Year 0</option>
                   <option>Year 1</option>
@@ -99,7 +99,7 @@
                 <!-- Password validation based on www.w3schools.com/howto/howto_js_password_validation.asp -->
                 <div class="form-group">
                   <label for="password">Password (8+ characters, must not contain <>)</label>
-    			        <input type="password" class="form-control form-element" name="password" placeholder="Password" id="password" pattern="([^<>]\w{8,})" required>
+    			        <input type="password" class="form-control form-element" name="password" placeholder="Password" pattern="([^<>]\w{8,})" required>
                 </div>
 
                 <br>
