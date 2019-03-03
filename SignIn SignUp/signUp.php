@@ -76,7 +76,7 @@
 
     		  <div class="form-group">
             <label for="username">Username (mustn't contain <>)</label>
-            <input type="textbox" class="form-control form-element" name="username" placeholder="Username" pattern="[<>]+">
+            <input type="textbox" class="form-control form-element" name="username" placeholder="Username" pattern="[^<>]+">
           </div>
 
           <div class="form-group">
