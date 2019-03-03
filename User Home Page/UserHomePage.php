@@ -60,7 +60,7 @@ body {
 	while($row = $stat->fetch()){
 	if (!in_array($row['UnitID'], $UnitIDInField))
       {
-			echo "<div class='row'> \n <div class='col-sm-3'> \n <span><img src='squareElement.png' style='width:100%' ."href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'></span>"
+			echo "<div class='row'> \n <div class='col-sm-3'> \n <span><img src='squareElement.png' style='width:100%'"."href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'></span>"
       array_push($UnitIDInField, $row['UnitID']);
       }
 }
