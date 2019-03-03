@@ -1,3 +1,10 @@
+<html>
+<header>
+<?php
+require_once("../Header - Footer/header.php");
+?>
+</header>
+<body>
 <?php
 session_start();
 require_once('config.inc.php');
@@ -10,4 +17,17 @@ $stat->bindParam(2, $UnitYear);
 $stat->execute();
     while($row = $stat->fetch()){
       echo "<li><a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";}
+?>
+	<div class="col-sm-3">
+			    <div class="thumbnail">
+<?php echo"<a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
+			        <img src="squareElement.png" style="width:100%">
+			        <div class="caption">
+			          <p><?php echo $row['FileName'] ?></p>
+			        </div>
+			      </a>
+			    </div>
+	 </div>
+<?php
  ?>
+</body>
