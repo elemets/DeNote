@@ -12,7 +12,7 @@ body {
 </style>
 
 <body>
-	<div class="row">
+	<div class="col-12">
 	<div id="top">
 
 <?php
