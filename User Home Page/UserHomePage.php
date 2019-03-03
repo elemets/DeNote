@@ -69,12 +69,13 @@ body {
 			$section = $row['UnitID'];
 			//echo "$start.$href.$middle.$section.$end";
 ?>
+ 
       <a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>
           <div id="top" class="container-fluid">
             <div class="row">
 	      <div class="col-sm-3">
 	        <span><img src="squareElement.png" style="width:100%"></span>
-	          <div class="centered"><?php echo $row['Unit']?></div>
+	          <div class="centered"><?php echo $row['UnitID']?></div>
 	      </div>
 	    </div>
       
