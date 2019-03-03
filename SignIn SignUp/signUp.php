@@ -100,6 +100,7 @@
                 <div class="form-group">
                   <label for="password">Password (8+ characters, must not contain <>)</label>
     			        <input type="password" class="form-control form-element" name="password" placeholder="Password" id="password" pattern="([^<>]\w{8,})" required>
+                </div>
 
                 <br>
                 <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign Up">
