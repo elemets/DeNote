@@ -5,6 +5,11 @@ require_once("../Header - Footer/header.php");
 ?>
 </header>
 <body>
+</br>
+</br>
+</br>
+<div id="top" class="container-fluid">
+			<div class="row">
 <?php
 session_start();
 require_once('config.inc.php');
@@ -30,4 +35,6 @@ $stat->execute();
 	 </div>
 <?php
  ?>
+</div>
+</div>
 </body>
