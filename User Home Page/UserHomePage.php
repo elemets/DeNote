@@ -36,7 +36,7 @@ body {
     <div id="top" class="container-fluid row">
 		<div class="col-sm-4">
      <div class="container">
-			   <span><img src="squareElement.png" style="width:100%;"></span>
+			   <span><img src="squareElement.png" class="img-responsive"></span>
 			   <div class="centered">Centered</div>
      </div>
 	  </div>
