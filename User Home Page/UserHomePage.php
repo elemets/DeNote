@@ -69,8 +69,8 @@ body {
 			$section = $row['UnitID'];
 			//echo "$start.$href.$middle.$section.$end";
 ?>
- 
-      <a href= "<?php'ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'?>">
+ <?php
+echo"      <a href= 'ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>
           <div id="top" class="container-fluid">
             <div class="row">
 	      <div class="col-sm-3">
@@ -80,6 +80,8 @@ body {
 	    </div>
       
       </a>
+"
+?>
 <?php
       array_push($UnitIDInField, $row['UnitID']);
       }
