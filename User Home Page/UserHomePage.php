@@ -9,12 +9,25 @@ require_once("../Header - Footer/header.php");
 body {
 	padding-top: 50px;
 }
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 </style>
 
 <body>
-    <div class="container-fluid">
-	<div id="top">
-
+    <div id="top" class="container-fluid row">
+     <div class="container">
+			   <img src="squareElement.png" style="width:100%;">
+			 <div class="centered">Centered</div>
+     </div>
 <?php
 $_SESSION["username"] = $_SESSION["username"]
 ?>
@@ -38,7 +51,6 @@ $_SESSION["username"] = $_SESSION["username"]
       }
 }
 ?>
-</div>
 </div>
 </body>
 <?php
