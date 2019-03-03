@@ -80,7 +80,7 @@ echo"      <a href= 'ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYe
 	    </div>
       
       </a>
-"
+";
 ?>
 <?php
       array_push($UnitIDInField, $row['UnitID']);
