@@ -70,7 +70,7 @@ body {
 			//echo "$start.$href.$middle.$section.$end";
 ?>
  
-      <a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>
+      <a href= "<?php'ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'?>">
           <div id="top" class="container-fluid">
             <div class="row">
 	      <div class="col-sm-3">
