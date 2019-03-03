@@ -24,10 +24,12 @@ body {
 
 <body>
     <div id="top" class="container-fluid row">
+		<div class="col-sm-3">
      <div class="container">
 			   <img src="squareElement.png" style="width:100%;">
-			 <div class="centered">Centered</div>
+			   <div class="centered">Centered</div>
      </div>
+	  </div>
 <?php
 $_SESSION["username"] = $_SESSION["username"]
 ?>
