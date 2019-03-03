@@ -33,6 +33,12 @@ body {
 </style>
 
 <body>
+	<?php
+	$_SESSION["username"] = $_SESSION["username"]
+	?>
+
+	<h2>Hello <?php echo $_SESSION["username"]; ?></h2>
+
     <div id="top" class="container-fluid">
 			<div class="row">
 		<div class="col-sm-3">
@@ -40,13 +46,6 @@ body {
 			   <div class="centered">Centered</div>
 	 </div>
 	  </div>
-<?php
-$_SESSION["username"] = $_SESSION["username"]
-?>
-<h2>Hello <?php echo $_SESSION["username"]; ?></h2>
-<?php echo $_SESSION["username"]."</br>"; ?>
-
-
 
 <?php
 	require_once('config.inc.php');
@@ -61,7 +60,7 @@ $_SESSION["username"] = $_SESSION["username"]
 	while($row = $stat->fetch()){
 	if (!in_array($row['UnitID'], $UnitIDInField))
       {
-      echo "<li><a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>".$row['UnitID']."</a></li>";
+			echo "<div class='row'> \n <div class='col-sm-3'> \n <span><img src='squareElement.png' style='width:100%' ."href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'></span>"
       array_push($UnitIDInField, $row['UnitID']);
       }
 }
