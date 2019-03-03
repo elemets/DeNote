@@ -94,7 +94,7 @@ p {
 <?php echo"			      <a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
 			        <img src="squareElement.png" style="width:100%">
 			        <div class="caption">
-			          <p>Lorem ipsum...</p>
+			          <p><?php echo $row['UnitID'] ?></p>
 			        </div>
 			      </a>
 			    </div>
