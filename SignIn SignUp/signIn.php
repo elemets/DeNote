@@ -74,12 +74,12 @@ session_start();
 
     		  <div class="form-group">
             <label for="username"> Username</label>
-            <input type="textbox" class="form-control form-element" name="username" placeholder="Username">
+            <input type="textbox" class="form-control form-element" name="username" placeholder="Username" pattern="[^<>]+">
           </div>
 
           <div class="form-group">
             <label for="password"> Password</label>
-    		    <input type="password" class="form-control form-element" name="password" placeholder="Password">
+    		    <input type="password" class="form-control form-element" name="password" placeholder="Password" pattern="[a-zA-Z0-9!?@#$%*-/+_]{8,}">
           </div>
 
           <br>
