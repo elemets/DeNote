@@ -98,7 +98,7 @@
           <!-- Password validation based on www.w3schools.com/howto/howto_js_password_validation.asp -->
           <div class="form-group">
             <label for="password">Password (8+ characters, mustn't contain <>)</label>
-    			  <input type="password" class="form-control form-element" name="password" placeholder="Password" pattern="([^<>]\w{7,})" required>
+    			  <input type="password" class="form-control form-element" name="password" placeholder="Password" pattern="(.[^\<\>]{7,})" required>
           </div>
 
           <br>
