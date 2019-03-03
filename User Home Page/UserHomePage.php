@@ -84,16 +84,25 @@ p {
 			$section = $row['UnitID'];
 			//echo "$start.$href.$middle.$section.$end";
 ?>
-       <a href= 'ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>
-          <div id="top" class="container-fluid">
-            <div class="row">
-	      <div class="col-sm-3">
-	        <span><img src="squareElement.png" style="width:100%"></span>
-	          <div class="centered"><?php echo $row['UnitID']?></div>
-	      </div>
-	    </div>
+       <div id="top" class="container-fluid">
+			<div class="row">
 
-      </a>"
+
+		<div class="col-sm-3">
+			    <div class="thumbnail">
+<?php echo"			      <a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
+			        <img src="squareElement.png" style="width:100%">
+			        <div class="caption">
+			          <p>Lorem ipsum...</p>
+			        </div>
+			      </a>
+			    </div>
+	 </div>
+
+
+
+
+	  </div>
 <?php
       array_push($UnitIDInField, $row['UnitID']);
       }
