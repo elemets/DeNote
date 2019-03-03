@@ -79,7 +79,7 @@ session_start();
 
           <div class="form-group">
             <label for="password"> Password</label>
-    		    <input type="password" class="form-control form-element" name="password" placeholder="Password" pattern="[a-zA-Z0-9!?@#$%*-/+_]{8,}">
+    		    <input type="password" class="form-control form-element" name="password" placeholder="Password" pattern="[a-zA-Z0-9!?@#$%*-/+_]">
           </div>
 
           <br>
