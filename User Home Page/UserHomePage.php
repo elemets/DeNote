@@ -36,10 +36,8 @@ body {
     <div id="top" class="container-fluid">
 			<div class="row">
 		<div class="col-sm-4">
-     <div class="container">
 			   <span><img src="squareElement.png" style="width:100%"></span>
 			   <div class="centered">Centered</div>
-     </div>
 	 </div>
 	  </div>
 <?php
