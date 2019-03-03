@@ -26,7 +26,7 @@ body {
     <div id="top" class="container-fluid row">
 		<div class="col-sm-3">
      <div class="container">
-			   <img src="squareElement.png" style="width:100%;">
+			   <span><img src="squareElement.png" style="width:100%;"></span>
 			   <div class="centered">Centered</div>
      </div>
 	  </div>
