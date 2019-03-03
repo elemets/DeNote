@@ -30,6 +30,12 @@ body {
 			   <div class="centered">Centered</div>
      </div>
 	  </div>
+		<div class="col-sm-3 Team-Center-Right">
+			<span><img src="../Welcome Page/Team Images/Abdullah.png" class="Team-Icon" alt="Abdullah image"></span>
+			<h4>ABDULLAH ALI</h4>
+			<p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry"</p>
+			<br>
+		</div>
 <?php
 $_SESSION["username"] = $_SESSION["username"]
 ?>
