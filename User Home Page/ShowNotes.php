@@ -11,6 +11,7 @@ body > p {
 }
 </style>
 <body>
+		<h1><?php echo $_GET['id']; ?></h1>
 </br>
 </br>
 </br>
