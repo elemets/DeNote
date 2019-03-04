@@ -11,11 +11,10 @@ body > p {
 }
 </style>
 <body>
+	<div id="top" class="container-fluid">
+		<div class="row">
 		<h1><?php echo $_GET['id']; ?></h1>
-</br>
-</br>
-</br>
-<div id="top" class="container-fluid">
+</div>
 			<div class="row">
 <?php
 session_start();

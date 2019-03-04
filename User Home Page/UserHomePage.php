@@ -22,6 +22,7 @@ body > p {
 	  <div class="row">
 	<h1>Hello <?php echo $_SESSION["username"]; ?></h1>
 </div>
+			<div class="row">
 <?php
 	require_once('config.inc.php');
     	// Connect to the database
@@ -32,10 +33,7 @@ body > p {
    	$stat->bindParam(1, $UnitYear);
    	$stat->execute();
         $UnitIDInField = array();
-?>
 
-			<div class="row">
-<?php
 	while($row = $stat->fetch()){
 	if (!in_array($row['UnitID'], $UnitIDInField))
       {
