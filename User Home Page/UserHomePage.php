@@ -39,9 +39,10 @@ p {
 	<?php
 	$_SESSION["username"] = $_SESSION["username"]
 	?>
-
+  <div id="top" class="container-fluid">
+	  <div class="row">
 	<h2>Hello <?php echo $_SESSION["username"]; ?></h2>
-
+</div>
 <?php
 	require_once('config.inc.php');
     	// Connect to the database
@@ -53,7 +54,7 @@ p {
    	$stat->execute();
         $UnitIDInField = array();
 ?>
-       <div id="top" class="container-fluid">
+
 			<div class="row">
 <?php
 	while($row = $stat->fetch()){
