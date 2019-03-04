@@ -20,7 +20,7 @@ body > p {
 	?>
   <div id="top" class="container-fluid">
 	  <div class="row">
-	<h2>Hello <?php echo $_SESSION["username"]; ?></h2>
+	<h1>Hello <?php echo $_SESSION["username"]; ?></h1>
 </div>
 <?php
 	require_once('config.inc.php');
