@@ -1,9 +1,31 @@
-<html>
-<header>
 <?php
 require_once("../Header - Footer/header.php");
 ?>
-</header>
+<title>Page Title</title>
+<style>
+body {
+	padding-top: 50px;
+}
+body > p {
+	text-align: center;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+  .btn-lg {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}
+</style>
 <body>
 </br>
 </br>

@@ -6,7 +6,7 @@ require_once("../Header - Footer/header.php");
 ?>
 <title>Page Title</title>
 <style>
-body {
+body > p {
 	padding-top: 50px;
 }
 p {
@@ -16,12 +16,6 @@ p {
   position: relative;
   text-align: center;
   color: white;
-}
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 @media screen and (max-width: 768px) {
   .col-sm-4 {
