@@ -7,6 +7,24 @@ include "../Header - Footer/header.php";
 ?>
 
 <title>Upload Page</title>
+<script type="text/javascript">
+$(function(){
+  var current = window.location.pathname;
+  if(current.includes('NoteUpload.php')) {
+    var element = document.getElementById('noteNav');
+    element.classList.add("active");
+  }
+  else if (current.includes('Feed.php')){
+    var element = document.getElementById('feedNav');
+    element.classList.add("active");
+  }
+  else if (current.includes('Profile.php')){
+    var element = document.getElementById('profileNav');
+    element.classList.add("active");
+  }
+});
+
+</script>
 <style>
     .bottom-buffer {
         margin-bottom:20px !important;
