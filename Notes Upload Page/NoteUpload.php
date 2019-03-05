@@ -76,9 +76,9 @@ if(isset($_POST['btn']))
     echo "empty field of section number or unit is ---- or number is string";
   }
 ?>
-<div class="container formcenter">
+<div class="container">
             <div class="form-content">
-                    <h2>Upload</h2>
+                    <h2 style="padding-top:50px;">Upload</h2>
 
    <div class="form-body">
                 <form method="post" enctype="multipart/form-data">
