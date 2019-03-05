@@ -60,6 +60,7 @@ body > p {
 ?>
 </div>
 </div>
+<a style="font-size:8px;color:grey;text-align:center;" href="attributions.php">Image attributions</a>
 </body>
 <?php
 require_once("../Header - Footer/footer.html");
