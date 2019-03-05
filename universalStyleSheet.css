@@ -10,6 +10,7 @@ h1 {
   color: #303030;
   font-weight: 800;
   padding: 0px;
+  margin: 0px;
 }
 h2 {
   font-size: 24px;
@@ -17,6 +18,7 @@ h2 {
   color: #303030;
   font-weight: 600;
   padding: 0px;
+  margin: 0px;
 }
 h3 {
   font-size: 19px;
@@ -24,6 +26,7 @@ h3 {
   color: #303030;
   font-weight: 400;
   padding: 0px;
+  margin: 0px;
 }
 h4 {
   font-size: 14px;
@@ -31,6 +34,7 @@ h4 {
   color: #303030;
   font-weight: 200;
   padding: 0px;
+  margin: 0px;
 }
 h5 {
   font-size: 9px;
@@ -38,6 +42,7 @@ h5 {
   color: #303030;
   font-weight: 100;
   padding: 0px;
+  margin: 0px;
 }
 .form-style {
   font-size: 12px !important;
