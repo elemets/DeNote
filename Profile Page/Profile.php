@@ -64,6 +64,7 @@ $stmt = $conn->prepare("INSERT INTO ProfilePic (`UnitID`,`type`,`data`) VALUES (
   $stmt->bindParam(2, $type);
   $stmt->bindParam(3, $data);
   $stmt->execute();
+}
 ?>
 </div>
 <!-- My notes Section -->
