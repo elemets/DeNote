@@ -13,10 +13,20 @@ $id = "view.php?id=" . $_GET['id'];
 
 
 <div class="iframe-container">
-<p align="center"><iframe src="<?php echo $id ?>"  width="960" height="900">
+<p align="center">
+  <object
+  data="<?php echo $id ?>"
+  type="application/pdf"
+  width="100%"
+  height="100%">
+  <iframe src="<?php echo $id ?>"  width="960" height="900">
+    <p>Your browser does not support PDFs.
+      <a href="<?php echo $id ?>">Download the PDF</a>.</p>
+
 
 </iframe></p>
 </div>
+</object>
 
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:80%;margin-left:10%"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
