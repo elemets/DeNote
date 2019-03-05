@@ -23,8 +23,8 @@
   });
 
   $(function(){
-    var body = document.body;
-    if($(body).height() < 700 ){
+    var windowHeight = $(window).height();
+    if($(body).height() < 700 || windowHeight < 700){
       console.log($(body).height());
       var footer = document.getElementById('footer');
       footer.classList.add("smallFooter");
