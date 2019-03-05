@@ -33,6 +33,9 @@ require_once("../Header - Footer/header.php");
 
   while($row = $stat->fetch()){
     echo "<li><a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
+  while($row = $stat2->fetch()){
+    echo "<li><a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
+    }
   }
    ?>
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
