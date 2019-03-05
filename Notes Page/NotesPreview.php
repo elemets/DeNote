@@ -17,8 +17,8 @@ $id = "view.php?id=" . $_GET['id'];
   <object
   data="<?php echo $id ?>"
   type="application/pdf"
-  width="100%"
-  height="100%">
+  width="960"
+  height="900">
   <iframe src="<?php echo $id ?>"  width="960" height="900">
     <p>Your browser does not support PDFs.
       <a href="<?php echo $id ?>">Download the PDF</a>.</p>
