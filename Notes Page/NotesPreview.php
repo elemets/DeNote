@@ -13,9 +13,9 @@ $id = "view.php?id=" . $_GET['id'];
 
 
 
-<iframe src="<?php echo $id ?>"  width="960" height="900" align="middle">
+<p align="center"><iframe src="<?php echo $id ?>"  width="960" height="900">
 
- </iframe>
+</iframe></p>
 
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:80%;margin-left:10%"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
