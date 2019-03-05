@@ -14,6 +14,7 @@ body {
 <?php
 require_once('config.inc.php');
 $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
+$conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
 $id = isset($_GET['id'])? $_GET['id'] : "";
 $stat = $conn->prepare("SELECT * FROM Notes WHERE NoteID = ?");
 $stat->bindParam(1, $id);
@@ -22,6 +23,11 @@ $row = $stat->fetch();
 echo '<h4>';
 echo $row['TitleNote'];
 echo '</h4>';
+$userName = $conn2->query("SELECT * FROM Users WHERE UserID ='$row['UserID']'")->fetch_object()->Username;
+
+echo '<h5>';
+echo "Author:" . $userName;
+echo '</h5>';
 ?>
 
           <h5> Author</h5>
