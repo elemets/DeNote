@@ -23,17 +23,17 @@ $row = $stat->fetch();
 $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
 $username = $conn2->query($syn)->fetch_object()->Username;
 
-echo '<h3>';
+echo '<h1>';
 echo $row['TitleNote'];
-echo '</h3>';
+echo '</h1>';
 
-echo '<h4>';
+echo '<h2>';
 echo "Author: " . $username;
-echo '</h4>';
+echo '</h2>';
 
-echo '<h4>';
+echo '<h2>';
 echo "Date Of Publish: " . $row['DateOfPublish'];
-echo '</h4>';
+echo '</h2>';
 ?>
         </div>
 <?php
