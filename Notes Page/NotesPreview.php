@@ -17,15 +17,17 @@ body {
           <h5> Author</h5>
           <h5> Time</h5>
         </div>
+  </div>
 <?php
 $id = "view.php?id=" . $_GET['id'];
 ?>
 <div  style="position:relative; top: 50px; ">
 <p align="center">
-  <iframe class="col-sm-12" src="<?php echo $id ?>"  >
+  <iframe src="<?php echo $id ?>"  >
 
 </iframe></p>
 </div>
+      <div class="row">
        <div class="col-sm-12"
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:80%;margin-left:10%"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
