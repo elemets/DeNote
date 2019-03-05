@@ -43,7 +43,7 @@ $stat->execute();
 	<div class="col-sm-3">
 			    <div class="container">
 					< img src="squareElement.png" style="width:100%"
-<?php echo"href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
+<?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 			        <div class="centered"><?php echo $row['FileName'] ?></div>
 			        </div>
 	 </div>
