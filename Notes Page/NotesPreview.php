@@ -11,7 +11,7 @@ body {
   <div id="top" class="container-fluid">
   <div class="row">
     		<div class="col-sm-6">
-  	<h4><?php echo $_SESSION["username"]; ?></h1>
+  	<h4>Title/h1>
   </div>
       	<div class="col-sm-6">
           <h5> Author</h3>
