@@ -184,7 +184,4 @@ if(isset($_POST['btn']))
 </div>
 </body>
 
-<?php
-require_once("../Header - Footer/footer.html");
-?>
 </html>
