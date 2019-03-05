@@ -30,6 +30,15 @@ body {
     display: none;
   }
 }
+.submit-btn {
+		background-color: #660099 !important;
+}
+.submit-font {
+		color:#ffffff !important;
+}
+.submit-font:hover {
+		color:#ecaa33 !important;
+}
 </style>
 <body>
   <div id="top" class="container-fluid">
@@ -74,6 +83,12 @@ if ($row['dataType'] == "application/pdf")
   <iframe src="<?php echo $id ?>"  >
 </iframe></p>
 </div>
+
+<div class="mobile-pdf">
+<a href="<?php echo $id ?>" class="btn btn-default btn-lg submit-btn btn-block submit-font" role="button">View PDF</a>
+</div>
+
+
 </div>
 <?php
 }else {
