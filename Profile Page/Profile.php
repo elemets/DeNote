@@ -24,7 +24,7 @@ require_once("../Header - Footer/header.php");
   $stat->bindParam(1, $userID);
   $stat->execute();
 
-  $followerID = $conn2->query("SELECT FollowedUserID FROM `Followers` WHERE FollowerUserID = '$userID'")->fetch_object()->FollowedUserID
+  $followerID = $conn2->query("SELECT FollowedUserID FROM `Followers` WHERE FollowerUserID = '$userID'")->fetch_object()->FollowedUserID;
   $stat2 = $conn->prepare("SELECT * FROM Notes WHERE UserID = '$followerID'");
   $stat2->bindParam(1, $followerID);
   $stat2->execute();
