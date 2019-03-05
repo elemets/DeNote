@@ -4,7 +4,8 @@ require_once("../Header - Footer/header.php");
 ?>
 <style>
 body {
-	padding-top: 50px;
+	padding-top: 60px;
+  padding-left: 60px;
 }
 </style>
   <body>
