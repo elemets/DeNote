@@ -6,14 +6,14 @@ require_once("../Header - Footer/header.php");
 body {
 	padding-top: 50px;
 }
-body > p {
-	text-align: center;
-}
 </style>
   <body>
-    <p>Images not explicitly mentioned in this page were released into the public domain</p>
 
-    <h1>Images in the user home page</h1>
+    <p><a href="UserHomePage.php">Back to the home page</a></p>
+
+    <p>Images not explicitly mentioned in this page were released into the public domain</p><br>
+
+    <h1>Images in the user home page</h1><br>
 
     <p>All images have been cropped and adapted</p>
 
