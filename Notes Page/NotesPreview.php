@@ -21,11 +21,13 @@ body {
 <?php
 $id = "view.php?id=" . $_GET['id'];
 ?>
+<div class="embed-responsive embed-responsive-4by3"
 <div  style="position:relative; top: 50px; ">
 <p align="center">
   <iframe src="<?php echo $id ?>"  >
 
 </iframe></p>
+</div>
 </div>
       <div class="row">
        <div class="col-sm-12"
