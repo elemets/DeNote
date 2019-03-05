@@ -18,10 +18,10 @@ $id = isset($_GET['id'])? $_GET['id'] : "";
 $stat = $conn->prepare("SELECT * FROM Notes WHERE UnitID = ? AND UnitYear = ?");
 $stat->bindParam(1, $id);
 $stat->execute();
-$row = $stat->fetch()
-echo '<h4>'
-echo $row['TitleNote']
-echo '</h4>'
+$row = $stat->fetch();
+echo '<h4>';
+echo $row['TitleNote'];
+echo '</h4>';
 ?>
 
           <h5> Author</h5>
