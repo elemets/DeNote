@@ -21,9 +21,11 @@ require_once("../Header - Footer/header.php");
   echo $_SESSION['username'];
   $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
 
-  $followingID = $conn->prepare("SELECT FollowedUserID FROM `Followers` WHERE FollowerUserID = $userID");
-  $followingID->bindParam(1, $userID);
-  $followingID->execute();
+  $followedUserID = $conn->prepare("SELECT FollowedUserID FROM `Followers` WHERE FollowerUserID = $userID");
+  $stat2 =  $conn->prepare("SELECT * FROM Notes WHERE UserID = '$followedUserID'")
+
+  $stat2->bindParam(1, $userID);
+  $stat2->execute();
 
   $stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = '$userID'");
   $stat->bindParam(1, $userID);
@@ -47,7 +49,7 @@ require_once("../Header - Footer/header.php");
     <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">Following</h3>
     <div class="jumbotron Container-fluid">
       <?php
-      while($row = $followingID->fetch()){
+      while($row = $stat2->fetch()){
         echo "<li><a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
       }
 
