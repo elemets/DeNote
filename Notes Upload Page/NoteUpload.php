@@ -78,7 +78,7 @@ if(isset($_POST['btn']))
 ?>
 <div class="container">
             <div class="form-content">
-                    <h2 style="padding-top:50px;">Upload</h2>
+                    <h2 style="padding-top:30px;">Upload</h2>
 
    <div class="form-body">
                 <form method="post" enctype="multipart/form-data">
