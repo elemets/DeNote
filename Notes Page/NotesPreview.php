@@ -11,11 +11,11 @@ body {
   <div id="top" class="container-fluid">
   <div class="row">
     		<div class="col-sm-6">
-  	<h4>Title/h1>
+  	<h4>Title</h4>
   </div>
       	<div class="col-sm-6">
-          <h5> Author</h3>
-          <h5> Time</h3>
+          <h5> Author</h5>
+          <h5> Time</h5>
         </div>
         <div class="col-sm-12"
 <?php
