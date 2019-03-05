@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<title>Attributions</title>
+<?php
+include "../Header - Footer/header.php";
+?>
   <body>
     <p>Images not explicitly mentioned in this page were released into the public domain</p>
 
