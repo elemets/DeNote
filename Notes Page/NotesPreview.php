@@ -20,6 +20,16 @@ body {
 		width: 0;
 	}
 }
+@media screen and (min-width: 768px) {
+  .mobile-pdf{
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .desktop-pdf{
+    display: none;
+  }
+}
 </style>
 <body>
   <div id="top" class="container-fluid">
@@ -59,7 +69,7 @@ if ($row['dataType'] == "application/pdf")
 {
 ?>
 		 <div class="col-sm-12 amp-active" style="padding-bottom:50px;">
-<div class="embed-responsive embed-responsive-4by3 ios-scroll">
+<div class="embed-responsive embed-responsive-4by3 ios-scroll desktop-pdf">
 <p align="center">
   <iframe src="<?php echo $id ?>"  >
 </iframe></p>
