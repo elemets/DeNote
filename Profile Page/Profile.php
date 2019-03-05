@@ -20,22 +20,13 @@ require_once("../Header - Footer/header.php");
   $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
   echo $_SESSION['username'];
   $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
-
-  $fetchFollowerID = $conn->prepare("SELECT FollowedUserID FROM `Followers` WHERE FollowerUserID = $userID");
-  $followedUserID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$fetchFollowerID'")->fetch_object()->UserID;
-  $stat2 = $conn->prepare("SELECT * FROM Notes WHERE UserID = '$followedUserID'");
-  $stat2->bindParam(1, $followedUserID);
-  $stat2->execute();
-
   $stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = '$userID'");
   $stat->bindParam(1, $userID);
   $stat->execute();
 
   while($row = $stat->fetch()){
     echo "<li><a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
-  while($row = $stat2->fetch()){
-    echo "<li><a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
-    }
+
   }
    ?>
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
