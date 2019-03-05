@@ -6,6 +6,16 @@ require_once("../Header - Footer/header.php");
 body {
 	padding-top: 50px;
 }
+.amp-active {
+	iframe {
+		height: 0;
+		max-height: 100%;
+		max-width: 100%;
+		min-height: 100%;
+		min-width: 100%;
+		width: 0;
+	}
+}
 </style>
 <body>
   <div id="top" class="container-fluid">
@@ -45,7 +55,7 @@ if ($row['dataType'] == "application/pdf")
 {
 ?>
 		 <div class="col-sm-12" style="padding-bottom:50px;">
-<div class="embed-responsive embed-responsive-4by3">
+<div class="embed-responsive embed-responsive-4by3 amp-active">
 <p align="center">
   <iframe src="<?php echo $id ?>"  >
 </iframe></p>
