@@ -13,7 +13,7 @@ $id = "view.php?id=" . $_GET['id'];
 
 <div class = "embed-responsive embed-responsive-16by9" style="position:relative; top: 50px;">
 <p align="center">
-  <iframe src="<?php echo $id ?>"  width="960" height="900">
+  <iframe src="<?php echo $id ?>"  width="960" height="800">
 
 </iframe></p>
 </div>
