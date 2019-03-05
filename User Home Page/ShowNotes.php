@@ -9,6 +9,18 @@ body {
 body > p {
 	text-align: center;
 }
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	color: white;
+}
 </style>
 <body>
 	<div id="top" class="container-fluid">
@@ -29,14 +41,11 @@ $stat->execute();
     while($row = $stat->fetch()){
 ?>
 	<div class="col-sm-3">
-			    <div class="thumbnail">
-<?php echo"<a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
-			        <img src="squareElement.png" style="width:100%">
-			        <div class="caption">
-			          <p><?php echo $row['FileName'] ?></p>
+			    <div class="container">
+					< img src="squareElement.png" style="width:100%"
+<?php echo"href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
+			        <div class="centered"><?php echo $row['FileName'] ?></div>
 			        </div>
-			      </a>
-			    </div>
 	 </div>
 <?php
 }
