@@ -1,33 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
 <?php
 require_once("../Header - Footer/header.php");
 ?>
-</head>
+<title>Note Preview Page</title>
+<style>
+body {
+	padding-top: 50px;
+}
+</style>
 <body>
-    <?php
+  <div id="top" class="container-fluid">
+  <div class="row">
+    		<div class="col-sm-6">
+  	<h1><?php echo $_SESSION["username"]; ?></h1>
+  </div>
+      	<div class="col-sm-6">
+          <h3> Author</h3>
+          <h3> Time</h3>
+        </div>
+        <div class="col-sm-12"
+<?php
 $id = "view.php?id=" . $_GET['id'];
 ?>
-<div style = "padding: 0px 50px";>
-<div class = "embed-responsive embed-responsive-4by3" style="position:relative; top: 50px; ">
+<div  style="position:relative; top: 50px; ">
 <p align="center">
   <iframe src="<?php echo $id ?>"  >
 
 </iframe></p>
 </div>
-</div>
+       </div>
+       <div class="col-sm-12"
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:80%;margin-left:10%"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
  <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1550317288312");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 <!-- end www.htmlcommentbox.com -->
-
+       </div>
+</div>
+</div>
 </body>
-<footer>
 <?php
 require_once("../Header - Footer/footer.html");
 ?>
-</footer>
 </html>
