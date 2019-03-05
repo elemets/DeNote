@@ -8,7 +8,7 @@ body {
 }
 </style>
 <body>
-  <div id="top" class="container">
+  <div id="top" class="container-fluid">
   <div class="row">
     		<div class="col-sm-12">
   	      <h4>Title</h4>
@@ -19,6 +19,7 @@ body {
 <?php
 $id = "view.php?id=" . $_GET['id'];
 ?>
+</div>
 <div class="embed-responsive embed-responsive-4by3"
 <div  style="position:relative; top: 50px; ">
 <p align="center">
@@ -27,6 +28,7 @@ $id = "view.php?id=" . $_GET['id'];
 </iframe></p>
 </div>
 </div>
+  <div id="top" class="container-fluid">
       <div class="row justify-content-md-center">
        <div class="col-sm-9" style="margin:0% 12.5%;"
 <!-- begin wwww.htmlcommentbox.com -->
