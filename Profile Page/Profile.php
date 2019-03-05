@@ -37,7 +37,7 @@ require_once("../Header - Footer/header.php");
     echo "<li><a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
 
   }
-   ?>
+
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 </div>
 <!-- My notes Section -->
@@ -51,9 +51,7 @@ require_once("../Header - Footer/header.php");
   <div class="">
     <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">Following</h3>
     <div class="jumbotron Container-fluid">
-      <?php
 
-      ?>
 
     </div>
   </div>
@@ -61,8 +59,11 @@ require_once("../Header - Footer/header.php");
     <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">My Followers</h3>
 
   </div>
+  while($row = $stat2->fetch()){
+    echo "<li><a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
 
-
+  }
+   ?>
 </body>
 <footer>
 <?php
