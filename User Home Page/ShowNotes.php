@@ -9,11 +9,6 @@ body {
 body > p {
 	text-align: center;
 }
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
 .centered {
   position: absolute;
   top: 50%;
