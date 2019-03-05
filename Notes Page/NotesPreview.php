@@ -45,7 +45,7 @@ if ($row['dataType'] == "application/pdf")
 {
 ?>
 		 <div class="col-sm-12" style="padding-bottom:50px;">
-<div class="embed-responsive embed-responsive-4by3" style="position:relative;">
+<div class="embed-responsive embed-responsive-4by3">
 <p align="center">
   <iframe src="<?php echo $id ?>"  >
 
