@@ -8,7 +8,7 @@ body {
 }
 </style>
 <body>
-  <div id="top" class="container-fluid">
+  <div id="top" class="container">
   <div class="row">
     		<div class="col-sm-12">
   	      <h4>Title</h4>
