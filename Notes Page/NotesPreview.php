@@ -28,11 +28,13 @@ echo $row['TitleNote'];
 echo '</h4>';
 
 echo '<h5>';
-echo "Author:" . $username;
+echo "Author: " . $username;
+echo '</h5>';
+
+echo '<h5>';
+echo "Time: " . $row['DateOfPublish'];
 echo '</h5>';
 ?>
-
-          <h5> Author</h5>
           <h5> Time</h5>
         </div>
   </div>
