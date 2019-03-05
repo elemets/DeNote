@@ -85,9 +85,8 @@ if ($row['dataType'] == "application/pdf")
 </div>
 
 <div class="mobile-pdf">
-<a href="<?php echo $id ?>" class="btn btn-default btn-lg submit-btn btn-block submit-font" role="button">View PDF</a>
+<a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button">View PDF</a>
 </div>
-
 
 </div>
 <?php
