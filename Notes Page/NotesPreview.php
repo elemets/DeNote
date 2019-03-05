@@ -32,10 +32,9 @@ echo "Author: " . $username;
 echo '</h5>';
 
 echo '<h5>';
-echo "Time: " . $row['DateOfPublish'];
+echo "Date Of Publish: " . $row['DateOfPublish'];
 echo '</h5>';
 ?>
-          <h5> Time</h5>
         </div>
   </div>
 <?php
