@@ -13,7 +13,7 @@ body > p {
 <body>
 	<div id="top" class="container-fluid">
 		<div class="row">
-		<h1><?php echo $_GET['id']; ?></h1>
+		<h1 style="padding-bottom:30px;"><?php echo $_GET['id']; ?></h1>
 </div>
 			<div class="row">
 <?php
