@@ -10,6 +10,16 @@ body {
 	-webkit-overflow-scrolling: touch;
   	overflow-y: scroll;
 }
+.amp-active {
+	iframe {
+		height: 0;
+		max-height: 100%;
+		max-width: 100%;
+		min-height: 100%;
+		min-width: 100%;
+		width: 0;
+	}
+}
 </style>
 <body>
   <div id="top" class="container-fluid">
@@ -48,7 +58,7 @@ $id = "view.php?id=" . $_GET['id'];
 if ($row['dataType'] == "application/pdf")
 {
 ?>
-		 <div class="col-sm-12" style="padding-bottom:50px;">
+		 <div class="col-sm-12 amp-active" style="padding-bottom:50px;">
 <div class="embed-responsive embed-responsive-4by3 ios-scroll">
 <p align="center">
   <iframe src="<?php echo $id ?>"  >
