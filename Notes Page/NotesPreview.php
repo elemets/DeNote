@@ -10,10 +10,8 @@ body {
 <body>
   <div id="top" class="container-fluid">
   <div class="row">
-    		<div class="col-sm-6">
-  	<h4>Title</h4>
-  </div>
-      	<div class="col-sm-6">
+    		<div class="col-sm-12">
+  	      <h4>Title</h4>
           <h5> Author</h5>
           <h5> Time</h5>
         </div>
