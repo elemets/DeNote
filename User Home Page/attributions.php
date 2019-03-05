@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 <title>Attributions</title>
 <?php
-include "../Header - Footer/header.php";
+require_once("../Header - Footer/header.php");
 ?>
   <body>
     <p>Images not explicitly mentioned in this page were released into the public domain</p>
@@ -40,4 +38,6 @@ include "../Header - Footer/header.php";
     <p>The LAWS pictrure was taken from <a href="https://commons.wikimedia.org/wiki/File:JMR-Memphis1.jpg">Wikimedia</a>, taken by the user <a href="https://en.wikipedia.org/wiki/User:Carptrash">Carptrash</a> at the English Wikipedia, used and shared under the <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 license</a>.</p>
 
   </body>
-</html>
+<?php
+require_once("../Header - Footer/footer.html");
+?>
