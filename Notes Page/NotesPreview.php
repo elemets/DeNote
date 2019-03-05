@@ -10,7 +10,7 @@ require_once("../Header - Footer/header.php");
     <?php
 $id = "view.php?id=" . $_GET['id'];
 ?>
-<div style = "padding: 50px";>
+<div style = "padding: 0px 50px";>
 <div class = "embed-responsive embed-responsive-4by3" style="position:relative; top: 50px; ">
 <p align="center">
   <iframe src="<?php echo $id ?>"  >
