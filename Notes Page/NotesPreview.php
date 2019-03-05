@@ -20,7 +20,8 @@ $stat = $conn->prepare("SELECT * FROM Notes WHERE NoteID = ?");
 $stat->bindParam(1, $id);
 $stat->execute();
 $row = $stat->fetch();
-$username = $conn2->query("SELECT Username FROM Users WHERE UserID ='$row['UserID']'")->fetch_object()->Username;
+$syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
+$username = $conn2->query($syn)->fetch_object()->Username;
 
 echo '<h4>';
 echo $row['TitleNote'];
