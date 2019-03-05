@@ -44,7 +44,7 @@ $id = "view.php?id=" . $_GET['id'];
 if ($row['dataType'] == "application/pdf")
 {
 ?>
-    		<div class="col-sm-12">
+		 <div class="col-sm-12" style="padding-bottom:50px;">
 <div class="embed-responsive embed-responsive-4by3" style="position:relative; top: 50px;">
 <p align="center">
   <iframe src="<?php echo $id ?>"  >
