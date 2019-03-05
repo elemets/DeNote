@@ -84,7 +84,7 @@ if ($row['dataType'] == "application/pdf")
 </iframe></p>
 </div>
 
-<div class="mobile-pdf">
+<div class="mobile-pdf" style="padding-top:50px;">
 <a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button">View PDF</a>
 </div>
 
