@@ -2,6 +2,14 @@
 <?php
 require_once("../Header - Footer/header.php");
 ?>
+<style>
+body {
+	padding-top: 50px;
+}
+body > p {
+	text-align: center;
+}
+</style>
   <body>
     <p>Images not explicitly mentioned in this page were released into the public domain</p>
 
