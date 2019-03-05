@@ -23,8 +23,6 @@ require_once("../Header - Footer/header.php");
 
   $followedUserID = $conn->prepare("SELECT FollowedUserID FROM `Followers` WHERE FollowerUserID = $userID");
   $stat2 =  $conn->prepare("SELECT * FROM Notes WHERE UserID = '$followedUserID'")
-
-  $stat2->bindParam(1, $followedUserID);
   $stat2->execute();
 
   $stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = '$userID'");
