@@ -24,6 +24,7 @@ require_once("../Header - Footer/header.php");
   $stat->bindParam(1, $userID);
   $stat->execute();
 
+  //gets the userid of the users you are following and then displays their uploaded notes
   $followerID = $conn2->query("SELECT FollowedUserID FROM `Followers` WHERE FollowerUserID = '$userID'")->fetch_object()->FollowedUserID;
   $stat2 = $conn->prepare("SELECT * FROM Notes WHERE UserID = '$followerID'");
   $stat2->bindParam(1, $followerID);
