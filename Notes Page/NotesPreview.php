@@ -11,11 +11,11 @@ body {
   <div id="top" class="container-fluid">
   <div class="row">
     		<div class="col-sm-6">
-  	<h1><?php echo $_SESSION["username"]; ?></h1>
+  	<h4><?php echo $_SESSION["username"]; ?></h1>
   </div>
       	<div class="col-sm-6">
-          <h3> Author</h3>
-          <h3> Time</h3>
+          <h5> Author</h3>
+          <h5> Time</h3>
         </div>
         <div class="col-sm-12"
 <?php
