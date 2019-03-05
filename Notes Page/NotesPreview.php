@@ -17,7 +17,7 @@ body {
           <h5> Author</h5>
           <h5> Time</h5>
         </div>
-        <div class="col"
+        <div class="col-lg-12"
 <?php
 $id = "view.php?id=" . $_GET['id'];
 ?>
