@@ -11,14 +11,12 @@ require_once("../Header - Footer/header.php");
 $id = "view.php?id=" . $_GET['id'];
 ?>
 
-
-<div class="iframe-container">
+<div>
 <p align="center">
   <iframe src="<?php echo $id ?>"  width="960" height="900">
 
 </iframe></p>
 </div>
-
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:80%;margin-left:10%"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
  <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
