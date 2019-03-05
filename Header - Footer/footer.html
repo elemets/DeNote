@@ -22,6 +22,15 @@
     }
   });
 
+  $(function(){
+    var body = document.body;
+    if($(body).height() < 700 ){
+      console.log($(body).height());
+      var footer = document.getElementById('footer');
+      footer.classList.add("smallFooter");
+    }
+  });
+
 
 
 
@@ -60,5 +69,3 @@
     });
   })
 </script>
-</body>
-</html>

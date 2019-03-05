@@ -40,7 +40,11 @@ $id = "view.php?id=" . $_GET['id'];
 </div>
 </div>
 </body>
+<footer>
+  <div>
 <?php
 require_once("../Header - Footer/footer.html");
 ?>
+  </div>
+</footer>
 </html>
