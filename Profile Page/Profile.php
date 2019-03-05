@@ -21,7 +21,7 @@ require_once("../Header - Footer/header.php");
   echo $_SESSION['username'];
   $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
 
-  $stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = $userID");
+  $stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = '$userID'");
   $stat->bindParam(1, $userID);
   $stat->execute();
 
