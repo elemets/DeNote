@@ -21,7 +21,7 @@ require_once("../Header - Footer/header.php");
   echo $_SESSION['username'];
   $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
 
-  $followingID = $conn->prepare("SELECT FollowedUserID FROM `Followers` WHERE FollowerUserID = $userId");
+  $followingID = $conn->prepare("SELECT FollowedUserID FROM `Followers` WHERE FollowerUserID = $userID");
   $followingID->bindParam(1, $userID);
   $followingID->execute();
 
