@@ -30,7 +30,7 @@ $id = "view.php?id=" . $_GET['id'];
 </div>
 </div>
       <div class="row justify-content-md-center">
-       <div class="col-sm-8"
+       <div class="col-sm-9" style="margin: 12.5%"
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:80%;margin-left:10%"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
  <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
