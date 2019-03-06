@@ -1,7 +1,9 @@
 <?php
 require_once("../Header - Footer/header.php");
+require_once('config.inc.php');
 $syn = "SELECT Username FROM Users WHERE UserID =" . $_GET['id']; 
 $userID = $_GET['id'];
+$conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
 $username = $conn2->query($syn)->fetch_object()->Username;
 ?>
 <title>Page Title</title>
