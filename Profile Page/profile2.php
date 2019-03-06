@@ -63,21 +63,29 @@ padding: 0px 0px;
   else
 {
 ?>
-   <button onclick=addFollowing() > Follow Me</button>
+  <form method=post action="<?php echo $_SERVER['PHP_SELF'];?> >
+   <input type=submit name="Follow Me" value="Follow Me">
+</form>
 <?php
 }
-
-function deleteFollowing()
+if($_SERVER["REQUEST_METHOD"] == "POST")
 {
+ if($_POST['Follow Me'] = null)
+  {
+    function deleteFollowing()
+    {
   
-}
-
-function addFollowing()
-{
-  echo "somthing";
-  $query = "INSERT INTO `Followers`(`FollowerUserID`, `FollowedUserID`) VALUES ('$userIDmain', '$userID')";
-  $result = $conn->query($query);
-  header($link);
+    }
+  }
+ else
+ {
+  function addFollowing()
+  {
+    echo "somthing";
+    $query = "INSERT INTO `Followers`(`FollowerUserID`, `FollowedUserID`) VALUES ('$userIDmain', '$userID')";
+    $result = $conn->query($query);
+    header($link);
+  }
 }
 ?>
 </div>
