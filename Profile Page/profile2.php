@@ -1,9 +1,17 @@
 <?php
+session_start();
+
+
 require_once("../Header - Footer/header.php");
 require_once('config.inc.php');
 $syn = "SELECT Username FROM Users WHERE UserID =" . $_GET['id']; 
 $userID = $_GET['id'];
 $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
+$userIDmain = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
+if($userIDmain == $userID)
+{
+header('Location: ../Profile Page/Profile.php');
+}
 $username = $conn2->query($syn)->fetch_object()->Username;
 ?>
 <title>Page Title</title>
@@ -39,8 +47,16 @@ padding: 0px 0px;
   require_once('config.inc.php');
   $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
   $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
+  $link = "https://web.cs.manchester.ac.uk/a64508sa/Z3_Y1_Project/Profile%20Page/profile2.php?id=" . $userID;
    ?>
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
+  <?php
+  
+  if ($ifFollow)
+    echo "<button herf="<?php echo $link ?>" > You are Following Me</button>";
+  else
+    echo "<button herf="<?php echo $link ?>" > Follow Me</button>";
+  ?>
 </div>
 <!-- My notes Section -->
 <div id="My_notes" class="grid-container"></div>
