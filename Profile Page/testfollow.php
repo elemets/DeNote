@@ -7,6 +7,7 @@ session_start();
         $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
         echo $userID;
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowerUserID = '$userID'");
+        $stat->execute();
         $count = 0;
         while($row = $stat->fetch())
         {
