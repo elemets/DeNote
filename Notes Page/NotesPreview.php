@@ -50,6 +50,7 @@ require_once('config.inc.php');
 $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
 $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
 $id = isset($_GET['id'])? $_GET['id'] : "";
+$NoteID2 = "$_GET['id']";
 $stat = $conn->prepare("SELECT * FROM Notes WHERE NoteID = ?");
 $stat->bindParam(1, $id);
 $stat->execute();
@@ -112,19 +113,19 @@ if ($row['dataType'] == "application/pdf")
 		echo "I am btn";
 		
 		echo $usernameMain;
-	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`) VALUES ('$id','$usernameMain')";
+	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`) VALUES ('$NoteID2','$usernameMain')";
     	     $result = $conn->query($query);
 	}
 	else if(isset($_POST['btn2']))
 	{
 		echo "I am btn2";
-		$query = "DELETE FROM `Votes` WHERE NoteID = '$id' AND UserID = '$usernameMain'";
+		$query = "DELETE FROM `Votes` WHERE NoteID = '$NoteID2' AND UserID = '$usernameMain'";
     	     	$result = $conn->query($query);
 	}
   ?>
 <form action="" method="post"> 
 <?php
-$stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$id' AND UserID = '$usernameMain'");
+$stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$NoteID2' AND UserID = '$usernameMain'");
         $stat->execute();
 if($row = $stat->fetch() != null)
 {
