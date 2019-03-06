@@ -122,7 +122,7 @@ if ($row['dataType'] == "application/pdf")
   ?>
 <form action="" method="post"> 
 <?php
-$stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain' AND type = -1");
+$stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain' AND type = 1");
         $stat->execute();
 	
 if(($row = $stat->fetch()) != null)
@@ -168,6 +168,7 @@ else
         
 	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`,  `type`) VALUES ('$notes', '$userIDmain' , -1)";
     	     $conn->query($query);
+             header('Location: '.$_SERVER['REQUEST_URI']);
 	}
 	else if(isset($_POST['btn3']))
 	{
