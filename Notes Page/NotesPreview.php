@@ -204,7 +204,9 @@ else
 <?php } ?>
 </form>
 
-
+<?php
+header("Refresh:0");
+?>
 
 
 
