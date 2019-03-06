@@ -28,7 +28,6 @@ body > p {
 			<div class="row">
 <?php
 session_start();
-$_SESSION[username] = $_SESSION[username];
 require_once('config.inc.php');
 $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
 $id = isset($_GET['id'])? $_GET['id'] : "";
