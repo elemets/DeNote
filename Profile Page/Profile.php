@@ -42,7 +42,19 @@ padding: 0px 0px;
 <div id="My_notes" class="grid-container"></div>
       <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">My notes</h3>
         <div class="jumbotron Container-fluid">
-          
+	<?php 
+    	$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
+    	$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
+    	$stat->bindParam(1, $userID);
+    	$stat->execute();
+
+    	while($row = $stat->fetch()){
+	?>
+	<div class="col-sm-3">
+		      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
+					<img src="squareElement.png" style="width:100%">
+			        <div class="centered"><h2 style="color: #fff;"><?php echo $row['TitleNote'] ?></h2></div>
+				  </a>
         </div>
 
 
