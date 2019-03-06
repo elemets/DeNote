@@ -37,16 +37,18 @@ $stat->bindParam(1, $id);
 $stat->bindParam(2, $UnitYear);
 $stat->execute();
 
-$stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND type = -1" );
-$stat2->execute();
-$counterLikes = 0;
-while($row2 = $stat2->fetch())
-{
-  $counterLikes++;
-}
-
     while($row = $stat->fetch()){
-?>
+		$stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$row['NoteID']' AND type = -1" );
+		$stat2->execute();
+		$counterLikes = 0;
+		while($row2 = $stat2->fetch())
+		{
+  		    $counterLikes++;
+		}
+
+?>	
+	
+	
 	<div class="col-sm-3">
 		      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 					<img src="squareElement.png" style="width:100%">
