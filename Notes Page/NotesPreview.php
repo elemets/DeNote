@@ -127,7 +127,7 @@ $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID
 	
 if(($row = $stat->fetch()) != null)
 {
-if("row['type']" == 1)
+  if("row['type']" == 1)
   {
 ?>
   <input type="submit" class="btn btn" method="post" value="Liked" name="btn2">
@@ -138,12 +138,14 @@ if("row['type']" == 1)
 ?>
 <input type="submit" class="btn btn" method="post" value="Like!" name="btn2" disabled>
 <?php
+  }
 }
 else
 {
 ?>
   <input type="submit" class="btn btn-primary" method="post" value="Like!" name="btn"> 
-<?php } ?>
+<?php
+} ?>
 </form>
 
    <?php
