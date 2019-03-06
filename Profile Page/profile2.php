@@ -51,43 +51,14 @@ padding: 0px 0px;
    ?>
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 
-  <?php
-  $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID' AND FollowerUserID = '$userIDmain'");
-  $stat->execute();
-  if (($row = $stat->fetch()) != null)
-{
-?>
-    <button onclick="deleteFollowing()" > You are Following Me</button>
-<?php
-}
-  else
-{
-?>
-  <form method=post action="<?php echo $_SERVER['PHP_SELF'];?>" >
-   <button type=submit name="Follow Me" value="Follow Me"> </button>
-</form>
-<?php
-}
-if($_SERVER["REQUEST_METHOD"] == "POST")
-{
- if($_POST['Follow Me'] = null)
-  {
-    function deleteFollowing()
-    {
-  
-    }
-  }
- else
- {
-  function addFollowing()
-  {
-    echo "somthing";
-    $query = "INSERT INTO `Followers`(`FollowerUserID`, `FollowedUserID`) VALUES ('$userIDmain', '$userID')";
-    $result = $conn->query($query);
-  }
- }
-}
-?>
+   <?php
+	if(isset($_POST['btn']))
+	{
+		echo "sdaas";
+	}
+  ?>
+  <input type="submit" value="Submit" name="btn">
+ 
 </div>
 <!-- My notes Section -->
 <div id="My_notes" class="grid-container"></div>
