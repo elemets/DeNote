@@ -106,7 +106,7 @@ if ($row['dataType'] == "application/pdf")
 <!-- VOTING -->
 
    <?php
-	$usernameMain = $_SESSION[username];
+	$usernameMain = "$_SESSION[username]";
 	if(isset($_POST['btn']))
 	{
 		echo "I am btn";
