@@ -129,7 +129,7 @@ if ($row['dataType'] == "application/pdf")
 echo $notes;
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$usernameMain'");
         $stat->execute();
-if($row = $stat->fetch() != null)
+if(($row = $stat->fetch()) != null)
 {
 ?>
   <input type="submit" class="btn btn-danger" method="post" value="Liked" name="btn2">
