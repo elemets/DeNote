@@ -104,7 +104,7 @@ if ($row['dataType'] == "application/pdf")
 ?>
 
 <div class="row">
-	<div class="col-sm-9"></div>
+	<div class="col-sm-8"></div>
 <!-- VOTING -->
 
    <?php
