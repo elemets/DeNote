@@ -64,7 +64,7 @@ padding: 0px 0px;
 {
 ?>
   <form method=post action="<?php echo $_SERVER['PHP_SELF'];?>" >
-   <button type=submit name="Follow Me"> </button>
+   <button type=submit name="Follow Me" value="Follow Me"> </button>
 </form>
 <?php
 }
