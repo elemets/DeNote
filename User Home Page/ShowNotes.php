@@ -50,7 +50,7 @@ while($row2 = $stat2->fetch())
 	<div class="col-sm-3">
 		      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 					<img src="squareElement.png" style="width:100%">
-			        <div class="centered"><h2 style="color: #fff;"><?php echo $row['TitleNote']  echo $counterLikes; ?></h2></div>
+			        <div class="centered"><h2 style="color: #fff;"><?php echo $row['TitleNote'];  echo $counterLikes; ?></h2></div>
 				  </a>
 	 </div>
 <?php
