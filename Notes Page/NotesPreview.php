@@ -127,9 +127,16 @@ $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID
 	
 if(($row = $stat->fetch()) != null)
 {
-	$typeVote = $row['type'];
-	echo $row['type'];
-	echo $typeVote;
+
+$stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND type = 1" );
+$stat2->execute();
+$counterLikes = 0
+while($row = $stat->fetch())
+{
+  $counterLikes++;
+}
+echo $counterLikes;
+
   if($typeVote == 1)
   {
 ?>
