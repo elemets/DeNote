@@ -20,7 +20,7 @@ body > p {
 	text-align: center;
 }
 .col-sm-3 {
-	padding-bottom: 10px;
+	padding-bottom: 30px;
 }
 </style>
 
