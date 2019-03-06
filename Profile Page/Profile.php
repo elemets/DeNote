@@ -63,8 +63,9 @@ require_once("../Header - Footer/header.php");
         $count = 0;
         while($row = $stat->fetch()){
           $FollowedUserID = $row['FollowedUserID'];
-          echo $FollowedUserID;
-          echo "</br>"
+          $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowedUserID'];
+          $username = $conn2->query($syn)->fetch_object()->Username;
+          echo $username . "\n";
           $count = $count + 1;
          }  
          echo "you have " . $count . "following";

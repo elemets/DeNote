@@ -9,10 +9,13 @@ session_start();
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowerUserID = '$userID'");
         $stat->execute();
         $count = 0;
+        $usernamesArray = array();
+        $usernamelinksArray = array();
         while($row = $stat->fetch())
         {
           $FollowedUserID = $row['FollowedUserID'];
-          echo $FollowedUserID;
+          $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
+$username = $conn2->query($syn)->fetch_object()->Username;
           $count = $count + 1;
           echo $count;
 	}
