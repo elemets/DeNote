@@ -84,7 +84,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     echo "somthing";
     $query = "INSERT INTO `Followers`(`FollowerUserID`, `FollowedUserID`) VALUES ('$userIDmain', '$userID')";
     $result = $conn->query($query);
-    header($link);
+    header('Location: '.$_SERVER['REQUEST_URI']);
   }
  }
 }
