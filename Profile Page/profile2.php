@@ -76,7 +76,7 @@ if($row = $stat->fetch() != null)
 else
 {
 ?>
-  <input type="submit" method="post" value="Follow me" name="btn"> 
+  <input type="submit" class="btn btn-primary" method="post" value="Follow me" name="btn"> 
 <?php } ?>
 </form>
 
