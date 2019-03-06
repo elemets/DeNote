@@ -20,7 +20,7 @@ body > p {
 <body>
 	<div id="top" class="container-fluid">
 		<div class="row">
-		<h1 style="padding-bottom:30px; padding-left: 20px;"><?php echo $_GET['id']; ?></h1>
+		<h1 style="padding-bottom:30px; padding-left: 15px;"><?php echo $_GET['id']; ?></h1>
 </div>
 			<div class="row">
 <?php
