@@ -85,7 +85,7 @@ if ($row['dataType'] == "application/pdf")
   <iframe src="<?php echo $id ?>"  >
 </iframe></p>
 </div>
-<a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>">Download</a>
+<a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
 
 <div class="mobile-pdf" style="padding-top:50px;">
 <a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button">View PDF</a>
@@ -97,7 +97,7 @@ if ($row['dataType'] == "application/pdf")
 ?>
     		<div class="col-sm-12">
 		<img src="<?php echo $id ?>" style="width:100%; padding-bottom:20px;">
-<a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>">Download</a>
+<a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
 </div>
 
 <?php
@@ -159,15 +159,6 @@ else
 <?php
 } ?>
 </form>
-
-
-
-
-
-
-
-
-
 
    <?php
 	$notes =  $_GET['id'];
