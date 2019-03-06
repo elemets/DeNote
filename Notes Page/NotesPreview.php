@@ -70,11 +70,12 @@ echo '<h2 style="padding-bottom:20px;.">';
 echo "Date Of Publish: " . $row['DateOfPublish'];
 echo '</h2>';
 ?>
-        </div>
+</div>
+</div>
+  <div class="row">
+
 <?php
 $id = "view.php?id=" . $_GET['id'];
-
-
 
 if ($row['dataType'] == "application/pdf")
 {
@@ -85,7 +86,6 @@ if ($row['dataType'] == "application/pdf")
   <iframe src="<?php echo $id ?>"  >
 </iframe></p>
 </div>
-<a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
 
 <div class="mobile-pdf" style="padding-top:50px;">
 <a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button">View PDF</a>
@@ -97,13 +97,16 @@ if ($row['dataType'] == "application/pdf")
 ?>
     		<div class="col-sm-12">
 		<img src="<?php echo $id ?>" style="width:100%; padding-bottom:20px;">
-<a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
-</div>
-
+		</div>
+	</div>
 <?php
 }
 ?>
 
+<div class="row justify-content-end">
+<div class="col-sm-3">
+	<a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+</div>
 <!-- VOTING -->
 
    <?php
@@ -122,6 +125,7 @@ if ($row['dataType'] == "application/pdf")
                 header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
+<div class="col-sm-3">
 <form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
@@ -159,7 +163,7 @@ else
 <?php
 } ?>
 </form>
-
+</div>
    <?php
 	$notes =  $_GET['id'];
 	$userIDmain = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
@@ -177,6 +181,7 @@ else
 		header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
+<div class="col-sm-3">
 <form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
@@ -216,19 +221,9 @@ else
   <button type="submit" class="btn btn-link" method="post" value="disLiked" name="btn4"><span class="glyphicon glyphicon-thumbs-up"></span></button>
 <?php } ?>
 </form>
-
-<?php
-
-
-
-
-
-?>
-
-
-
-
+</div>
 <!-- COMMENTS-->
+  <div class="row">
        <div class="col-sm-12">
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:100%;"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
@@ -236,7 +231,7 @@ else
  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1550317288312");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 <!-- end www.htmlcommentbox.com -->
        </div>
-</div>
+		 </div>
 </div>
 </body>
 <footer>
