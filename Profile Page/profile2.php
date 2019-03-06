@@ -57,7 +57,10 @@ padding: 0px 0px;
 		echo "sdaas";
 	}
   ?>
+<form action="" method="post"> 
   <input type="submit" method="post" value="Submit" name="btn">
+ </form>
+
  
 </div>
 <!-- My notes Section -->
