@@ -111,7 +111,7 @@ if ($row['dataType'] == "application/pdf")
 	$userIDmain = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
 	if(isset($_POST['btn']))
 	{
-	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`, `type`) VALUES ('$notes', '$userIDmain', "1")";
+	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`, `type`) VALUES ('$notes', '$userIDmain', 1)";
     	     $conn->query($query);
 	}
 	else if(isset($_POST['btn2']))
