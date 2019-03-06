@@ -100,7 +100,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")-
 }
 ?>
 <?php
-$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
+$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")->fetch_object()->UserID;//userID query
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID'");
         $stat->execute();
         $count = 0;
