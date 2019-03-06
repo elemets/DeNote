@@ -129,7 +129,8 @@ if ($row['dataType'] == "application/pdf")
 echo $notes;
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$usernameMain'");
         $stat->execute();
-echo $row = $stat->fetch();
+	$row = $stat->fetch();
+	echo $row == null? "yes" : "no";
 if(($row) != null)
 {
 ?>
