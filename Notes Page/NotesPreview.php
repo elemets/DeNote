@@ -103,7 +103,7 @@ if ($row['dataType'] == "application/pdf")
 }
 ?>
 
-<div class="row">
+<div class="row" style="text-align=right;">
 	<div class="col-sm-8"></div>
 <!-- VOTING -->
 
@@ -221,7 +221,7 @@ else
 </form>
 </div>
 </div>
-<div class="row">
+<div class="row" style="text-align=right;">
 <div class="col-sm-10"></div>
 <div class="col-sm-2">
 	<a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
