@@ -21,6 +21,18 @@
               echo "<li><a  href='../Notes Page/Notespreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
       }
     }
+
+    $stat = $conn->prepare("SELECT * FROM Users");
+    $stat->bindParam(1, $searchWord);
+    $stat->execute();
+
+    while($row = $stat->fetch())
+    {
+      if ($row['Username'] == $searchWord || $row['Email'] == $searchWord)
+      {	
+            echo "<li><a  href='../Profile Page/profile2.php?id=".$row['UserID']."'>".$row['Username']."</a></li>";
+      }
+    }
     ?>
   </body>
 </html>
