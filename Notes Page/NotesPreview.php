@@ -131,7 +131,7 @@ $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID
         $stat->execute();
 	$row = $stat->fetch();
 	echo $row == null? "yes" : "no";
-if(($row) != null)
+if(($row) == null)
 {
 ?>
   <input type="submit" class="btn btn-danger" method="post" value="Liked" name="btn2">
