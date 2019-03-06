@@ -67,12 +67,15 @@ require_once("../Header - Footer/header.php");
           $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowedUserID'];
           $username = $conn2->query($syn)->fetch_object()->Username;
           $link = "profile2.php?id=" . $FollowedUserID;
-          array_push($usernameArray,"profile2.php?id=  
+          ?>
+          <a href= "<?php echo $link ?>"> <?php echo $username ?> </a>
+          <?php
+          array_push($usernameArray, $link);
           echo $username;
-          
           $count = $count + 1;
          }  
-         echo "you have " . $count . "following";
+
+         //echo "you have " . $count . "following";
       ?>
 
     </div>
