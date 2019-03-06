@@ -108,29 +108,29 @@ if ($row['dataType'] == "application/pdf")
    <?php
 	if(isset($_POST['btn']))
 	{
-	     $query = "INSERT INTO `Followers`(`FollowerUserID`, `FollowedUserID`) VALUES ('$userIDmain','$userID')";
+	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`) VALUES ('$id','$_SESSION[username]')";
     	     $result = $conn->query($query);
 	}
 	else if(isset($_POST['btn2']))
 	{
-		$query = "DELETE FROM `Followers` WHERE `FollowerUserID`= '$userIDmain' AND `FollowedUserID`= '$userID' ";
+		$query = "DELETE FROM `Votes` WHERE NoteID = '$id' AND UserID = '$_SESSION[username]' ";
     	     	$result = $conn->query($query);
 	}
   ?>
 <form action="" method="post"> 
 <?php
-$stat = $conn->prepare("SELECT  * FROM `Votes` WHERE NoteID = '$id' AND UserID = '$userIDmain' ");
+$stat = $conn->prepare("SELECT  * FROM `Votes` WHERE NoteID = '$id' AND UserID = '$_SESSION[username]' ");
         $stat->execute();
-if($row = $stat->fetch() != null)
+if($stat->num_rows > 0)
 {
 ?>
-  <input type="submit" class="btn btn-danger" method="post" value="Unfollow" name="btn2">
+  <input type="submit" class="btn btn-danger" method="post" value="Liked" name="btn2">
 <?php
 }
 else
 {
 ?>
-  <input type="submit" class="btn btn-primary" method="post" value="Follow me" name="btn"> 
+  <input type="submit" class="btn btn-primary" method="post" value="Like!" name="btn"> 
 <?php } ?>
 </form>
 
@@ -154,7 +154,6 @@ else
 <footer>
   <div>
 <?php
-echo $_SESSION[username];
 require_once("../Header - Footer/footer.html");
 ?>
   </div>
