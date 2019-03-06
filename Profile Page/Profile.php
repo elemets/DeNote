@@ -43,29 +43,7 @@ require_once("../Header - Footer/header.php");
 
   }
    ?>
-  <img type="file" name="requiredFile" accept=".png,.jpg" src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
-
-                    <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
-
-<?php
-if(isset($_POST['btn']))
-{
-require_once('config.inc.php');
-// Connect to the database
- $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
- $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
-
- $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
-$type = $_FILES['requiredFile']['type'];
-$data = file_get_contents($_FILES['requiredFile']['tmp_name']);
-$stmt = $conn->prepare("INSERT INTO ProfilePic (`UnitID`,`type`,`data`) VALUES (?,?,?)");
-  $stmt->bindParam(1, $unitID);
-  $stmt->bindParam(2, $type);
-  $stmt->bindParam(3, $data);
-  $stmt->execute();
-}
-?>
+  <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 </div>
 <!-- My notes Section -->
 <div id="My_notes" class="grid-container"></div>
