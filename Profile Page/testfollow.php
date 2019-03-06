@@ -11,4 +11,5 @@ echo $_SESSION['username'];
           $FollowedUserID = $row['FollowedUserID'];
           echo $FollowedUserID;
           $count = $count + 1;
+}
 ?>
