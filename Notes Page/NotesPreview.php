@@ -109,6 +109,7 @@ if ($row['dataType'] == "application/pdf")
 	if(isset($_POST['btn']))
 	{
 		echo "I am btn";
+		echo $_SESSION[username];
 	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`) VALUES ('$id','$_SESSION[username]')";
     	     $result = $conn->query($query);
 	}
