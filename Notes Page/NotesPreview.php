@@ -1,5 +1,6 @@
 <?php
 require_once("../Header - Footer/header.php");
+session_start();
 ?>
 <title>Note Preview Page</title>
 <style>
@@ -101,6 +102,45 @@ if ($row['dataType'] == "application/pdf")
 <?php
 }
 ?>
+
+<!-- VOTING -->
+
+   <?php
+	if(isset($_POST['btn']))
+	{
+	     $query = "INSERT INTO `Followers`(`FollowerUserID`, `FollowedUserID`) VALUES ('$userIDmain','$userID')";
+    	     $result = $conn->query($query);
+	}
+	else if(isset($_POST['btn2']))
+	{
+		$query = "DELETE FROM `Followers` WHERE `FollowerUserID`= '$userIDmain' AND `FollowedUserID`= '$userID' ";
+    	     	$result = $conn->query($query);
+	}
+  ?>
+<form action="" method="post"> 
+<?php
+$stat = $conn->prepare("SELECT  * FROM `Votes` WHERE NoteID = '$id' AND UserID = '$userIDmain' ");
+        $stat->execute();
+if($row = $stat->fetch() != null)
+{
+?>
+  <input type="submit" class="btn btn-danger" method="post" value="Unfollow" name="btn2">
+<?php
+}
+else
+{
+?>
+  <input type="submit" class="btn btn-primary" method="post" value="Follow me" name="btn"> 
+<?php } ?>
+</form>
+
+
+
+
+
+
+
+<!-- COMMENTS-->
        <div class="col-sm-12">
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:100%;"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
@@ -114,6 +154,7 @@ if ($row['dataType'] == "application/pdf")
 <footer>
   <div>
 <?php
+echo $_SESSION[username];
 require_once("../Header - Footer/footer.html");
 ?>
   </div>
