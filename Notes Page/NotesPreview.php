@@ -168,7 +168,6 @@ else
         
 	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`,  `type`) VALUES ('$notes', '$userIDmain' , -1)";
     	     $conn->query($query);
-             header('Location: '.$_SERVER['REQUEST_URI']);
 	}
 	else if(isset($_POST['btn3']))
 	{
