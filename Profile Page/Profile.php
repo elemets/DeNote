@@ -20,9 +20,13 @@ body > p {
 .col-sm-3 {
 	padding-bottom: 30px;
 }
+.container-fluid {
+margin: 0px;
+padding: 0px 0px;
+}
 </style>
 <body>
-<div id="top" class="container"> 
+<div id="top" class="container-fluid"> 
 
 <!-- Title and profile icon -->
 <div id="My_Profile" class="text-center">
