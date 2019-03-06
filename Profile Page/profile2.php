@@ -63,7 +63,7 @@ padding: 0px 0px;
   else
 {
 ?>
-   <button onclick="addFollowing()" > Follow Me</button>
+   <button onclick=addFollowing() > Follow Me</button>
 <?php
 }
 
@@ -74,6 +74,7 @@ function deleteFollowing()
 
 function addFollowing()
 {
+  echo "somthing";
   $query = "INSERT INTO `Followers`(`FollowerUserID`, `FollowedUserID`) VALUES ('$userIDmain', '$userID')";
   $result = $conn->query($query);
   header($link);
