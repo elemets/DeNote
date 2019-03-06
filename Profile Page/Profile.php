@@ -1,5 +1,6 @@
 <?php
 require_once("../Header - Footer/header.php");
+session_start();
 ?>
 <title>Page Title</title>
 <style>
@@ -21,7 +22,7 @@ body > p {
 }
 </style>
 <body>
-<div id="top" class="container-fluid"> 
+<div id="top" class="container"> 
 
 <!-- Title and profile icon -->
 <div id="My_Profile" class="text-center">
