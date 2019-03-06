@@ -64,12 +64,16 @@ padding: 0px 0px;
 $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID' AND FollowerUserID = '$userIDmain' ");
         $stat->execute();
 if($row = $stat->fetch() != null)
+{
 ?>
   <input type="submit" method="post" value="UnFollow" name="btn2">
 <?php
+}
 else
+{
 ?>
   <input type="submit" method="post" value="Follow me" name="btn"> 
+<?php } ?>
 </form>
 
  
