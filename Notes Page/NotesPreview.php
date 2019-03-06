@@ -122,7 +122,7 @@ if ($row['dataType'] == "application/pdf")
   ?>
 <form action="" method="post"> 
 <?php
-$stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
+$stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain' AND type = 1");
         $stat->execute();
 	
 if(($row = $stat->fetch()) != null)
