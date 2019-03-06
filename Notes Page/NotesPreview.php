@@ -190,6 +190,17 @@ else
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
         $stat->execute();
+
+
+$stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND type = -1" );
+$stat2->execute();
+$counterLikes = 0;
+while($row = $stat2->fetch())
+{
+  $counterLikes++;
+}
+echo $counterLikes;
+
 	
 if(($row = $stat->fetch()) != null)
 {
