@@ -174,6 +174,7 @@ else
 	{
 		$query = "DELETE FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'";
     	     	$result = $conn2->query($query);
+		header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
 <form action="" method="post"> 
