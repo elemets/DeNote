@@ -57,7 +57,18 @@ require_once("../Header - Footer/header.php");
     <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">Following</h3>
     <div class="jumbotron Container-fluid">
       <?php
-
+        session_start();
+        require_once('config.inc.php');
+        $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
+        $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
+        $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
+        $stat = $conn->prepare("SELECT  FollowedUserID FROM `Followers` WHERE  	FollowerUserID = '$userID'");
+        $count = 0;
+        while($row = $stat->fetch()){
+          $FollowedUserID = $row['FollowedUserID'];
+          echo $FollowedUserID;
+          count = count + 1;
+         }  
       ?>
 
     </div>
