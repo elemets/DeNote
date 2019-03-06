@@ -111,21 +111,22 @@ if ($row['dataType'] == "application/pdf")
 	if(isset($_POST['btn']))
 	{
 		echo "I am btn";
-		echo $_GET['id'];
+		$notes =  $_GET['id'];
+		echo $notes;
 		echo $usernameMain;
-	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`) VALUES ($_GET['id'], $usernameMain)";
+	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`) VALUES ('$notes', '$usernameMain')";
     	     $result = $conn->query($query);
 	}
 	else if(isset($_POST['btn2']))
 	{
 		echo "I am btn2";
-		$query = "DELETE FROM `Votes` WHERE NoteID = '$_GET['id']' AND UserID = '$usernameMain'";
+		$query = "DELETE FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$usernameMain'";
     	     	$result = $conn->query($query);
 	}
   ?>
 <form action="" method="post"> 
 <?php
-$stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$_GET['id']' AND UserID = '$usernameMain'");
+$stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$usernameMain'");
         $stat->execute();
 if($row = $stat->fetch() != null)
 {
