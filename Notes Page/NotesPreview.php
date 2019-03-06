@@ -82,6 +82,7 @@ if ($row['dataType'] == "application/pdf")
 <p align="center">
   <iframe src="<?php echo $id ?>"  >
 </iframe></p>
+<a href="<?php echo $id ?>" download="<?php echo $row['TitleNote'] ?>">Download</a>
 </div>
 
 <div class="mobile-pdf" style="padding-top:50px;">
@@ -94,6 +95,7 @@ if ($row['dataType'] == "application/pdf")
 ?>
     		<div class="col-sm-12">
 		<img src="<?php echo $id ?>" style="width:100%; padding-bottom:20px;">
+		<a href="<?php echo $id ?>" download="<?php echo $row['TitleNote'] ?>">Download</a>
 </div>
 
 <?php
