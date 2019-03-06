@@ -38,7 +38,8 @@ $stat->bindParam(2, $UnitYear);
 $stat->execute();
 
     while($row = $stat->fetch()){
-		$stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$row['NoteID']' AND type = -1" );
+		$noteID = $row['NoteID'];
+		$stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$noteID' AND type = -1" );
 		$stat2->execute();
 		$counterLikes = 0;
 		while($row2 = $stat2->fetch())
