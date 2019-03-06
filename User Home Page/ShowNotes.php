@@ -36,12 +36,21 @@ $stat = $conn->prepare("SELECT * FROM Notes WHERE UnitID = ? AND UnitYear = ?");
 $stat->bindParam(1, $id);
 $stat->bindParam(2, $UnitYear);
 $stat->execute();
+
+$stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND type = -1" );
+$stat2->execute();
+$counterLikes = 0;
+while($row2 = $stat2->fetch())
+{
+  $counterLikes++;
+}
+
     while($row = $stat->fetch()){
 ?>
 	<div class="col-sm-3">
 		      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 					<img src="squareElement.png" style="width:100%">
-			        <div class="centered"><h2 style="color: #fff;"><?php echo $row['TitleNote'] ?></h2></div>
+			        <div class="centered"><h2 style="color: #fff;"><?php echo $row['TitleNote']  echo $counterLikes; ?></h2></div>
 				  </a>
 	 </div>
 <?php
