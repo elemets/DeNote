@@ -67,7 +67,7 @@ require_once("../Header - Footer/header.php");
         while($row = $stat->fetch()){
           $FollowedUserID = $row['FollowedUserID'];
           echo $FollowedUserID;
-          count = count + 1;
+          $count = $count + 1;
          }  
       ?>
 
