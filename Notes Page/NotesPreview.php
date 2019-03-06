@@ -142,7 +142,7 @@ if(($row = $stat->fetch()) != null)
   if($typeVote == 1)
   {
 ?>
-  <button type="submit" class="btn btn-link" method="post" value="Liked" name="btn2"><span class="glyphicon-thumbs-up"></span></button>
+  <button type="submit" class="btn btn-link" method="post" value="Liked" name="btn2"><span class="glyphicon glyphicon-thumbs-up"></span></button>
 <?php
   }
   else
