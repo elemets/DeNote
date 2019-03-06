@@ -51,6 +51,17 @@ padding: 0px 0px;
    ?>
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 
+  <?php
+  $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID' AND FollowerUserID = '$userIDmain'");
+  $stat->execute();
+  if (($row = $stat->fetch()) != null)
+?>
+    <button herf="<?php echo $link ?>" > You are Following Me</button>;
+<?php
+  else
+?>
+   <button herf="<?php echo $link ?>" > Follow Me</button>;
+</div>
 <!-- My notes Section -->
 <div id="My_notes" class="grid-container"></div>
       <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"><?php echo $username; ?> notes</h3>
