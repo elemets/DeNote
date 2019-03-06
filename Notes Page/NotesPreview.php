@@ -209,20 +209,20 @@ if(($row = $stat->fetch()) != null)
   if($typeVote == -1)
   {
   ?>
-  <input type="submit" class="btn btn-warning" method="post" value="disLiked" name="btn3">
+	<button type="submit" class="btn btn-link" method="post" value="disLiked" name="btn3"><span class="glyphicon glyphicon-thumbs-down"></span></button>
 <?php
   }
   else
   {
   ?>
-<input type="submit" class="btn btn"  value="disLike"  disabled>
+  <button type="submit" class="btn btn-link" value="disLiked" disabled><span class="glyphicon glyphicon-thumbs-down"></span></button>
 <?php
   }
 }
 else
 {
 ?>
-  <input type="submit" class="btn btn-danger" method="post" value="disLike" name="btn4">
+  <button type="submit" class="btn btn-link" method="post" value="disLiked" name="btn4"><span class="glyphicon glyphicon-thumbs-up"></span></button>
 <?php } ?>
 </form>
 
