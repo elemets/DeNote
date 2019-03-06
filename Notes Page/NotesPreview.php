@@ -113,20 +113,19 @@ if ($row['dataType'] == "application/pdf")
 	{
 	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`, `type`) VALUES ('$notes', '$userIDmain', 1)";
     	     $conn->query($query);
+             header('Location: '.$_SERVER['REQUEST_URI']);
 	}
 	else if(isset($_POST['btn2']))
 	{
 		$query = "DELETE FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'";
     	     	$result = $conn2->query($query);
+                header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
 <form action="" method="post"> 
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
         $stat->execute();
-	
-if(($row = $stat->fetch()) != null)
-{
 
 $stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND type = 1" );
 $stat2->execute();
@@ -136,6 +135,9 @@ while($row = $stat2->fetch())
   $counterLikes++;
 }
 echo $counterLikes;
+	
+if(($row = $stat->fetch()) != null)
+{
 
   if($typeVote == 1)
   {
