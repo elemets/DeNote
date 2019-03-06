@@ -104,9 +104,6 @@ if ($row['dataType'] == "application/pdf")
 ?>
 
 <div class="row justify-content-end">
-<div class="col-sm-3">
-	<a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
-</div>
 <!-- VOTING -->
 
    <?php
@@ -221,6 +218,10 @@ else
   <button type="submit" class="btn btn-link" method="post" value="disLiked" name="btn4"><span class="glyphicon glyphicon-thumbs-up"></span></button>
 <?php } ?>
 </form>
+</div>
+<div class="col-sm-3">
+	<a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+</div>
 </div>
 <!-- COMMENTS-->
   <div class="row">
