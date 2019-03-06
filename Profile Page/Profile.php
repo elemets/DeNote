@@ -61,11 +61,15 @@ require_once("../Header - Footer/header.php");
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowerUserID = '$userID'");
         $stat->execute();
         $count = 0;
+        $usernameArray = array(); 
         while($row = $stat->fetch()){
           $FollowedUserID = $row['FollowedUserID'];
           $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowedUserID'];
           $username = $conn2->query($syn)->fetch_object()->Username;
-          echo $username . "\n";
+          $link = "profile2.php?id=" . $FollowedUserID;
+          array_push($usernameArray,"profile2.php?id=  
+          echo $username;
+          
           $count = $count + 1;
          }  
          echo "you have " . $count . "following";
