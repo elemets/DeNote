@@ -63,8 +63,8 @@ padding: 0px 0px;
   else
 {
 ?>
-  <form method=post action="<?php echo $_SERVER['PHP_SELF'];?> >
-   <input type=submit name="Follow Me" value="Follow Me">
+  <form method=post action="<?php echo $_SERVER['PHP_SELF'];?>" >
+   <button type=submit name="Follow Me"> </button>
 </form>
 <?php
 }
