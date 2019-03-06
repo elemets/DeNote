@@ -56,7 +56,9 @@ padding: 0px 0px;
 			        <div class="centered"><h2 style="color: #fff;"><?php echo $row['TitleNote'] ?></h2></div>
 				  </a>
         </div>
-
+<?php
+}
+?>
 
 
 <?php
