@@ -8,9 +8,11 @@ session_start();
         echo $userID;
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowerUserID = '$userID'");
         $count = 0;
-        while($row = $stat->fetch()){
+        while($row = $stat->fetch())
+        {
           $FollowedUserID = $row['FollowedUserID'];
           echo $FollowedUserID;
           $count = $count + 1;
+          echo $count;
 	}
 ?>
