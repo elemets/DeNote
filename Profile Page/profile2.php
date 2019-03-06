@@ -63,7 +63,7 @@ padding: 0px 0px;
   else
 {
 ?>
-   <button action=addFollowing() > Follow Me</button>
+   <button onclick="addFollowing()" > Follow Me</button>
 <?php
 }
 
