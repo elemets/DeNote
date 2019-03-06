@@ -80,7 +80,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 
 
   <div class="">
-    <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">Following <?php echo $count;?></h3>
+    <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"> <?php echo $count;?> Followings</h3>
     <div class="jumbotron Container-fluid">
         <?php
          for($counter = 0; $counter < $count; $counter++)
