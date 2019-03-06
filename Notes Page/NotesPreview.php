@@ -109,19 +109,19 @@ if ($row['dataType'] == "application/pdf")
 	if(isset($_POST['btn']))
 	{
 	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`) VALUES ('$id','$_SESSION[username]')";
-    	     $result = $conn2->query($query);
+    	     $result = $conn->query($query);
 	}
 	else if(isset($_POST['btn2']))
 	{
 		$query = "DELETE FROM `Votes` WHERE NoteID = '$id' AND UserID = '$_SESSION[username]'";
-    	     	$result = $conn2->query($query);
+    	     	$result = $conn->query($query);
 	}
   ?>
 <form action="" method="post"> 
 <?php
-$stat = $conn2->prepare("SELECT * FROM `Votes` WHERE NoteID = '$id' AND UserID = '$_SESSION[username]'");
+$stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$id' AND UserID = '$_SESSION[username]'");
         $stat->execute();
-if($stat->num_rows > 0)
+if($row = $stat->fetch() != null)
 {
 ?>
   <input type="submit" class="btn btn-danger" method="post" value="Liked" name="btn2">
