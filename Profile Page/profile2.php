@@ -57,13 +57,13 @@ padding: 0px 0px;
   if (($row = $stat->fetch()) != null)
 {
 ?>
-    <button herf="<?php echo $link ?>" > You are Following Me</button>;
+    <button herf="<?php echo $link; ?>" > You are Following Me</button>
 <?php
 }
   else
 {
 ?>
-   <button herf="<?php echo $link ?>" > Follow Me</button>;
+   <button herf="<?php echo $link; ?>" > Follow Me</button>
 <?php
 }
 ?>
