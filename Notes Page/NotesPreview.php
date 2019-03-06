@@ -95,7 +95,7 @@ if ($row['dataType'] == "application/pdf")
 <?php
 }else {
 ?>
-    		<div class="col-sm-8">
+    		<div class="col-sm-12">
 		<img src="<?php echo $id ?>" style="width:100%; padding-bottom:20px;">
 		</div>
 	</div>
