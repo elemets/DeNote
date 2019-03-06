@@ -63,6 +63,7 @@ require_once("../Header - Footer/header.php");
         while($row = $stat->fetch()){
           $FollowedUserID = $row['FollowedUserID'];
           echo $FollowedUserID;
+          echo "39804";
           $count = $count + 1;
          }  
       ?>
