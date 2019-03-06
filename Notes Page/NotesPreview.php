@@ -133,7 +133,7 @@ if(($row = $stat->fetch()) != null)
   if($typeVote == 1)
   {
 ?>
-  <input type="submit" class="btn btn" method="post" value="Liked" name="btn2">
+  <input type="submit" class="btn btn-info" method="post" value="Liked" name="btn2">
 <?php
   }
   else
@@ -190,7 +190,7 @@ if(($row = $stat->fetch()) != null)
   if($typeVote == -1)
   {
   ?>
-  <input type="submit" class="btn btn" method="post" value="disLiked" name="btn3">
+  <input type="submit" class="btn warning" method="post" value="disLiked" name="btn3">
 <?php
   }
   else
