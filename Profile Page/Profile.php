@@ -59,7 +59,7 @@ padding: 0px 0px;
 <?php
 }
 ?>
-
+</div>
 
 <?php
 $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
