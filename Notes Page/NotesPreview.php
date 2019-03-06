@@ -220,6 +220,8 @@ else
 <?php } ?>
 </form>
 </div>
+</div>
+<div class="row">
 <div class="col-sm-1">
 	<a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
 </div>
