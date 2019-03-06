@@ -19,6 +19,9 @@ body > p {
   transform: translate(-50%, -50%);
 	text-align: center;
 }
+.col-sm-3 {
+	padding-bottom: 10px;
+}
 </style>
 
 <body>
