@@ -36,7 +36,7 @@ $stat->execute();
     while($row = $stat->fetch()){
 ?>
 	<div class="col-sm-3">
-		      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>>
+		      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 					<img src="squareElement.png" style="width:100%">
 			        <div class="centered"><?php echo $row['FileName'] ?></div>
 				  </a>
