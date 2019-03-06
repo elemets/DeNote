@@ -1,15 +1,27 @@
-<!DOCTYPE html>
-<?php   session_start(); ?>
-<html lang="en">
-<head>
-<title>Profile Page</title>
 <?php
 require_once("../Header - Footer/header.php");
 ?>
-<!-- Bootstrap CSS -->
-
-</head>
-<body id="top">
+<title>Page Title</title>
+<style>
+body {
+	padding-top: 50px;
+}
+body > p {
+	text-align: center;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	text-align: center;
+}
+.col-sm-3 {
+	padding-bottom: 30px;
+}
+</style>
+<body>
+<div id="top" class="container-fluid"> 
 
 <!-- Title and profile icon -->
 <div id="My_Profile" class="text-center">
@@ -98,11 +110,10 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 	</div>
   </div>
 
-
+</div>
+</div>
 </body>
-<footer>
 <?php
 require_once("../Header - Footer/footer.html");
 ?>
-</footer>
 </html>
