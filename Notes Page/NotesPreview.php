@@ -129,7 +129,7 @@ $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID
 
 $stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND type = 1" );
 $stat2->execute();
-$counterLikes = 0
+$counterLikes = 0;
 while($row = $stat2->fetch())
 {
   $counterLikes++;
