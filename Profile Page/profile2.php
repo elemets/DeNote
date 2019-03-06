@@ -60,8 +60,17 @@ padding: 0px 0px;
 	}
   ?>
 <form action="" method="post"> 
-  <input type="submit" method="post" value="Submit" name="btn">
- </form>
+<?php
+$stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID' AND FollowerUserID = '$userIDmain' ");
+        $stat->execute();
+if($row = $stat->fetch() != null)
+?>
+  <input type="submit" method="post" value="UnFollow" name="btn2">
+<?php
+else
+?>
+  <input type="submit" method="post" value="Follow me" name="btn"> 
+</form>
 
  
 </div>
