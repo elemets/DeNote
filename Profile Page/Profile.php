@@ -59,12 +59,14 @@ require_once("../Header - Footer/header.php");
       <?php
         $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowerUserID = '$userID'");
+        $stat->execute();
         $count = 0;
         while($row = $stat->fetch()){
           $FollowedUserID = $row['FollowedUserID'];
-          echo $FollowedUserID;
+          echo $FollowedUserID + "\n";
           $count = $count + 1;
          }  
+         echo "you have " . $count . "following";
       ?>
 
     </div>
