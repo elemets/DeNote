@@ -51,6 +51,8 @@ padding: 0px 0px;
    ?>
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 
+
+<!-- FOLLOWING BUTTONS -->
    <?php
 	if(isset($_POST['btn']))
 	{
