@@ -50,11 +50,28 @@ padding: 0px 0px;
     	$stat->execute();
 
     	while($row = $stat->fetch()){
-	?>
+	
+		$noteID = $row['NoteID'];
+		$stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$noteID'");
+		$stat2->execute();
+		$counterLikes = 0;
+		$counterDislikes = 0;
+		while($row2 = $stat2->fetch())
+		{
+			if($row2['type'] == 1)
+  				$counterLikes++;
+			else
+				$counterDislikes++;
+		}
+
+?>
 	<div class="col-sm-3">
 		      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 					<img src="squareElement.png" style="width:100%">
-			        <div class="centered"><h2 style="color: #fff;"><?php echo $row['TitleNote'] ?></h2></div>
+			        <div class="centered"><h2 style="color: #fff;">
+					<?php echo $row['TitleNote'];?> 
+					</br> Likes: <?php echo $counterLikes; ?> 
+					</br> Dislikes: <?php echo $counterDislikes; ?></h2></div>
 				  </a>
         </div>
 <?php
@@ -70,6 +87,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
         $usernameArray = array(); 
         $links = array();
         while($row = $stat->fetch()){
+          
           $FollowedUserID = $row['FollowedUserID'];
           $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowedUserID']; 
           $username = $conn2->query($syn)->fetch_object()->Username;
