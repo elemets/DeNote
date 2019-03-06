@@ -50,6 +50,7 @@ padding: 0px 0px;
   $link = "https://web.cs.manchester.ac.uk/a64508sa/Z3_Y1_Project/Profile%20Page/profile2.php?id=" . $userID;
    ?>
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
+<!--
   <?php
   
   if ($ifFollow)
@@ -58,6 +59,7 @@ padding: 0px 0px;
     echo "<button herf="<?php echo $link ?>" > Follow Me</button>";
   ?>
 </div>
+--->
 <!-- My notes Section -->
 <div id="My_notes" class="grid-container"></div>
       <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"><?php echo $username; ?> notes</h3>
