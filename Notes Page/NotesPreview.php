@@ -111,27 +111,21 @@ if ($row['dataType'] == "application/pdf")
 	$userIDmain = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
 	if(isset($_POST['btn']))
 	{
-		echo "I am btn";
-		echo $notes;
-		echo $usernameMain;
 	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`) VALUES ('$notes', '$userIDmain')";
     	     $conn->query($query);
 	}
 	else if(isset($_POST['btn2']))
 	{
-		echo "I am btn2";
 		$query = "DELETE FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'";
     	     	$result = $conn2->query($query);
 	}
   ?>
 <form action="" method="post"> 
 <?php
-echo $notes;
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
         $stat->execute();
-	$row = $stat->fetch();
-	echo $row == null? "yes" : "no";
-if(($row) != null)
+	
+if(($row = $stat->fetch()) != null)
 {
 ?>
   <input type="submit" class="btn btn-danger" method="post" value="Liked" name="btn2">
