@@ -58,7 +58,7 @@ require_once("../Header - Footer/header.php");
     <div class="jumbotron Container-fluid">
       <?php
         $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
-        $stat = $conn->prepare("SELECT  FollowedUserID FROM `Followers` WHERE  	FollowerUserID = '$userID'");
+        $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowerUserID = '$userID'");
         $count = 0;
         while($row = $stat->fetch()){
           $FollowedUserID = $row['FollowedUserID'];
