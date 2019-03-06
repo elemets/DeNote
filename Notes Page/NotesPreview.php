@@ -141,12 +141,12 @@ else
    <?php
 	$notes =  $_GET['id'];
 	$userIDmain = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
-	if(isset($_POST['btn']))
+	if(isset($_POST['btn4']))
 	{
 	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`,  `type`) VALUES ('$notes', '$userIDmain' , -1)";
     	     $conn->query($query);
 	}
-	else if(isset($_POST['btn2']))
+	else if(isset($_POST['btn3']))
 	{
 		$query = "DELETE FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'";
     	     	$result = $conn2->query($query);
@@ -160,13 +160,13 @@ $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID
 if(($row = $stat->fetch()) != null)
 {
 ?>
-  <input type="submit" class="btn btn" method="post" value="disLiked" name="btn2">
+  <input type="submit" class="btn btn" method="post" value="disLiked" name="btn3">
 <?php
 }
 else
 {
 ?>
-  <input type="submit" class="btn btn-danger" method="post" value="disLike" name="btn"> 
+  <input type="submit" class="btn btn-danger" method="post" value="disLike" name="btn4"> 
 <?php } ?>
 </form>
 
