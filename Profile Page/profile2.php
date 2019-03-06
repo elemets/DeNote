@@ -55,12 +55,18 @@ padding: 0px 0px;
   $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID' AND FollowerUserID = '$userIDmain'");
   $stat->execute();
   if (($row = $stat->fetch()) != null)
+{
 ?>
     <button herf="<?php echo $link ?>" > You are Following Me</button>;
 <?php
+}
   else
+{
 ?>
    <button herf="<?php echo $link ?>" > Follow Me</button>;
+<?php
+}
+?>
 </div>
 <!-- My notes Section -->
 <div id="My_notes" class="grid-container"></div>
