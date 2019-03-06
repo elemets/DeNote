@@ -95,7 +95,7 @@ if ($row['dataType'] == "application/pdf")
 <?php
 }else {
 ?>
-    		<div class="col-sm-12">
+    		<div class="col-sm-8">
 		<img src="<?php echo $id ?>" style="width:100%; padding-bottom:20px;">
 		</div>
 	</div>
@@ -123,7 +123,7 @@ if ($row['dataType'] == "application/pdf")
                 header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
-<div class="col-sm-1">
+<div class="col-sm-2">
 <form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
@@ -179,7 +179,7 @@ else
 		header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
-<div class="col-sm-1">
+<div class="col-sm-2">
 <form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
@@ -222,7 +222,8 @@ else
 </div>
 </div>
 <div class="row">
-<div class="col-sm-1">
+<div class="col-sm-10">
+<div class="col-sm-2">
 	<a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
 </div>
 </div>
