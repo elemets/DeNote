@@ -95,15 +95,17 @@ if ($row['dataType'] == "application/pdf")
 <?php
 }else {
 ?>
-    		<div class="col-sm-12">
+<div class="col-sm-2"></div>
+    		<div class="col-sm-8">
 		<img src="<?php echo $id ?>" style="width:100%; padding-bottom:20px;">
 		</div>
+<div class="col-sm-2"></div>
 	</div>
 <?php
 }
 ?>
 
-<div class="row">
+<div class="row" style="text-align:right;">
 	<div class="col-sm-8"></div>
 <!-- VOTING -->
 
@@ -123,7 +125,7 @@ if ($row['dataType'] == "application/pdf")
                 header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
-<div class="col-sm-2" style="text-align=right;">
+<div class="col-sm-2">
 <form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
