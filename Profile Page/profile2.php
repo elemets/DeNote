@@ -86,6 +86,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $result = $conn->query($query);
     header($link);
   }
+ }
 }
 ?>
 </div>
