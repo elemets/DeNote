@@ -108,11 +108,13 @@ if ($row['dataType'] == "application/pdf")
    <?php
 	if(isset($_POST['btn']))
 	{
+		echo "I am btn";
 	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`) VALUES ('$id','$_SESSION[username]')";
     	     $result = $conn->query($query);
 	}
 	else if(isset($_POST['btn2']))
 	{
+		echo "I am btn2";
 		$query = "DELETE FROM `Votes` WHERE NoteID = '$id' AND UserID = '$_SESSION[username]'";
     	     	$result = $conn->query($query);
 	}
