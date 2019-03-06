@@ -165,8 +165,10 @@ else
 	$userIDmain = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
 	if(isset($_POST['btn4']))
 	{
+        
 	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`,  `type`) VALUES ('$notes', '$userIDmain' , -1)";
     	     $conn->query($query);
+             header('Location: '.$_SERVER['REQUEST_URI']);
 	}
 	else if(isset($_POST['btn3']))
 	{
@@ -207,7 +209,7 @@ else
 <?php
 
 
- header('Location: '.$_SERVER['REQUEST_URI']);
+ 
 
 
 ?>
