@@ -113,13 +113,13 @@ if ($row['dataType'] == "application/pdf")
 	}
 	else if(isset($_POST['btn2']))
 	{
-		$query = "DELETE FROM `Votes` WHERE NoteID = '$id' AND UserID = '$_SESSION[username]' ";
+		$query = "DELETE FROM `Votes` WHERE NoteID = '$id' AND UserID = '$_SESSION[username]'";
     	     	$result = $conn->query($query);
 	}
   ?>
 <form action="" method="post"> 
 <?php
-$stat = $conn->prepare("SELECT  * FROM `Votes` WHERE NoteID = '$id' AND UserID = '$_SESSION[username]' ");
+$stat = $conn2->prepare("SELECT * FROM `Votes` WHERE NoteID = '$id' AND UserID = '$_SESSION[username]'");
         $stat->execute();
 if($stat->num_rows > 0)
 {
