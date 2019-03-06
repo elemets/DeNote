@@ -122,7 +122,7 @@ if ($row['dataType'] == "application/pdf")
                 header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
-<form action="" method="post"> 
+<form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
         $stat->execute();
@@ -135,27 +135,27 @@ while($row = $stat2->fetch())
   $counterLikes++;
 }
 echo $counterLikes;
-	
+
 if(($row = $stat->fetch()) != null)
 {
   $typeVote = $row['type'];
   if($typeVote == 1)
   {
 ?>
-  <input type="submit" class="btn btn-info" method="post" value="Liked" name="btn2">
+  <button type="submit" class="btn btn-link" method="post" value="Liked" name="btn2"><span class="glyphicon-thumbs-up"></span></button>
 <?php
   }
   else
   {
 ?>
-<input type="submit" class="btn btn"  value="Like!"  disabled>
+<input type="submit" class="btn btn-link"  value="Like!"  disabled>
 <?php
   }
 }
 else
 {
 ?>
-  <input type="submit" class="btn btn-primary" method="post" value="Like!" name="btn"> 
+  <input type="submit" class="btn btn-primary" method="post" value="Like!" name="btn">
 <?php
 } ?>
 </form>
@@ -174,7 +174,7 @@ else
 	$userIDmain = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
 	if(isset($_POST['btn4']))
 	{
-        
+
 	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`,  `type`) VALUES ('$notes', '$userIDmain' , -1)";
     	     $conn->query($query);
              header('Location: '.$_SERVER['REQUEST_URI']);
@@ -186,7 +186,7 @@ else
 		header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
-<form action="" method="post"> 
+<form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
         $stat->execute();
@@ -201,7 +201,7 @@ while($row = $stat2->fetch())
 }
 echo $counterLikes;
 
-	
+
 if(($row = $stat->fetch()) != null)
 {
 	$typeVote = $row['type'];
@@ -222,14 +222,14 @@ if(($row = $stat->fetch()) != null)
 else
 {
 ?>
-  <input type="submit" class="btn btn-danger" method="post" value="disLike" name="btn4"> 
+  <input type="submit" class="btn btn-danger" method="post" value="disLike" name="btn4">
 <?php } ?>
 </form>
 
 <?php
 
 
- 
+
 
 
 ?>
