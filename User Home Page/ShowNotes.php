@@ -14,7 +14,6 @@ body > p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-	color: white;
 }
 </style>
 <body>
@@ -38,7 +37,7 @@ $stat->execute();
 	<div class="col-sm-3">
 		      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 					<img src="squareElement.png" style="width:100%">
-			        <div class="centered"><h2><?php echo $row['FileName'] ?></h2></div>
+			        <div class="centered"><h2 style="color: #fff;"><?php echo $row['FileName'] ?></h2></div>
 				  </a>
 	 </div>
 <?php
