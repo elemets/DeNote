@@ -54,7 +54,9 @@ padding: 0px 0px;
    <?php
 	if(isset($_POST['btn']))
 	{
-		echo "sdaas";
+	     $query = "INSERT INTO `Followers`(`FollowerUserID`, `FollowedUserID`) VALUES ('$userIDmain','$userID')";
+    	     $result = $conn->query($query);
+		echo "dsadasdasda";
 	}
   ?>
 <form action="" method="post"> 
