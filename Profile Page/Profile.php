@@ -42,6 +42,7 @@ padding: 0px 0px;
 <div id="My_notes" class="grid-container"></div>
       <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">My notes</h3>
         <div class="jumbotron Container-fluid">
+<div class="row">
 	<?php 
     	$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
     	$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
