@@ -107,11 +107,11 @@ if ($row['dataType'] == "application/pdf")
 <!-- VOTING -->
 
    <?php
+	$notes =  $_GET['id'];
 	$usernameMain = "$_SESSION[username]";
 	if(isset($_POST['btn']))
 	{
 		echo "I am btn";
-		$notes =  $_GET['id'];
 		echo $notes;
 		echo $usernameMain;
 	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`) VALUES ('$notes', '$usernameMain')";
@@ -126,6 +126,7 @@ if ($row['dataType'] == "application/pdf")
   ?>
 <form action="" method="post"> 
 <?php
+echo $notes;
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$usernameMain'");
         $stat->execute();
 if($row = $stat->fetch() != null)
