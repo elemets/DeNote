@@ -12,6 +12,13 @@ body {
 body > p {
 	text-align: center;
 }
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	text-align: center;
+}
 </style>
 
 <body>
@@ -38,21 +45,12 @@ body > p {
 	if (!in_array($row['UnitID'], $UnitIDInField))
       {
 ?>
-
-
 		<div class="col-sm-3">
-			    <div class="thumbnail">
-<?php echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
+    <a <?php echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
 			        <img src="squareElement.png" style="width:100%">
-			        <div class="caption">
-			          <p><?php echo $row['UnitID'] ?></p>
-			        </div>
-			      </a>
-			    </div>
+			        <div class="centered"><h2 style="color: #fff;"><?php echo $row['UnitID'] ?></h2></div>
+				  </a>
 	 </div>
-
-
-
 <?php
       array_push($UnitIDInField, $row['UnitID']);
       }
