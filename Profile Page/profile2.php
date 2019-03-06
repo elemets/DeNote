@@ -47,7 +47,7 @@ padding: 0px 0px;
   require_once('config.inc.php');
   $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
   $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
-  $link = "https://web.cs.manchester.ac.uk/a64508sa/Z3_Y1_Project/Profile%20Page/profile2.php?id=" . $userID;
+  $link = "Location: https://web.cs.manchester.ac.uk/a64508sa/Z3_Y1_Project/Profile%20Page/profile2.php?id=" . $userID;
    ?>
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 
@@ -57,14 +57,26 @@ padding: 0px 0px;
   if (($row = $stat->fetch()) != null)
 {
 ?>
-    <button herf="<?php echo $link; ?>" > You are Following Me</button>
+    <button action=deleteFollowing() > You are Following Me</button>
 <?php
 }
   else
 {
 ?>
-   <button herf="<?php echo $link; ?>" > Follow Me</button>
+   <button action=addFollowing() > Follow Me</button>
 <?php
+}
+
+function deleteFollowing()
+{
+  
+}
+
+function addFollowing()
+{
+  $query = "INSERT INTO `Followers`(`FollowerUserID`, `FollowedUserID`) VALUES ('$userIDmain', '$userID')";
+  $result = $conn->query($query);
+  header($link);
 }
 ?>
 </div>
