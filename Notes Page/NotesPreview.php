@@ -148,14 +148,14 @@ if(($row = $stat->fetch()) != null)
   else
   {
 ?>
-<input type="submit" class="btn btn-link"  value="Like!"  disabled>
+<button type="submit" class="btn btn-link" value="Like!" disabled><span class="glyphicon glyphicon-thumbs-up"></span></button>
 <?php
   }
 }
 else
 {
 ?>
-  <input type="submit" class="btn btn-primary" method="post" value="Like!" name="btn">
+  <button type="submit" class="btn btn-link" method="post" value="Like!" name="btn"><span class="glyphicon glyphicon-thumbs-up"></span></button>
 <?php
 } ?>
 </form>
