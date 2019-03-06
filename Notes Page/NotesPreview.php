@@ -136,7 +136,7 @@ if(($row = $stat->fetch()) != null)
   else
   {
 ?>
-<input type="submit" class="btn btn" method="post" value="Like!" name="btn2" disabled>
+<input type="submit" class="btn btn"  value="Like!"  disabled>
 <?php
   }
 }
