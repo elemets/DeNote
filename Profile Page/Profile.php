@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php   session_start(); ?>
 <html lang="en">
 <head>
 <title>Profile Page</title>
@@ -12,32 +13,11 @@ require_once("../Header - Footer/header.php");
 
 <!-- Title and profile icon -->
 <div id="My_Profile" class="text-center">
-  <h1 style="font-size:60px;padding-top: 55px;">My Profile</h1>
+  <h1 style="font-size:60px;padding-top: 55px;"><?php echo $_SESSION['username']; ?></h1>
   <?php
-  session_start();
   require_once('config.inc.php');
   $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
   $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
-  echo $_SESSION['username'];
-  $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
-  $stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = '$userID'");
-  $stat->bindParam(1, $userID);
-  $stat->execute();
-
-  //gets the userid of the users you are following and then displays their uploaded notes
-  $followerName = $conn2->query("SELECT FollowedUserID FROM `Followers` WHERE FollowerUserID = '$userID'")->fetch_object()->FollowedUserID;
-  $followerID = $conn2->query("SELECT FollowedUserID FROM `Followers` WHERE FollowerUserID = '$userID'")->fetch_object()->FollowedUserID;
-  $followerName = $conn2->query("SELECT Username FROM `Users` WHERE UserID = '$followerID'")->fetch_object()->Username;
-  echo "you are following $followerName";
-
-  $stat2 = $conn->prepare("SELECT * FROM Notes WHERE UserID = '$followerID'");
-  $stat2->bindParam(1, $followerID);
-  $stat2->execute();
-
-  while($row = $stat->fetch()){
-    echo "<li><a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
-
-  }
   while($row = $stat2->fetch()){
     echo "<li><a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
 
