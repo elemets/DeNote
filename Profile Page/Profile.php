@@ -89,12 +89,37 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 <?php
 }
 ?>
+<?php
+$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
+        $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID'");
+        $stat->execute();
+        $count = 0;
+        $usernameArray = array(); 
+        $links = array();
+        while($row = $stat->fetch()){
+          $FollowerUserID = $row['FollowerUserID'];
+          $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowerUserID']; 
+          $username = $conn2->query($syn)->fetch_object()->Username;
+          array_push($usernameArray, $username);
+          $link = "profile2.php?id=" . $FollowerUserID;
+          array_push($links, $link);
+          $count = $count + 1;
+         } 
 
+?>
     </div>
   </div>
   <div class="">
-    <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">My Followers</h3>
-
+    <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"><?php echo $count;?> Followers</h3>
+	<div class="jumbotron Container-fluid"> 
+        <?php
+         for($counter = 0; $counter < $count; $counter++)
+         { ?>
+          <a href= "<?php echo $links[$counter]; ?>"> <?php echo $usernameArray[$counter]; ?> </a>
+<?php
+}
+?>
+	</div>
   </div>
 
 
