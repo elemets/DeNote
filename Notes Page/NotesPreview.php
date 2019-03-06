@@ -103,7 +103,7 @@ if ($row['dataType'] == "application/pdf")
 }
 ?>
 
-<div class="row" style="text-align=right;">
+<div class="row">
 	<div class="col-sm-8"></div>
 <!-- VOTING -->
 
@@ -123,7 +123,7 @@ if ($row['dataType'] == "application/pdf")
                 header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
-<div class="col-sm-2">
+<div class="col-sm-2" style="text-align=right;">
 <form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
@@ -221,7 +221,7 @@ else
 </form>
 </div>
 </div>
-<div class="row" style="text-align=right;">
+<div class="row">
 <div class="col-sm-10"></div>
 <div class="col-sm-2">
 	<a href="<?php echo $id ?>" class="btn btn-lg submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
