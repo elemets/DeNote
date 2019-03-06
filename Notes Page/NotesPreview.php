@@ -113,7 +113,7 @@ if ($row['dataType'] == "application/pdf")
 		echo "I am btn";
 		echo $_GET['id'];
 		echo $usernameMain;
-	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`) VALUES ('$_GET['id']','$usernameMain')";
+	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`) VALUES ($_GET['id'], $usernameMain)";
     	     $result = $conn->query($query);
 	}
 	else if(isset($_POST['btn2']))
