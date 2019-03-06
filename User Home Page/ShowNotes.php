@@ -38,7 +38,7 @@ $stat->execute();
 	<div class="col-sm-3">
 		      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 					<img src="squareElement.png" style="width:100%">
-			        <div class="centered"><?php echo $row['FileName'] ?></div>
+			        <div class="centered"><h2><?php echo $row['FileName'] ?></h2></div>
 				  </a>
 	 </div>
 <?php
