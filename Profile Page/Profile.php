@@ -18,10 +18,6 @@ require_once("../Header - Footer/header.php");
   require_once('config.inc.php');
   $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
   $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
-  while($row = $stat2->fetch()){
-    echo "<li><a href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
-
-  }
    ?>
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 </div>
