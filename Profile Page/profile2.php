@@ -57,7 +57,7 @@ padding: 0px 0px;
   if (($row = $stat->fetch()) != null)
 {
 ?>
-    <button onclick=deleteFollowing() > You are Following Me</button>
+    <button onclick="deleteFollowing()" > You are Following Me</button>
 <?php
 }
   else
