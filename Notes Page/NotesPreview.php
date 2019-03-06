@@ -193,9 +193,6 @@ $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID
 	
 if(($row = $stat->fetch()) != null)
 {
-	$typeVote = $row['type'];
-	echo $row['type'];
-	echo $typeVote;
   if($typeVote == -1)
   {
   ?>
