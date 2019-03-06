@@ -131,7 +131,7 @@ if(($row = $stat->fetch()) != null)
 $stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND type = 1" );
 $stat2->execute();
 $counterLikes = 0
-while($row = $stat->fetch())
+while($row = $stat2->fetch())
 {
   $counterLikes++;
 }
