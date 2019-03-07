@@ -4,7 +4,7 @@ session_start();
 
 require_once("../Header - Footer/header.php");
 require_once('config.inc.php');
-$syn = "SELECT Username FROM Users WHERE UserID =" . $_GET['id']; 
+$syn = "SELECT Username FROM Users WHERE UserID =" . $_GET['id'];
 $userID = $_GET['id'];
 $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
 $userIDmain = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
@@ -38,7 +38,7 @@ padding: 0px 0px;
 }
 </style>
 <body>
-<div id="top" class="container-fluid"> 
+<div id="top" class="container-fluid">
 
 <!-- Title and profile icon -->
 <div id="My_Profile" class="text-center">
@@ -65,7 +65,7 @@ padding: 0px 0px;
     	     	$result = $conn->query($query);
 	}
   ?>
-<form action="" method="post"> 
+<form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID' AND FollowerUserID = '$userIDmain' ");
         $stat->execute();
@@ -78,18 +78,18 @@ if($row = $stat->fetch() != null)
 else
 {
 ?>
-  <input type="submit" class="btn btn-primary" method="post" value="Follow me" name="btn"> 
+  <input type="submit" class="btn btn-primary" method="post" value="Follow me" name="btn">
 <?php } ?>
 </form>
 
- 
+
 </div>
 <!-- My notes Section -->
 <div id="My_notes" class="grid-container"></div>
-      <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"><?php echo $username; ?> notes</h3>
+      <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"><?php echo $username; ?>'s notes</h3>
         <div class="jumbotron Container-fluid">
 <div class="row">
-	<?php 
+	<?php
     	$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
     	$stat->bindParam(1, $_GET['id']);
     	$stat->execute();
@@ -111,8 +111,8 @@ else
 	<div class="col-sm-3">
 		      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 					<img src="squareElement.png" style="width:100%">
-			        <div class="centered"><h2 style="color: #fff;"><?php echo $row['TitleNote'];?> 
-					</br> Likes: <?php echo $counterLikes; ?> 
+			        <div class="centered"><h2 style="color: #fff;"><?php echo $row['TitleNote'];?>
+					</br> Likes: <?php echo $counterLikes; ?>
 					</br> Dislikes: <?php echo $counterDislikes; ?></h2></div>
 				  </a>
         </div>
@@ -126,17 +126,17 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")-
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowerUserID = '$userID'");
         $stat->execute();
         $count = 0;
-        $usernameArray = array(); 
+        $usernameArray = array();
         $links = array();
         while($row = $stat->fetch()){
           $FollowedUserID = $row['FollowedUserID'];
-          $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowedUserID']; 
+          $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowedUserID'];
           $username = $conn2->query($syn)->fetch_object()->Username;
           array_push($usernameArray, $username);
           $link = "profile2.php?id=" . $FollowedUserID;
           array_push($links, $link);
           $count = $count + 1;
-         } 
+         }
 
 ?>
 
@@ -160,24 +160,24 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")-
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID'");
         $stat->execute();
         $count = 0;
-        $usernameArray = array(); 
+        $usernameArray = array();
         $links = array();
         while($row = $stat->fetch()){
           $FollowerUserID = $row['FollowerUserID'];
-          $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowerUserID']; 
+          $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowerUserID'];
           $username = $conn2->query($syn)->fetch_object()->Username;
           array_push($usernameArray, $username);
           $link = "profile2.php?id=" . $FollowerUserID;
           array_push($links, $link);
           $count = $count + 1;
-         } 
+         }
 
 ?>
     </div>
   </div>
   <div class="">
     <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"><?php echo $count;?> Followers</h3>
-	<div class="jumbotron Container-fluid"> 
+	<div class="jumbotron Container-fluid">
         <?php
          for($counter = 0; $counter < $count; $counter++)
          { ?>
