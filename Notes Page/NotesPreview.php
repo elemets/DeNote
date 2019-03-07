@@ -39,13 +39,13 @@ body {
 		background-color: #660099 !important;
 }
 .like-btn {
-		background-color: #59D5BC !important;
+		background-color: #3CDB5D !important;
 }
 .dislike-btn {
 		background-color: #FE4D4D !important;
 }
 .submit-font {
-		color:# !important;
+		color:#ffff !important;
 }
 .submit-font:hover {
 		color:#ecaa33 !important;
@@ -159,13 +159,13 @@ if(($row = $stat->fetch()) != null)
   if($typeVote == 1)
   {
 ?>
-  <button type="submit" class="btn btn-block like-btn submit-font" method="post" value="Liked" name="btn2"><span><?php echo $counterLikes ?> </span><span class="glyphicon glyphicon-thumbs-up"> Liked</span></button>
+  <button type="submit" class="btn btn-block like-btn submit-font like-dislike" method="post" value="Liked" name="btn2"><span><?php echo $counterLikes ?> </span><span class="glyphicon glyphicon-thumbs-up"> Liked</span></button>
 <?php
   }
   else
   {
 ?>
-<button type="submit" class="btn btn-block like-btn submit-font" value="Like!" disabled><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
+<button type="submit" class="btn btn-block like-btn submit-font like-dislike" value="Like!" disabled><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
 <?php
   }
 }
