@@ -1,5 +1,12 @@
 <?php
 session_start();
+if($_SESSION["username"] == null)
+{
+	header('Location: ../index.html');
+}
+else {
+
+
 ?>
 <?php
 require_once("../Header - Footer/header.php");
@@ -65,5 +72,6 @@ body > p {
 </body>
 <?php
 require_once("../Header - Footer/footer.html");
+}
 ?>
 </html>
