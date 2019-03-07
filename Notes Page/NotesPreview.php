@@ -149,20 +149,20 @@ if(($row = $stat->fetch()) != null)
   if($typeVote == 1)
   {
 ?>
-  <button type="submit" class="btn btn-block btn-link" method="post" value="Liked" name="btn2"><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Liked</span></button>
+  <button type="submit" class="btn btn-block submit-btn submit-font btn-link" method="post" value="Liked" name="btn2"><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Liked</span></button>
 <?php
   }
   else
   {
 ?>
-<button type="submit" class="btn btn-block btn-link" value="Like!" disabled><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
+<button type="submit" class="btn btn-block submit-btn submit-font btn-link" value="Like!" disabled><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
 <?php
   }
 }
 else
 {
 ?>
-  <button type="submit" class="btn btn-block btn-link" method="post" value="Like!" name="btn"><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
+  <button type="submit" class="btn btn-block submit-btn submit-font btn-link" method="post" value="Like!" name="btn"><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
 <?php
 } ?>
 </form>
@@ -208,20 +208,20 @@ if(($row = $stat->fetch()) != null)
   if($typeVote == -1)
   {
   ?>
-	<button type="submit" class="btn btn-link" method="post" value="disLiked" name="btn3"><span class="glyphicon glyphicon-thumbs-down"> Disliked</span></button>
+	<button type="submit" class="btn btn-block submit-btn submit-font btn-link" method="post" value="disLiked" name="btn3"><span class="glyphicon glyphicon-thumbs-down"> Disliked</span></button>
 <?php
   }
   else
   {
   ?>
-  <button type="submit" class="btn btn-link" value="disLike" disabled><span class="glyphicon glyphicon-thumbs-down"> Dislike</span></button>
+  <button type="submit" class="btn btn-block submit-btn submit-font btn-link" value="disLike" disabled><span class="glyphicon glyphicon-thumbs-down"> Dislike</span></button>
 <?php
   }
 }
 else
 {
 ?>
-  <button type="submit" class="btn btn-link" method="post" value="disLike" name="btn4"><span class="glyphicon glyphicon-thumbs-down"> DisLike</span></button>
+  <button type="submit" class="btn btn-block submit-btn submit-font btn-link" method="post" value="disLike" name="btn4"><span class="glyphicon glyphicon-thumbs-down"> DisLike</span></button>
 <?php } ?>
 </form>
 </div>
