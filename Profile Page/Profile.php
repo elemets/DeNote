@@ -36,7 +36,7 @@ padding: 0px 0px;
 	background-color:#faf2ff;
 }
 
-input#HCB_comment_box .submit {
+input#HCB_submit .submit {
 	background-color: #faf2ff ;
 	border:1px solid #faf2ff;
 	color: #faf2ff;
