@@ -50,6 +50,10 @@ body {
 .submit-font:hover {
 		color:#ecaa33 !important;
 }
+
+.like-dislike {
+	color: #000 !important;
+}
 </style>
 <body>
   <div id="top" class="container-fluid">
