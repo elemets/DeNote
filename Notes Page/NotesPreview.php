@@ -50,6 +50,12 @@ body {
 .submit-font:hover {
 		color:#ecaa33 !important;
 }
+.glyphicon-thumbs-up {
+	  margin-right: 5px;
+}
+.glyphicon-thumbs-down {
+	  margin-right: 5px;
+}
 </style>
 <body>
   <div id="top" class="container-fluid">
@@ -155,7 +161,7 @@ if(($row = $stat->fetch()) != null)
   if($typeVote == 1)
   {
 ?>
-  <button type="submit" class="btn btn-block like-btn submit-font" method="post" value="Liked" name="btn2"><span><?php echo $counterLikes ?> </span><span class="glyphicon glyphicon-thumbs-up"> Liked</span></button>
+  <button type="submit" class="btn btn-block like-btn submit-font" method="post" value="Liked" name="btn2"><?php echo $counterLikes ?><span class="glyphicon glyphicon-thumbs-up"> Liked</span></button>
 <?php
   }
   else
