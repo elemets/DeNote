@@ -4,7 +4,6 @@ if($_SESSION["username"] == null)
 {
 	header('Location: ../index.html');
 }
-else {
 ?>
 
 <?php
@@ -197,12 +196,10 @@ if(isset($_POST['btn']))
         return false;
       else if ($Number == "")
         return false;
-     // else if(is_string($Number))
-       // return false;
       else
         return true;
     }
-  }
+
      ?>
 
 </div>
