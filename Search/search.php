@@ -3,7 +3,6 @@ if($_SESSION["username"] == null)
 {
 	header('Location: ../index.html');
 }
-else {
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,7 +39,6 @@ else {
             echo "<li><a  href='../Profile Page/profile2.php?id=".$row['UserID']."'>".$row['Username']."</a></li>";
       }
     }
-  }
     ?>
   </body>
 </html>

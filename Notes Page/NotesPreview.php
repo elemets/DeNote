@@ -5,7 +5,6 @@ if($_SESSION["username"] == null)
 {
 	header('Location: ../index.html');
 }
-else {
 ?>
 <title>Note Preview Page</title>
 <style>
@@ -237,7 +236,7 @@ else
 <!-- COMMENTS-->
   <div class="row">
        <div class="col-sm-12">
-		
+
 
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:100%;"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
@@ -252,7 +251,6 @@ else
   <div>
 <?php
 require_once("../Header - Footer/footer.html");
-}
 ?>
   </div>
 </footer>

@@ -4,7 +4,6 @@ if($_SESSION["username"] == null)
 {
 	header('Location: ../index.html');
 }
-else {
 require_once("../Header - Footer/header.php");
 ?>
 <title>Page Title</title>
@@ -65,6 +64,5 @@ body > p {
 </body>
 <?php
 require_once("../Header - Footer/footer.html");
-}
 ?>
 </html>

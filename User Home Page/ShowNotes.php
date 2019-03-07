@@ -1,5 +1,9 @@
 <?php
 require_once("../Header - Footer/header.php");
+if($_SESSION["username"] == null)
+{
+	header('Location: ../index.html');
+}
 ?>
 <title>Page Title</title>
 <style>
@@ -51,15 +55,15 @@ $stat->execute();
 				$counterDislikes++;
 		}
 
-?>	
-	
-	
+?>
+
+
 	<div class="col-sm-3">
 		      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 					<img src="squareElement.png" style="width:100%">
 			        <div class="centered"><h2 style="color: #fff;">
-					<?php echo $row['TitleNote'];?> 
-					</br> Likes: <?php echo $counterLikes; ?> 
+					<?php echo $row['TitleNote'];?>
+					</br> Likes: <?php echo $counterLikes; ?>
 					</br> Dislikes: <?php echo $counterDislikes; ?></h2></div>
 				  </a>
 	 </div>

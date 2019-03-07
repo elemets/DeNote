@@ -5,7 +5,6 @@ if($_SESSION["username"] == null)
 {
 	header('Location: ../index.html');
 }
-else {
 ?>
 <title>Page Title</title>
 <style>
@@ -170,6 +169,5 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 </body>
 <?php
 require_once("../Header - Footer/footer.html");
-}
 ?>
 </html>
