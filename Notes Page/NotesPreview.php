@@ -38,10 +38,10 @@ body {
 .submit-btn {
 		background-color: #660099 !important;
 }
-like-btn {
+.like-btn {
 		background-color: #59D5BC !important;
 }
-dislike-btn {
+.dislike-btn {
 		background-color: #FE4D4D !important;
 }
 .submit-font {
