@@ -96,18 +96,7 @@ if(isset($_POST['btn']))
   $stmt->execute();
   }
   else
-{
-?>
-<div class="fixed-top" style="padding-top: 53px">
-	      <div class="alert alert-danger alert-dismissible fade show" role="alert">
-          <strong>Error:</strong> Check that you entered the correct username and password.
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-      </div>
-<?php
-   }
+    echo "empty field of section number or unit is ---- or number is string";
   }
 ?>
 <div class="container">
