@@ -155,7 +155,7 @@ if(($row = $stat->fetch()) != null)
   if($typeVote == 1)
   {
 ?>
-  <button type="submit" class="btn btn-block like-btn submit-font" method="post" value="Liked" name="btn2"><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Liked</span></button>
+  <button type="submit" class="btn btn-block like-btn submit-font" method="post" value="Liked" name="btn2"><?php echo $counterLikes ?>   <span class="glyphicon glyphicon-thumbs-up"> Liked</span></button>
 <?php
   }
   else
