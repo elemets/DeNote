@@ -1,6 +1,10 @@
 <?php
 session_start();
-
+if($_SESSION["username"] == null)
+{
+	header('Location: ../index.html');
+}
+else {
 
 require_once("../Header - Footer/header.php");
 require_once('config.inc.php');
@@ -195,5 +199,6 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")-
 </body>
 <?php
 require_once("../Header - Footer/footer.html");
+}
 ?>
 </html>

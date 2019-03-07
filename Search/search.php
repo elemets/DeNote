@@ -1,3 +1,10 @@
+<?php
+if($_SESSION["username"] == null)
+{
+	header('Location: ../index.html');
+}
+else {
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,10 +36,11 @@
     while($row = $stat->fetch())
     {
       if ($row['Username'] == $searchWord || $row['Email'] == $searchWord)
-      {	
+      {
             echo "<li><a  href='../Profile Page/profile2.php?id=".$row['UserID']."'>".$row['Username']."</a></li>";
       }
     }
+  }
     ?>
   </body>
 </html>

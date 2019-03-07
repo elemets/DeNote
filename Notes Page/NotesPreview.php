@@ -1,6 +1,11 @@
 <?php
 require_once("../Header - Footer/header.php");
 session_start();
+if($_SESSION["username"] == null)
+{
+	header('Location: ../index.html');
+}
+else {
 ?>
 <title>Note Preview Page</title>
 <style>
@@ -245,6 +250,7 @@ else
   <div>
 <?php
 require_once("../Header - Footer/footer.html");
+}
 ?>
   </div>
 </footer>

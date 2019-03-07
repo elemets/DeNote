@@ -1,6 +1,11 @@
 <?php
 require_once("../Header - Footer/header.php");
 session_start();
+if($_SESSION["username"] == null)
+{
+	header('Location: ../index.html');
+}
+else {
 ?>
 <title>Page Title</title>
 <style>
@@ -26,7 +31,7 @@ padding: 0px 0px;
 }
 </style>
 <body>
-<div id="top" class="container-fluid"> 
+<div id="top" class="container-fluid">
 
 <!-- Title and profile icon -->
 <div id="My_Profile" class="text-center">
@@ -43,14 +48,14 @@ padding: 0px 0px;
       <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">My notes</h3>
         <div class="jumbotron Container-fluid">
 <div class="row">
-	<?php 
+	<?php
     	$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
     	$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
     	$stat->bindParam(1, $userID);
     	$stat->execute();
 
     	while($row = $stat->fetch()){
-	
+
 		$noteID = $row['NoteID'];
 		$stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$noteID'");
 		$stat2->execute();
@@ -69,8 +74,8 @@ padding: 0px 0px;
 		      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 					<img src="squareElement.png" style="width:100%">
 			        <div class="centered"><h2 style="color: #fff;">
-					<?php echo $row['TitleNote'];?> 
-					</br> Likes: <?php echo $counterLikes; ?> 
+					<?php echo $row['TitleNote'];?>
+					</br> Likes: <?php echo $counterLikes; ?>
 					</br> Dislikes: <?php echo $counterDislikes; ?></h2></div>
 				  </a>
         </div>
@@ -84,18 +89,18 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowerUserID = '$userID'");
         $stat->execute();
         $count = 0;
-        $usernameArray = array(); 
+        $usernameArray = array();
         $links = array();
         while($row = $stat->fetch()){
-          
+
           $FollowedUserID = $row['FollowedUserID'];
-          $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowedUserID']; 
+          $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowedUserID'];
           $username = $conn2->query($syn)->fetch_object()->Username;
           array_push($usernameArray, $username);
           $link = "profile2.php?id=" . $FollowedUserID;
           array_push($links, $link);
           $count = $count + 1;
-         } 
+         }
 
 ?>
 
@@ -119,24 +124,24 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID'");
         $stat->execute();
         $count = 0;
-        $usernameArray = array(); 
+        $usernameArray = array();
         $links = array();
         while($row = $stat->fetch()){
           $FollowerUserID = $row['FollowerUserID'];
-          $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowerUserID']; 
+          $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowerUserID'];
           $username = $conn2->query($syn)->fetch_object()->Username;
           array_push($usernameArray, $username);
           $link = "profile2.php?id=" . $FollowerUserID;
           array_push($links, $link);
           $count = $count + 1;
-         } 
+         }
 
 ?>
     </div>
   </div>
   <div class="">
     <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"><?php echo $count;?> Followers</h3>
-	<div class="jumbotron Container-fluid"> 
+	<div class="jumbotron Container-fluid">
         <?php
          for($counter = 0; $counter < $count; $counter++)
          { ?>
@@ -152,5 +157,6 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 </body>
 <?php
 require_once("../Header - Footer/footer.html");
+}
 ?>
 </html>
