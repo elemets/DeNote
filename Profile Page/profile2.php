@@ -58,11 +58,13 @@ padding: 0px 0px;
 	{
 	     $query = "INSERT INTO `Followers`(`FollowerUserID`, `FollowedUserID`) VALUES ('$userIDmain','$userID')";
     	     $result = $conn->query($query);
+	     header('Location: '.$_SERVER['REQUEST_URI']);
 	}
 	else if(isset($_POST['btn2']))
 	{
 		$query = "DELETE FROM `Followers` WHERE `FollowerUserID`= '$userIDmain' AND `FollowedUserID`= '$userID' ";
     	     	$result = $conn->query($query);
+		header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
 <form action="" method="post">
