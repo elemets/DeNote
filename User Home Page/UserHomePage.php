@@ -2,6 +2,7 @@
 session_start();
 if($_SESSION["username"] == null)
 {
+	echo "dsadas";
 	header('Location: ../index.html');
 }
 else {
