@@ -143,7 +143,6 @@ while($row = $stat2->fetch())
 {
   $counterLikes++;
 }
-echo $counterLikes;
 
 if(($row = $stat->fetch()) != null)
 {
@@ -151,20 +150,20 @@ if(($row = $stat->fetch()) != null)
   if($typeVote == 1)
   {
 ?>
-  <button type="submit" class="btn btn-link" method="post" value="Liked" name="btn2"><span class="glyphicon glyphicon-thumbs-up"> Liked</span></button>
+  <button type="submit" class="btn btn-link" method="post" value="Liked" name="btn2"><?php echo $counterLikes ?><span class="glyphicon glyphicon-thumbs-up"> Liked</span></button>
 <?php
   }
   else
   {
 ?>
-<button type="submit" class="btn btn-link" value="Like!" disabled><span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
+<button type="submit" class="btn btn-link" value="Like!" disabled><?php echo $counterLikes ?><span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
 <?php
   }
 }
 else
 {
 ?>
-  <button type="submit" class="btn btn-link" method="post" value="Like!" name="btn"><span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
+  <button type="submit" class="btn btn-link" method="post" value="Like!" name="btn"><?php echo $counterLikes ?><span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
 <?php
 } ?>
 </form>
@@ -223,7 +222,7 @@ if(($row = $stat->fetch()) != null)
 else
 {
 ?>
-  <button type="submit" class="btn btn-link" method="post" value="disLike" name="btn4"><span class="glyphicon glyphicon-thumbs-up"> DisLike</span></button>
+  <button type="submit" class="btn btn-link" method="post" value="disLike" name="btn4"><span class="glyphicon glyphicon-thumbs-down"> DisLike</span></button>
 <?php } ?>
 </form>
 </div>
