@@ -5,9 +5,6 @@ if($_SESSION["username"] == null)
 	header('Location: ../index.html');
 }
 else {
-
-
-?>
 <?php
 require_once("../Header - Footer/header.php");
 ?>
@@ -33,7 +30,7 @@ body > p {
 
 <body>
 	<?php
-	$_SESSION["username"] = $_SESSION["username"]
+	//$_SESSION["username"] = $_SESSION["username"]
 	?>
   <div id="top" class="container-fluid">
 	  <div class="row">
