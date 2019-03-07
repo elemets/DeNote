@@ -1,5 +1,10 @@
 <?php
 session_start();
+if($_SESSION["username"] == null)
+{
+	header('Location: ../index.html');
+}
+else {
 ?>
 
 <?php
@@ -197,6 +202,7 @@ if(isset($_POST['btn']))
       else
         return true;
     }
+  }
      ?>
 
 </div>
