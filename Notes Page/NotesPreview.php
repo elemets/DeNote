@@ -52,7 +52,7 @@ body {
 }
 
 .like-dislike {
-	color: #000 !important;
+	color: #181818 !important;
 }
 </style>
 <body>
