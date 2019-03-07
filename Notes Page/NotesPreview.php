@@ -51,10 +51,10 @@ body {
 		color:#ecaa33 !important;
 }
 .glyphicon-thumbs-up {
-	  margin-right: 5px;
+	  padding: 0px 5px;
 }
 .glyphicon-thumbs-down {
-	  margin-right: 5px;
+	  padding: 0px 5px;
 }
 </style>
 <body>
