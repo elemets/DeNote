@@ -110,7 +110,7 @@ if ($row['dataType'] == "application/pdf")
 ?>
 
 <div class="row" style="text-align:right;">
-	<div class="col-sm-8"></div>
+	<div class="col-sm-2"></div>
 <!-- VOTING -->
 
    <?php
@@ -129,7 +129,7 @@ if ($row['dataType'] == "application/pdf")
                 header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
-<div class="col-sm-2">
+<div class="col-sm-4">
 <form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
@@ -149,20 +149,20 @@ if(($row = $stat->fetch()) != null)
   if($typeVote == 1)
   {
 ?>
-  <button type="submit" class="btn btn-link" method="post" value="Liked" name="btn2"><?php echo $counterLikes ?><span class="glyphicon glyphicon-thumbs-up"> Liked</span></button>
+  <button type="submit" class="btn btn-block btn-link" method="post" value="Liked" name="btn2"><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Liked</span></button>
 <?php
   }
   else
   {
 ?>
-<button type="submit" class="btn btn-link" value="Like!" disabled><?php echo $counterLikes ?><span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
+<button type="submit" class="btn btn-block btn-link" value="Like!" disabled><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
 <?php
   }
 }
 else
 {
 ?>
-  <button type="submit" class="btn btn-link" method="post" value="Like!" name="btn"><?php echo $counterLikes ?><span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
+  <button type="submit" class="btn btn-block btn-link" method="post" value="Like!" name="btn"><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
 <?php
 } ?>
 </form>
@@ -184,7 +184,7 @@ else
 		header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
-<div class="col-sm-2">
+<div class="col-sm-4">
 <form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
@@ -225,6 +225,7 @@ else
 <?php } ?>
 </form>
 </div>
+<div class="col-sm-2"></div>
 </div>
 <div class="row">
 <div class="col-sm-2"></div>
