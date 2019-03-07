@@ -109,7 +109,7 @@ if ($row['dataType'] == "application/pdf")
 }
 ?>
 
-<div class="row" style="text-align:right;">
+<div class="row" style="text-align:center;">
 	<div class="col-sm-2"></div>
 <!-- VOTING -->
 
