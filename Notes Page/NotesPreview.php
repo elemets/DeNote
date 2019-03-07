@@ -238,6 +238,8 @@ else
 <!-- COMMENTS-->
   <div class="row">
        <div class="col-sm-12">
+		
+
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:100%;"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
  <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
