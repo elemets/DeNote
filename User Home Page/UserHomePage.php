@@ -30,7 +30,7 @@ body > p {
 	?>
   <div id="top" class="container-fluid">
 	  <div class="row">
-	<h1 style="padding-bottom:30px; padding-left: 15px;">Hello <?php echo $_SESSION["username"]; ?></h1>
+	<h1 style="padding-bottom:30px; padding-left: 15px;">Hello, <?php echo $_SESSION["username"]; ?></h1>
 </div>
 			<div class="row">
 <?php
