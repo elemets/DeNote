@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once("../Header - Footer/header.php");
 if($_SESSION["username"] == null)
 {
@@ -66,10 +67,7 @@ $stat->execute();
 					</br> Likes: <?php echo $counterLikes; ?>
 					</br> Dislikes: <?php echo $counterDislikes; ?></h2></div>
 				  </a>
-	 </div>
-<?php
-}
- ?>
+	 </div
 </div>
 </div>
 </body>
