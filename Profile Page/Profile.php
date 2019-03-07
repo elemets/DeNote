@@ -33,7 +33,7 @@ padding: 0px 0px;
 #HCB_comment_box #hcb_form_email,
 #HCB_comment_box #hcb_form_name,
 #HCB_comment_box #hcb_form_website {
-	background-color:#f8eaff;
+	background-color:#faf2ff;
 }
 
 #HCB_comment_box .submit {
