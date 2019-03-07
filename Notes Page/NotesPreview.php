@@ -165,14 +165,14 @@ if(($row = $stat->fetch()) != null)
   else
   {
 ?>
-<button type="submit" class="btn btn-block like-btn submit-font like-dislike" value="Like!" disabled><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
+<button type="submit" class="btn btn-block like-btn like-dislike" value="Like!" disabled><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
 <?php
   }
 }
 else
 {
 ?>
-  <button type="submit" class="btn btn-block like-btn submit-font like-dislike" method="post" value="Like!" name="btn"><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
+  <button type="submit" class="btn btn-block like-btn like-dislike" method="post" value="Like!" name="btn"><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
 <?php
 } ?>
 </form>
