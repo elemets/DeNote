@@ -29,12 +29,6 @@ margin: 0px;
 padding: 0px 0px;
 }
 
- .submit-btn {
-	background:none; /* Clear twitter bootstrap style. */
-	background-color:#660298;
-	border:1px solid #660298;
-	color: #660298;
-}
 </style>
 <body>
 <div id="top" class="container-fluid">
@@ -163,12 +157,21 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 </div>
 </div>
 <div class="row">
-		 <div class="col-sm-12 container" style="padding-left: 50px;">
+		 <div class="col-sm-12 container" style="padding-left: 20px;">
 
 
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:100%;"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
  <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <style media="screen">
+
+	.submit-btn {
+	 background:none; /* Clear twitter bootstrap style. */
+	 background-color:#660298;
+	 border:1px solid #660298;
+	 color: #660298;
+ }
+ </style>
  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1550317288312");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 <!-- end www.htmlcommentbox.com -->
 			</div>
