@@ -28,6 +28,13 @@ body > p {
 margin: 0px;
 padding: 0px 0px;
 }
+
+#HCB_comment_box .submit {
+	background:none; /* Clear twitter bootstrap style. */
+	background-color:#660298;
+	border:1px solid #660298;
+	color: white;
+}
 </style>
 <body>
 <div id="top" class="container-fluid">
