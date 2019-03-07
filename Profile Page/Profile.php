@@ -157,7 +157,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 </div>
 </div>
 <div class="row">
-		 <div class="col-sm-12">
+		 <div class="col-sm-12 container-fluid">
 
 
 <!-- begin wwww.htmlcommentbox.com -->
