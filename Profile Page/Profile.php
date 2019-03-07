@@ -36,13 +36,14 @@ padding: 0px 0px;
 	background-color:#faf2ff;
 }
 
+
+</style>
+<e>
 input#HCB_submit .submit {
 	background-color: #faf2ff ;
 	border:1px solid #faf2ff;
 	color: #faf2ff;
 }
-
-
 </style>
 <body>
 <div id="top" class="container-fluid">
