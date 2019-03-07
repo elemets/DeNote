@@ -39,10 +39,10 @@ body {
 		background-color: #660099 !important;
 }
 like-btn {
-		background-color: green !important;
+		background-color: #59D5BC !important;
 }
 dislike-btn {
-		background-color: red !important;
+		background-color: #FE4D4D !important;
 }
 .submit-font {
 		color:#ffffff !important;
