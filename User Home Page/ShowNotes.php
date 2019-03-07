@@ -67,7 +67,10 @@ $stat->execute();
 					</br> Likes: <?php echo $counterLikes; ?>
 					</br> Dislikes: <?php echo $counterDislikes; ?></h2></div>
 				  </a>
-	 </div
+	 </div>
+<?php
+}
+ ?>
 </div>
 </div>
 </body>
