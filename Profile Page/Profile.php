@@ -35,7 +35,7 @@ padding: 0px 0px;
 #HCB_comment_box .hcb-wrapper{clear:both}
 #HCB_comment_box input.text{display:block;width:95%}
 #HCB_comment_box input.submit{border-top:1px solid #660099;border-left:1px solid #660099;border-bottom:1px solid #660099;border-right:1px solid #660099;background-color:#660099;color:#000;font-weight:700;cursor:pointer}
-#HCB_comment_box div.comment{color:#fdb3a5;background:rgba(0,0,0,.5);border:3px double #f26646;margin:5px;padding:2px}
+#HCB_comment_box div.comment{color:#660099;background:#660099;border:3px double #660099;margin:5px;padding:2px}
 #HCB_comment_box .comment .likes{color:#0f0}#HCB_comment_box .hcb-link{color:#0088af;text-decoration:none}
 
 
