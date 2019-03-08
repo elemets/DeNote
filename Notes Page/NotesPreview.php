@@ -28,12 +28,17 @@ body {
 	.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
 		padding-bottom: 20px;
 	}
-
+	.desktop-pdf{
+		display: initial;
+	}
 }
 @media screen and (max-width: 768px) {
   .desktop-pdf{
     display: none;
   }
+	.mobile-pdf{
+		display: initial;
+	}
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
