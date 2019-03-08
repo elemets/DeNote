@@ -28,14 +28,14 @@ body > p {
 margin: 0px;
 padding: 0px 0px;
 }
-#HCB_comment_box{border:2px solid #660099;border-radius:5px;padding:10px;color:#fff;background:#660099}.hcb-mod b{color:#0088af}
+#HCB_comment_box{border:2px solid #660099;border-radius:5px;padding:10px;color:#white;background:#660099}.hcb-mod b{color:white}
 #HCB_comment_box textarea,
 #HCB_comment_box input.text{border-top:1px solid #e4e4e4;border-left:1px solid #e4e4e4;border-bottom:1px solid #eaeaea;border-right:1px solid #eaeaea;background-color:#f8f8f8}
 #HCB_comment_box .hcb-wrapper-half{display:block;width:50%;float:left}
 #HCB_comment_box .hcb-wrapper{clear:both}
 #HCB_comment_box input.text{display:block;width:95%}
 #HCB_comment_box input.submit{background:none; background-color:#660099; border:1px solid darkgreen; color:white;}
-#HCB_comment_box div.comment{color:white;background:#800080;border:3px double #660099;margin:5px;padding:2px}
+#HCB_comment_box div.comment{color:black;background:white;border:3px double #660099;margin:5px;padding:2px}
 #HCB_comment_box .comment .likes{color:#0f0}
 #HCB_comment_box .hcb-link{color:#0088af;text-decoration:none}
 #HCB_comment_box a.btn{background:none; background-color:#660099; border:1px solid darkgreen; color:white;}
