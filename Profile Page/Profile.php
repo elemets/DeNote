@@ -90,7 +90,7 @@ body > p {
 
 <!-- My notes Section -->
 <div id="My_notes" class="grid-container"></div>
-      <h3 style="font-size: 50px; padding-top: 30px; padding-left: 20px">My notes</h3>
+      <h3 style="font-size: 50px; padding-top: 30px;">My notes</h3>
 <div class="row">
 	<?php
     	$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
