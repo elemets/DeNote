@@ -1,4 +1,4 @@
-#HCB_<?php
+<?php
 require_once("../Header - Footer/header.php");
 session_start();
 if($_SESSION["username"] == null)
@@ -90,7 +90,7 @@ body > p {
 
 <!-- My notes Section -->
 <div id="My_notes" class="grid-container"></div>
-      <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">My notes</h3>
+      <h3 style="font-size: 50px; padding-top: 30px; padding-left: 20px">My notes</h3>
 <div class="row">
 	<?php
     	$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
@@ -157,7 +157,6 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 
   <div class="">
     <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"> <?php echo $count;?> Followings</h3>
-    <div class="jumbotron Container-fluid">
         <?php
          for($counter = 0; $counter < $count; $counter++)
          { ?>
@@ -183,11 +182,9 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
          }
 
 ?>
-    </div>
   </div>
   <div class="">
     <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"><?php echo $count;?> Followers</h3>
-	<div class="jumbotron Container-fluid">
         <?php
          for($counter = 0; $counter < $count; $counter++)
          { ?>
@@ -195,7 +192,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 <?php
 }
 ?>
-	</div>
+
   </div>
 
 </div>
