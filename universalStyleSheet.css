@@ -183,33 +183,12 @@ footer .glyphicon {
        padding-top: 20%;
     }
     }
-    .submit btn {
-      display: inline-block;
-      padding: 15px 25px;
-      font-size: 24px;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      outline: none;
-      color: #fff;
-      background-color: #4CAF50;
-      border: none;
-      border-radius: 15px;
-      box-shadow: 0 9px #999;
-    }
-
-    input#hcb_submit:hover {background-color: #3e8e41}
-
-    input#hcb_submit:active {
-      background-color: #3e8e41;
-      box-shadow: 0 5px #666;
-      transform: translateY(4px);
-    }
-    <e>
-  input#hcb_form_name {
-    color:blue;
-    font-size:18px;
-    background-color:darkgreen;
+    #HCB_comment_box .submit {
+        background:none; /* Clear twitter bootstrap style. */
+        background-color:green;
+        border:1px solid darkgreen;
+        color: red;
+      }
   }
 
 }
