@@ -27,7 +27,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-center" id="nav">
-            <li><a href="../Feed Page/Feed.php" id="feedNav"><span class="glyphicon glyphicon-list"></span> FEED</a></li>
+            <li><a href="../User Home Page/UserHomePage.php" id="feedNav"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
             <li><a href="../Notes Upload Page/NoteUpload.php" id="noteNav"><span class="glyphicon glyphicon-upload"></span> UPLOAD</a></li>
           </ul>
           <form method="post" class="navbar-form navbar-left form-style" action="../Search/search.php">
