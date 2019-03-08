@@ -18,7 +18,7 @@ body > p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -75%);
+  transform: translate(-50%, -85%);
 	text-align: center;
 }
 .col-sm-3 {
