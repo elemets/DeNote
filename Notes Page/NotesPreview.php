@@ -51,7 +51,7 @@ body {
 		background-color: #FE4D4D !important;
 }
 .submit-font {
-		color:#ffff !important;
+		color:#fff !important;
 }
 .submit-font:hover {
 		color:#ecaa33 !important;
