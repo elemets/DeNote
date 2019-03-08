@@ -118,9 +118,11 @@ $id = "view.php?id=" . $_GET['id'];
 if ($row['dataType'] == "application/pdf")
 {
 ?>
+<div class="col-sm-2"></div>
 <div class="col-sm-8 col-xs-12 mobile-pdf">
 <a href="<?php echo $id ?>" class="btn btn-block submit-btn submit-font" role="button">View PDF</a>
 </div>
+<div class="col-sm-2"></div>
 
 <div class="col-sm-12 col-xs-12 amp-active desktop-pdf">
 <div class="embed-responsive embed-responsive-4by3">
