@@ -36,6 +36,14 @@ padding: 0px 0px;
 	padding: 0px;
 	margin: 0px;
 }
+.col-sm-12 h3 {
+	font-size: 19px;
+	text-transform: uppercase;
+	color: red;
+	font-weight: 400;
+	padding: 0px;
+	margin: 0px;
+}
 
 #HCB_comment_box{border:2px solid #660099;border-radius:5px;padding:10px;color:#white;background:#660099}.hcb-mod b{color:white}
 #HCB_comment_box textarea,
