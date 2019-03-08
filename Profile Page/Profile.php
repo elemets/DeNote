@@ -34,7 +34,7 @@ padding: 0px 0px;
 #HCB_comment_box .hcb-wrapper-half{display:block;width:50%;float:left}
 #HCB_comment_box .hcb-wrapper{clear:both}
 #HCB_comment_box input.text{display:block;width:95%}
-#HCB_comment_box input.submit{border-top:1px solid #fcb1a2;border-left:1px solid #fcb1a2;border-bottom:1px solid #bb2b0f;border-right:1px solid #bb2b0f;background-color:#f26646;color:#000;font-weight:700;cursor:pointer}
+#HCB_comment_box input.submit{border-top:1px solid #fcb1a2;border-left:1px solid #fcb1a2;border-bottom:1px solid #bb2b0f;border-right:1px solid #bb2b0f;background-color:#660099;color:#000;font-weight:700;cursor:pointer}
 #HCB_comment_box div.comment{color:#fdb3a5;background:rgba(0,0,0,.5);border:3px double #f26646;margin:5px;padding:2px}
 #HCB_comment_box .comment .likes{color:#0f0}#HCB_comment_box .hcb-link{color:#0088af;text-decoration:none}
 
