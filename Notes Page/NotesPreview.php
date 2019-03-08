@@ -117,28 +117,28 @@ if ($row['dataType'] == "application/pdf")
 </div>
 </div>
 
-<div class="col-sm-2 col-xs-2 mobile-pdf"></div>
-<div class="col-sm-8 col-xs-8 mobile-pdf">
+<div class="col-sm-2 mobile-pdf"></div>
+<div class="col-sm-8 mobile-pdf">
 <a href="<?php echo $id ?>" class="btn btn-block submit-btn submit-font" role="button">View PDF</a>
 </div>
-<div class="col-sm-2 col-xs-2 mobile-pdf"></div>
+<div class="col-sm-2 mobile-pdf"></div>
 
 </div>
 <?php
 }else {
 ?>
-<div class="col-sm-2 col-xs-2"></div>
-    		<div class="col-sm-8 col-xs-8">
+<div class="col-sm-2"></div>
+    		<div class="col-sm-8">
 		<img src="<?php echo $id ?>" style="width:100%; padding-bottom:20px;">
 		</div>
-<div class="col-sm-2 col-xs-2"></div>
+<div class="col-sm-2"></div>
 	</div>
 <?php
 }
 ?>
 
 <div class="row" style="text-align:center;">
-	<div class="col-sm-2 col-xs-2"></div>
+	<div class="col-sm-2"></div>
 <!-- VOTING -->
 
    <?php
@@ -251,18 +251,18 @@ else
 <?php } ?>
 </form>
 </div>
-<div class="col-sm-2 col-xs-2"></div>
+<div class="col-sm-2"></div>
 </div>
 <div class="row">
-<div class="col-sm-2 col-xs-2"></div>
-<div class="col-sm-8 col-xs-8">
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
 	<a href="<?php echo $id ?>" class="btn btn-block submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
 </div>
-<div class"col-sm-2 col-xs-2"></div>
+<div class"col-sm-2"></div>
 </div>
 <!-- COMMENTS-->
   <div class="row">
-       <div class="col-sm-12 col-xs-12">
+       <div class="col-sm-12">
 
 
 <!-- begin wwww.htmlcommentbox.com -->
