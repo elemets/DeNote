@@ -164,7 +164,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
          { ?>
 					<div class="col-sm-3">
          <a href= "<?php echo $links[$counter]; ?>">
-        <img src="squareElement.png" style="width:100%" class"img-circle">
+        <img src="squareElement.png" style="width:100%" class="img-circle">
 								<div class="centered"><h2 style="color: #fff;">
          <?php echo $usernameArray[$counter]; ?>
 			 </div>
@@ -204,7 +204,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 			  ?>
 					<div class="col-sm-3">
 				 <a href= "<?php echo $links[$counter]; ?>">
-				<img src="squareElement.png" style="width:100%" class"img-circle">
+				<img src="squareElement.png" style="width:100%" class="img-circle">
 								<div class="centered"><h2 style="color: #fff;">
 				 <?php echo $usernameArray[$counter]; ?>
 			 </div>
