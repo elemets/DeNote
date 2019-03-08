@@ -90,7 +90,7 @@ body > p {
 <div class="col-sm-4 col-sm-offset-4">
 <a href= "<?php echo $links[$counter]; ?>">
 <img src="squareElement.png" style="width:100%" class="img-circle">
-			<div class="centered"><h1 style="color: #fff; font-size: 75px;">
+			<div class="centered"><h1 style="color: #fff; font-size: 50px;">
 <?php echo $_SESSION['username']; ?>
 </div>
 </a>
@@ -99,7 +99,7 @@ body > p {
 <!-- My notes Section -->
 <div class="row">
 	<div class="col-sm-12">
-      <h3 style="font-size: 50px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes</h3>
+      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes</h3>
 	</div>
 
 	<?php
@@ -161,7 +161,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 ?>
 
 	<div class="col-sm-12">
-    <h3 style="font-size: 50px; padding-top: 30px; padding-bottom: 15px; color: black;"> <?php echo $count;?> Followings</h3>
+    <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> <?php echo $count;?> Followings</h3>
 	</div>
         <?php
          for($counter = 0; $counter < $count; $counter++)
@@ -200,7 +200,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
          }
 ?>
 		<div class="col-sm-12">
-			<h3 style="font-size: 50px; padding-top: 30px; padding-bottom: 15px; color: black;"> <?php echo $count;?> Followers</h3>
+			<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> <?php echo $count;?> Followers</h3>
 		</div>
         <?php
          for($counter = 0; $counter < $count; $counter++)
