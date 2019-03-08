@@ -154,7 +154,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 ?>
 
 	<div class="col-sm-12">
-    <h3 style="font-size: 50px; padding-top: 30px; padding-bottom: : 15px; color: black;"> <?php echo $count;?> Followings</h3>
+    <h3 style="font-size: 50px; padding-top: 30px; padding-bottom: 15px; color: black;"> <?php echo $count;?> Followings</h3>
 	</div>
         <?php
          for($counter = 0; $counter < $count; $counter++)
