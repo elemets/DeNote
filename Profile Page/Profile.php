@@ -78,7 +78,7 @@ body > p {
 <div id="top" class="container-fluid">
 
 <!-- Title and profile icon -->
-<div id="My_Profile" class="text-center">
+<div class="text-center">
   <h1 style="font-size:60px;padding-top: 55px;"><?php echo $_SESSION['username']; ?></h1>
   <?php
   require_once('config.inc.php');
@@ -88,10 +88,12 @@ body > p {
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 </div>
 
-<!-- My notes Section -->
-<div id="My_notes" class="grid-container"></div>
-      <h3 style="font-size: 50px; padding-top: 30px; padding-bottom: 15px;">My notes</h3>
 <div class="row">
+<!-- My notes Section -->
+	<div class="col-sm-12">
+      <h3 style="font-size: 50px; padding-top: 30px; padding-bottom: 15px;">My notes</h3>
+	</div>
+
 	<?php
     	$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
     	$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
@@ -125,11 +127,10 @@ body > p {
         </div>
 <?php
 }
-
 ?>
+<!-- My notes Section End -->
 
-
-
+<!-- Following Section -->
 <?php
 $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowerUserID = '$userID'");
@@ -147,23 +148,26 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
           array_push($links, $link);
           $count = $count + 1;
          }
-
 ?>
-
-
-
-
-
-
-  <div class="">
-    <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"> <?php echo $count;?> Followings</h3>
+	<div class="col-sm-12">
+    <h3 style="font-size: 50px; padding-top: 30px; padding-bottom: : 15px"> <?php echo $count;?> Followings</h3>
+	</div>
         <?php
          for($counter = 0; $counter < $count; $counter++)
          { ?>
-          <a href= "<?php echo $links[$counter]; ?>"> <?php echo $usernameArray[$counter]; ?> </a>
+					<div class="col-sm-3">
+         <a href= "<?php echo $links[$counter]; ?>">
+        <img src="squareElement.png" style="width:100%">
+								<div class="centered"><h2 style="color: #fff;">
+         <?php echo $usernameArray[$counter]; ?>
+			 </div>
+			 </a>
+		 </div>
 <?php
 }
 ?>
+
+<!-- Following Section End -->
 <?php
 $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID'");
@@ -196,17 +200,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
   </div>
 
 </div>
-<div class="row">
-		 <div class="col-sm-12 container" style="padding-left: 20px;">
 
-
-<!-- begin wwww.htmlcommentbox.com -->
- <div id="HCB_comment_box" style="width:100%;"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
- <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
- <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1550317288312");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-<!-- end www.htmlcommentbox.com -->
-			</div>
-	</div>
 </body>
 <?php
 require_once("../Header - Footer/footer.html");
