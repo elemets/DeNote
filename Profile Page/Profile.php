@@ -95,10 +95,8 @@ body > p {
 <div class="col-sm-3">
 <a href= "<?php echo $links[$counter]; ?>">
 <img src="squareElement.png" style="width:100%" class="img-circle">
-			<div class="centered">
-				<h1 style="color: #fff;">
+			<div class="centered"><h1 style="color: #fff; font-size: 30px;">
 <?php echo $_SESSION['username']; ?>
-</h1>
 </div>
 </a>
 </div>
