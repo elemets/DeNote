@@ -29,31 +29,13 @@ margin: 0px;
 padding: 0px 0px;
 }
 
-#HCB_comment_box #hcb_form_content,
-#HCB_comment_box #hcb_form_email,
-#HCB_comment_box #hcb_form_name,
-#HCB_comment_box #hcb_form_website {
-	background-color:#faf2ff;
-}
 
-#HCB_comment_box #hcb_submit {
-	background:none; /* Clear twitter bootstrap style. */
-	background-color: #660099;
-	border:1px solid darkgreen;
-	color: white;
-}
-#HCB_comment_box .btn {
-	background:none; /* Clear twitter bootstrap style. */
-	background-color: #660099;
-	border:1px solid darkgreen;
-	color: white;
-}
-.btn{
-	background:none; /* Clear twitter bootstrap style. */
-	background-color: #660099;
-	border:1px solid darkgreen;
-	color: white;
-}
+
+
+
+#HCB_comment_box{border:2px solid #fff;border-radius:5px;padding:10px;color:#fff;background:rgba(0,0,0,.5)}.hcb-mod b{color:#0088af}#HCB_comment_box textarea,#HCB_comment_box input.text{border-top:1px solid #e4e4e4;border-left:1px solid #e4e4e4;border-bottom:1px solid #eaeaea;border-right:1px solid #eaeaea;background-color:#f8f8f8}line-through;
+#HCB_comment_box .hcb-wrapper-half{display:block;width:50%;float:left}#HCB_comment_box .hcb-wrapper{clear:both}#HCB_comment_box input.text{display:block;width:95%}#HCB_comment_box input.submit{border-top:1px solid #fcb1a2;border-left:1px solid #fcb1a2;border-bottom:1px solid #bb2b0f;border-right:1px solid #bb2b0f;background-color:#f26646;color:#000;font-weight:700;cursor:pointer}
+#HCB_comment_box div.comment{color:#fdb3a5;background:rgba(0,0,0,.5);border:3px double #f26646;margin:5px;padding:2px}#HCB_comment_box .comment .likes{color:#0f0}#HCB_comment_box .hcb-link{color:#0088af;text-decoration:none}
 
 
 </style>
