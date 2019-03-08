@@ -56,6 +56,9 @@ body {
 .submit-font:hover {
 		color:#ecaa33 !important;
 }
+.col-xs-0 {
+	display: none;
+}
 
 .like-dislike {
 	color: #181818 !important;
