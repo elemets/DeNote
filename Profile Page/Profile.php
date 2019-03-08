@@ -76,7 +76,6 @@ padding: 0px 0px;
 #HCB_comment_box .hcb-link{color:#0088af;text-decoration:none}
 #HCB_comment_box a.btn{background:none; background-color:#660099; border:1px solid darkgreen; color:white;}
 
-
 </style>
 
 <body>
@@ -92,10 +91,10 @@ padding: 0px 0px;
    ?>
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 </div>
+
 <!-- My notes Section -->
 <div id="My_notes" class="grid-container"></div>
       <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px">My notes</h3>
-        <div class="jumbotron Container-fluid">
 <div class="row">
 	<?php
     	$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
@@ -203,7 +202,6 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 	</div>
   </div>
 
-</div>
 </div>
 <div class="row">
 		 <div class="col-sm-12 container" style="padding-left: 20px;">
