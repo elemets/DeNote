@@ -51,11 +51,9 @@ padding: 0px 0px;
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #fff;
+  color: #660099;
   background-color: #660099;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
 }
 
 #HCB_comment_box input.submit.button:hover {background-color: #3e8e41}
