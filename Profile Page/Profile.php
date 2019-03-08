@@ -38,13 +38,19 @@ padding: 0px 0px;
 
 #HCB_comment_box #hcb_submit {
 	background:none; /* Clear twitter bootstrap style. */
-	background-color:purple;
+	background-color: #660099;
 	border:1px solid darkgreen;
 	color: white;
 }
 #HCB_comment_box .btn {
 	background:none; /* Clear twitter bootstrap style. */
-	background-color:purple;
+	background-color: #660099;
+	border:1px solid darkgreen;
+	color: white;
+}
+.btn{
+	background:none; /* Clear twitter bootstrap style. */
+	background-color: #660099;
 	border:1px solid darkgreen;
 	color: white;
 }
