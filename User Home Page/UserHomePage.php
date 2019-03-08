@@ -18,7 +18,7 @@ body > p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -85%);
+  transform: translate(-50%, -50%);
 	text-align: center;
 }
 .col-sm-3 {
@@ -29,7 +29,7 @@ body > p {
 <body>
   <div id="top" class="container-fluid">
 	  <div class="row">
-	<h1 style="padding-bottom:30px; padding-left: 15px;">Hello, <?php echo $_SESSION["username"]; ?></h1>
+	<h1 style="margin-bottom:30px; padding-left: 15px;">Hello, <?php echo $_SESSION["username"]; ?></h1>
 </div>
 			<div class="row">
 <?php
