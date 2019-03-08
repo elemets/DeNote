@@ -266,8 +266,7 @@ else
 </div>
 <!-- COMMENTS-->
   <div class="row">
-       <div class="col-sm-12">
-
+       <div class="col-sm-12" style="padding-top: 50px;">
 
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" style="width:100%;"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
