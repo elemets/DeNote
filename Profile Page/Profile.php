@@ -28,7 +28,7 @@ body > p {
 margin: 0px;
 padding: 0px 0px;
 }
-h3.HCB_comment_box {
+h3.#HCB_comment_box {
 	font-size: 19px;
 	text-transform: uppercase;
 	color: white;
