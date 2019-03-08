@@ -43,7 +43,28 @@ padding: 0px 0px;
 #HCB_comment_box .hcb-wrapper-half{display:block;width:50%;float:left}
 #HCB_comment_box .hcb-wrapper{clear:both}
 #HCB_comment_box input.text{display:block;width:95%}
-#HCB_comment_box input.submit{background:none; background-color:#660099; border:1px solid darkgreen; color:white;}
+#HCB_comment_box input.submit{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#HCB_comment_box input.submit.button:hover {background-color: #3e8e41}
+
+#HCB_comment_box input.submit.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 #HCB_comment_box div.comment{color:black;background:white;border:3px double #660099;margin:5px;padding:2px}
 #HCB_comment_box .comment .likes{color:#0f0}
 #HCB_comment_box .hcb-link{color:#0088af;text-decoration:none}
