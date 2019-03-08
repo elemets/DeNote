@@ -40,6 +40,9 @@ body > p {
 	padding: 0px;
 	margin: 0px;
 }
+.img-circle {
+    border-radius: 50%;
+}
 
 #HCB_comment_box{border:2px solid #660099;border-radius:5px;padding:10px;color:#white;background:#660099}.hcb-mod b{color:white}
 #HCB_comment_box textarea,
@@ -161,7 +164,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
          { ?>
 					<div class="col-sm-3">
          <a href= "<?php echo $links[$counter]; ?>">
-        <img src="squareElement.png" style="width:100%">
+        <img src="squareElement.png" style="width:100%" class"img-circle">
 								<div class="centered"><h2 style="color: #fff;">
          <?php echo $usernameArray[$counter]; ?>
 			 </div>
@@ -201,7 +204,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 			  ?>
 					<div class="col-sm-3">
 				 <a href= "<?php echo $links[$counter]; ?>">
-				<img src="squareElement.png" style="width:100%">
+				<img src="squareElement.png" style="width:100%" class"img-circle">
 								<div class="centered"><h2 style="color: #fff;">
 				 <?php echo $usernameArray[$counter]; ?>
 			 </div>
