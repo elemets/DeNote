@@ -73,7 +73,7 @@ body {
 	color: #181818 !important;
 }
 .like-dislike:hover {
-	color: #404040 !important;
+	color: #505050 !important;
 }
 #HCB_comment_box .submit {
 		background:none; /* Clear twitter bootstrap style. */
