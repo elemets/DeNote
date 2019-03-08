@@ -119,7 +119,7 @@ if ($row['dataType'] == "application/pdf")
 {
 ?>
 <div class="col-sm-2"></div>
-<div class="col-sm-8 col-xs-12 mobile-pdf">
+<div class="col-sm-8 col-xs-12 mobile-pdf" style="padding-top:20px;">
 <a href="<?php echo $id ?>" class="btn btn-block submit-btn submit-font" role="button">View PDF</a>
 </div>
 <div class="col-sm-2"></div>
