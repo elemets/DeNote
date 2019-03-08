@@ -82,7 +82,7 @@ body {
 <body>
   <div id="top" class="container-fluid">
   <div class="row">
-    		<div class="col-sm-12 col-xs-12" style="margin:0px;">
+    		<div class="col-sm-12 col-xs-12" style="padding:0px;">
 <?php
 require_once('config.inc.php');
 $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
