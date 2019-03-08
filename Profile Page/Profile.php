@@ -124,7 +124,7 @@ body > p {
 		}
 
 ?>
-	<div class="col-sm-3 col-xs-6">
+	<div class="col-sm-3">
 		      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 					<img src="squareElement.png" style="width:100%">
 			        <div class="centered"><h2 style="color: #fff;">
@@ -166,7 +166,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
         <?php
          for($counter = 0; $counter < $count; $counter++)
          { ?>
-					<div class="col-sm-3 col-xs-6">
+					<div class="col-sm-3">
          <a href= "<?php echo $links[$counter]; ?>">
         <img src="squareElement.png" style="width:100%" class="img-circle">
 								<div class="centered"><h2 style="color: #fff;">
@@ -206,7 +206,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
          for($counter = 0; $counter < $count; $counter++)
          {
 			  ?>
-					<div class="col-sm-3 col-xs-6">
+					<div class="col-sm-3">
 				 <a href= "<?php echo $links[$counter]; ?>">
 				<img src="squareElement.png" style="width:100%" class="img-circle">
 								<div class="centered"><h2 style="color: #fff;">
