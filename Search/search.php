@@ -25,7 +25,7 @@ if($_SESSION["username"] == null)
     {
       if ($row['FileName'] == $searchWord || $row['TitleNote'] == $searchWord || $row['UnitID'] == $searchWord)
       {
-              echo "<li><a  href='../Notes Page/Notespreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
+              echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
       }
     }
 
