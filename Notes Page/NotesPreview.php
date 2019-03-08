@@ -83,7 +83,7 @@ body {
 }
 </style>
 <body>
-  <div id="top" class="container-fluid">
+  <div id="top" class="container-fluid" Style="padding-bottom:0px;">
   <div class="row">
     		<div class="col-sm-12 col-xs-12" style="padding-bottom:0px;">
 <?php
