@@ -96,7 +96,7 @@ body > p {
 <a href= "<?php echo $links[$counter]; ?>">
 <img src="squareElement.png" style="width:100%" class="img-circle">
 			<div class="centered"><h2 style="color: #fff;">
-<?php echo $usernameArray[$counter]; ?>
+<?php echo $_SESSION['username']; ?>
 </div>
 </a>
 </div>
