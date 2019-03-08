@@ -172,6 +172,9 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 ?>
 </div>
 <!-- Following Section End -->
+
+<!-- Followers Section -->
+<div class="row">
 <?php
 $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID'");
@@ -188,21 +191,29 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
           array_push($links, $link);
           $count = $count + 1;
          }
-
 ?>
-  </div>
-  <div class="">
-    <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"><?php echo $count;?> Followers</h3>
+		<div class="col-sm-12">
+			<h3 style="font-size: 50px; padding-top: 30px; padding-bottom: 15px; color: black;"> <?php echo $count;?> Followers</h3>
+		</div>
         <?php
          for($counter = 0; $counter < $count; $counter++)
-         { ?>
-          <a href= "<?php echo $links[$counter]; ?>"> <?php echo $usernameArray[$counter]; ?> </a>
+         {
+			  ?>
+					<div class="col-sm-3">
+				 <a href= "<?php echo $links[$counter]; ?>">
+				<img src="squareElement.png" style="width:100%">
+								<div class="centered"><h2 style="color: #fff;">
+				 <?php echo $usernameArray[$counter]; ?>
+			 </div>
+			 </a>
+		 </div>
 <?php
 }
 ?>
 
   </div>
-
+</div>
+<!-- Followers Section End -->
 </div>
 
 </body>
