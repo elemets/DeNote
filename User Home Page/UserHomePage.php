@@ -16,8 +16,6 @@ body > p {
 }
 .centered {
   position: absolute;
-  top: 70%;
-  left: 70%;
   transform: translate(-50%, -50%);
 	text-align: center;
 }
