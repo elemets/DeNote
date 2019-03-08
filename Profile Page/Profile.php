@@ -88,8 +88,9 @@ body > p {
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 </div>
 
-<div class="row">
+
 <!-- My notes Section -->
+<div class="row">
 	<div class="col-sm-12">
       <h3 style="font-size: 50px; padding-top: 30px; padding-bottom: 15px;">My notes</h3>
 	</div>
@@ -128,9 +129,11 @@ body > p {
 <?php
 }
 ?>
+</div>
 <!-- My notes Section End -->
 
 <!-- Following Section -->
+<div class="row">
 <?php
 $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowerUserID = '$userID'");
@@ -149,6 +152,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
           $count = $count + 1;
          }
 ?>
+
 	<div class="col-sm-12">
     <h3 style="font-size: 50px; padding-top: 30px; padding-bottom: : 15px"> <?php echo $count;?> Followings</h3>
 	</div>
@@ -166,7 +170,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 <?php
 }
 ?>
-
+</div>
 <!-- Following Section End -->
 <?php
 $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
