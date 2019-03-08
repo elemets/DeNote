@@ -104,7 +104,7 @@ echo '<h2>';
 echo "Author: " . $username;
 echo '</h2>';
 
-echo '<h2 style="padding-bottom:20px;.">';
+echo '<h2>';
 echo "Date Of Publish: " . $row['DateOfPublish'];
 echo '</h2>';
 ?>
