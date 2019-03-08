@@ -205,5 +205,11 @@ footer .glyphicon {
       box-shadow: 0 5px #666;
       transform: translateY(4px);
     }
+    <e>
+  input#hcb_form_page {
+    color:blue;
+    font-size:18px;
+    background-color:darkgreen;
+  }
 
 }
