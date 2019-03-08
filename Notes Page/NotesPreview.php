@@ -132,7 +132,7 @@ if ($row['dataType'] == "application/pdf")
 ?>
 
 <div class="row" style="text-align:center; padding-bottom:20px;">
-	<div class="col-sm-2 col-xs-2"></div>
+	<div class="col-sm-2"></div>
 <!-- VOTING -->
 
    <?php
@@ -151,7 +151,7 @@ if ($row['dataType'] == "application/pdf")
                 header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
-<div class="col-sm-4 col-xs-4">
+<div class="col-sm-4 col-xs-6">
 <form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
@@ -206,7 +206,7 @@ else
 		header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
-<div class="col-sm-4 col-xs-4">
+<div class="col-sm-4 col-xs-6">
 <form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
@@ -245,7 +245,7 @@ else
 <?php } ?>
 </form>
 </div>
-<div class="col-sm-2 col-xs-2"></div>
+<div class="col-sm-2"></div>
 </div>
 <div class="row">
 <div class="col-sm-2"></div>
