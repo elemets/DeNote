@@ -11,10 +11,6 @@ if($_SESSION["username"] == null)
 body {
 	padding-top: 50px;
 }
-.ios-scroll{
-	-webkit-overflow-scrolling: touch;
-  	overflow-y: scroll;
-}
 .amp-active {
 	iframe {
 		height: 0;
@@ -35,6 +31,15 @@ body {
     display: none;
   }
 }
+
+@supports (-webkit-overflow-scrolling: touch) {
+	.desktop-pdf{
+		display: none;
+	}
+	.mobile-pdf{
+		display: initial;
+	}
+
 .submit-btn {
 		background-color: #660099 !important;
 }
@@ -95,7 +100,7 @@ if ($row['dataType'] == "application/pdf")
 {
 ?>
 		 <div class="col-sm-12 amp-active" style="padding-bottom:50px;">
-<div class="embed-responsive embed-responsive-4by3 ios-scroll desktop-pdf">
+<div class="embed-responsive embed-responsive-4by3 desktop-pdf">
 <p align="center">
   <iframe src="<?php echo $id ?>"  >
 </iframe></p>
