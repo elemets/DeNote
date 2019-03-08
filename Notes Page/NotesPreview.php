@@ -29,7 +29,7 @@ body {
 		padding-bottom: 20px;
 	}
 	.desktop-pdf{
-		display: initial;
+		display: inline;
 	}
 }
 @media screen and (max-width: 768px) {
@@ -37,7 +37,7 @@ body {
     display: none;
   }
 	.mobile-pdf{
-		display: initial;
+		display: inline;
 	}
 }
 
@@ -46,7 +46,7 @@ body {
 		display: none;
 	}
 	.mobile-pdf{
-		display: initial;
+		display: inline;
 	}
 }
 
