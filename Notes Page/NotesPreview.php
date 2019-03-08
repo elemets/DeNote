@@ -39,6 +39,7 @@ body {
 	.mobile-pdf{
 		display: initial;
 	}
+}
 
 .submit-btn {
 		background-color: #660099 !important;
