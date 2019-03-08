@@ -92,7 +92,7 @@ body > p {
 </div>
 
 <div class="row">
-<div class="col-sm-12">
+<div class="col-sm-4 col-sm-offset-4">
 <a href= "<?php echo $links[$counter]; ?>">
 <img src="squareElement.png" style="width:100%" class="img-circle">
 			<div class="centered"><h1 style="color: #fff; font-size: 75px;">
