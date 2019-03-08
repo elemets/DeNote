@@ -28,18 +28,16 @@ body > p {
 margin: 0px;
 padding: 0px 0px;
 }
+h3.HCB_comment_box {
+	font-size: 19px;
+	text-transform: uppercase;
+	color: white;
+	font-weight: 400;
+	padding: 0px;
+	margin: 0px;
+}
 
 #HCB_comment_box{border:2px solid #660099;border-radius:5px;padding:10px;color:#white;background:#660099}.hcb-mod b{color:white}
-#HCB_comment_box{
-	h3 {
-	  font-size: 19px;
-	  text-transform: uppercase;
-	  color: white;
-	  font-weight: 400;
-	  padding: 0px;
-	  margin: 0px;
-	}
-}
 #HCB_comment_box textarea,
 #HCB_comment_box input.text{border-top:1px solid #e4e4e4;border-left:1px solid #e4e4e4;border-bottom:1px solid #eaeaea;border-right:1px solid #eaeaea;background-color:#f8f8f8}
 #HCB_comment_box .hcb-wrapper-half{display:block;width:50%;float:left}
