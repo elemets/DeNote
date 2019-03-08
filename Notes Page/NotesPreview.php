@@ -65,9 +65,6 @@ body {
 .submit-font:hover {
 		color:#ecaa33 !important;
 }
-.col-xs-0 {
-	display: none;
-}
 
 .like-dislike {
 	color: #181818 !important;
@@ -82,7 +79,7 @@ body {
 <body>
   <div id="top" class="container-fluid">
   <div class="row">
-    		<div class="col-sm-12 col-xs-12">
+    		<div class="col-sm-12">
 <?php
 require_once('config.inc.php');
 $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
@@ -118,7 +115,7 @@ $id = "view.php?id=" . $_GET['id'];
 if ($row['dataType'] == "application/pdf")
 {
 ?>
-		 <div class="col-sm-12 col-xs-12 amp-active desktop-pdf">
+		 <div class="col-sm-12 amp-active desktop-pdf">
 <div class="embed-responsive embed-responsive-4by3">
 <p align="center">
   <iframe src="<?php echo $id ?>"  >
@@ -167,7 +164,7 @@ if ($row['dataType'] == "application/pdf")
                 header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
-<div class="col-sm-4 col-xs-6">
+<div class="col-sm-4">
 <form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
@@ -222,7 +219,7 @@ else
 		header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
-<div class="col-sm-4 col-xs-6">
+<div class="col-sm-4">
 <form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
