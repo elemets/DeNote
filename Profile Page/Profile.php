@@ -28,7 +28,7 @@ body > p {
 margin: 0px;
 padding: 0px 0px;
 }
-h3.col-sm-12 {
+.col-sm-12 h3 {
 	font-size: 19px;
 	text-transform: uppercase;
 	color: white;
