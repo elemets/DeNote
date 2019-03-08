@@ -24,10 +24,6 @@ body > p {
 .col-sm-3 {
 	padding-bottom: 30px;
 }
-.container-fluid {
-margin: 0px;
-padding: 0px 0px;
-}
 .col-sm-12 h3 {
 	font-size: 19px;
 	text-transform: uppercase;
