@@ -36,7 +36,7 @@ padding: 0px 0px;
 	padding: 0px;
 	margin: 0px;
 }
-.col-sm-12 h3 {
+.col-sm-12 p {
 	font-size: 19px;
 	text-transform: uppercase;
 	color: red;
