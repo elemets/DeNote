@@ -14,9 +14,6 @@ body {
 body > p {
 	text-align: center;
 }
-h3 {
-  color: black;
-}
 .centered {
   position: absolute;
   top: 50%;
@@ -95,7 +92,7 @@ h3 {
 <!-- My notes Section -->
 <div class="row">
 	<div class="col-sm-12">
-      <h3 style="font-size: 50px; padding-top: 30px; padding-bottom: 15px;">My notes</h3>
+      <h3 style="font-size: 50px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes</h3>
 	</div>
 
 	<?php
