@@ -59,6 +59,12 @@ body {
 .like-dislike {
 	color: #181818 !important;
 }
+#HCB_comment_box .submit {
+		background:none; /* Clear twitter bootstrap style. */
+		background-color:green;
+		border:1px solid darkgreen;
+		color: red;
+}
 </style>
 <body>
   <div id="top" class="container-fluid">

@@ -182,13 +182,5 @@ footer .glyphicon {
     .embed-responsive-10by3 {
        padding-top: 20%;
     }
-    }
-    #HCB_comment_box .submit {
-        background:none; /* Clear twitter bootstrap style. */
-        background-color:green;
-        border:1px solid darkgreen;
-        color: red;
-      }
-  }
 
-}
+  }
