@@ -14,6 +14,9 @@ body {
 body > p {
 	text-align: center;
 }
+h3 {
+  color: black;
+}
 .centered {
   position: absolute;
   top: 50%;
