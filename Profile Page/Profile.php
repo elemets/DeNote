@@ -36,7 +36,7 @@ padding: 0px 0px;
 	background-color:#faf2ff;
 }
 
-#HCB_comment_box .submit {
+#HCB_comment_box #hcb_submit {
 	background:none; /* Clear twitter bootstrap style. */
 	background-color:green;
 	border:1px solid darkgreen;
