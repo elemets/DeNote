@@ -132,7 +132,7 @@ if ($row['dataType'] == "application/pdf")
 ?>
 
 <div class="row" style="text-align:center; padding-bottom:20px;">
-	<div class="col-sm-2"></div>
+	<div class="col-sm-2 col-xs-0"></div>
 <!-- VOTING -->
 
    <?php
@@ -245,7 +245,7 @@ else
 <?php } ?>
 </form>
 </div>
-<div class="col-sm-2"></div>
+<div class="col-sm-2 col-xs-0"></div>
 </div>
 <div class="row">
 <div class="col-sm-2"></div>
