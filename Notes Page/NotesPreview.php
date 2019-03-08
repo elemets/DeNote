@@ -110,7 +110,7 @@ echo '</h2>';
 ?>
 </div>
 </div>
-
+  <div class="row">
 
 <?php
 $id = "view.php?id=" . $_GET['id'];
@@ -118,27 +118,25 @@ $id = "view.php?id=" . $_GET['id'];
 if ($row['dataType'] == "application/pdf")
 {
 ?>
-  <div class="row desktop-pdf">
-		 <div class="col-sm-12 col-xs-12 amp-active">
+		 <div class="col-sm-12 col-xs-12 amp-active desktop-pdf">
 <div class="embed-responsive embed-responsive-4by3">
 <p align="center">
   <iframe src="<?php echo $id ?>"  >
 </iframe></p>
 </div>
 </div>
-</div>
 
-  <div class="row mobile-pdf">
-<div class="col-sm-2"></div>
-<div class="col-sm-8">
+<div class="col-sm-2 mobile-pdf"></div>
+<div class="col-sm-8 mobile-pdf">
+<a href="<?php echo $id ?>" class="btn btn-block submit-btn submit-font" role="button"><span class="glyphicon glyphicon-download-alt"></span> View PDF</a>
 <a href="<?php echo $id ?>" class="btn btn-block submit-btn submit-font" role="button">View PDF</a>
 </div>
 <div class="col-sm-2 mobile-pdf"></div>
+
 </div>
 <?php
 }else {
 ?>
-  <div class="row">
 <div class="col-sm-2"></div>
     		<div class="col-sm-8">
 		<img src="<?php echo $id ?>" style="width:100%; padding-bottom:20px;">
