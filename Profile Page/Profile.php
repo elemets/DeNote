@@ -91,7 +91,16 @@ body > p {
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 </div>
 
-
+<div class="row">
+<div class="col-sm-3">
+<a href= "<?php echo $links[$counter]; ?>">
+<img src="squareElement.png" style="width:100%" class="img-circle">
+			<div class="centered"><h2 style="color: #fff;">
+<?php echo $usernameArray[$counter]; ?>
+</div>
+</a>
+</div>
+</div>
 <!-- My notes Section -->
 <div class="row">
 	<div class="col-sm-12">
