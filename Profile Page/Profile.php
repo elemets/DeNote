@@ -99,7 +99,7 @@ body > p {
 <!-- My notes Section -->
 <div class="row">
 	<div class="col-sm-12">
-      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes</h3>
+      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes  <a href="DeletePage.php">Delete Notes</a></h3>
 	</div>
 
 	<?php
