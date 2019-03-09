@@ -75,7 +75,7 @@ if($_SESSION["username"] == null)
 
 
     echo "<h1> Username </h1>";
-    $stat = $conn->prepare("SELECT * FROM Users WHERE SectionNumber LIKE '%$searchWord%'");
+    $stat = $conn->prepare("SELECT * FROM Users WHERE Username LIKE '%$searchWord%' AND Username != 'ADMIN'");
     $stat->execute();
     while($row = $stat->fetch())
     {
