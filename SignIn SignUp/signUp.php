@@ -115,11 +115,11 @@
   <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-      //used real escape string because apparantly it prevent mysql injections
-	    $username = mysql_real_escape_string($_POST["username"]);
-      $password = mysql_real_escape_string($_POST["password"]);
-  	  $year = mysql_real_escape_string($_POST["year"]);
-  	  $email = mysql_real_escape_string($_POST["email"]);
+
+	    $username = $_POST["username"];
+      $password = ($_POST["password"];
+  	  $year = ($_POST["year"];
+  	  $email =$_POST["email"];
 
       //stores the error results
       $action = array();
