@@ -121,19 +121,10 @@
   	  $year = $_POST["year"];
   	  $email =$_POST["email"];
 
-      //stores the error results
-      $action = array();
-      $action['result'] = null;
-      $text = array();
-
 
   	  if(register($username, $password, $email, $year)) {
        header('Location: ../User Home Page/UserHomePage.php');
   	  } else {
-        ?>
-
-
-
 
     <div class="fixed-top" style="padding-top: 53px">
     	<div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -143,7 +134,9 @@
         </button>
       </div>
     </div>
+
+    }
   }
-  }
+?>
 </body>
 </html>
