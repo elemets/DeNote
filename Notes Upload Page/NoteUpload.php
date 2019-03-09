@@ -190,16 +190,16 @@ if(isset($_POST['btn']))
                     <div class="form-group">
                             <input type="file" name="requiredFile" accept=".pdf,.png,.jpg">
                     </div>
+                    <br>
+                    <div class="form-group">
+                   <input type="checkbox" name="box" value="tik the Box"> i agree to all the rules bla bla bla<br>
+                    </div>  
 
                     <br>
                     <div class="form-group">
                     <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
                     </div>
-                    <br>
-
-                    <div class="form-group">
-                   <input type="checkbox" name="box" value="tik the Box"> I have a bike<br>
-                    </div>
+                    
                 </form>
             </div>
           </div>
