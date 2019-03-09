@@ -112,7 +112,7 @@ body > p {
 							while($row = $stat->fetch())
 							{
 	?>
-								<option><?php $row['TitleNote'];?></option>
+								<option><?php echo $row['TitleNote'];?></option>
 	<?php
 							}
 	?>
