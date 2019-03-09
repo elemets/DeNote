@@ -18,7 +18,7 @@ if($_SESSION["username"] == null)
       <!--USERNAME-->
       <label for="username">Username (mustn't contain <>)</label>
       <br>
-      <input type="textbox" name="newUsername" placeholder="Username" pattern="[^<>]+">
+      <input type="textbox" name="newUsername" placeholder="Username" pattern="[^<>]+" value="<?php echo $_SESSION['username'];?>" disabled>
 
       <br>
 
@@ -51,7 +51,7 @@ if($_SESSION["username"] == null)
     	  $newYear = $_POST["newYear"];
 
         $oldUsername = $_SESSION['username'];
-      
+
     	  if(edit($newUsername, $newPassword, $newYear, $oldUsername)) {
           echo "I am working";
          //header('Location: ../Profile Page/Profile.php');
