@@ -1,9 +1,6 @@
 <?php
 session_start();
-if($_SESSION["username"] == null)
-{
-	header('Location: ../index.html');
-}
+
 require_once("../Header - Footer/header.php");
 ?>
 <title>Page Title</title>
