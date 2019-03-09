@@ -8,13 +8,11 @@ $conn = new mysqli($database_host, $database_user, $database_pass, "2018_comp101
 if($conn -> connect_error)
     die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
 
-function edit($newUsername, $newPassword, $newYear)
+function edit($newUsername, $newPassword, $newYear, $oldUsername)
 {
     global $conn;
 
-    $userID = $conn->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
-    echo $_SESSION[username];
-    echo $userID;
+    $userID = $conn->query("SELECT UserID FROM Users WHERE Username ='$oldUsername'")->fetch_object()->UserID;//userID query
 
     $NewPassword_hash = crypt($newPassword, $newUsername);
 

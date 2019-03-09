@@ -50,7 +50,10 @@ if($_SESSION["username"] == null)
         $newPassword = $_POST["newPassword"];
     	  $newYear = $_POST["newYear"];
 
-    	  if(edit($newUsername, $newPassword, $newYear)) {
+        $oldUsername = $_SESSION[username];
+        echo $oldUsername;
+
+    	  if(edit($newUsername, $newPassword, $newYear, $oldUsername)) {
           echo "I am working";
          //header('Location: ../Profile Page/Profile.php');
     	  } else {
