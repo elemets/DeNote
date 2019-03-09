@@ -9,12 +9,18 @@
 
       <!--USERNAME-->
       <label for="username">Username (mustn't contain <>)</label>
-      <input type="textbox" class="form-control form-element" name="username" placeholder="Username" pattern="[^<>]+">
+      <input type="textbox" name="username" placeholder="Username" pattern="[^<>]+">
+
+      <br>
 
       <!--PASSWORD-->
       <label for="password">Password (8+ characters, mustn't contain <>)</label>
-      <input type="password" class="form-control form-element" name="password" placeholder="Password" pattern="[a-zA-Z0-9!?@#$%*-/+_]{8,}">
+      <input type="password" name="password" placeholder="Password" pattern="[a-zA-Z0-9!?@#$%*-/+_]{8,}">
 
+      <br>
+
+      <!--SUBMIT-->
+      <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign Up">
     </form>
   </body>
 </html>
