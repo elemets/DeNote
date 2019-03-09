@@ -137,6 +137,43 @@ body > p {
 				        </div>
 	<?php
 				}
+	?>
+				<div class="row">
+	<?php
+
+				        $stat = $conn->prepare("SELECT * FROM `Users`");
+				        $stat->execute();
+				        $numberOfUser = 0;
+				        $usernameArray = array();
+				        $links = array();
+				        while($row = $stat->fetch())
+								{
+				          $username = $row['Username'];
+				          array_push($usernameArray, $username);
+				          $link = "profile2.php?id=" . $row['UserID'];
+				          array_push($links, $link);
+				          $numberOfUser++;
+				         }
+	?>
+
+					<div class="col-sm-12">
+				    <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> <?php echo $numberOfUser;?>All Users</h3>
+					</div>
+	<?php
+				         for($counter = 0; $counter < $numberOfUser; $counter++)
+				         {
+	?>
+										<div class="col-sm-3">
+						         	<a href= "<?php echo $links[$counter]; ?>">
+						        	<img src="squareElement.png" style="width:100%" class="img-circle">
+														<div class="centered"><h2 style="color: #fff;">
+						         				<?php echo $usernameArray[$counter]; ?>
+									 						</div>
+									 		</a>
+								 		</div>
+	<?php
+									}
+	?>
 			}
 			else
 			{
@@ -176,7 +213,6 @@ body > p {
 				        </div>
 	<?php
 				}
-			}
 	?>
 
 </div>
@@ -185,13 +221,14 @@ body > p {
 <!-- Following Section -->
 <div class="row">
 <?php
-$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
+				$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowerUserID = '$userID'");
         $stat->execute();
         $count = 0;
         $usernameArray = array();
         $links = array();
-        while($row = $stat->fetch()){
+        while($row = $stat->fetch())
+				{
 
           $FollowedUserID = $row['FollowedUserID'];
           $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowedUserID'];
@@ -206,19 +243,20 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 	<div class="col-sm-12">
     <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> <?php echo $count;?> Followings</h3>
 	</div>
-        <?php
-         for($counter = 0; $counter < $count; $counter++)
-         { ?>
-					<div class="col-sm-3">
-         <a href= "<?php echo $links[$counter]; ?>">
-        <img src="squareElement.png" style="width:100%" class="img-circle">
-								<div class="centered"><h2 style="color: #fff;">
-         <?php echo $usernameArray[$counter]; ?>
-			 </div>
-			 </a>
-		 </div>
 <?php
-}
+         for($counter = 0; $counter < $count; $counter++)
+         {
+?>
+						<div class="col-sm-3">
+		         	<a href= "<?php echo $links[$counter]; ?>">
+		        	<img src="squareElement.png" style="width:100%" class="img-circle">
+										<div class="centered"><h2 style="color: #fff;">
+		         				<?php echo $usernameArray[$counter]; ?>
+					 						</div>
+					 		</a>
+				 		</div>
+<?php
+					}
 ?>
 </div>
 <!-- Following Section End -->
@@ -226,13 +264,14 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
 <!-- Followers Section -->
 <div class="row">
 <?php
-$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
+				$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID'");
         $stat->execute();
         $count = 0;
         $usernameArray = array();
         $links = array();
-        while($row = $stat->fetch()){
+        while($row = $stat->fetch())
+				{
           $FollowerUserID = $row['FollowerUserID'];
           $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowerUserID'];
           $username = $conn2->query($syn)->fetch_object()->Username;
@@ -240,25 +279,26 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[use
           $link = "profile2.php?id=" . $FollowerUserID;
           array_push($links, $link);
           $count = $count + 1;
-         }
+        }
 ?>
 		<div class="col-sm-12">
 			<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> <?php echo $count;?> Followers</h3>
 		</div>
-        <?php
+<?php
          for($counter = 0; $counter < $count; $counter++)
          {
-			  ?>
-					<div class="col-sm-3">
-				 <a href= "<?php echo $links[$counter]; ?>">
-				<img src="squareElement.png" style="width:100%" class="img-circle">
+?>
+						<div class="col-sm-3">
+				 			<a href= "<?php echo $links[$counter]; ?>">
+									<img src="squareElement.png" style="width:100%" class="img-circle">
 								<div class="centered"><h2 style="color: #fff;">
-				 <?php echo $usernameArray[$counter]; ?>
-			 </div>
-			 </a>
-		 </div>
+				 				<?php echo $usernameArray[$counter]; ?>
+			 					</div>
+			 				</a>
+		 				</div>
 <?php
-}
+					}
+		}
 ?>
   </div>
 <!-- Followers Section End -->
