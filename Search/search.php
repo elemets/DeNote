@@ -34,9 +34,18 @@ if($_SESSION["username"] == null)
     echo "<h1> FileName </h1>";
     $stat = $conn->prepare("SELECT * FROM Notes WHERE FileName LIKE '%$searchWord%'");
     $stat->execute();
+    $UnitIDInField = array();
     while($row = $stat->fetch())
     {
-              echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
+
+      	if (!in_array($row['UnitID'], $UnitIDInField))
+      {
+?>
+            <a <?php  echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
+            <?php echo $row['UnitID']?>
+            </a>
+<?php
+            array_push($UnitIDInField, $row['UnitID']);
     }
     if ($stat->rowCount() == 0)
     {
