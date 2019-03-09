@@ -318,7 +318,7 @@ body > p {
 		if(isset($_POST['deleteBtnAdmin']))
 		{
 			$note = $_POST["note"];
-			$stat = $conn->prepare("DELETE FROM `Notes` WHERE `TitleNote` = '2'");
+			$stat = $conn2->prepare("DELETE FROM `Notes` WHERE `TitleNote` = '$note'");
 			$stat->execute();
 			echo "DELETED";
 			header('Location: '.$_SERVER['REQUEST_URI']);
