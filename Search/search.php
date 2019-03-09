@@ -20,7 +20,7 @@ if($_SESSION["username"] == null)
     $stat = $conn->prepare("SELECT * FROM Notes WHERE * LIKE '%$searchWord%'");
     $stat->bindParam(1, $searchWord);
     $stat->execute();
-    echo $row['FileName'];
+    echo $stat->fetch();
     while($row = $stat->fetch())
     {
               echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
