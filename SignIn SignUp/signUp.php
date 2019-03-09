@@ -126,38 +126,16 @@
       $action['result'] = null;
       $text = array();
 
-      if(empty($username))
-      {
-        $action['result'] = 'error';
-        array_push($text,'You forgot your username');
-      }
-      if(empty($password))
-      {
-        $action['result'] = 'error';
-        array_push($text,'You forgot your password');
-      }
-      if(empty($email))
-      {
-        $action['result'] = 'error';
-        array_push($text,'You forgot your email');
-      }
-      if($action['result'] != 'error'){
-    //no errors, continue signup
-       $password = ($password);
-      }
-      $action['text'] = $text;
 
   	  if(register($username, $password, $email, $year)) {
        header('Location: ../User Home Page/UserHomePage.php');
   	  } else {
-        $action['result'] = 'error';
-        array_push($text,'User could not be added to the database.');
-        echo $text;
-        }
+        ?>
 
 
-    }  ?>
-    <!--<div class="fixed-top" style="padding-top: 53px">
+
+
+    <div class="fixed-top" style="padding-top: 53px">
     	<div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>Error:</strong> Please fill in all the fields correctly.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -165,6 +143,7 @@
         </button>
       </div>
     </div>
-  -->
+  }
+  }
 </body>
 </html>
