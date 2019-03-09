@@ -125,7 +125,7 @@
   	  if(register($username, $password, $email, $year)) {
        header('Location: ../User Home Page/UserHomePage.php');
   	  } else {
-    echo
+    echo "
     <div class="fixed-top" style="padding-top: 53px">
     	<div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>Error:</strong> Please fill in all the fields correctly.
@@ -133,9 +133,9 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-    </div>
-  }
+    </div> "
     }
+  } ?>
   }
 
 </body>
