@@ -120,7 +120,7 @@ body > p {
 	?>
 				      </select>
 
-							<input type="submit" value="Delete" name="deleteBtnAdmin">
+							<input type="submit" value="Delete" name="deleteBtn">
 						</form>
 				</div>
 	<?php
