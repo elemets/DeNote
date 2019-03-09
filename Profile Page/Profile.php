@@ -212,7 +212,7 @@ body > p {
 								  </a>
 				        </div>
 	<?php
-				}
+					}
 	?>
 
 </div>
@@ -257,7 +257,6 @@ body > p {
 				 		</div>
 <?php
 					}
-			}
 ?>
 </div>
 <!-- Following Section End -->
