@@ -141,6 +141,11 @@
         $action['result'] = 'error';
         array_push($text,'You forgot your email');
       }
+      if($action['result'] != 'error'){
+    //no errors, continue signup
+       $password = ($password);
+      }
+      $action['text'] = $text;
 
   	  if(register($username, $password, $email, $year)) {
        header('Location: ../User Home Page/UserHomePage.php');
