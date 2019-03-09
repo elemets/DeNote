@@ -80,7 +80,7 @@ if(isset($_POST['btn']))
   $unitID = $_POST["UnitID"];
   $sectionNumber = $_POST["sectionNumber"];
 
-  if(validateUpload($unitID, $sectionNumber))
+  if(validateUpload($unitID, $sectionNumber) && isset($_POST['box']))
   {
   $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
   $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`, `UnitYear`) VALUES (?,?,?,?,?,?,?,?)");
@@ -194,7 +194,12 @@ if(isset($_POST['btn']))
                     <br>
                     <div class="form-group">
                     <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
-                  </div>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                   <input type="checkbox" name="box" value="tik the Box"> I have a bike<br>
+                    </div>
                 </form>
             </div>
           </div>
