@@ -104,8 +104,7 @@ body > p {
 			{
 	?>
 				<div class="col-sm-12">
-			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">
-							All notes  <p>Delete Note:</p>
+			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> All notes  <p>Delete Note:</p>
 							<select name="note">
 	<?php
 							$stat = $conn->prepare("SELECT * FROM Notes");
