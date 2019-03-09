@@ -20,7 +20,7 @@ if($_SESSION["username"] == null)
     $stat = $conn->prepare("SELECT * FROM Notes WHERE * LIKE '%?%'");
     $stat->bindParam(1, $searchWord);
     $stat->execute();
-    echo $stat->fetch()
+    echo $stat->fetch();
     while($row = $stat->fetch())
     {
       if ($row['FileName'] == $searchWord || $row['TitleNote'] == $searchWord || $row['UnitID'] == $searchWord)
