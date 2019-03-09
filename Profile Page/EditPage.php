@@ -19,7 +19,7 @@ if($_SESSION["username"] == null)
       <label for="username">Username (mustn't contain <>)</label>
       <br>
       <input type="textbox" name="newUsername" placeholder="Username" pattern="[^<>]+" value="<?php echo $_SESSION['username'];?>" disabled>
-
+			<input type="checkbox" name="box" value="tick the Box"> You want change your username too> <br>
       <br>
 
       <!--PASSWORD-->
