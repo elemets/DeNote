@@ -13,6 +13,7 @@ function edit($newUsername, $newPassword, $newYear)
     global $conn;
 
     $userID = $conn->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
+    echo $_SESSION[username];
     echo $userID;
 
     $NewPassword_hash = crypt($newPassword, $newUsername);
