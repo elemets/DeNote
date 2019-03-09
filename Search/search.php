@@ -75,15 +75,11 @@ if($_SESSION["username"] == null)
 
 
     echo "<h1> Username </h1>";
-    $stat = $conn->prepare("SELECT * FROM Users");
-    $stat->bindParam(1, $searchWord);
+    $stat = $conn->prepare("SELECT * FROM Users WHERE SectionNumber LIKE '%$searchWord%'");
     $stat->execute();
     while($row = $stat->fetch())
     {
-      if ($row['Username'] == $searchWord || $row['Email'] == $searchWord)
-      {
             echo "<li><a  href='../Profile Page/profile2.php?id=".$row['UserID']."'>".$row['Username']."</a></li>";
-      }
     }
     if ($stat->rowCount() == 0)
     {
