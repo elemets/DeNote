@@ -26,7 +26,7 @@ if($_SESSION["username"] == null)
       if (!in_array($row['UnitID'], $UnitIDInField))
       {
 ?>
-            <a <?php  echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
+            <a <?php  echo"<a href='../Notes Page/NotesShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
             <?php echo $row['UnitID']?>
             </a>
 <?php
