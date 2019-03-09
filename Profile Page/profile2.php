@@ -58,9 +58,9 @@ padding: 0px 0px;
   if(isset($_POST['btnDelete']))
   {
     $deleteQuery = "DELETE FROM `Notes` WHERE `UserID` = '$userID'";
-    $result = $conn->deleteQuery($query);
+    $result = $conn->query($deleteQuery);
     $deleteUser = "DELETE FROM `Users` WHERE `UserID` = '$userID'";
-    $result = $conn->deleteUser($query);
+    $result = $conn->query($deleteUser);
     header('Location: '.$_SERVER['REQUEST_URI']);
   }
   if ($userIDmain == "-1")
