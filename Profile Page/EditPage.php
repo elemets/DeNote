@@ -18,11 +18,11 @@ if($_SESSION["username"] == null)
       <!--USERNAME-->
       <label for="username">Username (mustn't contain <>)</label>
       <br>
-      <input type="textbox" name="newUsername" id="text" pattern="[^<>]+" value="<?php echo $_SESSION['username'];?>">
-			<input type="checkbox" name="box" id="box">You want change your username too
+      <input type="textbox" name="newUsername" id="text" pattern="[^<>]+" value="<?php echo $_SESSION['username'];?>" disabled>
+			<input type="checkbox" name="box" id="box"> You want change your username too
 			<script>
 				document.getElementById('box').onchange = function() {
-    		document.getElementById('text').disabled = this.checked;
+    		!document.getElementById('text').disabled = this.checked;
 				};
 			</script>
       <br>
