@@ -151,7 +151,7 @@
        header('Location: ../User Home Page/UserHomePage.php');
   	  } else {
         $action['result'] = 'error';
-        array_push($text,'User could not be added to the database. Reason: ' .mysql_error());
+        array_push($text,'User could not be added to the database.);
 
         }
 
