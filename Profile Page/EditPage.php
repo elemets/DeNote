@@ -22,7 +22,7 @@ if($_SESSION["username"] == null)
 			<input type="checkbox" name="box" id="box"> You want change your username too
 			<script>
 				document.getElementById('box').onchange = function() {
-    		this.checked = document.getElementById('text').disabled;
+    		!(document.getElementById('text').disabled) = this.checked;
 				};
 			</script>
       <br>
