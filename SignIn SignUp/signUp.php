@@ -115,15 +115,38 @@
   <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-	    $username = $_POST["username"];
-      $password = $_POST["password"];
-  	  $year = $_POST["year"];
-  	  $email = $_POST["email"];
+      //used real escape string because apparantly it prevent mysql injections
+	    $username = mysql_real_escape_string $_POST["username"];
+      $password = mysql_real_escape_string $_POST["password"];
+  	  $year = mysql_real_escape_string $_POST["year"];
+  	  $email = mysql_real_escape_string $_POST["email"];
+
+      //stores the error results
+      $action = array();
+      $action['result'] = null;
+      $text = array();
+
+      if(empty($username))
+      {
+        $action['result'] = 'error';
+        array_push($text,'You forgot your username');
+      }
+      if(empty($password))
+      {
+        $action['result'] = 'error';
+        array_push($text,'You forgot your password');
+      }
+      if(empty($email))
+      {
+        $action['result'] = 'error';
+        array_push($text,'You forgot your email');
+      }
 
   	  if(register($username, $password, $email, $year)) {
        header('Location: ../User Home Page/UserHomePage.php');
   	  } else {
-  ?>
+        $action['result'] = 'error';
+        array_push($text,'User could not be added to the database. Reason: ' . mysql_error());
     <div class="fixed-top" style="padding-top: 53px">
     	<div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>Error:</strong> Please fill in all the fields correctly.
@@ -132,9 +155,8 @@
         </button>
       </div>
     </div>
-  <?php
+    ?>
 	    }
 	  }
-  ?>
 </body>
 </html>
