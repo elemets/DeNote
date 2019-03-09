@@ -4,7 +4,6 @@ if($_SESSION["username"] == null)
 {
 	header('Location: ../index.html');
 }
-require_once("database.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,6 +12,7 @@ require_once("database.php");
     <title>Edit Profile</title>
   </head>
   <body>
+    <?php require_once("database.php"); ?>
     <form method="post" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 
       <!--USERNAME-->
