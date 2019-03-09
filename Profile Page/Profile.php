@@ -173,7 +173,6 @@ body > p {
 								 		</div>
 	<?php
 									}
-	?>
 			}
 			else
 			{
