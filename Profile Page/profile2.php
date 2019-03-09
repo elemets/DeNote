@@ -67,7 +67,7 @@ padding: 0px 0px;
   {
 ?>
     <form action="" method="post">
-    <input type="submit" class="btn btn-danger" method="post" value="deleteNote" name="btnDelete">
+    <input type="submit" class="btn btn-danger" method="post" value="delete User" name="btnDelete">
     </form>
 <?php
   }

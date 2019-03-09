@@ -100,26 +100,28 @@ body > p {
 <div class="row">
 	<?php
 			$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
-			if ($userID == -1)
+			$adminID = -1;
+			if ($userID == $adminID)
 			{
 	?>
 				<div class="col-sm-12">
 			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> All notes  <p>Delete Note:</p></h3>
 						<form method="post">
 							<select name="note">
+								<option>---</option>
 	<?php
-							$stat = $conn->prepare("SELECT * FROM Notes");
-							$stat->execute();
-							while($row = $stat->fetch())
-							{
+								$stat = $conn->prepare("SELECT * FROM Notes");
+								$stat->execute();
+								while($row = $stat->fetch())
+								{
 	?>
-								<option><?php echo $row['TitleNote'];?></option>
+									<option><?php echo $row['TitleNote'];?></option>
 	<?php
-							}
+								}
 	?>
 				      </select>
 
-						<input type="submit" value="Delete" name="deleteBtnAdmin">
+							<input type="submit" value="Delete" name="deleteBtn">
 						</form>
 				</div>
 	<?php
@@ -194,7 +196,26 @@ body > p {
 			{
 	?>
 				<div class="col-sm-12">
-						<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes  <a href="DeletePage.php"> <p>Delete Notes</p></a></h3>
+						<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes <p>Delete Notes</p></h3>
+						<form method="post">
+							<select name="note">
+								<option>---</option>
+	<?php
+								$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
+								$stat->bindParam(1, $userID);
+								$stat->execute();
+								while($row = $stat->fetch())
+								{
+	?>
+									<option><?php echo $row['TitleNote'];?></option>
+	<?php
+								}
+	?>
+							</select>
+
+							<input type="submit" value="Delete" name="deleteBtn">
+						</form>
+				</div>
 				</div>
 	<?php
 				$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
@@ -315,13 +336,16 @@ body > p {
 					}
 		}
 
-		if(isset($_POST['deleteBtnAdmin']))
+		if(isset($_POST['deleteBtn']))
 		{
 			$note = $_POST["note"];
-			$stat = $conn2->prepare("DELETE FROM `Notes` WHERE `TitleNote` = '$note'");
-			$stat->execute();
-			echo "DELETED";
-			header('Location: '.$_SERVER['REQUEST_URI']);
+			if ($note != "---")
+			{
+				$stat = $conn2->prepare("DELETE FROM `Notes` WHERE `TitleNote` = '$note'");
+				$stat->execute();
+				echo "DELETED";
+				header('Location: '.$_SERVER['REQUEST_URI']);
+			}
 		}
 ?>
   </div>
