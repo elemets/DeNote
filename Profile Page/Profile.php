@@ -107,19 +107,20 @@ body > p {
 			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> All notes  <p>Delete Note:</p></h3>
 						<form method="post">
 							<select name="note">
+								<option>---</option>
 	<?php
-							$stat = $conn->prepare("SELECT * FROM Notes");
-							$stat->execute();
-							while($row = $stat->fetch())
-							{
+								$stat = $conn->prepare("SELECT * FROM Notes");
+								$stat->execute();
+								while($row = $stat->fetch())
+								{
 	?>
-								<option><?php echo $row['TitleNote'];?></option>
+									<option><?php echo $row['TitleNote'];?></option>
 	<?php
-							}
+								}
 	?>
 				      </select>
 
-						<input type="submit" value="Delete" name="deleteBtnAdmin">
+							<input type="submit" value="Delete" name="deleteBtnAdmin">
 						</form>
 				</div>
 	<?php
