@@ -8,30 +8,16 @@ $conn = new mysqli($database_host, $database_user, $database_pass, "2018_comp101
 if($conn -> connect_error)
     die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
 
-function edit($newUsername, $newPassword, $newYear, $oldUsername, $withName)
+function edit($newUsername, $newPassword, $newYear, $oldUsername)
 {
     global $conn;
 
     $userID = $conn->query("SELECT UserID FROM Users WHERE Username ='$oldUsername'")->fetch_object()->UserID;//userID query
 
-    if (isset($withName))
-    {
-      $query = "SELECT * FROM Users WHERE Username = '$newUsername' LIMIT 1";
-      $result = $conn->query($query);
-      if ($result->num_rows > 0) return false;
+    $NewPassword_hash = crypt($newPassword, $newUsername);
 
-      $NewPassword_hash = crypt($newPassword, $newUsername);
-
-      $query = "UPDATE Users SET Username='$newUsername',PasswordHash='$NewPassword_hash',YearOfStudent='$newYear' WHERE UserID = '$userID'";
-      $result = $conn->query($query);
-    }
-    else
-    {
-      $NewPassword_hash = crypt($newPassword, $oldUsername);
-
-      $query = "UPDATE Users SET PasswordHash='$NewPassword_hash',YearOfStudent='$newYear' WHERE UserID = '$userID'";
-      $result = $conn->query($query);
-    }
+    $query = "UPDATE Users SET Username='$newUsername',PasswordHash='$NewPassword_hash',YearOfStudent='$newYear' WHERE UserID = '$userID'";
+    $result = $conn->query($query);
 
     if ($result) {
       return true;
@@ -40,6 +26,14 @@ function edit($newUsername, $newPassword, $newYear, $oldUsername, $withName)
       return false;
     }
 
+}
+
+function exist($newUsername)
+{
+  $query = "SELECT * FROM Users WHERE Username = '$newUsername' LIMIT 1";
+  $result = $conn->query($query);
+  if ($result->num_rows > 0) return true;
+  else return false;
 }
 
 ?>

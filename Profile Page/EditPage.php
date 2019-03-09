@@ -51,15 +51,21 @@ if($_SESSION["username"] == null)
     <?php
       if ($_SERVER["REQUEST_METHOD"] == "POST")
       {
-  	    $newUsername = $_POST["newUsername"];
+				$oldUsername = $_SESSION['username'];
+				$newUsername = $oldUsername;
+
+				if (isset($_POST['box']))
+				{
+					$newUsername = $_POST["newUsername"];
+				}
+
         $newPassword = $_POST["newPassword"];
     	  $newYear = $_POST["newYear"];
 				$withName = $_POST["withName"];
-        $oldUsername = $_SESSION['username'];
 
-    	  if(edit($newUsername, $newPassword, $newYear, $oldUsername, $withName)) {
+    	  if(edit($newUsername, $newPassword, $newYear, $oldUsername) && !exist($newUsername)) {
           echo "I am working";
-         //header('Location: ../Profile Page/Profile.php');
+         	//header('Location: ../Profile Page/Profile.php');
     	  } else {
           echo "Wrong";
         }
