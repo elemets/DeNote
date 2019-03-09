@@ -19,15 +19,10 @@ if($_SESSION["username"] == null)
       <label for="username">Username (mustn't contain <>)</label>
       <br>
       <input type="textbox" name="newUsername" id="text" pattern="[^<>]+" value="<?php echo $_SESSION['username'];?>" disabled>
-			<input type="checkbox" name="box" id="box"> You want change your username too
+			<input type="checkbox" name="box" id="box" value="withName"> You want change your username too
 			<script>
 				document.getElementById('box').onchange = function() {
-    		//document.getElementById('text').checked = this.disabled;
 				document.getElementById('text').disabled = !document.getElementById('text').disabled;
-				/*if(document.getElementById('text').disabled)
-				{
-					document.getElementById('test')
-				}*/
 				};
 			</script>
       <br>
@@ -59,10 +54,10 @@ if($_SESSION["username"] == null)
   	    $newUsername = $_POST["newUsername"];
         $newPassword = $_POST["newPassword"];
     	  $newYear = $_POST["newYear"];
-
+				$withName = $_POST["withName"];
         $oldUsername = $_SESSION['username'];
 
-    	  if(edit($newUsername, $newPassword, $newYear, $oldUsername)) {
+    	  if(edit($newUsername, $newPassword, $newYear, $oldUsername, $withName)) {
           echo "I am working";
          //header('Location: ../Profile Page/Profile.php');
     	  } else {
