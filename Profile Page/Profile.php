@@ -104,7 +104,7 @@ body > p {
 			{
 	?>
 				<div class="col-sm-12">
-			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> All notes  <p>Delete Note:</p>
+			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> All notes  <p>Delete Note:</p></h3>
 							<select name="note">
 	<?php
 							$stat = $conn->prepare("SELECT * FROM Notes");
@@ -117,7 +117,7 @@ body > p {
 							}
 	?>
 				      </select>
-						</h3>
+
 						<input type="submit" value="Delete" name="deleteBtn">
 				</div>
 	<?php
@@ -312,6 +312,8 @@ body > p {
 <?php
 					}
 		}
+
+		if(isset($_POST['deleteBtn']))
 ?>
   </div>
 <!-- Followers Section End -->
