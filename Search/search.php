@@ -20,25 +20,10 @@ if($_SESSION["username"] == null)
     $searchWord = $_POST['searchWord'];
     $stat = $conn->prepare("SELECT * FROM Notes WHERE UnitID LIKE '%$searchWord%'");
     $stat->execute();
+       $UnitIDInField = array();
     while($row = $stat->fetch())
     {
-              echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
-    }
-    if ($stat->rowCount() == 0)
-    {
-      echo "nothing found in this section";
-    }
-
-
-
-    echo "<h1> FileName </h1>";
-    $stat = $conn->prepare("SELECT * FROM Notes WHERE FileName LIKE '%$searchWord%'");
-    $stat->execute();
-    $UnitIDInField = array();
-    while($row = $stat->fetch())
-    {
-
-      	if (!in_array($row['UnitID'], $UnitIDInField))
+      if (!in_array($row['UnitID'], $UnitIDInField))
       {
 ?>
             <a <?php  echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
@@ -55,13 +40,27 @@ if($_SESSION["username"] == null)
 
 
 
+    echo "<h1> FileName </h1>";
+    $stat = $conn->prepare("SELECT * FROM Notes WHERE FileName LIKE '%$searchWord%'");
+    $stat->execute();
+    while($row = $stat->fetch())
+    {
+      	 echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
+    }
+    if ($stat->rowCount() == 0)
+    {
+      echo "nothing found in this section";
+    }
+
+
+
 
     echo "<h1> TitleNote </h1>";
     $stat = $conn->prepare("SELECT * FROM Notes WHERE TitleNote LIKE '%$searchWord%'");
     $stat->execute();
     while($row = $stat->fetch())
     {
-              echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
+              echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['TitleNote']."</a></li>";
     }
     if ($stat->rowCount() == 0)
     {
