@@ -22,10 +22,7 @@ if($_SESSION["username"] == null)
     $stat->execute();
     while($row = $stat->fetch())
     {
-      if ($row['FileName'] == $searchWord || $row['TitleNote'] == $searchWord || $row['UnitID'] == $searchWord)
-      {
               echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
-      }
     }
 
     $stat = $conn->prepare("SELECT * FROM Users");
