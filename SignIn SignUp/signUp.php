@@ -117,8 +117,8 @@
     {
 
 	    $username = $_POST["username"];
-      $password = ($_POST["password"];
-  	  $year = ($_POST["year"];
+      $password = $_POST["password"];
+  	  $year = $_POST["year"];
   	  $email =$_POST["email"];
 
       //stores the error results
