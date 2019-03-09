@@ -18,7 +18,7 @@ if($_SESSION["username"] == null)
       <!--USERNAME-->
       <label for="username">Username (mustn't contain <>)</label>
       <br>
-      <input type="textbox" name="newUsername" placeholder="Username" pattern="[^<>]+" placeholder="sda" disabled>
+      <input type="textbox" name="newUsername" placeholder="Username" pattern="[^<>]+" defaultValue="<?php echo $_SESSION['username'];?>" disabled>
 
       <br>
 
