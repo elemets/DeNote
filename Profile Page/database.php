@@ -30,6 +30,8 @@ function edit($newUsername, $newPassword, $newYear, $oldUsername)
 
 function exist($newUsername)
 {
+  global $conn;
+  
   $query = "SELECT * FROM Users WHERE Username = '$newUsername' LIMIT 1";
   $result = $conn->query($query);
   if ($result->num_rows > 0) return true;

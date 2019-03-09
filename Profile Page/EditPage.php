@@ -61,7 +61,6 @@ if($_SESSION["username"] == null)
 
         $newPassword = $_POST["newPassword"];
     	  $newYear = $_POST["newYear"];
-				$withName = $_POST["withName"];
 
     	  if(edit($newUsername, $newPassword, $newYear, $oldUsername) && !exist($newUsername)) {
           echo "I am working";
