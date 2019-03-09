@@ -100,7 +100,8 @@ body > p {
 <div class="row">
 	<?php
 			$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
-			if ($userID == -1)
+			$adminID = -1;
+			if ($userID == $adminID)
 			{
 	?>
 				<div class="col-sm-12">
