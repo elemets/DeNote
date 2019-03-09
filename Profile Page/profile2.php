@@ -61,7 +61,7 @@ padding: 0px 0px;
     $result = $conn->query($deleteQuery);
     $deleteUser = "DELETE FROM `Users` WHERE `UserID` = '$userID'";
     $result = $conn->query($deleteUser);
-    header('Location: '.$_SERVER['REQUEST_URI']);
+    header('Location: Profile.php');
   }
   if ($userIDmain == "-1")
   {
