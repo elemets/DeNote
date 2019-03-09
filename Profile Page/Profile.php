@@ -195,7 +195,26 @@ body > p {
 			{
 	?>
 				<div class="col-sm-12">
-						<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes  <a href="DeletePage.php"> <p>Delete Notes</p></a></h3>
+						<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes <p>Delete Notes</p></h3>
+						<form method="post">
+							<select name="note">
+								<option>---</option>
+	<?php
+								$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
+								$stat->bindParam(1, $userID);
+								$stat->execute();
+								while($row = $stat->fetch())
+								{
+	?>
+									<option><?php echo $row['TitleNote'];?></option>
+	<?php
+								}
+	?>
+							</select>
+
+							<input type="submit" value="Delete" name="deleteBtn">
+						</form>
+				</div>
 				</div>
 	<?php
 				$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
@@ -316,7 +335,7 @@ body > p {
 					}
 		}
 
-		if(isset($_POST['deleteBtnAdmin']))
+		if(isset($_POST['deleteBtn']))
 		{
 			$note = $_POST["note"];
 			$stat = $conn2->prepare("DELETE FROM `Notes` WHERE `TitleNote` = '$note'");
