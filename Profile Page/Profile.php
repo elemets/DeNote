@@ -105,6 +105,7 @@ body > p {
 	?>
 				<div class="col-sm-12">
 			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> All notes  <p>Delete Note:</p></h3>
+						<form method="post">
 							<select name="note">
 	<?php
 							$stat = $conn->prepare("SELECT * FROM Notes");
@@ -118,7 +119,8 @@ body > p {
 	?>
 				      </select>
 
-						<input type="submit" value="Delete" name="deleteBtn">
+						<input type="submit" value="Delete" name="deleteBtnAdmin">
+						</form>
 				</div>
 	<?php
 				$stat = $conn->prepare("SELECT * FROM Notes");
@@ -313,7 +315,14 @@ body > p {
 					}
 		}
 
-		if(isset($_POST['deleteBtn']))
+		if(isset($_POST['deleteBtnAdmin']))
+		{
+			$note = $_POST["note"];
+			$stat = $conn->prepare("DELETE FROM `Notes` WHERE `TitleNote` = '2'");
+			$stat->execute();
+			echo "DELETED";
+			header('Location: '.$_SERVER['REQUEST_URI']);
+		}
 ?>
   </div>
 <!-- Followers Section End -->
