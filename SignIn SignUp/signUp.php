@@ -124,7 +124,8 @@
 
   	  if(register($username, $password, $email, $year)) {
        $_SESSION["username"] = $username;
-       echo $username + '\n';
+       echo $username;
+       echo "<br>";
        echo $_SESSION["username"];
        //header('Location: ../User Home Page/UserHomePage.php');
   	  } else {
