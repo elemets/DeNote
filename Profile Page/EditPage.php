@@ -1,10 +1,10 @@
 <?php
-
 session_start();
 if($_SESSION["username"] == null)
 {
 	header('Location: ../index.html');
 }
+require_once("database.php");
 ?>
 <!DOCTYPE html>
 <html>
