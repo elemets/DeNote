@@ -20,7 +20,7 @@ function edit($newUsername, $newPassword, $newYear, $oldUsername)
     $result = $conn->query($query);
     if ($result->num_rows > 0) return false;
 
-    $query = "UPDATE `Users` SET `Username`='$newUsername',`PasswordHash`='$NewPassword_hash',`YearOfStudent`='$newYear' WHERE 'UserID' = '$userID'";
+    $query = "UPDATE Users SET Username='$newUsername',PasswordHash='$NewPassword_hash',YearOfStudent='$newYear' WHERE UserID = '$userID'";
     $result = $conn->query($query);
 
     if ($result) {
