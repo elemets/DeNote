@@ -64,6 +64,8 @@ if($_SESSION["username"] == null)
 
     	  if(edit($newUsername, $newPassword, $newYear, $oldUsername) && !exist($newUsername)) {
           echo "I am working";
+					$_SESSION["username"] = $username;
+					
          	//header('Location: ../Profile Page/Profile.php');
     	  } else {
           echo "Wrong";
