@@ -343,7 +343,7 @@ body > p {
 				$stat = $conn2->prepare("DELETE FROM `Notes` WHERE `TitleNote` = '$note'");
 				$stat->execute();
 				echo "DELETED";
-				//header('Location: '.$_SERVER['REQUEST_URI']);
+				header('Location: '.$_SERVER['REQUEST_URI']);
 			}
 			else
 			{
