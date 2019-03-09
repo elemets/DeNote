@@ -37,8 +37,8 @@ body > p {
     	// Connect to the database
      	$conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
      	$conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
-			$username = $_SESSION[username];
-	$UnitYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE Username = '$username'")->fetch_object()->YearOfStudent;//YearOfStudent query
+			$_SESSION["username"] = $_SESSION["username"];
+	$UnitYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE Username = '$_SESSION[username]'")->fetch_object()->YearOfStudent;//YearOfStudent query
 	$stat = $conn->prepare("SELECT * FROM Notes WHERE UnitYear = ?");
    	$stat->bindParam(1, $UnitYear);
    	$stat->execute();
