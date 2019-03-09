@@ -175,7 +175,7 @@ body > p {
 	?>
 
 					<div class="col-sm-12">
-				    <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> <?php echo $numberOfUser;?> All Users</h3>
+				    <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">All Users (<?php echo $numberOfUser;?>)</h3>
 					</div>
 	<?php
 				         for($counter = 0; $counter < $numberOfUser; $counter++)
