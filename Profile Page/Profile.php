@@ -88,7 +88,7 @@ body > p {
 
 <div class="row">
 <div class="col-sm-2 col-sm-offset-5">
-<a href= "<?php echo $links[$counter]; ?>">
+<a href= "EditPage.php">
 <img src="squareElement.png" style="width:100%" class="img-circle">
 			<div class="centered"><h1 style="color: #fff; font-size: 50px;">
 <?php echo $_SESSION['username']; ?>
