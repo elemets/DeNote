@@ -40,7 +40,7 @@
           </form>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../Profile Page/Profile.php" class="" id="profileNav"><span class="glyphicon glyphicon-user"></span>PROFILE</a></li>
-            <li><a <?php $_SESSION["username"] = null; ?>href="../index.html"><span class="glyphicon glyphicon-log-out"></span>LOGOUT</a></li>
+            <li><a ?>href="../index.html"><span class="glyphicon glyphicon-log-out"></span>LOGOUT</a></li>
           </ul>
         </div>
       </div>
