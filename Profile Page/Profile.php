@@ -102,9 +102,9 @@ body > p {
 			$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
 			if ($userID == -1)
 			{
-				echo "<div class="col-sm-12">
-			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">All notes  <a href="DeletePage.php"> <p>Delete Notes</p></a></h3>
-				</div>";
+				echo "<div class="col-sm-12">";
+			      echo ";<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">All notes  <a href="DeletePage.php"> <p>Delete Notes</p></a></h3>";
+				echo "</div>";
 
 				$stat = $conn->prepare("SELECT * FROM Notes");
 	    	$stat->execute();
@@ -139,6 +139,9 @@ body > p {
 			}
 			else
 			{
+				echo "<div class="col-sm-12">";
+						echo ";<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes  <a href="DeletePage.php"> <p>Delete Notes</p></a></h3>";
+				echo "</div>";
 				$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
 	    	$stat->bindParam(1, $userID);
 	    	$stat->execute();
