@@ -20,7 +20,7 @@ if($_SESSION["username"] == null)
     $searchWord = $_POST['searchWord'];
     $stat = $conn->prepare("SELECT * FROM Notes WHERE UnitID LIKE '%$searchWord%'");
     $stat->execute();
-    if ($result->num_rows > 0)
+    if ($stat->num_rows > 0)
       echo "nothing found in this section";
     while($row = $stat->fetch())
     {
@@ -30,7 +30,7 @@ if($_SESSION["username"] == null)
     echo "<h1> FileName </h1>";
     $stat = $conn->prepare("SELECT * FROM Notes WHERE FileName LIKE '%$searchWord%'");
     $stat->execute();
-    if ($result->num_rows > 0)
+    if ($stat->num_rows > 0)
       echo "nothing found in this section";
     while($row = $stat->fetch())
     {
@@ -41,7 +41,7 @@ if($_SESSION["username"] == null)
     echo "<h1> TitleNote </h1>";
     $stat = $conn->prepare("SELECT * FROM Notes WHERE TitleNote LIKE '%$searchWord%'");
     $stat->execute();
-    if ($result->num_rows > 0)
+    if ($stat->num_rows > 0)
       echo "nothing found in this section";
     while($row = $stat->fetch())
     {
@@ -52,7 +52,7 @@ if($_SESSION["username"] == null)
     echo "<h1> SectionNumber </h1>";
     $stat = $conn->prepare("SELECT * FROM Notes WHERE SectionNumber LIKE '%$searchWord%'");
     $stat->execute();
-    if ($result->num_rows > 0)
+    if ($stat->num_rows > 0)
       echo "nothing found in this section";
     while($row = $stat->fetch())
     {
@@ -64,7 +64,7 @@ if($_SESSION["username"] == null)
     $stat = $conn->prepare("SELECT * FROM Users");
     $stat->bindParam(1, $searchWord);
     $stat->execute();
-    if ($result->num_rows > 0)
+    if ($stat->num_rows > 0)
       echo "nothing found in this section";
     while($row = $stat->fetch())
     {
