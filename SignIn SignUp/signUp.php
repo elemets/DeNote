@@ -149,6 +149,8 @@
         array_push($text,'User could not be added to the database. Reason: ' . mysql_error());
         }
          ?>
+
+    <!--
     <div class="fixed-top" style="padding-top: 53px">
     	<div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>Error:</strong> Please fill in all the fields correctly.
@@ -157,6 +159,7 @@
         </button>
       </div>
     </div>
+  -->
   }
 </body>
 </html>
