@@ -118,6 +118,7 @@ body > p {
 	?>
 				      </select>
 						</h3>
+						<input type="submit" value="Delete" name="deleteBtn">
 				</div>
 	<?php
 				$stat = $conn->prepare("SELECT * FROM Notes");
