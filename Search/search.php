@@ -13,6 +13,7 @@ if($_SESSION["username"] == null)
   </head>
   <body>
     <?php
+    echo "<h1> UnitID </h1>";
     require_once('config.inc.php');
     $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
     // $conn = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
@@ -24,7 +25,7 @@ if($_SESSION["username"] == null)
               echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
     }
 
-
+    echo "<h1> FileName </h1>";
     $stat = $conn->prepare("SELECT * FROM Notes WHERE FileName LIKE '%$searchWord%'");
     $stat->execute();
     while($row = $stat->fetch())
@@ -33,7 +34,7 @@ if($_SESSION["username"] == null)
     }
 
 
-
+    echo "<h1> TitleNote </h1>";
     $stat = $conn->prepare("SELECT * FROM Notes WHERE TitleNote LIKE '%$searchWord%'");
     $stat->execute();
     while($row = $stat->fetch())
@@ -42,7 +43,7 @@ if($_SESSION["username"] == null)
     }
 
 
-
+    echo "<h1> SectionNumber </h1>";
     $stat = $conn->prepare("SELECT * FROM Notes WHERE SectionNumber LIKE '%$searchWord%'");
     $stat->execute();
     while($row = $stat->fetch())
@@ -51,7 +52,7 @@ if($_SESSION["username"] == null)
     }
 
 
-
+    echo "<h1> Username </h1>";
     $stat = $conn->prepare("SELECT * FROM Users");
     $stat->bindParam(1, $searchWord);
     $stat->execute();
