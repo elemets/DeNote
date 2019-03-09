@@ -29,6 +29,7 @@ if($_SESSION["username"] == null)
             <a <?php  echo"<a href='../User Home Page/ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
             <?php echo $row['UnitID']?>
             </a>
+            </br>
 <?php
             array_push($UnitIDInField, $row['UnitID']);
       }
