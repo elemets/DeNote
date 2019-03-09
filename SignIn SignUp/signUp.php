@@ -124,10 +124,7 @@
 
   	  if(register($username, $password, $email, $year)) {
        $_SESSION["username"] = $username;
-       echo $username;
-       echo "<br>";
-       echo $_SESSION["username"];
-       //header('Location: ../User Home Page/UserHomePage.php');
+       header('Location: ../User Home Page/UserHomePage.php');
   	  } else {
 
     echo '<div class="fixed-top" style="padding-top: 53px">
