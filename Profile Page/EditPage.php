@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+if($_SESSION["username"] == null)
+{
+	header('Location: ../index.html');
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,18 +17,44 @@
 
       <!--USERNAME-->
       <label for="username">Username (mustn't contain <>)</label>
-      <input type="textbox" name="username" placeholder="Username" pattern="[^<>]+">
+      <br>
+      <input type="textbox" name="newUsername" placeholder="Username" pattern="[^<>]+">
 
       <br>
 
       <!--PASSWORD-->
       <label for="password">Password (8+ characters, mustn't contain <>)</label>
-      <input type="password" name="password" placeholder="Password" pattern="[a-zA-Z0-9!?@#$%*-/+_]{8,}">
+      <br>
+      <input type="password" name="newPassword" placeholder="Password" pattern="[a-zA-Z0-9!?@#$%*-/+_]{8,}">
 
       <br>
 
+      <label for="year">Year of Study</label>
+      <br>
+      <select name="newYear">
+        <option>Year 0</option>
+        <option>Year 1</option>
+        <option>Year 2</option>
+        <option>Year 3</option>
+        <option>Other</option>
+      </select>
+
       <!--SUBMIT-->
-      <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign Up">
+      <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Edit">
     </form>
+
+    <?php
+      if ($_SERVER["REQUEST_METHOD"] == "POST")
+      {
+  	    $newUsername = $_POST["newUsername"];
+        $newPassword = $_POST["newPassword"];
+    	  $newYear = $_POST["newYear"];
+
+    	  if(edit($newUsername, $newPassword, $newYear)) {
+         header('Location: ../Profile.php');
+    	  } else {
+          echo "Wrong";
+        }
+    ?>
   </body>
 </html>
