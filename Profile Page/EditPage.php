@@ -23,7 +23,7 @@ if($_SESSION["username"] == null)
 			<script>
 				document.getElementById('box').onchange = function() {
     		//document.getElementById('text').checked = this.disabled;
-				document.getElementById('text').disabled = !document.getElementById('text');
+				document.getElementById('text').disabled = !document.getElementById('text').disabled;
 				/*if(document.getElementById('text').disabled)
 				{
 					document.getElementById('test')
