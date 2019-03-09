@@ -55,6 +55,7 @@ if($_SESSION["username"] == null)
     	  } else {
           echo "Wrong";
         }
+      }
     ?>
   </body>
 </html>
