@@ -338,10 +338,16 @@ body > p {
 		if(isset($_POST['deleteBtn']))
 		{
 			$note = $_POST["note"];
-			$stat = $conn2->prepare("DELETE FROM `Notes` WHERE `TitleNote` = '$note'");
-			$stat->execute();
-			echo "DELETED";
-			header('Location: '.$_SERVER['REQUEST_URI']);
+			if ($note != "---")
+			{
+				$stat = $conn2->prepare("DELETE FROM `Notes` WHERE `TitleNote` = '$note'");
+				$stat->execute();
+				echo "DELETED";
+				header('Location: '.$_SERVER['REQUEST_URI']);
+			}
+			else {
+				echo "Choose note, please"
+			}
 		}
 ?>
   </div>
