@@ -345,10 +345,6 @@ body > p {
 				echo "DELETED";
 				header('Location: '.$_SERVER['REQUEST_URI']);
 			}
-			else
-			{
-				echo "Choose note, please";
-			}
 		}
 ?>
   </div>
