@@ -55,8 +55,21 @@ padding: 0px 0px;
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 
 <?php
+  if(isset($_POST['btnDelete']))
+  {
+    $deleteQuery = "DELETE FROM `Notes` WHERE `UserID` = '$userID'";
+    $result = $conn->deleteQuery($query);
+    $deleteUser = "DELETE FROM `Users` WHERE `UserID` = '$userID'";
+    $result = $conn->deleteUser($query);
+    header('Location: '.$_SERVER['REQUEST_URI']);
+  }
   if ($userIDmain == "-1")
   {
+?>
+    <form action="" method="post">
+    <input type="submit" class="btn btn-danger" method="post" value="deleteNote" name="btnDelete">
+    </form>
+<?php
   }
   else
   {
