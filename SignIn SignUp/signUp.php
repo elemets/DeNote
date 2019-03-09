@@ -119,7 +119,7 @@
 	    $username = $_POST["username"];
       $password = $_POST["password"];
   	  $year = $_POST["year"];
-  	  $email =$_POST["email"];
+  	  $email = $_POST["email"];
 
 
   	  if(register($username, $password, $email, $year)) {
@@ -133,10 +133,11 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-    </div> "
-    }
+    </div>
+    <?php
+  }?>
   }
-  }
+  
 
 </body>
 </html>
