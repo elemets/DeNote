@@ -54,9 +54,14 @@ padding: 0px 0px;
    ?>
   <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
 
-
+<?php
+  if ($userIDmain == "-1")
+  {
+  }
+  else
+  {
 <!-- FOLLOWING BUTTONS -->
-   <?php
+   
 	if(isset($_POST['btn']))
 	{
 	     $query = "INSERT INTO `Followers`(`FollowerUserID`, `FollowedUserID`) VALUES ('$userIDmain','$userID')";
@@ -89,6 +94,7 @@ else
 
 
 </div>
+<?php     }//else ?>
 <!-- My notes Section -->
 <div id="My_notes" class="grid-container"></div>
       <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"><?php echo $username; ?>'s notes</h3>
