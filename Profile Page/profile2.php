@@ -60,8 +60,9 @@ padding: 0px 0px;
   }
   else
   {
+?>
 <!-- FOLLOWING BUTTONS -->
-   
+<?php   
 	if(isset($_POST['btn']))
 	{
 	     $query = "INSERT INTO `Followers`(`FollowerUserID`, `FollowedUserID`) VALUES ('$userIDmain','$userID')";
