@@ -76,7 +76,7 @@
 
     		  <div class="form-group">
             <label for="username">Username (mustn't contain <>)</label>
-            <input type="textbox" class="form-control form-element" name="username" placeholder="Username" pattern="[^<>]+">
+            <input type="textbox" class="form-control form-element" name="username" placeholder="Username" pattern="[^<>;]+">
           </div>
 
           <div class="form-group">
@@ -104,6 +104,7 @@
           <br>
           <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Sign Up">
           <p style="text-align: center">Already a member? <a href="./signIn.php" style="color:#660098;">Sign in here</a></p>
+          <p style="text-align: center">By signing up, you accept the following <a href="./TermsAndConditions.html" style="color:#660098;">Terms and Conditions</a></p>
     			</form>
         </div>
       </div>
