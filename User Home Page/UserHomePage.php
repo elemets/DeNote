@@ -50,7 +50,7 @@ body > p {
 ?>
 		<div class="col-sm-3 col-xs-6">
     <a <?php echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
-			        <img src="squareElement.png" style="width:100%">
+			        <img src="<?php echo $img ?>" style="width:100%">
 			        <div class="centered"><h2 style="color: #fff;"><?php echo $row['UnitID'] ?></h2></div>
 				  </a>
 	 </div>
