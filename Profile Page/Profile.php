@@ -167,11 +167,13 @@ body > p {
 	<?php
 									}
 			}
+	?>
+	</div>
+	<?php
 			else
 			{
 	?>
 	<!-- Admin End---->
-</div>
 	<div id="top" class="container-fluid">
 			<div class="row">
 				<div class="col-sm-12">
