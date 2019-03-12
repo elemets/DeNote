@@ -267,7 +267,7 @@ body > p {
 ?>
 
 	<div class="col-sm-12">
-    <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> <?php echo $count;?> Followings</h3>
+    <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> <?php echo $count;?> Following</h3>
 	</div>
 <?php
          for($counter = 0; $counter < $count; $counter++)
