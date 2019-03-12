@@ -46,7 +46,7 @@ body > p {
 	while($row = $stat->fetch()){
 	if (!in_array($row['UnitID'], $UnitIDInField))
       {
-	$img = "Images/" . $row['UnitID'] . ".jpeg";
+	$img = "Images/" . $row['UnitID'] . ".png";
 ?>
 		<div class="col-sm-3 col-xs-6">
     <a <?php echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
