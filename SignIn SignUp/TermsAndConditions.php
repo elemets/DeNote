@@ -1,6 +1,7 @@
 <?php
 session_start();
-if($_SESSION[username] == null)
+$user = $_SESSION["username"];
+if($user == null)
 {
 	$link = "signUp.php";
 }
