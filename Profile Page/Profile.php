@@ -97,7 +97,7 @@ body > p {
 </div>
 </div>
 <!-- My notes Section -->
-<div class="row">
+
 		<!-- Admin Start---->
 	<?php
 			$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
@@ -105,6 +105,7 @@ body > p {
 			if ($userID == $adminID)
 			{
 	?>
+		<div class="row">
 				<div class="col-sm-12">
 			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> All notes  <p>Delete Note:</p></h3>
 						<form method="post">
@@ -154,6 +155,7 @@ body > p {
 									</br> Dislikes: <?php echo $counterDislikes; ?></h2></div>
 								  </a>
 				        </div>
+							</div>
 	<?php
 				}
 	?>
@@ -190,6 +192,7 @@ body > p {
 									 						</div>
 									 		</a>
 								 		</div>
+									</div>
 	<?php
 									}
 			}
@@ -197,6 +200,7 @@ body > p {
 			{
 	?>
 	<!-- Admin End---->
+			<div class="row">
 				<div class="col-sm-12">
 						<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes <p>Delete Notes</p></h3>
 						<form method="post">
