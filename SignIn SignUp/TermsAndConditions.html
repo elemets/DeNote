@@ -1,3 +1,15 @@
+<?php
+session_start();
+$user = $_SESSION['Username'];
+if($user == null)
+{
+	$link = "signUp.php";
+}
+else
+{
+	$link = "../Notes Upload Page/NoteUpload.php";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,7 +82,7 @@
 
   <nav class="navbar">
     <div id="top" class="container-fluid">
-      <a class="navbar-brand" href="signUp.php"><img src="../Welcome Page/logo_white.png"  height="23.5" alt="DeNOTE logo"></a>
+      <a class="navbar-brand" href="<?php echo $link?>"><img src="../Welcome Page/logo_white.png"  height="23.5" alt="DeNOTE logo"></a>
     </div>
   </nav>
 
