@@ -155,10 +155,11 @@ body > p {
 									</br> Dislikes: <?php echo $counterDislikes; ?></h2></div>
 								  </a>
 				        </div>
-							</div>
+
 	<?php
 				}
 	?>
+				</div>
 				<div class="row">
 	<?php
 
