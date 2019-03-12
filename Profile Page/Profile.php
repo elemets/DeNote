@@ -206,7 +206,7 @@ body > p {
 							<input type="submit" value="Delete" name="deleteBtn">
 						</form>
 					</div>
-				</div>
+
 	<?php
 				$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
 	    	$stat->bindParam(1, $userID);
