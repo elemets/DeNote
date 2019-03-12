@@ -41,44 +41,32 @@ if($_SESSION["username"] == null)
 
 
 
-    echo "<h1> FileName </h1>";
+    echo "<h1> Notes </h1>";
     $stat = $conn->prepare("SELECT * FROM Notes WHERE FileName LIKE '%$searchWord%'");
     $stat->execute();
     while($row = $stat->fetch())
     {
       	 echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
     }
-    if ($stat->rowCount() == 0)
-    {
-      echo "nothing found in this section";
-    }
 
 
 
 
-    echo "<h1> TitleNote </h1>";
+
     $stat = $conn->prepare("SELECT * FROM Notes WHERE TitleNote LIKE '%$searchWord%'");
     $stat->execute();
     while($row = $stat->fetch())
     {
               echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['TitleNote']."</a></li>";
     }
-    if ($stat->rowCount() == 0)
-    {
-      echo "nothing found in this section";
-    }
 
 
-    echo "<h1> SectionNumber </h1>";
+
     $stat = $conn->prepare("SELECT * FROM Notes WHERE SectionNumber LIKE '%$searchWord%'");
     $stat->execute();
     while($row = $stat->fetch())
     {
               echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
-    }
-    if ($stat->rowCount() == 0)
-    {
-      echo "nothing found in this section";
     }
 
 
