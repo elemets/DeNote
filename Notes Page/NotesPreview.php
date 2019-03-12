@@ -201,7 +201,7 @@ if(($row = $stat->fetch()) != null)
 else
 {
 ?>
-  <button type="submit" class="btn btn-block like-btn submit-font like-dislike" method="post" value="Like!" name="btn"><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
+  <button type="submit" class="btn btn-block like-btn submit-font like-dislike" method="post" value="Like!" name="btn"><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like</span></button>
 <?php
 } ?>
 </form>
@@ -258,7 +258,7 @@ if(($row = $stat->fetch()) != null)
 else
 {
 ?>
-  <button type="submit" class="btn btn-block dislike-btn submit-font like-dislike" method="post" value="disLike" name="btn4"><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-down"> DisLike</span></button>
+  <button type="submit" class="btn btn-block dislike-btn submit-font like-dislike" method="post" value="disLike" name="btn4"><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-down"> Dislike</span></button>
 <?php } ?>
 </form>
 </div>
