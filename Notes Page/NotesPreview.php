@@ -194,7 +194,7 @@ if(($row = $stat->fetch()) != null)
   else
   {
 ?>
-<button type="submit" class="btn btn-block like-btn submit-font like-dislike" value="Like!" disabled><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up"> Like!</span></button>
+<button type="submit" class="btn btn-block like-btn submit-font like-dislike" value="Like!" disabled><?php echo $counterLikes ?> <span class="glyphicon glyphicon-thumbs-up">Like</span></button>
 <?php
   }
 }
