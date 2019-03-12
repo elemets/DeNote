@@ -128,7 +128,7 @@ body > p {
 	<?php
 				}
 	?>
-				</div>
+				
 				<div class="row">
 	<?php
 
