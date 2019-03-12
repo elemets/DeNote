@@ -94,7 +94,7 @@ body > p {
 
 							<input type="submit" value="Delete" name="deleteBtn">
 						</form>
-				</div>
+
 	<?php
 				$stat = $conn->prepare("SELECT * FROM Notes");
 	    	$stat->execute();
@@ -128,7 +128,7 @@ body > p {
 	<?php
 				}
 	?>
-				
+</div>
 				<div class="row">
 	<?php
 
