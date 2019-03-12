@@ -183,7 +183,10 @@ body > p {
 
 			<div class="row">
 				<div class="col-sm-12">
-						<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes <p>Delete Notes</p></h3>
+						<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes</h3>
+					</div>
+					<div class="col-sm-12">
+						<p>Delete Note:</p>
 						<form method="post">
 							<select name="note">
 								<option>---</option>
@@ -202,6 +205,7 @@ body > p {
 
 							<input type="submit" value="Delete" name="deleteBtn">
 						</form>
+					</div>
 				</div>
 	<?php
 				$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
