@@ -192,14 +192,14 @@ if(isset($_POST['btn']))
                     </div>
                     <br>
                     <div class="form-group">
-                   <input type="checkbox" name="box" value="tik the Box"> i agree to all the rules bla bla bla<br>
-                    </div>  
+                   <input type="checkbox" name="box" value="tik the Box"> i agree to all the <a href="./TermsAndConditions.html">Terms and Conditions</a><br>
+                    </div>
 
                     <br>
                     <div class="form-group">
                     <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
                     </div>
-                    
+
                 </form>
             </div>
           </div>
