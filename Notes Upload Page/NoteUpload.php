@@ -192,7 +192,7 @@ if(isset($_POST['btn']))
                     </div>
                     <br>
                     <div class="form-group">
-                   <input type="checkbox" name="box" value="tik the Box"> i agree to all the <a href="./TermsAndConditions.html">Terms and Conditions</a><br>
+                   <input type="checkbox" name="box" value="tik the Box"> I confirm that the file complies with the <a href="./TermsAndConditions.html">Terms and Conditions</a><br>
                     </div>
 
                     <br>
