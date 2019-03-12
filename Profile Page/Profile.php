@@ -176,7 +176,7 @@ body > p {
 			{
 	?>
 	<!-- Admin End---->
-	<div id="top" class="container-fluid">
+
 			<div class="row">
 				<div class="col-sm-12">
 						<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes <p>Delete Notes</p></h3>
