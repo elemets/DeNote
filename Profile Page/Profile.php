@@ -75,8 +75,12 @@ body > p {
 			{
 	?>
 		<div class="row">
-				<div class="col-sm-12">
-			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> All notes  <p>Delete Note:</p></h3>
+				<div class="col-sm-6">
+			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> All notes</h3>
+					</div>
+
+					<div class="col-sm-6">
+						<p>Delete Note:</p>
 						<form method="post">
 							<select name="note">
 								<option>---</option>
@@ -94,6 +98,7 @@ body > p {
 
 							<input type="submit" value="Delete" name="deleteBtn">
 						</form>
+					</div>
 
 	<?php
 				$stat = $conn->prepare("SELECT * FROM Notes");
