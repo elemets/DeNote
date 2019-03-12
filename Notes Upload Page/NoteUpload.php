@@ -190,12 +190,10 @@ if(isset($_POST['btn']))
                     <div class="form-group">
                             <input type="file" name="requiredFile" accept=".pdf,.png,.jpg">
                     </div>
-                    <br>
                     <div class="form-group">
                    <input type="checkbox" name="box" value="tik the Box"> I confirm that the file complies with the <a href="./TermsAndConditions.html">Terms and Conditions</a><br>
                     </div>
 
-                    <br>
                     <div class="form-group">
                     <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
                     </div>
