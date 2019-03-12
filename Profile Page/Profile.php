@@ -60,7 +60,7 @@ body > p {
    ?>
 
 <div class="row">
-<div class="col-sm-3 col-center" Style="max-width: 400px;">
+<div class="col-sm-3 col-center" Style="max-width: 500px;">
 <a href= "EditPage.php">
 <img src="squareElement.png" style="width:100%" class="img-circle">
 			<div class="centered"><h1 style="color: #fff; font-size: 50px;">
