@@ -163,11 +163,12 @@ body > p {
 									 						</div>
 									 		</a>
 								 		</div>
-									</div>
+
 	<?php
 									}
 			}
 	?>
+			</div>
 	</div>
 	<?php
 			else
