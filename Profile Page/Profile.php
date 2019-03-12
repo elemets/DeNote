@@ -134,7 +134,6 @@ body > p {
 				}
 	?>
 </div>
-</div>
 				<div class="row">
 	<?php
 
