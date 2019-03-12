@@ -51,7 +51,7 @@ body > p {
 		<div class="col-sm-3 col-xs-6">
     <a <?php echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
 			        <img src="<?php echo $img ?>" style="width:100%">
-			        <div class="centered"><h2 style="color: #fff; background-color: #660099; padding: 5px 5px;"><?php echo $row['UnitID'] ?></h2></div>
+			        <div class="centered"><h2 style="color: #fff; background-color: #660099; padding: 10px 10px;"><?php echo $row['UnitID'] ?></h2></div>
 				  </a>
 	 </div>
 <?php
