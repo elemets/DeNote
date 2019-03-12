@@ -98,6 +98,7 @@ body > p {
 </div>
 <!-- My notes Section -->
 <div class="row">
+		<!-- Admin Start---->
 	<?php
 			$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
 			$adminID = -1;
@@ -195,6 +196,7 @@ body > p {
 			else
 			{
 	?>
+	<!-- Admin End---->
 				<div class="col-sm-12">
 						<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes <p>Delete Notes</p></h3>
 						<form method="post">
@@ -215,7 +217,6 @@ body > p {
 
 							<input type="submit" value="Delete" name="deleteBtn">
 						</form>
-				</div>
 				</div>
 	<?php
 				$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
