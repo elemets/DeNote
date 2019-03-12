@@ -124,7 +124,7 @@ body > p {
 					}
 
 		?>
-					<div class="col-sm-3">
+					<div class="col-sm-2">
 						      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 									<img src="squareElement.png" style="width:100%">
 							        <div class="centered"><h2 style="color: #fff;">
@@ -163,7 +163,7 @@ body > p {
 				         for($counter = 0; $counter < $numberOfUser; $counter++)
 				         {
 	?>
-										<div class="col-sm-3">
+										<div class="col-sm-2">
 						         	<a href= "<?php echo $links[$counter]; ?>">
 						        	<img src="squareElement.png" style="width:100%" class="img-circle">
 														<div class="centered"><h2 style="color: #fff;">
@@ -232,7 +232,7 @@ body > p {
 					}
 
 	?>
-					<div class="col-sm-3">
+					<div class="col-sm-2">
 						      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 									<img src="squareElement.png" style="width:100%">
 							        <div class="centered"><h2 style="color: #fff;">
@@ -277,7 +277,7 @@ body > p {
          for($counter = 0; $counter < $count; $counter++)
          {
 ?>
-						<div class="col-sm-3">
+						<div class="col-sm-2">
 		         	<a href= "<?php echo $links[$counter]; ?>">
 		        	<img src="squareElement.png" style="width:100%" class="img-circle">
 										<div class="centered"><h2 style="color: #fff;">
@@ -318,7 +318,7 @@ body > p {
          for($counter = 0; $counter < $count; $counter++)
          {
 ?>
-						<div class="col-sm-3">
+						<div class="col-sm-2">
 				 			<a href= "<?php echo $links[$counter]; ?>">
 									<img src="squareElement.png" style="width:100%" class="img-circle">
 								<div class="centered"><h2 style="color: #fff;">
