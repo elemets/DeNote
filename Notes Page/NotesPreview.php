@@ -99,9 +99,9 @@ $row = $stat->fetch();
 $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
 $username = $conn2->query($syn)->fetch_object()->Username;
 
-echo '<h1>';
+echo '<h1><u>';
 echo $row['TitleNote'];
-echo '</h1>';
+echo '</u></h1>';
 
 echo '<h2>';
 echo "Author: " . $username;
