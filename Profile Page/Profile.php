@@ -43,6 +43,10 @@ body > p {
 .img-circle {
     border-radius: 50%;
 }
+.col-center {
+	float: none;
+	margin: 0 auto;
+}
 
 </style>
 
@@ -56,7 +60,7 @@ body > p {
    ?>
 
 <div class="row">
-<div class="col-sm-4 col-sm-offset-4">
+<div class="col-sm-3 col-center" Style="max-width: 100px;">
 <a href= "EditPage.php">
 <img src="squareElement.png" style="width:100%" class="img-circle">
 			<div class="centered"><h1 style="color: #fff; font-size: 50px;">
