@@ -108,7 +108,7 @@ echo "Author: " . $username;
 echo '</h2>';
 
 echo '<h2>';
-echo "Date Of Publish: " . $row['DateOfPublish'];
+echo "Date: " . $row['DateOfPublish'];
 echo '</h2>';
 ?>
 </div>
