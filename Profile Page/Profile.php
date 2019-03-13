@@ -48,9 +48,6 @@ body > p {
 	margin: 0 auto;
 }
 }
-.bottom-buffer {
-		margin-bottom:20px;
-}
 .submit-btn {
 		background-color: #660099;
 		border-radius: 5px;
@@ -85,6 +82,9 @@ body > p {
 </div>
 </a>
 </div>
+<div class="col-sm-3 col-center">
+<a class="btn btn-default btn-sm submit-btn submit-font" href="EditPage.php">Link</a>
+</div>
 </div>
 <!-- My notes Section -->
 
@@ -100,9 +100,10 @@ body > p {
 			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> All notes</h3>
 					</div>
 
-					<div class="col-sm-12">
-						<p>Delete Note:</p>
-						<form method="post">
+					<div class="col-sm-12" style="padding-top: 10px; padding-bottom: 20px; color: black;">
+						<div class="pull-right" style="width: 175px;">
+						<h4 style="color: black;">Delete Note:</h4>
+						<form method="post" class"form-inline">
 							<select name="note">
 								<option>---</option>
 	<?php
@@ -115,11 +116,11 @@ body > p {
 	<?php
 								}
 	?>
-				      </select>
-
-							<input type="submit" value="Delete" name="deleteBtn">
+					</select>
+							<input type="submit" class="btn btn-default btn-sm submit-btn submit-font" value="Delete" name="deleteBtn">
 						</form>
 					</div>
+				</div>
 
 	<?php
 				$stat = $conn->prepare("SELECT * FROM Notes");
@@ -224,7 +225,7 @@ body > p {
 								}
 	?>
 							</select>
-							<input type="submit" class="btn btn-default btn-sm submit-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
+							<input type="submit" class="btn btn-default btn-sm submit-btn submit-font" value="Delete" name="deleteBtn">
 						</form>
 					</div>
 				</div>
