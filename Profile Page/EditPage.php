@@ -14,6 +14,9 @@ session_start();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	  </head>
     <style>
+		a {
+			color: #660098;
+		}
           body {
               background-color: white;
           }
