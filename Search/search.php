@@ -101,7 +101,11 @@ body > p {
     }
     if ($stat->rowCount() == 0)
     {
-      echo "<h5>nothing found in this section</h5>";
+?>
+			<div class="col-sm-12">
+					<h4 style="font-size: 30px; padding-bottom: 15px; color: black;"> Nothing found in Unit ID</h4>
+			</div>
+<?php
     }
 ?>
 </div>
@@ -146,7 +150,11 @@ body > p {
     }
     if ($stat->rowCount() == 0 && $stat2->rowCount() == 0)
     {
-      echo "nothing found in this section";
+			?>
+						<div class="col-sm-12">
+								<h4 style="font-size: 30px; padding-bottom: 15px; color: black;"> Nothing found in Notes</h4>
+						</div>
+			<?php
     }
 ?>
 </div>
@@ -173,7 +181,11 @@ body > p {
     }
     if ($stat->rowCount() == 0)
     {
-      echo "nothing found in this section";
+			?>
+						<div class="col-sm-12">
+								<h4 style="font-size: 30px; padding-bottom: 15px; color: black;"> Nothing found in Usernames</h4>
+						</div>
+			<?php
     }
 
     ?>
