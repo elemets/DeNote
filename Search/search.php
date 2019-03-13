@@ -103,7 +103,7 @@ body > p {
     {
 ?>
 			<div class="col-sm-12">
-					<h5 style="font-size: 30px; padding-bottom: 15px; color: black;"> Nothing found in Unit ID</h5>
+					<h4 style="padding-bottom: 15px; color: black;"> Nothing found in Unit ID</h4>
 			</div>
 <?php
     }
@@ -152,7 +152,7 @@ body > p {
     {
 			?>
 						<div class="col-sm-12">
-								<h5 style="font-size: 30px; padding-bottom: 15px; color: black;"> Nothing found in Notes</h5>
+								<h4 style="padding-bottom: 15px; color: black;"> Nothing found in Notes</h4>
 						</div>
 			<?php
     }
@@ -183,7 +183,7 @@ body > p {
     {
 			?>
 						<div class="col-sm-12">
-								<h5 style="font-size: 30px; padding-bottom: 15px; color: black;"> Nothing found in Usernames</h5>
+								<h4 style="padding-bottom: 15px; color: black;"> Nothing found in Usernames</h4>
 						</div>
 			<?php
     }
