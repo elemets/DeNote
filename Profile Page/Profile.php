@@ -223,8 +223,8 @@ body > p {
 								}
 	?>
 							</select>
-<br>
-							<input type="submit" class="btn btn-default btn-sm submit-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
+							<br>
+							<input type="submit" class="btn btn-default btn-md submit-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
 						</form>
 					</div>
 
