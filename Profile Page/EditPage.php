@@ -31,9 +31,11 @@ if($_SESSION["username"] == null)
       <label for="password">Password (8+ characters, mustn't contain <>)</label>
       <br>
       <input type="password" name="newPassword" placeholder="Password" pattern="[a-zA-Z0-9!?@#$%*-/+_]{8,}">
-
+			<br>
+			<label for="password">Confirm your Password (8+ characters, mustn't contain <>)</label>
       <br>
-
+      <input type="password" name="ConfirmNewPassword" placeholder="Confirm password" pattern="[a-zA-Z0-9!?@#$%*-/+_]{8,}">
+      <br>
       <label for="year">Year of Study</label>
       <br>
       <select name="newYear">
@@ -59,10 +61,18 @@ if($_SESSION["username"] == null)
 					$newUsername = $_POST["newUsername"];
 				}
 
+				$confirmPassword = $_POST["ConfirmNewPassword"];
         $newPassword = $_POST["newPassword"];
+				if ($confirmPassword == $newPassword)
+				{
+					$valid = True;
+				}
+				else {
+				 $valid = False;
+				}
     	  $newYear = $_POST["newYear"];
 
-    	  if(edit($newUsername, $newPassword, $newYear, $oldUsername) && !exist($newUsername)) {
+    	  if(edit($newUsername, $newPassword, $newYear, $oldUsername) && !exist($newUsername) && $valid) {
           echo "I am working";
 					$_SESSION["username"] = $newUsername;
          	header('Location: ../Profile Page/Profile.php');
