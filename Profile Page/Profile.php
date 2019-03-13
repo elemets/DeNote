@@ -206,7 +206,7 @@ body > p {
 				<div class="col-sm-6">
 						<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes</h3>
 					</div>
-					<div class="col-sm-6 text-right" style="padding-top: 30px; padding-bottom: 15px; color: black;">
+					<div class="col-sm-6" style="padding-top: 30px; padding-bottom: 15px; color: black;">
 						<div class="container">
 						<h4 style="color: black;">Delete Note:</h4>
 						<form method="post" class"form-inline">
