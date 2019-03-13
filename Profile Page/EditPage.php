@@ -62,6 +62,8 @@ session_start();
 	  	require_once("database.php");
 	  ?>
 
+  <br><p style="margin-left:5%;"><a href="Profile.php">Return to Profile</a></p>
+
 		<div class="container formcenter">
 	    <div class="col-sm">
 	      <div class="form-content">
