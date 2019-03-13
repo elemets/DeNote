@@ -251,7 +251,7 @@ body > p {
 
 	?>
 	<br>
-					<div class="col-sm-2 col-xs-4">
+					<div class="col-sm-2 col-xs-6">
 						      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 									<img src="squareElement.png" style="width:100%">
 							        <div class="centered"><h2 style="color: #fff;">
