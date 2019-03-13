@@ -126,27 +126,51 @@ body > p {
 											</a>
 									</div>
 <?php
-
     }
 
     $stat2 = $conn->prepare("SELECT * FROM Notes WHERE SectionNumber LIKE '%$searchWord%'");
     $stat2->execute();
     while($row = $stat2->fetch())
     {
-              echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
+?>
+							<div class="col-sm-2 col-xs-6">
+											<a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
+											<img src="squareElement.png" style="width:100%">
+													<div class="centered"><h3 style="color: #fff;">
+											<?php echo $row['TitleNote']?></h3>
+										</div>
+											</a>
+									</div>
+<?php
+
     }
     if ($stat->rowCount() == 0 && $stat2->rowCount() == 0)
     {
       echo "nothing found in this section";
     }
+?>
+</div>
 
-
+<div class="row">
+	<div class="col-sm-12">
+			<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> Notes</h3>
+		</div>
+<?php
     echo "<h1> Username </h1>";
     $stat = $conn->prepare("SELECT * FROM Users WHERE Username LIKE '%$searchWord%' AND Username != 'ADMIN'");
     $stat->execute();
     while($row = $stat->fetch())
     {
-            echo "<li><a  href='../Profile Page/profile2.php?id=".$row['UserID']."'>".$row['Username']."</a></li>";
+?>
+						<div class="col-sm-2 col-xs-6">
+									<a <?php echo "href='../Profile Page/profile2.php?id=".$row['UserID']."'>"; ?>
+											<img src="squareElement.png" style="width:100%" class="img-circle">
+														<div class="centered"><h3 style="color: #fff;">
+									<?php echo $row['Username']?></h3>
+										</div>
+					     		</a>
+			         	</div>
+<?php
     }
     if ($stat->rowCount() == 0)
     {
@@ -154,6 +178,9 @@ body > p {
     }
 
     ?>
+</div>
+
+
 </div>
 </body>
 <?php
