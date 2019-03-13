@@ -49,12 +49,12 @@ body > p {
 }
 }
 .submit-btn {
-		background-color: #660099 !important;
-		border-radius: 5px !important;
+		background-color: #660099;
+		border-radius: 5px;
 }
 .submit-btn:hover {
-		background-color: #660099 !important;
-		border-radius: 5px !important;
+		background-color: #660099;
+		border-radius: 5px;
 }
 .submit-font {
 		color:#ffffff;
