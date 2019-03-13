@@ -80,7 +80,7 @@ body > p {
 <div class="col-sm-3 col-center" Style="max-width: 350px;">
 <a href= "EditPage.php">
 <img src="squareElement.png" style="width:100%" class="img-circle">
-			<div class="centered"><h1 style="color: #fff; font-size: 50px;">
+			<div class="centered"><h1 style="color: #fff; font-size: 40px;">
 <?php echo $_SESSION['username']; ?>
 </div>
 </a>
