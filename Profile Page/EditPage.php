@@ -105,6 +105,7 @@ session_start();
       </select>
 		</div>
 
+    <br>
 		<div class="form-group">
 		<input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit">
 		</div>
