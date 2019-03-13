@@ -13,7 +13,6 @@ if($_SESSION["username"] == null)
 <div id="top" class="container-fluid">
 
 <?php
-session_start();
 if($_SESSION["username"] == null)
 {
 	header('Location: ../index.html');
