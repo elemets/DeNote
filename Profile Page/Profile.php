@@ -83,7 +83,7 @@ body > p {
 </a>
 </div>
 <div class="col-sm-3 col-center">
-<a class="btn btn-default btn-sm submit-btn submit-font" href="EditPage.php">Link</a>
+<a class="btn btn-block btn-default btn-sm submit-btn submit-font" href="EditPage.php">Link</a>
 </div>
 </div>
 <!-- My notes Section -->
