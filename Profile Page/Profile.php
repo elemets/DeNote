@@ -48,6 +48,9 @@ body > p {
 	margin: 0 auto;
 }
 }
+.bottom-buffer {
+		margin-bottom:20px;
+}
 .submit-btn {
 		background-color: #660099;
 		border-radius: 5px;
@@ -82,7 +85,9 @@ body > p {
 </div>
 </a>
 </div>
-
+<div class="col-sm-3 col-center">
+<a class="btn btn-primary" href="#" role="button">Link</a>
+</div>
 </div>
 <!-- My notes Section -->
 
@@ -115,7 +120,7 @@ body > p {
 								}
 	?>
 					</select>
-							<input type="submit" class="btn btn-default btn-sm submit-btn submit-font" value="Delete" name="deleteBtn">
+							<input type="submit" class="btn btn-default btn-sm submit-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
 						</form>
 					</div>
 				</div>
@@ -223,7 +228,7 @@ body > p {
 								}
 	?>
 							</select>
-							<input type="submit" class="btn btn-default btn-sm submit-btn submit-font" value="Delete" name="deleteBtn">
+							<input type="submit" class="btn btn-default btn-sm submit-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
 						</form>
 					</div>
 				</div>
