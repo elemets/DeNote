@@ -1,4 +1,18 @@
 <?php
+require_once("../Header - Footer/header.php");
+session_start();
+if($_SESSION["username"] == null)
+{
+	header('Location: ../index.html');
+}
+?>
+<title>Profile</title>
+<style>
+</style>
+<body>
+<div id="top" class="container-fluid">
+
+<?php
 session_start();
 if($_SESSION["username"] == null)
 {
@@ -42,25 +56,16 @@ if($_SESSION["username"] == null)
 
 
     echo "<h1> Notes </h1>";
-    $stat = $conn->prepare("SELECT * FROM Notes WHERE FileName LIKE '%$searchWord%'");
-    $stat->execute();
-    while($row = $stat->fetch())
-    {
-      	 echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
-    }
-
-
-
-
-
     $stat = $conn->prepare("SELECT * FROM Notes WHERE TitleNote LIKE '%$searchWord%'");
     $stat->execute();
     while($row = $stat->fetch())
     {
               echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['TitleNote']."</a></li>";
     }
-
-
+		if ($stat->rowCount() == 0)
+		{
+			echo "nothing found in this section";
+		}
 
     $stat = $conn->prepare("SELECT * FROM Notes WHERE SectionNumber LIKE '%$searchWord%'");
     $stat->execute();
@@ -68,8 +73,6 @@ if($_SESSION["username"] == null)
     {
               echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
     }
-
-
 
 
     echo "<h1> Username </h1>";
@@ -85,5 +88,9 @@ if($_SESSION["username"] == null)
     }
 
     ?>
-  </body>
+</div>
+</body>
+<?php
+require_once("../Header - Footer/footer.html");
+?>
 </html>
