@@ -1,4 +1,4 @@
-<?php
+-fluid<?php
 // Start the session
 session_start();
 ?>
@@ -53,7 +53,7 @@ session_start();
 
 <body>
   <nav class="navbar">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand" href="../index.html"><img src="../Welcome Page/logo_white.png"  height="23.5"> </a>
     </div>
   </nav>
