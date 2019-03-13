@@ -82,7 +82,7 @@ body > p {
 </div>
 </a>
 </div>
-<div class="col-sm-3 col-center">
+<div class="col-sm-3 col-center" style="padding-top: 30px;">
 <a class="btn btn-block btn-default btn-sm submit-btn submit-font" href="EditPage.php">Link</a>
 </div>
 </div>
