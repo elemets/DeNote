@@ -209,6 +209,7 @@ body > p {
 					<div class="col-sm-6" style="padding-top: 30px; padding-bottom: 15px; color: black;">
 						<h4 style="color: black;">Delete Note:</h4>
 						<form method="post">
+							<div class="form-group form-inline">
 							<select name="note">
 								<option>---</option>
 	<?php
@@ -223,8 +224,10 @@ body > p {
 								}
 	?>
 							</select>
-							<br>
-							<input type="submit" class="btn btn-default btn-lg submit-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
+						</div>
+					<div class="form-group">
+							<input type="submit" class="btn btn-default submit-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
+						</div>
 						</form>
 					</div>
 
