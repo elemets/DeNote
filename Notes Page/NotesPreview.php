@@ -109,7 +109,7 @@ echo '</h2>';
 
 echo '<h2>';
 echo "Date: " . $row['DateOfPublish'];
-echo '</h2>';
+echo '</h2><br>';
 ?>
 </div>
 </div>
