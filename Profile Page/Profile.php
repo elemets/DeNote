@@ -254,14 +254,13 @@ body > p {
 					}
 
 	?>
-	<br>
 					<div class="col-sm-2 col-xs-6">
 						      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 									<img src="squareElement.png" style="width:100%">
 							        <div class="centered"><h3 style="color: #fff;">
 									<?php echo $row['TitleNote'];?>
-									</br> Likes: <?php echo $counterLikes; ?>
-								</br> Dislikes: <?php echo $counterDislikes; ?></h3></div>
+									<br> Likes: <?php echo $counterLikes; ?>
+								<br> Dislikes: <?php echo $counterDislikes; ?></h3></div>
 								  </a>
 				        </div>
 	<?php
