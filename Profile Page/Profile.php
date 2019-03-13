@@ -203,10 +203,10 @@ body > p {
 	<!-- Admin End---->
 
 			<div class="row">
-				<div class="col-sm-6 col-xs-6">
+				<div class="col-sm-12">
 						<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes</h3>
 					</div>
-					<div class="col-sm-6 col-xs-6" style="padding-top: 30px; padding-bottom: 15px; color: black;">
+					<div class="col-sm-12" style="padding-top: 30px; padding-bottom: 15px; color: black;">
 						<div class="pull-right" style="width: 175px;">
 						<h4 style="color: black;">Delete Note:</h4>
 						<form method="post" class"form-inline">
