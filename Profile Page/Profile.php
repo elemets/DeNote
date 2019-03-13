@@ -103,7 +103,7 @@ body > p {
 			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> All notes</h3>
 					</div>
 
-					<div class="col-sm-12" style="padding-top: 10px; padding-bottom: 20px; color: black;">
+					<div class="col-sm-12" style="padding-top: 10px; padding-bottom: 30px; color: black;">
 						<div class="pull-right" style="width: 175px;">
 						<h4 style="color: black;">Delete Note:</h4>
 						<form method="post" class"form-inline">
@@ -145,11 +145,11 @@ body > p {
 					}
 
 		?>
-					<div class="col-sm-2">
+					<div class="col-sm-2 col-xs-6">
 						      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 									<img src="squareElement.png" style="width:100%">
-							        <div class="centered"><h2 style="color: #fff;">
-									<?php echo $row['TitleNote'];?>
+							        <div class="centered"><h3 style="color: #fff;">
+									<?php echo $row['TitleNote'];?></h3>
 									</br> Likes: <?php echo $counterLikes; ?>
 									</br> Dislikes: <?php echo $counterDislikes; ?></h2></div>
 								  </a>
@@ -184,11 +184,11 @@ body > p {
 				         for($counter = 0; $counter < $numberOfUser; $counter++)
 				         {
 	?>
-										<div class="col-sm-2">
+										<div class="col-sm-2 col-xs-6">
 						         	<a href= "<?php echo $links[$counter]; ?>">
 						        	<img src="squareElement.png" style="width:100%" class="img-circle">
-														<div class="centered"><h2 style="color: #fff;">
-						         				<?php echo $usernameArray[$counter]; ?>
+														<div class="centered"><h3 style="color: #fff;">
+						         				<?php echo $usernameArray[$counter]; ?></h3>
 									 						</div>
 									 		</a>
 								 		</div>
@@ -303,8 +303,8 @@ body > p {
 						<div class="col-sm-2 col-xs-6">
 		         	<a href= "<?php echo $links[$counter]; ?>">
 		        	<img src="squareElement.png" style="width:100%" class="img-circle">
-										<div class="centered"><h2 style="color: #fff;">
-		         				<?php echo $usernameArray[$counter]; ?>
+										<div class="centered"><h3 style="color: #fff;">
+		         				<?php echo $usernameArray[$counter]; ?></h3>
 					 						</div>
 					 		</a>
 				 		</div>
@@ -344,8 +344,8 @@ body > p {
 						<div class="col-sm-2 col-xs-6">
 				 			<a href= "<?php echo $links[$counter]; ?>">
 									<img src="squareElement.png" style="width:100%" class="img-circle">
-								<div class="centered"><h2 style="color: #fff;">
-				 				<?php echo $usernameArray[$counter]; ?>
+								<div class="centered"><h3 style="color: #fff;">
+				 				<?php echo $usernameArray[$counter]; ?></h3>
 			 					</div>
 			 				</a>
 		 				</div>
