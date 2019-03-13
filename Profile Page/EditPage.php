@@ -43,8 +43,8 @@ session_start();
               background-color: #660099;
           }
  	        .formcenter {
-              min-height: 90%;  /* Fallback for browsers do NOT support vh unit */
-   	          min-height: 90vh; /* These two lines are counted as one :-)       */
+              min-height: 80%;  /* Fallback for browsers do NOT support vh unit */
+   	          min-height: 80vh; /* These two lines are counted as one :-)       */
               width: auto;
   	          display: flex;
   	          align-items: center;
