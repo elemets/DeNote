@@ -116,9 +116,18 @@ body > p {
     $stat->execute();
     while($row = $stat->fetch())
     {
-              echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['TitleNote']."</a></li>";
-    }
+?>
+							<div class="col-sm-2 col-xs-6">
+											<a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
+											<img src="squareElement.png" style="width:100%">
+													<div class="centered"><h3 style="color: #fff;">
+											<?php echo $row['TitleNote']?></h3>
+										</div>
+											</a>
+									</div>
+<?php
 
+    }
 
     $stat2 = $conn->prepare("SELECT * FROM Notes WHERE SectionNumber LIKE '%$searchWord%'");
     $stat2->execute();
