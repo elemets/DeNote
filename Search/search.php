@@ -11,8 +11,13 @@ if($_SESSION["username"] == null)
 </style>
 <body>
 <div id="top" class="container-fluid">
+
+	<div class="row">
+		<div class="col-sm-12">
+				<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> Unit ID</h3>
+			</div>
+
  <?php
-    echo "<h1> UnitID </h1>";
     require_once('config.inc.php');
     $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
     // $conn = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
@@ -25,22 +30,31 @@ if($_SESSION["username"] == null)
       if (!in_array($row['UnitID'], $UnitIDInField))
       {
 ?>
-             <?php  echo"<li><a href='../User Home Page/ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
-            <?php echo $row['UnitID']?>
-            </a></li>
-            </br>
+						<div class="col-sm-2 col-xs-6">
+							      <a <?php echo "href='../User Home Page/ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
+										<img src="squareElement.png" style="width:100%">
+								        <div class="centered"><h3 style="color: #fff;">
+										<?php echo $row['UnitID']?></h3>
+									</div>
+									  </a>
+					      </div>
 <?php
             array_push($UnitIDInField, $row['UnitID']);
       }
     }
     if ($stat->rowCount() == 0)
     {
-      echo "nothing found in this section";
+      echo "<h5>nothing found in this section</h5>";
     }
+?>
+</div>
 
 
-
-    echo "<h1> Notes </h1>";
+<div class="row">
+	<div class="col-sm-12">
+			<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> Notes</h3>
+		</div>
+<?php
     $stat = $conn->prepare("SELECT * FROM Notes WHERE TitleNote LIKE '%$searchWord%'");
     $stat->execute();
     while($row = $stat->fetch())
