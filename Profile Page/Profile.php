@@ -189,7 +189,7 @@ body > p {
 				<div class="col-sm-6">
 						<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes</h3>
 					</div>
-					<div class="col-sm-6">
+					<div class="col-sm-6" style="padding-top: 30px; padding-bottom: 15px; color: black;">
 						<p>Delete Note:</p>
 						<form method="post">
 							<select name="note">
