@@ -1,11 +1,4 @@
 <?php
-session_start();
-if($_SESSION["username"] == null)
-{
-	header('Location: ../index.html');
-}
-?>
-<?php
 // Start the session
 session_start();
 ?>
