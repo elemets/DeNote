@@ -296,7 +296,7 @@ body > p {
          for($counter = 0; $counter < $count; $counter++)
          {
 ?>
-						<div class="col-sm-2 col-xs-4">
+						<div class="col-sm-2 col-xs-6">
 		         	<a href= "<?php echo $links[$counter]; ?>">
 		        	<img src="squareElement.png" style="width:100%" class="img-circle">
 										<div class="centered"><h2 style="color: #fff;">
@@ -337,7 +337,7 @@ body > p {
          for($counter = 0; $counter < $count; $counter++)
          {
 ?>
-						<div class="col-sm-2 col-xs-4">
+						<div class="col-sm-2 col-xs-6">
 				 			<a href= "<?php echo $links[$counter]; ?>">
 									<img src="squareElement.png" style="width:100%" class="img-circle">
 								<div class="centered"><h2 style="color: #fff;">
