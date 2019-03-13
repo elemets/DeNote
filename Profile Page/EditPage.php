@@ -72,10 +72,13 @@ session_start();
 		<div class="form-body">
 	       <form class="form-horizontal" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 
+		<div class="form-body form-check">
+					 <input type="checkbox" class="form-control form-element form-check-input" name="box" id="box" value="withName">
+	 				<label for="box" class="form-check-label"> I want to change username too</label>
+    </div>
+
 	  <div class="form-group">
         <label for="username"> New Username (mustn't contain <>)</label>
-				<input type="checkbox" class="form-control form-element form-check-input" name="box" id="box" value="withName">
-				<label for="box" class="form-check-label"> I want to change username too</label>
         <input type="textbox" class="form-control form-element" name="newUsername" id="text" placeholder="Username" pattern="[^<>]+" value="<?php echo $_SESSION['username'];?>" disabled>
     </div>
 
