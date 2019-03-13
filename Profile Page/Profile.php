@@ -47,7 +47,19 @@ body > p {
 	float: none;
 	margin: 0 auto;
 }
-
+}
+.bottom-buffer {
+		margin-bottom:20px;
+}
+.submit-btn {
+		background-color: #660099;
+}
+.submit-font {
+		color:#ffffff;
+}
+.submit-font:hover {
+		color:#ecaa33;
+}
 </style>
 
 <body>
@@ -207,7 +219,7 @@ body > p {
 	?>
 							</select>
 
-							<input type="submit" value="Delete" name="deleteBtn">
+							<input type="submit" class="btn btn-default btn-lg submit-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
 						</form>
 					</div>
 
