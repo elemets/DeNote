@@ -53,11 +53,11 @@ body > p {
 }
 .submit-btn {
 		background-color: #660099;
-		border-radius: 10px;
+		border-radius: 5px;
 }
 .submit-btn:hover {
 		background-color: #660099;
-		border-radius: 10px;
+		border-radius: 5px;
 }
 .submit-font {
 		color:#ffffff;
