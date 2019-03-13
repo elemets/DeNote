@@ -77,7 +77,7 @@ body > p {
    ?>
 
 <div class="row">
-<div class="col-sm-3 col-center" Style="width: 350px;">
+<div class="col-sm-3 col-center" Style="max-width: 350px;">
 <a href= "EditPage.php">
 <img src="squareElement.png" style="width:100%" class="img-circle">
 			<div class="centered"><h1 style="color: #fff; font-size: 50px;">
