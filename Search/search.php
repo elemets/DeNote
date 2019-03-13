@@ -71,7 +71,7 @@ body > p {
 
 	<div class="row">
 		<div class="col-sm-12">
-				<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> Unit ID</h3>
+				<h3 style="font-size: 30px; padding-bottom: 15px; color: black;"> Unit ID</h3>
 			</div>
 
  <?php
