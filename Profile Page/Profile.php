@@ -103,7 +103,7 @@ body > p {
 			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> All notes</h3>
 					</div>
 
-					<div class="col-sm-12" style="padding-top: 10px; padding-bottom: 100px; color: black;">
+					<div class="col-sm-12" style="padding-top: 10px; margin-bottom: 10px; color: black;">
 						<div class="pull-right" style="width: 175px;">
 						<h4 style="color: black;">Delete Note:</h4>
 						<form method="post" class"form-inline">
