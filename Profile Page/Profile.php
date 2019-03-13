@@ -207,6 +207,7 @@ body > p {
 						<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes</h3>
 					</div>
 					<div class="col-sm-6 text-right" style="padding-top: 30px; padding-bottom: 15px; color: black;">
+						<div class="container">
 						<h4 style="color: black;">Delete Note:</h4>
 						<form method="post" class"form-inline">
 							<select name="note">
@@ -226,6 +227,7 @@ body > p {
 							<input type="submit" class="btn btn-default btn-sm submit-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
 						</form>
 					</div>
+				</div>
 
 	<?php
 				$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
