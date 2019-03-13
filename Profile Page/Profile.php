@@ -208,8 +208,8 @@ body > p {
 					</div>
 					<div class="col-sm-6" style="padding-top: 30px; padding-bottom: 15px; color: black;">
 						<h4 style="color: black;">Delete Note:</h4>
-						<form method="post">
-							<div class="form-group form-inline">
+						<form method="post" class"form-inline">
+							<div class="form-group">
 							<select name="note">
 								<option>---</option>
 	<?php
