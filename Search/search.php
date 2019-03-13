@@ -62,16 +62,17 @@ if($_SESSION["username"] == null)
     {
               echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['TitleNote']."</a></li>";
     }
-		if ($stat->rowCount() == 0)
-		{
-			echo "nothing found in this section";
-		}
 
-    $stat = $conn->prepare("SELECT * FROM Notes WHERE SectionNumber LIKE '%$searchWord%'");
-    $stat->execute();
-    while($row = $stat->fetch())
+
+    $stat2 = $conn->prepare("SELECT * FROM Notes WHERE SectionNumber LIKE '%$searchWord%'");
+    $stat2->execute();
+    while($row = $stat2->fetch())
     {
               echo "<li><a  href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>".$row['FileName']."</a></li>";
+    }
+    if ($stat->rowCount() == 0 && $stat2->rowCount() == 0)
+    {
+      echo "nothing found in this section";
     }
 
 
