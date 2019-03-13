@@ -85,7 +85,7 @@ body > p {
 </div>
 </a>
 </div>
-<div class="col-sm-3 col-center" style="padding=top: 30px;">
+<div class="col-sm-3 col-center" style="padding-top: 30px;">
 <a class="btn btn-default btn-block btn-sm submit-btn submit-font bottom-buffer" href="EditPage.php">Edit Profile</a>
 </div>
 </div>
