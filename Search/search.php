@@ -153,10 +153,9 @@ body > p {
 
 <div class="row">
 	<div class="col-sm-12">
-			<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> Notes</h3>
+			<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> Usernames</h3>
 		</div>
 <?php
-    echo "<h1> Username </h1>";
     $stat = $conn->prepare("SELECT * FROM Users WHERE Username LIKE '%$searchWord%' AND Username != 'ADMIN'");
     $stat->execute();
     while($row = $stat->fetch())
