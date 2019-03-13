@@ -100,7 +100,7 @@ body > p {
 	?>
 		<div class="row">
 				<div class="col-sm-12">
-			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> All notes</h3>
+			      <h3 style="font-size: 30px; padding-top: 15px; padding-bottom: 15px; color: black;"> All notes</h3>
 					</div>
 
 					<div class="col-sm-12" style="padding-top: 10px; padding-bottom: 20px; color: black;">
@@ -208,7 +208,7 @@ body > p {
 
 			<div class="row">
 				<div class="col-sm-12">
-						<h3 style="font-size: 30px; padding-top: 30px; color: black;">My notes</h3>
+						<h3 style="font-size: 30px; padding-top: 15px; color: black;">My notes</h3>
 					</div>
 					<div class="col-sm-12" style="padding-top: 10px; padding-bottom: 20px; color: black;">
 						<div class="pull-right" style="width: 175px;">
