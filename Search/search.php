@@ -8,6 +8,63 @@ if($_SESSION["username"] == null)
 ?>
 <title>Profile</title>
 <style>
+body {
+	padding-top: 50px;
+}
+body > p {
+	text-align: center;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+	text-align: center;
+}
+.col-sm-2 {
+	padding-bottom: 30px;
+}
+.col-sm-12 h3 {
+	font-size: 19px;
+	text-transform: uppercase;
+	color: white;
+	font-weight: 400;
+	padding: 0px;
+	margin: 0px;
+}
+.col-sm-12 p {
+	font-size: 19px;
+	text-transform: uppercase;
+	color: red;
+	font-weight: 400;
+	padding: 0px;
+	margin: 0px;
+}
+.img-circle {
+    border-radius: 50%;
+}
+.col-center {
+	float: none;
+	margin: 0 auto;
+}
+}
+.bottom-buffer {
+		margin-bottom:20px;
+}
+.submit-btn {
+		background-color: #660099;
+		border-radius: 5px;
+}
+.submit-btn:hover {
+		background-color: #660099;
+		border-radius: 5px;
+}
+.submit-font {
+		color:#ffffff;
+}
+.submit-font:hover {
+		color:#ecaa33;
+}
 </style>
 <body>
 <div id="top" class="container-fluid">
