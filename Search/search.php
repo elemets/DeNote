@@ -11,20 +11,6 @@ if($_SESSION["username"] == null)
 </style>
 <body>
 <div id="top" class="container-fluid">
-
-<?php
-if($_SESSION["username"] == null)
-{
-	header('Location: ../index.html');
-}
-?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
  <?php
     echo "<h1> UnitID </h1>";
     require_once('config.inc.php');
