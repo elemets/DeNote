@@ -186,10 +186,10 @@ body > p {
 	<!-- Admin End---->
 
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-sm-6">
 						<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;">My notes</h3>
 					</div>
-					<div class="col-sm-12">
+					<div class="col-sm-6">
 						<p>Delete Note:</p>
 						<form method="post">
 							<select name="note">
