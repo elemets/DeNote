@@ -25,9 +25,9 @@ if($_SESSION["username"] == null)
       if (!in_array($row['UnitID'], $UnitIDInField))
       {
 ?>
-            <a <?php  echo"<a href='../User Home Page/ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
+             <?php  echo"<li><a href='../User Home Page/ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
             <?php echo $row['UnitID']?>
-            </a>
+            </a></li>
             </br>
 <?php
             array_push($UnitIDInField, $row['UnitID']);
