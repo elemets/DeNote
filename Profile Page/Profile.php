@@ -54,6 +54,9 @@ body > p {
 .submit-btn {
 		background-color: #660099;
 }
+.submit-btn:hover {
+		background-color: #660099;
+}
 .submit-font {
 		color:#ffffff;
 }
