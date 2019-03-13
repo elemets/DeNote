@@ -143,7 +143,16 @@ session_start();
 					$_SESSION["username"] = $newUsername;
          	header('Location: ../Profile Page/Profile.php');
     	  } else {
-          echo "Wrong";
+          ?>
+        	    <div class="fixed-top" style="padding-top: 53px">
+        	      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <strong>Error:</strong> Your passwords do not match.
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              </div>
+          <?php
         }
       }
     ?>
