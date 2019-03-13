@@ -73,7 +73,7 @@ session_start();
 	       <form class="form-horizontal" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 
 		<div class="form-body form-check">
-					 <input type="checkbox" class="form-control form-element form-check-input" name="box" id="box" value="withName">
+					 <input type="checkbox" class="form-check-input" name="box" id="box" value="withName">
 	 				<label for="box" class="form-check-label"> I want to change username too</label>
     </div>
 
