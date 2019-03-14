@@ -215,7 +215,7 @@
                       alert("Only JPG and PDF files are allowed!");
                       $("#file-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
                       return;
-                  }
+                  } else {
 
                   var fileReader = new FileReader();
                   fileReader.onload = function(e) {
@@ -227,10 +227,11 @@
                          && int32View[4]==0x2d) {
                           alert("ok!");
                       } else {
-                          alert("only valid JPG and PDF files");
+                          alert("Only JPG and PDF files are allowed!");
                           $("#file-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
                           return;
                       }
+                    }
                   };
                   fileReader.readAsArrayBuffer(file);
               });
