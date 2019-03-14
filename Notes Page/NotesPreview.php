@@ -287,7 +287,9 @@ else
 <script type="text/javascript">
 $(function(){
 	var username = "boi";
-	document.getElementById('hcb_form_name').setAttribute('value', 'username');
+	var value = $("#hcb_form_name").val();
+	value = "username";
+
 });
 </script>
 </body>
