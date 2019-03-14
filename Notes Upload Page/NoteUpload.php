@@ -27,7 +27,7 @@
         element.classList.add("active");
       }
     });
-    
+
   </script>
   <style>
     .bottom-buffer {
@@ -66,12 +66,12 @@
         // Connect to the database
          $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
          $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
-        
+
          $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        
+
         if(isset($_POST['btn']))
         {
-        
+
           $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
           $unitYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->YearOfStudent;
           $name = $_FILES['requiredFile']['name'];
@@ -79,7 +79,7 @@
           $titleNote = $_POST["title"];
           $unitID = $_POST["UnitID"];
           $sectionNumber = $_POST["sectionNumber"];
-        
+
           if(validateUpload($unitID, $sectionNumber) && isset($_POST['box']))
           {
           $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
@@ -97,19 +97,19 @@
           else
         {
         ?>
-      <div class="fixed-top" style="padding-top: 53px">
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-          <strong>Error:</strong> Check that you entered the correct username and password.
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-      </div>
+
       <?php
         }
          }
         ?>
-
+        <div class="fixed-top" style="padding-top: 53px">
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error:</strong> Check that you entered the correct username and password.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
       <div class="container">
         <div class="form-content">
           <h2 style="padding-top:30px;">Upload</h2>
@@ -207,7 +207,7 @@
           else
             return true;
         }
-        
+
          ?>
     </div>
   </body>
