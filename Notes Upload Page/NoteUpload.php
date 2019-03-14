@@ -225,7 +225,7 @@
                       if(int32View.length>4 && int32View[0]==0xFF && int32View[1]==0xD8 && int32View[2]==0xFF && int32View[3]==0xE0
                          || int32View[0]==0x25 && int32View[1]==0x50 && int32View[2]==0x44 && int32View[3]==0x46
                          && int32View[4]==0x2d) {
-                          alert("ok!");
+                          //alert("ok!");
                       } else {
                           alert("Only JPG and PDF files are allowed!");
                           $("#file-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
