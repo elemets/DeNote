@@ -8,6 +8,7 @@ if($_SESSION["username"] == null)
 ?>
 <title>Note Preview Page</title>
 <style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 body {
 	padding-top: 50px;
 }
@@ -287,7 +288,7 @@ else
 <script type="text/javascript">
 $(function(){
 
-	$("hcb_form_name").val("username");
+	$("#hcb_form_name").val("username");
 
 });
 </script>
