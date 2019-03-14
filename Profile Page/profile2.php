@@ -62,7 +62,7 @@ padding: 0px 0px;
     $result = $conn->query($deleteQuery);
     $deleteFollow = "DELETE FROM `Followers` WHERE FollowerUserID = '$userID'";
     $result = $conn->query($deleteFollow);
-    $deleteUser = "DELETE FROM `Users` WHERE `UserID` = '$userID'";
+    $deleteUser = "DELETE FROM `Users` WHERE UserID = $userID";
     $result = $conn->query($deleteUser);
     header('Location: Profile.php');
   }
