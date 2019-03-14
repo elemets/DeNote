@@ -20,6 +20,8 @@
       position: absolute;
       top: 50%;
       left: 50%;
+      background-color:rgba(0, 0, 0, 0.7);
+      padding: 20px;
       transform: translate(-50%, -75%);
       text-align: center;
     }
@@ -56,9 +58,9 @@
           ?>
         <div class="col-sm-3 col-xs-6">
           <a <?php echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
-          <img src="<?php echo $img ?>" style="width:100%; opacity: 1; filter: alpha(opacity=100);">
+          <img src="<?php echo $img ?>" style="width:100%;">
           <div class="centered">
-            <h2 style="color: #fff; background-color:rgba(0, 0, 0, 0.7); padding: 10px 10px;"><?php echo $row['UnitID'] ?></h2>
+            <h2 style="color: #fff;"><?php echo $row['UnitID'] ?></h2>
           </div>
           </a>
         </div>
