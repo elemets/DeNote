@@ -20,8 +20,8 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      background-color:rgba(0, 0, 0, 0.7);
-      padding: 20px;
+      background-color:rgba(0, 0, 0, 0.8);
+      padding: 15%;
       transform: translate(-50%, -75%);
       text-align: center;
     }
