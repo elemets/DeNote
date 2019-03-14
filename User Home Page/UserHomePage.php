@@ -20,7 +20,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      background-color:rgba(0, 0, 0, 0.8);
+      background-color:rgba(255, 255, 255, 0.8);
       padding: 15px 10% 15px 10%;
       transform: translate(-50%, -75%);
       text-align: center;
@@ -60,7 +60,7 @@
           <a <?php echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
           <img src="<?php echo $img ?>" style="width:100%;">
           <div class="centered">
-            <h2 style="color: #fff;"><?php echo $row['UnitID'] ?></h2>
+            <h2 style="color: #000;"><?php echo $row['UnitID'] ?></h2>
           </div>
           </a>
         </div>
