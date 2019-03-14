@@ -83,6 +83,7 @@ body > p {
 require_once('config.inc.php');
 $syn = "SELECT Username FROM Users WHERE UserID =" . $_GET['id'];
 $userID = $_GET['id'];
+$conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
 $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
 $userIDmain = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
 if($userIDmain == $userID)
