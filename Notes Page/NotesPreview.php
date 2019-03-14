@@ -287,7 +287,7 @@ else
 <script type="text/javascript">
 $(function(){
 
-	$("#hcb_form_name").val("username");
+	$("hcb_form_name").val("username");
 
 });
 </script>
