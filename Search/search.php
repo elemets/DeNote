@@ -23,7 +23,7 @@
     outline-style: solid;
     outline-color: #000;
     background-color:rgba(255, 255, 255, 0.9);
-    padding: 15px 10% 15px 10%;
+    padding: 15px 8% 15px 8%;
     transform: translate(-50%, -75%);
     text-align: center;
   }
