@@ -92,6 +92,16 @@
           $stmt->bindParam(7, $titleNote);
           $stmt->bindParam(8, $unitYear);
           $stmt->execute();
+?>
+          <div class="fixed-top" style="padding-top: 0px">
+          <div class="alert alert-danger alert-dismissible" role="alert">
+             You have successfully uploaded a file.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+<?php
           }
           else
         {
