@@ -171,7 +171,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")-
 
 
   <div class="">
-    <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"> <?php echo $count;?> Followings</h3>
+    <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"> <?php echo $count;?> Following</h3>
     <div class="jumbotron Container-fluid">
         <?php
          for($counter = 0; $counter < $count; $counter++)
