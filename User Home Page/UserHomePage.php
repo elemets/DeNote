@@ -21,7 +21,7 @@
       top: 50%;
       left: 50%;
       background-color:rgba(0, 0, 0, 0.8);
-      padding: 0% 50% 0% 50%;
+      padding: 10px 25% 10px 25%;
       transform: translate(-50%, -75%);
       text-align: center;
     }
