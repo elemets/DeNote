@@ -295,7 +295,7 @@ require_once("../Header - Footer/footer.html");
 
 <script type="text/javascript">
 $(function(){
-	var username = $username;
-	document.getElementById("hcb_form_name").value = username; 
+	var username = "boi";
+	document.getElementById($hcb_form_name).value = username;
 });
 </script>
