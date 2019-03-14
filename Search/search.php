@@ -96,7 +96,7 @@ body > p {
 $img = "../User Home Page/Images/" . $row['UnitID'] . ".png";
 ?>
 
-						<div class="col-sm-3 col-xs-6">
+						<div class="col-sm-2 col-xs-6">
           <a <?php echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
           <img src="<?php echo $img ?>" style="width:100%;">
           <div class="centered">
