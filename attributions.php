@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <title>Attributions</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="universalStyleSheet.css">
 </head>
 <?php
 require_once("Header - Footer/header.php");
