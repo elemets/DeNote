@@ -21,6 +21,7 @@
       top: 50%;
       left: 50%;
       outline-style: solid;
+      outline-color: #000;
       background-color:rgba(255, 255, 255, 0.8);
       padding: 15px 10% 15px 10%;
       transform: translate(-50%, -75%);
