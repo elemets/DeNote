@@ -26,8 +26,8 @@
     .col-sm-3 {
     padding-bottom: 30px;
     }
-    icol-sm-3 col-xs-6:hover {
-    opacity: 0.9;  
+    img:hover {
+    opacity: 1;  
     }
   </style>
 
