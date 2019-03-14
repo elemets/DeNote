@@ -59,6 +59,14 @@ body > p {
 		background-color: #660099;
 		border-radius: 5px;
 }
+.delete-btn {
+	background-color: #D90000;
+	border-radius: 5px;
+}
+.delete-btn:hover {
+	background-color: #D90000;
+	border-radius: 5px;
+}
 .submit-font {
 		color:#ffffff;
 }
@@ -122,7 +130,7 @@ body > p {
 								}
 	?>
 					</select>
-							<input type="submit" class="btn btn-default btn-sm submit-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
+							<input type="submit" class="btn btn-default btn-sm delete-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
 						</form>
 					</div>
 				</div>
