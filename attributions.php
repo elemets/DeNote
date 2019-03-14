@@ -1,4 +1,3 @@
-<link rel="stylesheet" type"text/css" href="../universalStyleSheet.css">
 <?php
 require_once("./Header - Footer/header.php");
 ?>
