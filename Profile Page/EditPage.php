@@ -58,7 +58,7 @@ session_start();
   <body>
 		<nav class="navbar">
 	    <div class="container-fluid">
-	      <a class="navbar-brand" href="../index.html"><img src="../Welcome Page/logo_white.png"  height="23.5"> </a>
+	      <a class="navbar-brand" href="../User Home Page/UserHomePage.php"><img src="../Welcome Page/logo_white.png"  height="23.5"> </a>
 	    </div>
 	  </nav>
 	  <?php
