@@ -1,11 +1,11 @@
+<?php
+require_once("Header - Footer/header.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Attributions</title>
 </head>
-<?php
-require_once("Header - Footer/header.php");
-?>
 <style>
 body {
 	padding-top: 60px;
