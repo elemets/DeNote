@@ -28,6 +28,7 @@
     }
     icol-sm-3 col-xs-6:hover {
     outline-style: solid;  
+    outline-width: medium;
     }
   </style>
 
