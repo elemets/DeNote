@@ -1,5 +1,5 @@
 <?php
-require_once("./Header - Footer/header.php");
+require_once("../Header - Footer/header.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,6 +57,6 @@ body {
 
   </body>
 <?php
-require_once("./Header - Footer/footer.html");
+require_once("../Header - Footer/footer.html");
 ?>
 </html>
