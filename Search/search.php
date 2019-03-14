@@ -14,13 +14,20 @@ body {
 body > p {
 	text-align: center;
 }
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -100%);
-	text-align: center;
-}
+ .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      outline-style: solid;
+      outline-color: #000;
+      background-color:rgba(255, 255, 255, 0.9);
+      padding: 15px 10% 15px 10%;
+      transform: translate(-50%, -75%);
+      text-align: center;
+    }
+    .col-sm-3 {
+      padding-bottom: 30px;
+    }
 .col-sm-2 {
 	padding-bottom: 30px;
 }
@@ -86,15 +93,17 @@ body > p {
     {
       if (!in_array($row['UnitID'], $UnitIDInField))
       {
+$img = "../User Home Page/Images/" . $row['UnitID'] . ".png";
 ?>
-						<div class="col-sm-2 col-xs-6">
-							      <a <?php echo "href='../User Home Page/ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
-										<img src="squareElement.png" style="width:100%">
-								        <div class="centered"><h3 style="color: #fff;">
-										<?php echo $row['UnitID']?></h3>
-									</div>
-									  </a>
-					      </div>
+
+						<div class="col-sm-3 col-xs-6">
+          <a <?php echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
+          <img src="<?php echo $img ?>" style="width:100%;">
+          <div class="centered">
+            <h2 style="color: #000;"><?php echo $row['UnitID'] ?></h2>
+          </div>
+          </a>
+        </div>
 <?php
             array_push($UnitIDInField, $row['UnitID']);
       }
