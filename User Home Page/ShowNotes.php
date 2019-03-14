@@ -67,7 +67,7 @@
           <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
           <img src="squareElement.png" style="width:100%">
           <div class="centered">
-            <h2 style="color: #fff;">
+            <h2 style="color: #000;">
               <?php echo $row['TitleNote'];?>
               </br> Likes: <?php echo $counterLikes; ?>
               </br> Dislikes: <?php echo $counterDislikes; ?>
