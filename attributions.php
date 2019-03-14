@@ -1,3 +1,4 @@
+<link rel="stylesheet" type"text/css" href="../universalStyleSheet.css">
 <?php
 require_once("Header - Footer/header.php");
 ?>
@@ -12,7 +13,8 @@ body {
   padding-left: 60px;
 }
 </style>
-  <body lang="en">
+
+  <body>
 
     <p>Content not explicitly mentioned in this page were released into the public domain</p><br>
 
