@@ -60,12 +60,12 @@ body > p {
 		border-radius: 5px;
 }
 .delete-btn {
-	background-color: #D90000;
-	border-radius: 5px;
+	background-color: #D90000!important;
+	border-radius: 5px!important;
 }
 .delete-btn:hover {
-	background-color: #D90000;
-	border-radius: 5px;
+	background-color: #D90000!important;
+	border-radius: 5px!important;
 }
 .submit-font {
 		color:#ffffff;
