@@ -88,13 +88,11 @@ body > p {
 
 <div class="row">
 <div class="col-sm-3 col-center" Style="max-width: 350px;">
-<a href= "EditPage.php">
 <img src="squareElement.png" style="width:100%" class="img-circle">
 			<div class="centered"><h1 style="color: #fff; font-size: 40px;">
 				<?php echo $_SESSION['username']; ?>
 				<?php echo $userYear; ?>
 			</div>
-</a>
 </div>
 <div class="col-sm-3 col-center" style="padding-top: 15px;">
 <a class="btn btn-default btn-block btn-sm submit-btn submit-font bottom-buffer" href="EditPage.php">Edit Profile</a>

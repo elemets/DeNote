@@ -1,11 +1,85 @@
 <?php
+require_once("../Header - Footer/header.php");
 session_start();
 if($_SESSION["username"] == null)
 {
 	header('Location: ../index.html');
 }
+?>
+<title>Profile</title>
+<style>
+body {
+	padding-top: 50px;
+}
+body > p {
+	text-align: center;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+	text-align: center;
+}
+.col-sm-2 {
+	padding-bottom: 30px;
+}
+.col-sm-12 h3 {
+	font-size: 19px;
+	text-transform: uppercase;
+	color: white;
+	font-weight: 400;
+	padding: 0px;
+	margin: 0px;
+}
+.col-sm-12 p {
+	font-size: 19px;
+	text-transform: uppercase;
+	color: red;
+	font-weight: 400;
+	padding: 0px;
+	margin: 0px;
+}
+.img-circle {
+    border-radius: 50%;
+}
+.col-center {
+	float: none;
+	margin: 0 auto;
+}
+}
+.bottom-buffer {
+		margin-bottom:20px;
+}
+.submit-btn {
+		background-color: #660099;
+		border-radius: 5px;
+}
+.submit-btn:hover {
+		background-color: #660099;
+		border-radius: 5px;
+}
+.delete-btn {
+	background-color: #D90000!important;
+	border-radius: 5px!important;
+}
+.delete-btn:hover {
+	background-color: #D90000!important;
+	border-radius: 5px!important;
+}
+.submit-font {
+		color:#ffffff;
+}
+.submit-font:hover {
+		color:#ecaa33;
+}
+</style>
 
-require_once("../Header - Footer/header.php");
+<body>
+<div id="top" class="container-fluid">
+
+<!-- Title and profile icon -->
+<?php
 require_once('config.inc.php');
 $syn = "SELECT Username FROM Users WHERE UserID =" . $_GET['id'];
 $userID = $_GET['id'];
@@ -18,44 +92,19 @@ header('Location: ../Profile Page/Profile.php');
 $username = $conn2->query($syn)->fetch_object()->Username;
 $userYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE UserID ='$userID'")->fetch_object()->YearOfStudent;
 ?>
-<title>Page Title</title>
-<style>
-body {
-	padding-top: 50px;
-}
-body > p {
-	text-align: center;
-}
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-	text-align: center;
-}
-.col-sm-3 {
-	padding-bottom: 30px;
-}
-.container-fluid {
-margin: 0px;
-padding: 0px 0px;
-}
-</style>
-<body>
-<div id="top" class="container-fluid">
 
-<!-- Title and profile icon -->
-<div id="My_Profile" class="text-center">
-  <h1 style="font-size:60px;padding-top: 55px;"><?php echo $username; ?> <br> <?php echo $userYear;?></h1>
-  <?php
-  require_once('config.inc.php');
-  $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
-  $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
-  $link = "Location: https://web.cs.manchester.ac.uk/a64508sa/Z3_Y1_Project/Profile%20Page/profile2.php?id=" . $userID;
-   ?>
-  <img src="Icons/Profile_Icon.png" alt="" style="width: 250px; height: auto;">
+<div class="row">
+<div class="col-sm-3 col-center" Style="max-width: 350px;">
+<img src="squareElement.png" style="width:100%" class="img-circle">
+			<div class="centered"><h1 style="color: #fff; font-size: 40px;">
+				<?php echo $username; ?>
+				<?php echo $userYear; ?>
+			</div>
+</div>
 
 <?php
+  $link = "Location: https://web.cs.manchester.ac.uk/a64508sa/Z3_Y1_Project/Profile%20Page/profile2.php?id=" . $userID;
+
   if(isset($_POST['btnDelete']))
   {
     $deleteQuery = "DELETE FROM `Notes` WHERE UserID = '$userID'";
@@ -63,7 +112,7 @@ padding: 0px 0px;
     $deleteFollow = "DELETE FROM `Followers` WHERE FollowerUserID = '$userID'";
     $result = $conn->query($deleteFollow);
     $deleteFollowed = "DELETE FROM `Followers` WHERE FollowedUserID = '$userID'";
-    $result = $conn->query($deleteFollowed);    
+    $result = $conn->query($deleteFollowed);
     $deleteUser = "DELETE FROM `Users` WHERE UserID = '$userID'";
     $result = $conn->query($deleteUser);
     header('Location: Profile.php');
@@ -71,9 +120,11 @@ padding: 0px 0px;
   if ($userIDmain == "-1")
   {
 ?>
+<div class="col-sm-3 col-center" style="padding-top: 15px;">
     <form action="" method="post">
-    <input type="submit" class="btn btn-danger" method="post" value="delete User" name="btnDelete">
+    <input type="submit" class="btn btn-default btn-block btn-sm delete-btn submit-font bottom-buffer" method="post" value="delete User" name="btnDelete">
     </form>
+	</div>
 <?php
   }
   else
@@ -94,6 +145,7 @@ padding: 0px 0px;
 		header('Location: '.$_SERVER['REQUEST_URI']);
 	}
   ?>
+<div class="col-sm-3 col-center" style="padding-top: 15px;">
 <form action="" method="post">
 <?php
 $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID' AND FollowerUserID = '$userIDmain' ");
@@ -101,24 +153,29 @@ $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$user
 if($row = $stat->fetch() != null)
 {
 ?>
-  <input type="submit" class="btn btn-danger" method="post" value="Unfollow" name="btn2">
+  <input type="submit" class="btn btn-default btn-block btn-sm delete-btn submit-font bottom-buffer" method="post" value="Unfollow" name="btn2">
 <?php
 }
 else
 {
 ?>
-  <input type="submit" class="btn btn-primary" method="post" value="Follow me" name="btn">
+  <input type="submit" class="btn btn-default btn-block btn-sm submit-btn submit-font bottom-buffer" method="post" value="Follow me" name="btn">
 <?php } ?>
 </form>
-
-
 </div>
+
 <?php     }//else ?>
+</div>
+
+
+
 <!-- My notes Section -->
-<div id="My_notes" class="grid-container"></div>
-      <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"><?php echo $username; ?>'s notes</h3>
-        <div class="jumbotron Container-fluid">
+
 <div class="row">
+	<div class="col-sm-12">
+			<h3 style="font-size: 30px; padding-top: 30px; color: black;"><?php echo $username; ?>'s Notes</h3>
+		</div>
+
 	<?php
     	$stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
     	$stat->bindParam(1, $_GET['id']);
@@ -138,18 +195,27 @@ else
 				$counterDislikes++;
 		}
 	?>
-	<div class="col-sm-3">
+				<div class="col-sm-2 col-xs-6">
 		      <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
-					<img src="squareElement.png" style="width:100%">
-			        <div class="centered"><h2 style="color: #fff;"><?php echo $row['TitleNote'];?>
-					</br> Likes: <?php echo $counterLikes; ?>
-					</br> Dislikes: <?php echo $counterDislikes; ?></h2></div>
-				  </a>
-        </div>
+								<img src="squareElement.png" style="width:100%">
+										<div class="centered"><h3 style="color: #fff;">
+											<?php echo $row['TitleNote'];?>
+								<br> Likes: <?php echo $counterLikes; ?>
+							<br> Dislikes: <?php echo $counterDislikes; ?></h3></div>
+								</a>
+							</div>
 <?php
 }
 ?>
 </div>
+
+<!-- My notes Section End -->
+
+<!-- My Following Section -->
+<div class="row">
+	<div class="col-sm-12">
+			<h3 style="font-size: 30px; padding-top: 30px; color: black;"><?php echo $username; ?>'s Following</h3>
+		</div>
 
 <?php
 $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")->fetch_object()->UserID;//userID query
@@ -168,23 +234,30 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")-
           $count = $count + 1;
          }
 
-?>
 
-
-
-
-
-
-  <div class="">
-    <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"> <?php echo $count;?> Following</h3>
-    <div class="jumbotron Container-fluid">
-        <?php
          for($counter = 0; $counter < $count; $counter++)
-         { ?>
-          <a href= "<?php echo $links[$counter]; ?>"> <?php echo $usernameArray[$counter]; ?> </a>
-<?php
-}
+         {
 ?>
+					<div class="col-sm-2 col-xs-6">
+						<a href= "<?php echo $links[$counter]; ?>">
+						<img src="squareElement.png" style="width:100%" class="img-circle">
+									<div class="centered"><h3 style="color: #fff;">
+									<?php echo $usernameArray[$counter]; ?></h3>
+										</div>
+						</a>
+					</div>
+<?php
+}//for
+?>
+</div>
+<!-- My Following Section End-->
+
+<!-- My Followers Section -->
+<div class="row">
+	<div class="col-sm-12">
+			<h3 style="font-size: 30px; padding-top: 30px; color: black;"><?php echo $username; ?>'s Followers</h3>
+		</div>
+
 <?php
 $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")->fetch_object()->UserID;//userID query
         $stat = $conn->prepare("SELECT  * FROM `Followers` WHERE FollowedUserID = '$userID'");
@@ -202,22 +275,19 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")-
           $count = $count + 1;
          }
 
-?>
-    </div>
-  </div>
-  <div class="">
-    <h3 style="font-size: 50px; padding-top: 30px; padding-left: 60px"><?php echo $count;?> Followers</h3>
-	<div class="jumbotron Container-fluid">
-        <?php
          for($counter = 0; $counter < $count; $counter++)
          { ?>
-          <a href= "<?php echo $links[$counter]; ?>"> <?php echo $usernameArray[$counter]; ?> </a>
+					<div class="col-sm-2 col-xs-6">
+						<a href= "<?php echo $links[$counter]; ?>">
+						<img src="squareElement.png" style="width:100%" class="img-circle">
+									<div class="centered"><h3 style="color: #fff;">
+									<?php echo $usernameArray[$counter]; ?></h3>
+										</div>
+						</a>
+					</div>
 <?php
-}
+} // for
 ?>
-	</div>
-  </div>
-
 </div>
 </div>
 </body>
