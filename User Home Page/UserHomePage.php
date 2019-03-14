@@ -11,25 +11,22 @@
   <title>Page Title</title>
   <style>
     body {
-    padding-top: 50px;
+      padding-top: 50px;
     }
     body > p {
-    text-align: center;
+      text-align: center;
     }
     .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -75%);
-    text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -75%);
+      text-align: center;
     }
     .col-sm-3 {
-    padding-bottom: 30px;
+      padding-bottom: 30px;
     }
-    icol-sm-3 col-xs-6:hover {
-    outline-style: solid;  
-    outline-width: medium;
-    }
+
   </style>
 
   <body>
@@ -61,7 +58,7 @@
           <a <?php echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
           <img src="<?php echo $img ?>" style="width:100%; opacity: 0.8; filter: alpha(opacity=50);">
           <div class="centered">
-            <h2 style="color: #fff; background-color:rgba(102, 0, 153, 0.95); padding: 10px 10px;"><?php echo $row['UnitID'] ?></h2>
+            <h2 style="color: #fff; background-color:rgba(0, 0, 0, 0.7); padding: 10px 10px;"><?php echo $row['UnitID'] ?></h2>
           </div>
           </a>
         </div>
