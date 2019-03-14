@@ -94,7 +94,7 @@
           $stmt->execute();
 ?>
           <div class="fixed-top" style="padding-top: 0px">
-          <div class="alert alert-danger alert-dismissible" role="alert">
+          <div class="alert alert-success alert-dismissible" role="alert">
              You have successfully uploaded a file.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -108,7 +108,7 @@
         ?>
         <div class="fixed-top" style="padding-top: 0px">
           <div class="alert alert-danger alert-dismissible" role="alert">
-            <strong>Error:</strong> Check that you have specified a document to be uploaded.
+            <strong>Error:</strong> Check that you have chosen a file and completed each field.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
