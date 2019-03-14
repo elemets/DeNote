@@ -2,7 +2,7 @@
 <html lang="en">
 <title>Attributions</title>
 <?php
-require_once("../Header - Footer/header.php");
+require_once("Header - Footer/header.php");
 ?>
 <style>
 body {
@@ -56,6 +56,6 @@ body {
 
   </body>
 <?php
-require_once("../Header - Footer/footer.html");
+require_once("Header - Footer/footer.html");
 ?>
 </html>
