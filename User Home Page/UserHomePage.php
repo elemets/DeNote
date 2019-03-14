@@ -26,6 +26,9 @@
     .col-sm-3 {
     padding-bottom: 30px;
     }
+    img:hover {
+    opacity: 0.9;  
+    }
   </style>
 
   <body>
