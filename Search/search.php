@@ -133,7 +133,7 @@ $img = "../User Home Page/Images/" . $row['UnitID'] . ".png";
 							<div class="col-sm-2 col-xs-6">
 											<a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 											<img src="squareElement.png" style="width:100%">
-													<div class="centered"><h3 style="color: #fff;">
+													<div class="centered"><h3 style="color: #000;">
 											<?php echo $row['TitleNote']?></h3>
 										</div>
 											</a>
@@ -149,7 +149,7 @@ $img = "../User Home Page/Images/" . $row['UnitID'] . ".png";
 							<div class="col-sm-2 col-xs-6">
 											<a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
 											<img src="squareElement.png" style="width:100%">
-													<div class="centered"><h3 style="color: #fff;">
+													<div class="centered"><h3 style="color: #000;">
 											<?php echo $row['TitleNote']?></h3>
 										</div>
 											</a>
