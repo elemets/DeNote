@@ -83,6 +83,17 @@
           $unitID = $_POST["UnitID"];
           $sectionNumber = $_POST["sectionNumber"];
 
+<<<<<<< HEAD
+=======
+          if (!(($_FILES["requiredFile"]["type"] == "image/gif")
+             || ($_FILES["requiredFile"]["type"] == "image/jpeg")
+             || ($_FILES["requiredFile"]["type"] == "image/pjpeg"))
+             || ($_FILES["requiredFile"]["type"] == "application/pdf")))
+          {
+            echo "INPUT ONLY PDF AND IMAGES";
+          }
+
+>>>>>>> Testing validate upload
           if(validateUpload($unitID, $sectionNumber) && isset($_POST['box']))
           {
           $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
