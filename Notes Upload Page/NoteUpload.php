@@ -27,10 +27,6 @@
         element.classList.add("active");
       }
     });
-
-    $(function(){
-
-    });
   </script>
   <style>
     .bottom-buffer {
