@@ -16,6 +16,7 @@ if($userIDmain == $userID)
 header('Location: ../Profile Page/Profile.php');
 }
 $username = $conn2->query($syn)->fetch_object()->Username;
+$userYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE UserID ='$userID'")->fetch_object()->YearOfStudent;
 ?>
 <title>Page Title</title>
 <style>
@@ -45,7 +46,7 @@ padding: 0px 0px;
 
 <!-- Title and profile icon -->
 <div id="My_Profile" class="text-center">
-  <h1 style="font-size:60px;padding-top: 55px;"><?php echo $username; ?></h1>
+  <h1 style="font-size:60px;padding-top: 55px;"><?php echo $username; ?> <br> <?php echo $userYear;?></h1>
   <?php
   require_once('config.inc.php');
   $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
@@ -75,7 +76,7 @@ padding: 0px 0px;
   {
 ?>
 <!-- FOLLOWING BUTTONS -->
-<?php   
+<?php
 	if(isset($_POST['btn']))
 	{
 	     $query = "INSERT INTO `Followers`(`FollowerUserID`, `FollowedUserID`) VALUES ('$userIDmain','$userID')";
