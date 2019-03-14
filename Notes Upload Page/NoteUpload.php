@@ -182,8 +182,8 @@
                 <label for="sectionID"> Section ID</label>
                 <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID">
               </div>
-              <div class="form-group">
-                <input type="file" name="requiredFile" accept=".pdf,.png,.jpg">
+              <div id="file-id" class="form-group">
+                <input type="file" id="requiredFile" name="requiredFile" accept=".pdf,.png,.jpg">
               </div>
               <div class="form-group">
                 <input type="checkbox" name="box" value="tik the Box"> I confirm that the file complies with the <a href="./TermsAndConditions.html">Terms and Conditions</a><br>
@@ -203,7 +203,7 @@
 
                   if(!(file.type.match('image/jp.*') || file.type.match('application/pdf'))) {
                       alert("only JPG and PDF files");
-                      $("#requiredFile").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
+                      $("#file-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
                       return;
                   }
 
@@ -218,7 +218,7 @@
                           alert("ok!");
                       } else {
                           alert("only valid JPG and PDF files");
-                          $("#requiredFile").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
+                          $("#file-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
                           return;
                       }
                   };
