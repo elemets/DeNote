@@ -11,24 +11,20 @@
   <title>Page Title</title>
   <style>
     body {
-     padding-top: 50px;
+    padding-top: 50px;
     }
     body > p {
-     text-align: center;
+    text-align: center;
     }
     .centered {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      outline-style: solid;
-      outline-color: #000;
-      background-color:rgba(255, 255, 255, 0.9);
-      padding: 15px 10% 15px 10%;
-      transform: translate(-50%, -75%);
-      text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center;
     }
     .col-sm-3 {
-      padding-bottom: 30px;
+    padding-bottom: 30px;
     }
   </style>
 
@@ -67,7 +63,7 @@
           <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
           <img src="squareElement.png" style="width:100%">
           <div class="centered">
-            <h2 style="color: #000;">
+            <h2 style="color: #fff;">
               <?php echo $row['TitleNote'];?>
               </br> Likes: <?php echo $counterLikes; ?>
               </br> Dislikes: <?php echo $counterDislikes; ?>
