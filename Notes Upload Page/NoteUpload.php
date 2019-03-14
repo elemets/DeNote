@@ -97,11 +97,6 @@
           else
         {
         ?>
-
-      <?php
-        }
-         }
-        ?>
         <div class="fixed-top" style="padding-top: 53px">
           <div class="alert alert-danger alert-dismissible fade show" role="alert">
             <strong>Error:</strong> Check that you entered the correct username and password.
@@ -110,6 +105,8 @@
             </button>
           </div>
         </div>
+
+
       <div class="container">
         <div class="form-content">
           <h2 style="padding-top:30px;">Upload</h2>
