@@ -204,20 +204,9 @@
       $(function(){
         $("#requiredFile").on('change', function(event) {
             var file = event.target.files[0];
-            if(file.size>=2*1024*1024) {
-                alert("JPG images of maximum 2MB");
-                $("#requiredFile").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
-                return;
-            }
 
-            if(!file.type.match('image/jp.*')) {
-                alert("only JPG images");
-                $("#requiredFile").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
-                return;
-            }
-
-            if(!file.type.match('application/pdf')) {
-                alert("only PDF images");
+            if(!(file.type.match('image/jp.*') || file.type.match('application/pdf'))) {
+                alert("only JPG and PDF files");
                 $("#requiredFile").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
                 return;
             }
@@ -225,28 +214,22 @@
             var fileReader = new FileReader();
             fileReader.onload = function(e) {
                 var int32View = new Uint8Array(e.target.result);
+
                 // for JPG is 0xFF 0xD8 0xFF 0xE0 (see https://en.wikipedia.org/wiki/List_of_file_signatures)
-                if(int32View.length>4 && int32View[0]==0xFF && int32View[1]==0xD8 && int32View[2]==0xFF && int32View[3]==0xE0) {
+                if(int32View.length>4 && int32View[0]==0xFF && int32View[1]==0xD8 && int32View[2]==0xFF && int32View[3]==0xE0
+                   || int32View[0]==0x25 && int32View[1]==0x50 && int32View[2]==0x44 && int32View[3]==0x46
+                   && int32View[4]==0x2d) {
                     alert("ok!");
                 } else {
-                    alert("only valid JPG images");
-                    $("#form-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
-                    return;
-                }
-                // for PDF is 0x25 0x50 0x44 0x46 0x2d
-                if(int32View.length>4 && int32View[0]==0x25 && int32View[1]==0x50 && int32View[2]==0x44 && int32View[3]==0x46
-                && int32View[4]==0x2d) {
-                    alert("ok!");
-                } else {
-                    alert("only valid PDF images");
-                    $("#form-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
+                    alert("only valid JPG and PDF files");
+                    $("#requiredFile").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
                     return;
                 }
             };
             fileReader.readAsArrayBuffer(file);
         });
-    });
-</script>
+      });
+      </script>
 
       <?php
         function validateUpload($Unit, $Number)
