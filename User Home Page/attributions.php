@@ -1,30 +1,31 @@
 <?php
-require_once("../Header - Footer/header.php");
-?>
+  require_once("../Header - Footer/header.php");
+  ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Attributions</title>
-</head>
-<style>
-body {
-	padding-top: 60px;
-  padding-left: 60px;
-}
-</style>
+  </head>
+
+  <style>
+    body {
+    padding-top: 60px;
+    padding-left: 60px;
+    }
+  </style>
 
   <body>
 
-    <p>Content not explicitly mentioned in this page were released into the public domain</p><br>
+    <p>Content not explicitly mentioned in this page is in the public domain</p>
+    <br>
 
     <h1>Code</h1>
-
+    <br>
     <p>The <a href="https://getbootstrap.com/">Bootstrap toolkit</a> is used under the <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">MIT License</a>.</p>
-    
     <p>Comment functionality provided by <a href="https://www.htmlcommentbox.com/">HTML Comment Box</a>.</p>
 
-    <h1>Images in the user home page</h1><br>
-
+    <h1>Images in the user home page</h1>
+    <br>
     <p>All images have been cropped and adapted</p>
 
     <p>The AHCP image, taken from <a href="https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_055.jpg">Wikimedia</a> depicts a work of art in the public domain worldwide. The digitalisation copyright is held by Zenodot Verlagsgesellschaft mbH, or Directmedia Publishing, licensed under the <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation License</a>.</p>
@@ -53,10 +54,12 @@ body {
 
     <p>The ITAL picture was taken from <a href="https://commons.wikimedia.org/wiki/File:859MilanoDuomo.JPG">Wikimedia</a>, taken by the user MarkusMark, used and shared under the <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 license</a>.</p>
 
-    <p>The LAWS pictrure was taken from <a href="https://commons.wikimedia.org/wiki/File:JMR-Memphis1.jpg">Wikimedia</a>, taken by the user <a href="https://en.wikipedia.org/wiki/User:Carptrash">Carptrash</a> at the English Wikipedia, used and shared under the <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 license</a>.</p>
+    <p>The LAWS picture was taken from <a href="https://commons.wikimedia.org/wiki/File:JMR-Memphis1.jpg">Wikimedia</a>, taken by the user <a href="https://en.wikipedia.org/wiki/User:Carptrash">Carptrash</a> at the English Wikipedia, used and shared under the <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 license</a>.</p>
 
   </body>
-<?php
-require_once("../Header - Footer/footer.html");
-?>
+
+  <?php
+    require_once("../Header - Footer/footer.html");
+    ?>
+
 </html>
