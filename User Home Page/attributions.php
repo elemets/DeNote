@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <title>Attributions</title>
 <?php
 require_once("../Header - Footer/header.php");
@@ -8,7 +10,7 @@ body {
   padding-left: 60px;
 }
 </style>
-  <body>
+  <body lang="en">
 
     <p><a href="UserHomePage.php">Back to the home page</a></p>
 
@@ -22,7 +24,7 @@ body {
 
     <p>The CHEN picture, taken from <a href="https://commons.wikimedia.org/wiki/File:Chem_eng.png"> Wikimedia</a>, created by the user Μηχανικός1, is used and shared under the <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 license</a>.</p>
 
-    <p>The CHIN picture, taken from <a href="https://commons.wikimedia.org/wiki/File:China_Town_-_Manchester_-_panoramio.jpg">Wikimedia</a>, created by Pedro Krtička</a>, is used under the <a href="https://creativecommons.org/licenses/by/3.0/deed.en">CC BY 3.0 license</a>.</p>
+    <p>The CHIN picture, taken from <a href="https://commons.wikimedia.org/wiki/File:China_Town_-_Manchester_-_panoramio.jpg">Wikimedia</a>, created by Pedro Krtička, is used under the <a href="https://creativecommons.org/licenses/by/3.0/deed.en">CC BY 3.0 license</a>.</p>
 
     <p>The CLAH picture, taken from <a href="https://commons.wikimedia.org/wiki/File:Graeco_Roman_Sculpted_male_head_Wellcome_L0013574.jpg">Wikimedia</a>, originating from <a href="https://wellcome.ac.uk/press-release/thousands-years-visual-culture-made-free-through-wellcome-images">Wellcome Images</a>, is used under a <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0 license</a>.</p>
 
@@ -50,3 +52,4 @@ body {
 <?php
 require_once("../Header - Footer/footer.html");
 ?>
+</html>
