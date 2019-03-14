@@ -58,7 +58,7 @@
           <a <?php echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
           <img src="<?php echo $img ?>" style="width:100%; opacity: 0.8; filter: alpha(opacity=50);">
           <div class="centered">
-            <h2 style="color: #fff; background-color:rgba(0, 0, 0, 0.5); position:absolute; width:100%;"><?php echo $row['UnitID'] ?></h2>
+            <h2 style="color: #fff; background-color:rgba(0, 0, 0, 0.7); padding: 50% 50%;"><?php echo $row['UnitID'] ?></h2>
           </div>
           </a>
         </div>
