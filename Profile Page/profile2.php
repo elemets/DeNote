@@ -215,7 +215,7 @@ else
 <!-- My Following Section -->
 <div class="row">
 	<div class="col-sm-12">
-			<h3 style="font-size: 30px; padding-top: 30px; color: black;"><?php echo $username; ?>'s Following</h3>
+			<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"><?php echo $username; ?>'s Following</h3>
 		</div>
 
 <?php
@@ -256,7 +256,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")-
 <!-- My Followers Section -->
 <div class="row">
 	<div class="col-sm-12">
-			<h3 style="font-size: 30px; padding-top: 30px; color: black;"><?php echo $username; ?>'s Followers</h3>
+			<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"><?php echo $username; ?>'s Followers</h3>
 		</div>
 
 <?php
