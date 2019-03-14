@@ -14,7 +14,13 @@ body {
 
     <p><a href="UserHomePage.php">Back to the home page</a></p>
 
-    <p>Images not explicitly mentioned in this page were released into the public domain</p><br>
+    <p>Content not explicitly mentioned in this page were released into the public domain</p><br>
+
+    <h1>Code</h1>
+
+    <p>The <a href="https://getbootstrap.com/">Bootstrap toolkit</a> is used under the <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">MIT License</a>.</p>
+    
+    <p>Comment functionality provided by <a href="https://www.htmlcommentbox.com/">HTML Comment Box</a>.</p>
 
     <h1>Images in the user home page</h1><br>
 
