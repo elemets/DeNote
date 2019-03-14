@@ -82,12 +82,7 @@ body {
 		color: red;
 }
 </style>
-<script type="text/javascript">
-$(function(){
-	var username = "boi";
-	document.getElementById('hcb_form_name').setAttribute('value', 'username');
-});
-</script>
+
 <body>
   <div id="top" class="container-fluid" Style="padding-bottom:0px;">
   <div class="row">
@@ -289,6 +284,12 @@ else
        </div>
 		 </div>
 </div>
+<script type="text/javascript">
+$(function(){
+	var username = "boi";
+	document.getElementById('hcb_form_name').setAttribute('value', 'username');
+});
+</script>
 </body>
 <footer>
   <div>
