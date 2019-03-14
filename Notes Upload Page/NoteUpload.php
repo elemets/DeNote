@@ -100,7 +100,7 @@
           else
         {
         ?>
-        <div class="fixed-top" style="padding-top: 53px">
+        <div class="fixed-top" style="padding-top: 20px">
           <div class="alert alert-danger alert-dismissible" role="alert">
             <strong>Error:</strong> Check that you have specified a document to be uploaded.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
