@@ -130,7 +130,7 @@ body > p {
 								}
 	?>
 					</select>
-							<input type="submit" class="btn btn-sm delete-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
+							<input type="submit" class="btn btn-default btn-sm delete-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
 						</form>
 					</div>
 				</div>
