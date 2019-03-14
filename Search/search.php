@@ -105,7 +105,7 @@
         ?>
 
       <div class="col-sm-2 col-xs-6">
-        <a <?php echo"<a href='ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
+        <a <?php echo"<a href='../User Home Page/ShowNotes.php?id=".$row['UnitID']."&UnitYear=".$row['UnitYear']."'>"; ?>
         <img src="<?php echo $img ?>" style="width:100%;">
         <div class="centered-categories">
           <h2 style="color: #000;"><?php echo $row['UnitID'] ?></h2>
