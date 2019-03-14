@@ -74,6 +74,8 @@ body > p {
   require_once('config.inc.php');
   $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
   $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
+	$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
+	$userYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE UserID ='$userID'")->fetch_object()->YearOfStudent;// YearOfStudent query
    ?>
 
 <div class="row">
@@ -81,8 +83,9 @@ body > p {
 <a href= "EditPage.php">
 <img src="squareElement.png" style="width:100%" class="img-circle">
 			<div class="centered"><h1 style="color: #fff; font-size: 40px;">
-<?php echo $_SESSION['username']; ?>
-</div>
+				<?php echo $_SESSION['username']; ?>
+				<?php echo $userYear; ?>
+			</div>
 </a>
 </div>
 <div class="col-sm-3 col-center" style="padding-top: 15px;">
@@ -93,7 +96,6 @@ body > p {
 
 		<!-- Admin Start---->
 	<?php
-			$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
 			$adminID = -1;
 			if ($userID == $adminID)
 			{
