@@ -27,7 +27,7 @@
     padding-bottom: 30px;
     }
     icol-sm-3 col-xs-6:hover {
-    opacity: 1;  
+    outline-style: solid;  
     }
   </style>
 
