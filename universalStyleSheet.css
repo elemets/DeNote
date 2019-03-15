@@ -115,10 +115,10 @@ footer .glyphicon {
     background-color: #ffffff;
 }
 .search-font {
-    color:#660099;
+    color:#660099 !important;
 }
 .search-font:hover {
-    color:#ffffff;
+    color:#ffffff !important;
 }
 
 @keyframes slide {
