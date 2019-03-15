@@ -52,7 +52,7 @@
             	$stat->bindParam(1, $UnitYear);
             	$stat->execute();
                  $UnitIDInField = array();
-          
+
           while($row = $stat->fetch()){
           if (!in_array($row['UnitID'], $UnitIDInField))
                {
@@ -74,8 +74,6 @@
           ?>
       </div>
     </div>
-
-    <p><a style="color:grey;" href="attributions.php">Image attributions</a></p>
   </body>
 
   <?php
