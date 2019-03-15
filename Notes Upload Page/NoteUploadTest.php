@@ -24,8 +24,9 @@ session_start();
     if(isset($_POST['btn'])){
       foreach ($_FILES['requiredFiles']['name'] as $key => $value) {
         $fileName = basename($_FILES['requiredFiles']['name'][$key]);
+	$data = file_get_contents($_FILES['requiredFiles']['tmp_name'])
 	$pdf->AddPage();
-	$pdf->Image($fileName,20,40,170,170);
+	$pdf->Image($data,20,40,170,170);
       }
 	
 	$pdf->Output();
