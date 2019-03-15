@@ -59,7 +59,7 @@
   </body>
 
   <?php
-    require_once("/Header - Footer/footer.html");
+    require_once("Header - Footer/footer.html");
     ?>
 
 </html>
