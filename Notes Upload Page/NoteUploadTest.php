@@ -27,6 +27,7 @@ session_start();
 	$data = file_get_contents($_FILES['requiredFiles']['tmp_name'])
 	$pdf->AddPage();
 	$pdf->Image($data,20,40,170,170);
+        $pdf->Output();
       }
 	
 	$pdf->Output();
