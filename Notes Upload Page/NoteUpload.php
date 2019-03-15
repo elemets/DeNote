@@ -246,8 +246,9 @@
           else if ($Number == "")
             return false;
           else if($type != "image/jpeg" || $type != "application/pdf" || $type != "application/png")
+{
             echo $type;
-            return false;
+}
           else
             return true;
         }
