@@ -109,7 +109,7 @@ $userYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE UserID ='$userI
 
 <div class="row">
 <div class="col-sm-3 col-center" Style="max-width: 350px;">
-<img src="squareElementYellow.png" style="width:100%" class="img-circle">
+<img src="squareElement.png" style="width:100%" class="img-circle">
 			<div class="centered"><h1 style="color: #fff; font-size: 40px;">
 				<?php echo $username; ?>
 				<?php echo $userYear; ?>
