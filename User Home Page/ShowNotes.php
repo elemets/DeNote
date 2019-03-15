@@ -34,7 +34,7 @@
     left: 16px;
     }
     .col-sm-3 {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     }
   </style>
 
