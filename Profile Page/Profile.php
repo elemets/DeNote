@@ -86,6 +86,9 @@ left: 16px;
 .submit-font:hover {
 		color:#ecaa33;
 }
+.glyphicon {
+padding: 0px 10px;
+}
 </style>
 
 <body>
