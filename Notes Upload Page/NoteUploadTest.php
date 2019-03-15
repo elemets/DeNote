@@ -19,20 +19,10 @@ session_start();
      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if(isset($_POST['btn'])){
-      $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
-      $name = $_FILES['requiredFile']['name'];
-      $type = $_FILES['requiredFile']['type'];
-      $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
-      $sectionName = $_POST["sectionName"];
-      $parentID = $_POST["courses"];
-      $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionName`, `UserID`, `ParentID`) VALUES (?, ?, ?,?, ?,?)");
-      $stmt->bindParam(1, $name);
-      $stmt->bindParam(2, $type);
-      $stmt->bindParam(3, $data);
-      $stmt->bindParam(4, $sectionName);
-      $stmt->bindParam(5, $userID);
-      $stmt->bindParam(6, $parentID);
-      $stmt->execute();
+      foreach ($_FILES['requiredFiles']['name'] as $key => $value) {
+        $fileName = basename($_FILES['requiredFiles']['name'][$key]);
+        echo $fileName
+      }
     }
      ?>
     <form method="post" enctype="multipart/form-data">
