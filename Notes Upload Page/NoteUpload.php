@@ -79,7 +79,7 @@
           $unitID = $_POST["UnitID"];
           $sectionNumber = $_POST["sectionNumber"];
 
-          if(validateUpload($unitID, $sectionNumber) && isset($_POST['box']))
+          if(validateUpload($unitID, $sectionNumber, $type) && isset($_POST['box']))
           {
           $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
           $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`, `UnitYear`) VALUES (?,?,?,?,?,?,?,?)");
@@ -214,7 +214,7 @@
                   if(!(file.type.match('image/jp.*') || file.type.match('application/pdf'))) {
                       alert("Only JPG and PDF files are allowed!");
                       $("#file-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
-                     <?php header('Location: '.$_SERVER['REQUEST_URI']);?>
+                      
                       return;
                   }
 
@@ -239,11 +239,13 @@
             </script>
 
       <?php
-        function validateUpload($Unit, $Number)
+        function validateUpload($Unit, $Number,$type)
         {
           if ($Unit == "----")
             return false;
           else if ($Number == "")
+            return false;
+          else if($type != "image/jpeg" || $type != "application/pdf" || $type != "application/png")
             return false;
           else
             return true;
