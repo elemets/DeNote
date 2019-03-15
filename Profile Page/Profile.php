@@ -107,7 +107,7 @@ padding: 0px 10px;
 <img src="squareElement.png" style="width:100%" class="img-circle">
 			<div class="centered"><h1 style="color: #fff; font-size: 40px;">
 				<?php echo $_SESSION['username']; ?></h1>
-				<h2><?php echo $userYear; ?></h2>
+				<h2 style="color: #fff;"><?php echo $userYear; ?></h2>
 			</div>
 </div>
 <div class="col-sm-3 col-center" style="padding-top: 15px;">
