@@ -227,7 +227,7 @@
         ?>
       <div class="col-sm-2 col-xs-6">
         <a <?php echo "href='../Profile Page/profile2.php?id=".$row['UserID']."'>"; ?>
-        <img src="squareElement.png" style="width:100%" class="img-circle">
+        <img src="squareElementYellow.png" style="width:100%" class="img-circle">
         <div class="centered">
           <h3 style="color: #fff;">
             <?php echo $row['Username']?>
