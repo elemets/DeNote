@@ -194,7 +194,7 @@ body > p {
 	?>
 										<div class="col-sm-2 col-xs-6">
 						         	<a href= "<?php echo $links[$counter]; ?>">
-						        	<img src="squareElement.png" style="width:100%" class="img-circle">
+						        	<img src="squareElementYellow.png" style="width:100%" class="img-circle">
 														<div class="centered"><h3 style="color: #fff;">
 						         				<?php echo $usernameArray[$counter]; ?></h3>
 									 						</div>
@@ -309,7 +309,7 @@ body > p {
 ?>
 						<div class="col-sm-2 col-xs-6">
 		         	<a href= "<?php echo $links[$counter]; ?>">
-		        	<img src="squareElement.png" style="width:100%" class="img-circle">
+		        	<img src="squareElementYellow.png" style="width:100%" class="img-circle">
 										<div class="centered"><h3 style="color: #fff;">
 		         				<?php echo $usernameArray[$counter]; ?></h3>
 					 						</div>
@@ -350,7 +350,7 @@ body > p {
 ?>
 						<div class="col-sm-2 col-xs-6">
 				 			<a href= "<?php echo $links[$counter]; ?>">
-									<img src="squareElement.png" style="width:100%" class="img-circle">
+									<img src="squareElementYellow.png" style="width:100%" class="img-circle">
 								<div class="centered"><h3 style="color: #fff;">
 				 				<?php echo $usernameArray[$counter]; ?></h3>
 			 					</div>
