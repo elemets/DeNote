@@ -109,6 +109,9 @@ footer .glyphicon {
   background-color: #f6f6f6;
 }
 .search-btn {
+    background-color: #990099;
+}
+.search-btn:hover {
     background-color: #ffffff;
 }
 .saearch-font {
