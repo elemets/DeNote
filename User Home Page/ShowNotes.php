@@ -37,7 +37,7 @@
     margin-bottom: 30px;
     }
     .glyphicon {
-    padding: 0px 3px;
+    padding: 0px 10px;
     }
   </style>
 
