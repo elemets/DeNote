@@ -31,7 +31,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -75%);
+    transform: translate(-50%, -50%);
     text-align: center;
   }
   .bottom-right {
