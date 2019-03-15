@@ -87,7 +87,7 @@
           </div>
           <div class="bottom-left">
             <h2 style="color: #fff;">
-              <span class="glyphicon glyphicon-thumbs-up"><?php echo $counterDislikes; ?>
+              <?php echo $counterDislikes; ?><span class="glyphicon glyphicon-thumbs-down"><?php echo $counterDislikes; ?>
             </h2>
           </div>
           </a>
