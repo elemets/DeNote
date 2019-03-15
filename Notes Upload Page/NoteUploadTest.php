@@ -1,6 +1,6 @@
 
 <?php
-require(‘fpdf.php’);
+require('fpdf.php');
 session_start();
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ session_start();
 
      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-     $pdf = new fpdf();
+     $pdf = new FPDF();
     if(isset($_POST['btn'])){
       foreach ($_FILES['requiredFiles']['name'] as $key => $value) {
         $fileName = basename($_FILES['requiredFiles']['name'][$key]);
