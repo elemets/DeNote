@@ -36,6 +36,9 @@
     .col-sm-3 {
     margin-bottom: 30px;
     }
+    .glyphicon {
+    padding-right: 0px 3px;
+    }
   </style>
 
   <body>
@@ -79,7 +82,7 @@
           </div>
           <div class="bottom-right">
             <h2 style="color: #fff;">
-              <?php echo $counterLikes; ?><span class="glyphicon glyphicon-print"></span>
+              <?php echo $counterLikes; ?><span class="glyphicon glyphicon-thumbs-up"></span>
             </h2>
           </div>
           <div class="bottom-left">
