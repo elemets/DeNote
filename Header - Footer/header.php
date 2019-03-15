@@ -35,7 +35,7 @@
               <input type="text" class="form-control" placeholder="Looking for Something?" name="searchWord">
             </div>
             <button type="submit" class="btn search-btn search-font"><a>
-            <span class="glyphicon glyphicon-search"></span>
+            <span class="search-font glyphicon glyphicon-search"></span>
             </a></button>
           </form>
           <ul class="nav navbar-nav navbar-right">
