@@ -83,9 +83,10 @@
 </style>
 
 <body>
+   <div id="top" class="container-fluid">
 <?php
-          if(trim($_POST['searchWord']) == "")
-{?>              <div id="top" class="container-fluid">
+    if(trim($_POST['searchWord']) == "")
+{?>
     <div class="row">
       <div class="col-sm-12">
         <h3 style="font-size: 30px; padding-bottom: 15px; color: black;"> Unit ID</h3>
@@ -94,6 +95,7 @@
       <div class="col-sm-12">
         <h4 style="padding-bottom: 15px; color: black;"> Nothing found in Notes</h4>
       </div>
+    </div>
 
     <div class="row">
       <div class="col-sm-12">
@@ -102,6 +104,7 @@
 
       <div class="col-sm-12">
         <h4 style="padding-bottom: 15px; color: black;"> Nothing found in Notes</h4>
+      </div>
       </div>
 
     <div class="row">
@@ -112,11 +115,12 @@
       <div class="col-sm-12">
         <h4 style="padding-bottom: 15px; color: black;"> Nothing found in Notes</h4>
       </div>
+    </div>
 <?php
- }         else
-          { 
+ }
+ else
+{
 ?>
-  <div id="top" class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
         <h3 style="font-size: 30px; padding-bottom: 15px; color: black;"> Unit ID</h3>
@@ -182,7 +186,7 @@
       </div>
       <?php
         }
-        
+
         $stat2 = $conn->prepare("SELECT * FROM Notes WHERE SectionNumber LIKE '%$searchWord%'");
         $stat2->execute();
         while($row = $stat2->fetch())
@@ -241,7 +245,7 @@
       </div>
       <?php
         }
-        }
+  }
         ?>
     </div>
   </div>
