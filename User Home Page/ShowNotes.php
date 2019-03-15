@@ -79,7 +79,7 @@
           </div>
           <div class="bottom-right">
             <h2 style="color: #fff;">
-              Likes: <?php echo $counterLikes; ?>
+              <?php echo $counterLikes; ?><span class="glyphicon glyphicon-print"></span>
             </h2>
           </div>
           <div class="bottom-left">
