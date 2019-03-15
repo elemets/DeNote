@@ -1,5 +1,5 @@
 <?php
-  require_once("/Header - Footer/header.php");
+  require_once("Header - Footer/header.php");
   ?>
 <!DOCTYPE html>
 <html lang="en">
