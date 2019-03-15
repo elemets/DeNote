@@ -64,7 +64,7 @@ input .btn.submit-btn.submit-font:hover{
   font-family: Montserrat, sans-serif;
 }
 .navbar a, .navbar .navbar-brand {
-  color: #fff;
+  color: #fff !important;
 }
 .navbar-nav a:hover{
   color: #660099 !important;
