@@ -85,7 +85,7 @@
 <body>
 <?php
           if(trim($_POST['searchWord']) == "")
-?>              <div id="top" class="container-fluid">
+{?>              <div id="top" class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
         <h3 style="font-size: 30px; padding-bottom: 15px; color: black;"> Unit ID</h3>
@@ -113,7 +113,7 @@
         <h4 style="padding-bottom: 15px; color: black;"> Nothing found in Notes</h4>
       </div>
 <?php
-          else
+ }         else
           { 
 ?>
   <div id="top" class="container-fluid">
