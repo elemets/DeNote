@@ -1,4 +1,6 @@
+
 <?php
+require(‘fpdf.php’);
 session_start();
 ?>
 <!DOCTYPE html>
@@ -18,12 +20,17 @@ session_start();
 
      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+     $pdf = new FPDF();
     if(isset($_POST['btn'])){
       foreach ($_FILES['requiredFiles']['name'] as $key => $value) {
         $fileName = basename($_FILES['requiredFiles']['name'][$key]);
-        echo $fileName;
-        echo "<br>";
+	$pdf->AddPage();
+	$pdf->Image($fileName,20,40,170,170);
       }
+	
+	$pdf->Output();
+	header('Content-Type: application/pdf');
+        echo $pdf;
     }
      ?>
     <form method="post" enctype="multipart/form-data">
