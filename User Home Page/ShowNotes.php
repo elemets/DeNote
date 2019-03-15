@@ -20,8 +20,18 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -50%);
     text-align: center;
+    }
+    .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    }
+    .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
     }
     .col-sm-3 {
     padding-bottom: 30px;
@@ -43,7 +53,7 @@
           $stat->bindParam(1, $id);
           $stat->bindParam(2, $UnitYear);
           $stat->execute();
-          
+
               while($row = $stat->fetch()){
           		$noteID = $row['NoteID'];
           		$stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$noteID'");
@@ -57,7 +67,7 @@
           			else
           				$counterDislikes++;
           		}
-          
+
           ?>
         <div class="col-sm-3">
           <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
@@ -65,8 +75,16 @@
           <div class="centered">
             <h2 style="color: #fff;">
               <?php echo $row['TitleNote'];?>
-              </br> Likes: <?php echo $counterLikes; ?>
-              </br> Dislikes: <?php echo $counterDislikes; ?>
+            </h2>
+          </div>
+          <div class="bottom-right">
+            <h2 style="color: #fff;">
+              Likes: <?php echo $counterLikes; ?>
+            </h2>
+          </div>
+          <div class="bottom-left">
+            <h2 style="color: #fff;">
+              Dislikes: <?php echo $counterDislikes; ?>
             </h2>
           </div>
           </a>
