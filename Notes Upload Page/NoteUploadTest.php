@@ -21,7 +21,7 @@ session_start();
     if(isset($_POST['btn'])){
       foreach ($_FILES['requiredFiles']['name'] as $key => $value) {
         $fileName = basename($_FILES['requiredFiles']['name'][$key]);
-        echo $fileName;
+        echo $fileName . "</br>";
       }
     }
      ?>
