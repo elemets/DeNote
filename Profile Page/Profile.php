@@ -21,8 +21,21 @@ body > p {
   transform: translate(-50%, -100%);
 	text-align: center;
 }
+.bottom-right {
+position: absolute;
+bottom: 8px;
+right: 16px;
+}
+.bottom-left {
+position: absolute;
+bottom: 8px;
+left: 16px;
+}
 .col-sm-2 {
-	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+.col-xs-6 {
+	margin-bottom: 30px;
 }
 .col-sm-12 h3 {
 	font-size: 19px;
@@ -158,10 +171,19 @@ body > p {
 									<img src="squareElement.png" style="width:100%">
 							        <div class="centered"><h3 style="color: #fff;">
 									<?php echo $row['TitleNote'];?></h3>
-									</br> Likes: <?php echo $counterLikes; ?>
-									</br> Dislikes: <?php echo $counterDislikes; ?></h2></div>
-								  </a>
-				        </div>
+										</div>
+										<div class="bottom-right">
+					            <h3 style="color: #fff;">
+					              <?php echo $counterLikes; ?><span class="glyphicon glyphicon-thumbs-up"></span>
+					            </h3>
+					          </div>
+					          <div class="bottom-left">
+					            <h3 style="color: #fff;">
+					              <span class="glyphicon glyphicon-thumbs-down"></span><?php echo $counterDislikes; ?>
+					            </h3>
+					          </div>
+					          </a>
+					        </div>
 
 	<?php
 				}
@@ -267,10 +289,20 @@ body > p {
 									<img src="squareElement.png" style="width:100%">
 							        <div class="centered"><h3 style="color: #fff;">
 									<?php echo $row['TitleNote'];?>
-									<br> Likes: <?php echo $counterLikes; ?>
-								<br> Dislikes: <?php echo $counterDislikes; ?></h3></div>
+									</div>
+									<div class="bottom-right">
+										<h3 style="color: #fff;">
+											<?php echo $counterLikes; ?><span class="glyphicon glyphicon-thumbs-up"></span>
+										</h3>
+									</div>
+									<div class="bottom-left">
+										<h3 style="color: #fff;">
+											<span class="glyphicon glyphicon-thumbs-down"></span><?php echo $counterDislikes; ?>
+										</h3>
+									</div>
 								  </a>
 				        </div>
+
 	<?php
 					}
 	?>
