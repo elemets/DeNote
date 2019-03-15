@@ -245,7 +245,7 @@
             return false;
           else if ($Number == "")
             return false;
-          else if(trim($type) != "image/jpeg" || trim($type) != "application/pdf " || trim($type) != "application/png")
+          else if((trim($type) != "image/jpeg") || (trim($type) != "application/pdf") || (trim($type) != "image/png"))
             return false;
           else
             return true;
