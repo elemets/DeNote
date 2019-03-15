@@ -214,7 +214,7 @@
                   if(!(file.type.match('image/jp.*') || file.type.match('application/pdf'))) {
                       alert("Only JPG and PDF files are allowed!");
                       $("#file-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
-                      
+                      location.reload(); 
                       return;
                   }
 
@@ -245,10 +245,6 @@
             return false;
           else if ($Number == "")
             return false;
-          else if($type != "image/jpeg" || $type != "application/pdf " || $type != "application/png")
-{
-            echo $type;
-}
           else
             return true;
         }
