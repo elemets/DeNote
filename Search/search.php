@@ -85,7 +85,34 @@
 <body>
 <?php
           if(trim($_POST['searchWord']) == "")
-            echo "zero result found";
+              <div id="top" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 style="font-size: 30px; padding-bottom: 15px; color: black;"> Unit ID</h3>
+      </div>
+
+      <div class="col-sm-12">
+        <h4 style="padding-bottom: 15px; color: black;"> Nothing found in Notes</h4>
+      </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> Notes</h3>
+      </div>
+
+      <div class="col-sm-12">
+        <h4 style="padding-bottom: 15px; color: black;"> Nothing found in Notes</h4>
+      </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> Usernames</h3>
+      </div>
+
+      <div class="col-sm-12">
+        <h4 style="padding-bottom: 15px; color: black;"> Nothing found in Notes</h4>
+      </div>
+
           else
           { 
 ?>
