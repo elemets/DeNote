@@ -39,7 +39,7 @@ session_start();
       <label for="sectionID"> Section:</label>
       <input type="textbox" name="sectionName"/>
       <label for="uploadedFile"> Choose file:</label>
-      <input type="file" name="requiredFile"/>
+      <input type="file" name="requiredFiles[]" multiple/>
       <label for="Unit"> Section:</label>
       <select name="courses" placeholder="parentID">
               <option>AHCP</option>
