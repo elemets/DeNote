@@ -307,7 +307,7 @@ Comments
 $CommentBox = $_POST["commentBox"];
 $query50 = "INSERT INTO `Comments`(`NoteID`, `UserID`,  `Content`) VALUES ('$notes', '$userIDmain' , '$CommentBox')";
     	     $conn->query($query50);
-             header('Location: '.$_SERVER['REQUEST_URI']);
+             header('Location: NotesPreview.php?id='.$NoteID2);
         }
 ?>
 
