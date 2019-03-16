@@ -293,14 +293,6 @@ $(function(){
 </script>
 
 <!-- comments new-->
-<?php
-	if(isset($_POST['commentbtn']))
-	{
-	     $query = "INSERT INTO `Votes`(`NoteID`, `UserID`,  `type`) VALUES ('$notes', '$userIDmain' , -1)";
-    	     $conn->query($query);
-             header('Location: '.$_SERVER['REQUEST_URI']);
-        }
-?>
 Comments
 <form action="" method="post">
 <textArea maxlength="50" name="commentBox">
@@ -310,6 +302,13 @@ Comments
 </form>
 
 <?php
+	if(isset($_POST['commentbtn']))
+	{
+$CommentBox = $_POST["commentBox"];
+$query50 = "INSERT INTO `Comments`(`NoteID`, `UserID`,  `Content`) VALUES ('$notes', '$userIDmain' , '$CommentBox')";
+    	     $conn->query($query50);
+             header('Location: NotesPreview.php?id='.$NoteID2);
+        }
 ?>
 
 
