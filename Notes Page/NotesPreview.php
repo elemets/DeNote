@@ -302,6 +302,17 @@ Comments
 </form>
 
 <?php
+$stat = $conn->prepare("SELECT * FROM Comments WHERE NoteID = ? ");
+          $stat->bindParam(1, $notes);
+          $stat->execute();
+
+              while($row = $stat->fetch()){
+?>
+<textArea maxlength="50" name="commentBox" disabled>
+<?php echo $row['Content'] ?>
+</textArea>
+<?php
+}
 	if(isset($_POST['commentbtn']))
 	{
 $CommentBox = $_POST["commentBox"];
