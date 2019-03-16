@@ -304,7 +304,8 @@ Comments
 <?php
 	if(isset($_POST['commentbtn']))
 	{
-             $query = "INSERT INTO `Comments`(`NoteID`, `UserID`,  `Content`) VALUES ('$notes', '$userIDmain' , '$_POST["commentBox"]')";
+$CommentBox = $_POST["commentBox"];
+$query = "INSERT INTO `Comments`(`NoteID`, `UserID`,  `Content`) VALUES ('$notes', '$userIDmain' , '$CommentBox')";
     	     $conn->query($query);
              header('Location: '.$_SERVER['REQUEST_URI']);
 ?>
