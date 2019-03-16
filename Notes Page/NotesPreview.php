@@ -353,7 +353,7 @@ $query50 = "INSERT INTO `Comments`(`NoteID`, `UserID`,  `Content`) VALUES ('$not
         }
 	if(isset($_POST['deleteComment']))
 	{
-		$query = "DELETE FROM `Comments` WHERE CommentID = '$_POST['deleteComment']'";
+		$query = "DELETE FROM `Comments` WHERE CommentID = '$_POST["deleteComment"]'";
     	     	$result = $conn2->query($query);
                 header('Location: '.$_SERVER['REQUEST_URI']);
 	}
