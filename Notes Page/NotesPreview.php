@@ -344,7 +344,7 @@ if($userIDmain == $row['UserID'] || $row['UserID'] == -1)
 
 
 
-	if(isset($_POST['commentbtn']))
+	if(isset($_POST['commentbtn']) && trim($_POST["commentBox"]) != "")
 	{
 $CommentBox = $_POST["commentBox"];
 $query50 = "INSERT INTO `Comments`(`NoteID`, `UserID`,  `Content`) VALUES ('$notes', '$userIDmain' , '$CommentBox')";
