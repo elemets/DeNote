@@ -302,7 +302,7 @@ $(function(){
         }
 ?>
 Comments
-<form>
+<form action="" method="post">
 <textArea maxlength="50" name="commentBox">
 
 </textArea>
