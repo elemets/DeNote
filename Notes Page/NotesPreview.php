@@ -323,12 +323,27 @@ dateOfPublish:
 <h5>
 <?php echo $row['CommentDate']?>
 </h5>
+<?php
+if($userIDmain == $row['UserID'] || $row['UserID'] == -1)
+{
+?>
+<form action="" method="post">
+<button  type="submit" method="post" value="<?php echo $row['CommentID']?>" name="deleteComment"> Delete Your Comment</button>
+</form>
+<?php
+}//if
+?>
 <textArea maxlength="50" name="commentBox" disabled>
 <?php echo $row['Content'] ?>
 </textArea>
 </br>
 <?php
-}
+}//while
+
+
+
+
+
 	if(isset($_POST['commentbtn']))
 	{
 $CommentBox = $_POST["commentBox"];
@@ -336,6 +351,12 @@ $query50 = "INSERT INTO `Comments`(`NoteID`, `UserID`,  `Content`) VALUES ('$not
     	     $conn->query($query50);
              header('Location: NotesPreview.php?id='.$NoteID2);
         }
+	if(isset($_POST['deleteComment']))
+	{
+		$query = "DELETE FROM `Comments` WHERE CommentID = '$_POST['deleteComment']'";
+    	     	$result = $conn2->query($query);
+                header('Location: '.$_SERVER['REQUEST_URI']);
+	}
 ?>
 
 
