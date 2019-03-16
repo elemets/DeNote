@@ -292,15 +292,22 @@ $(function(){
 });
 </script>
 
-
+<!-- comments new-->
 Comments
 <form>
 <textArea maxlength="50" name="commentBox">
 
 </textArea>
+<button type="submit" method="post" value="Comment" name="commentbtn">Comment</button>
 </form>
 
-
+<?php
+	if(isset($_POST['commentbtn']))
+	{
+             $query = "INSERT INTO `Comments`(`NoteID`, `UserID`,  `Content`) VALUES ('$notes', '$userIDmain' , '$_POST["commentBox"]')";
+    	     $conn->query($query);
+             header('Location: '.$_SERVER['REQUEST_URI']);
+?>
 
 
 
