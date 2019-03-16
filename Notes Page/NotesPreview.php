@@ -333,9 +333,9 @@ if($userIDmain == $row['UserID'] || $row['UserID'] == -1)
 <?php
 }//if
 ?>
-<textArea maxlength="50" name="commentBox" disabled>
+<h>
 <?php echo $row['Content'] ?>
-</textArea>
+<h>
 </br>
 <?php
 }//while
@@ -349,7 +349,7 @@ if($userIDmain == $row['UserID'] || $row['UserID'] == -1)
 $CommentBox = $_POST["commentBox"];
 $query50 = "INSERT INTO `Comments`(`NoteID`, `UserID`,  `Content`) VALUES ('$notes', '$userIDmain' , '$CommentBox')";
     	     $conn->query($query50);
-             header('Location: NotesPreview.php?id='.$NoteID2);
+             header('Location: '.$_SERVER['REQUEST_URI']);
         }
 	if(isset($_POST['deleteComment']))
 	{
