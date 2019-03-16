@@ -334,7 +334,9 @@ if($userIDmain == $row['UserID'] || $row['UserID'] == -1)
 }//if
 ?>
 <h>
+<strong>
 <?php echo $row['Content'] ?>
+</strong>
 <h>
 </br>
 <?php
