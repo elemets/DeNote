@@ -307,7 +307,22 @@ $stat = $conn->prepare("SELECT * FROM Comments WHERE NoteID = ? ");
           $stat->execute();
 
               while($row = $stat->fetch()){
+$syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
+$usernameOfTheCommenter = $conn2->query($syn)->fetch_object()->Username;
 ?>
+<h4>
+Author: 
+</h4>
+<h5>
+<?php echo $usernameOfTheCommenter?>
+</h5>
+
+<h4>
+dateOfPublish: 
+</h4>
+<h5>
+<?php echo $row['CommentDate']?>
+</h5>
 <textArea maxlength="50" name="commentBox" disabled>
 <?php echo $row['Content'] ?>
 </textArea>
