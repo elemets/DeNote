@@ -186,6 +186,22 @@
         $stat->execute();
         while($row = $stat->fetch())
         {
+
+
+
+	$noteID = $row['NoteID'];
+          		$stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$noteID'");
+          		$stat2->execute();
+          		$counterLikes = 0;
+          		$counterDislikes = 0;
+          		while($row2 = $stat2->fetch())
+          		{
+          			if($row2['type'] == 1)
+            				$counterLikes++;
+          			else
+          				$counterDislikes++;
+          		}
+
         ?>
       <div class="col-sm-2 col-xs-6">
         <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
@@ -214,6 +230,23 @@
         $stat2->execute();
         while($row = $stat2->fetch())
         {
+
+
+
+
+	$noteID = $row['NoteID'];
+          		$stat3 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$noteID'");
+          		$stat3->execute();
+          		$counterLikes = 0;
+          		$counterDislikes = 0;
+          		while($row2 = $stat3->fetch())
+          		{
+          			if($row2['type'] == 1)
+            				$counterLikes++;
+          			else
+          				$counterDislikes++;
+          		}
+
         ?>
       <div class="col-sm-2 col-xs-6">
         <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
