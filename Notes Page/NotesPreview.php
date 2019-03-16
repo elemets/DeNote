@@ -309,8 +309,9 @@ $stat = $conn->prepare("SELECT * FROM Comments WHERE NoteID = ? ");
               while($row = $stat->fetch()){
 ?>
 <textArea maxlength="50" name="commentBox" disabled>
-<?php echo $row['Content'] ?> </br>
+<?php echo $row['Content'] ?>
 </textArea>
+</br>
 <?php
 }
 	if(isset($_POST['commentbtn']))
