@@ -279,16 +279,6 @@
     <div class"col-sm-2"></div>
   </div>
 
-  <!-- COMMENTS-->
-  </div>
-  <script type="text/javascript">
-    $(function(){
-    
-    	$("#hcb_form_name").val("username");
-    
-    });
-  </script>
-
 
   <!-- COMMENTS -->
   <div class="comments">
