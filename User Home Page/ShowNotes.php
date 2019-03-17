@@ -82,12 +82,12 @@
           </div>
           <div class="bottom-right">
             <h2 style="color: #fff;">
-              <?php echo $counterLikes; ?><span class="glyphicon glyphicon-thumbs-up"></span>
+              <?php echo $counterDislikes; ?><span class="glyphicon glyphicon-thumbs-down"></span>
             </h2>
           </div>
           <div class="bottom-left">
             <h2 style="color: #fff;">
-              <span class="glyphicon glyphicon-thumbs-down"></span><?php echo $counterDislikes; ?>
+              <span class="glyphicon glyphicon-thumbs-up"></span><?php echo $counterLikes; ?>
             </h2>
           </div>
           </a>

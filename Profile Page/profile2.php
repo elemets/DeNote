@@ -217,12 +217,12 @@ else
 										</div>
 										<div class="bottom-right">
 											<h3 style="color: #fff;">
-												<?php echo $counterLikes; ?><span class="glyphicon glyphicon-thumbs-up"></span>
+												</span><?php echo $counterDislikes; ?><span class="glyphicon glyphicon-thumbs-down"></span>
 											</h3>
 										</div>
 										<div class="bottom-left">
 											<h3 style="color: #fff;">
-												<span class="glyphicon glyphicon-thumbs-down"></span><?php echo $counterDislikes; ?>
+												<span class="glyphicon glyphicon-thumbs-up"><?php echo $counterLikes; ?>
 											</h3>
 										</div>
 								</a>
