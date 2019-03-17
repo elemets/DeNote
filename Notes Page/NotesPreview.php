@@ -76,6 +76,10 @@ body {
 .like-dislike:hover {
 	color: #505050 !important;
 }
+
+.comments {
+  margin-left: 20px
+}
 #HCB_comment_box .submit {
 		background:none; /* Clear twitter bootstrap style. */
 		background-color:green;
@@ -283,8 +287,9 @@ $(function(){
 });
 </script>
 
-<!-- comments new-->
-Comments
+<!-- Comments-->
+<div class="comments">
+<h2>Comments</h2>
 <form action="" method="post">
 <textArea maxlength="50" name="commentBox">
 
@@ -309,7 +314,7 @@ Author:
 </h5>
 
 <h4>
-dateOfPublish: 
+Date: 
 </h4>
 <h5>
 <?php echo $row['CommentDate']?>
@@ -329,7 +334,7 @@ if($userIDmain == $row['UserID'] || $row['UserID'] == -1)
 <?php echo $row['Content'] ?>
 </strong>
 <h>
-</br>
+<br>
 <?php
 }//while
 
@@ -352,7 +357,7 @@ $query50 = "INSERT INTO `Comments`(`NoteID`, `UserID`,  `Content`) VALUES ('$not
                 header('Location: '.$_SERVER['REQUEST_URI']);
 	}
 ?>
-
+</div>
 
 
 
