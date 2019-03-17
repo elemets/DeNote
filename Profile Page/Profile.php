@@ -177,7 +177,7 @@ padding: 0px 10px;
 										</div>
 										<div class="bottom-right">
 					            <h3 style="color: #fff;">
-					              </span><?php echo $counterDislikes; ?><span class="glyphicon glyphicon-thumbs-down"></span>
+					              <?php echo $counterDislikes; ?><span class="glyphicon glyphicon-thumbs-down"></span>
 					            </h3>
 					          </div>
 					          <div class="bottom-left">
@@ -300,7 +300,7 @@ padding: 0px 10px;
 									</div>
 									<div class="bottom-left">
 										<h3 style="color: #fff;">
-											<span class="glyphicon glyphicon-thumbs-up"><?php echo $counterLikes; ?>
+											<span class="glyphicon glyphicon-thumbs-up"></span><?php echo $counterLikes; ?>
 										</h3>
 									</div>
 								  </a>
