@@ -314,7 +314,7 @@
       {
       ?>
     <form action="" method="post">
-      <button  type="submit" method="post" value="<?php echo $row['CommentID']?>" name="deleteComment"> Delete Your Comment</button>
+      <button  type="submit" method="post" value="<?php echo $row['CommentID']?>" name="deleteComment"> Delete</button>
     </form>
     <?php
       }//if
