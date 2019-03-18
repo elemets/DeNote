@@ -25,7 +25,7 @@ session_start();
       foreach ($_FILES['requiredFiles']['name'] as $key => $value) {
         $pdf->AddPage();
         $fileName = basename($_FILES['requiredFiles']['name'][$key]);
-        $pdf->Image($fileName, 15, 140, 75, 113, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, true);
+        $pdf->Image('$fileName', 15, 140, 75, 113, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, true);
       }
       $pdf->Output('example_009.pdf', 'I');
 
