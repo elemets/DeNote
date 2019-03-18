@@ -118,34 +118,5 @@ session_start();
 
 
 
-  <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-
-	    $username = $_POST["username"];
-      $password = $_POST["password"];
-  	  $year = $_POST["year"];
-  	  $email = $_POST["email"];
-
-
-  	  if(register($username, $password, $email, $year)) {
-       $_SESSION["username"] = $username;
-       header('Location: ../User Home Page/UserHomePage.php');
-  	  } else {
-
-    echo '<div class="fixed-top" style="padding-top: 53px">
-    	<div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Error:</strong> Please fill in all the fields correctly.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    </div>';
-
-  }
-}?>
-
-
-
 </body>
 </html>
