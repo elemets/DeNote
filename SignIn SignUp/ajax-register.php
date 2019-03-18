@@ -31,21 +31,7 @@ else {
 
 // PASSWORD
 // DO YOUR OWN MINIMUM PASSWORD STRENGTH TEST HERE
-if ($_POST['password']=="") {
-  $regPass = false;
-  $checks .= "Please enter a password\n";
-}
 
-if ($_POST['cpassword']=="") {
-  $regPass = false;
-  $checks .= "Please confirm your password\n";
-}
-
-// CHECK IF PASSWORDS MATCH
-if ($_POST['password']!=$_POST['cpassword']) {
-  $regPass = false;
-  $checks .= "Passwords do not match\n";
-}
 
 // IF CHECKS ARE ALL GREEN - GO FOR ACTUAL DATABASE REGISTRATION
 if ($regPass) {
