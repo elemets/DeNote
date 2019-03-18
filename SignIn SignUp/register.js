@@ -16,6 +16,7 @@ function register(){
     pass = false;
   }
 
+
   // PROCESS AJAX OR SHOW ERROR MESSAGE
   if (pass) {
     $.ajax({
@@ -26,7 +27,6 @@ function register(){
         name : $('#name').val(),
         email : $('#email').val(),
         password : $('#password').val(),
-        year : $('#year').val(),
       }
     }).done(function(res){
       if (res['status']) {

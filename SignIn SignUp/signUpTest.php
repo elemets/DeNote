@@ -15,7 +15,7 @@
   <div id="body">
     <h3>REGISTRATION</h3>
     <form onsubmit="return register();">
-    <label for="name">Name: </label>
+    <label for="name">Username: </label>
     <input type="text" id="name" name="name" placeholder="Full name" required autofocus><br>
     <label for="email">Email: </label>
     <input type="email" id="email" name="email" placeholder="Email" required><br>
