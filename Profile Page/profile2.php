@@ -70,11 +70,11 @@ left: 16px;
 		border-radius: 5px;
 }
 .delete-btn {
-	background-color: #D90000!important;
+	background-color: #ef3737!important;
 	border-radius: 5px!important;
 }
 .delete-btn:hover {
-	background-color: #D90000!important;
+	background-color: #ef3737!important;
 	border-radius: 5px!important;
 }
 .submit-font {
