@@ -1,4 +1,3 @@
-
 <?php
 require_once('tcpdf_include.php');
 session_start();
@@ -24,8 +23,8 @@ session_start();
     if(isset($_POST['btn'])){
       foreach ($_FILES['requiredFiles']['name'] as $key => $value) {
         $pdf->AddPage();
-        $fileName = basename($_FILES['requiredFiles']['name'][$key]);
-        $pdf->Image('$fileName', 15, 140, 75, 113, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, true);
+        $imgdata = file_get_contents($_FILES['requiredFile']['tmp_name']);
+        $pdf->Image('@'.$imgdata);
       }
       $pdf->Output('example_009.pdf', 'I');
 
