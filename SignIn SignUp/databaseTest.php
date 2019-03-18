@@ -47,13 +47,13 @@ class Users{
 
     // THIS IS RAW BASIC PROTECTION FOR THE PASSWORD
     // DO YOUR OWN ADVANCED ENCRYPTION
-    $data['2'] = md5($data['2']);
+    $data['2'] = ($data['2']);
 
     // USING THE DATA FIELD AS A RANDOM CONFIRMATION KEY
-    $data['3'] = md5(date("YmdHis"));
+    $data['3'] = (date("YmdHis"));
 
     // INSERT INTO DATABASE
-    $stmt = $this->pdo->prepare("INSERT INTO `users` (`user_name`, `user_email`, `user_password`, `user_data`) VALUES (?, ?, ?, ?)");
+    $stmt = $this->pdo->prepare("INSERT INTO `Users` (`Username`, `Email`, `PasswordHash`, `user_data`) VALUES (?, ?, ?, ?)");
     $pass = $stmt->execute($data);
 
     // SEND COINFIRMATION EMAIL IF PASS
