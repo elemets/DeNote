@@ -1,6 +1,6 @@
 
 <?php
-require('fpdf.php');
+require_once('tcpdf_include.php');
 session_start();
 ?>
 <!DOCTYPE html>
@@ -20,19 +20,15 @@ session_start();
 
      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-     $pdf = new FPDF();
+     $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
     if(isset($_POST['btn'])){
       foreach ($_FILES['requiredFiles']['name'] as $key => $value) {
+        $pdf->AddPage();
         $fileName = basename($_FILES['requiredFiles']['name'][$key]);
-	$data = file_get_contents($_FILES['requiredFiles']['tmp_name'])
-	$pdf->AddPage();
-	$pdf->Image($data,20,40,170,170);
-        $pdf->Output();
+        $pdf->Image($fileName, 15, 140, 75, 113, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, true);
       }
-	
-	$pdf->Output();
-	header('Content-Type: application/pdf');
-        echo $pdf;
+      $pdf->Output('example_009.pdf', 'I');
+
     }
      ?>
     <form method="post" enctype="multipart/form-data">
