@@ -6,6 +6,10 @@
     {
     	header('Location: ../index.html');
     }
+    if($_SESSION["username"] == 'ADMIN')
+    {
+    	header('Location: ../Profile Page/Profile.php');
+    }
     require_once("../Header - Footer/header.php");
     ?>
   <title>Page Title</title>
