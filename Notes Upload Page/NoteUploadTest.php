@@ -28,8 +28,6 @@ session_start();
         $pdf->Image('@'.$imgdata);
       }
       $pdf->Output('example_009.pdf', 'I');
-
-    }
      ?>
     <form method="post" enctype="multipart/form-data">
       <label for="sectionID"> Section:</label>
