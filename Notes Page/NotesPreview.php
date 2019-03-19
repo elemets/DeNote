@@ -310,7 +310,7 @@
       <?php echo $row['CommentDate']?>
     </h5>
     <?php
-      if($userIDmain == $row['UserID'] || $row['UserID'] == -1)
+      if($userIDmain == $row['UserID'] || $userIDmain == -1)
       {
       ?>
     <form action="" method="post">
