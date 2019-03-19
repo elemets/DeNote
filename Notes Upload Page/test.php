@@ -26,7 +26,8 @@ if(isset($_POST['btn'])){
   $userID = '127';
   $unitID = 'COMP';
   $titleNote = 'dsadas';
-  $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`) VALUES (?,?,?,?,?,?,?)");
+  $unitYear = 'Year 1'
+  $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`, `UnitYear`) VALUES (?,?,?,?,?,?,?,?)");
   $stmt->bindParam(1, $filename);
   $stmt->bindParam(2, $type);
   $stmt->bindParam(3, $data);
@@ -34,5 +35,6 @@ if(isset($_POST['btn'])){
   $stmt->bindParam(5, $userID);
   $stmt->bindParam(6, $unitID);
   $stmt->bindParam(7, $titleNote);
+  $stmt->bindParam(7, $unitYear);
   $stmt->execute();
  ?>
