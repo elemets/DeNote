@@ -19,6 +19,8 @@ if(isset($_POST['btn'])){
 }
 
   $pdf->Output('example_009.pdf', 'F');
+  echo $pdf;
+  /*
   $data = file_get_contents($pdf);
   $type = filetype ($filename);
   $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`) VALUES (?,?,?,?,?,?,?)");
@@ -30,4 +32,5 @@ if(isset($_POST['btn'])){
   $stmt->bindParam(6, 'COMP');
   $stmt->bindParam(7, 'alabala');
   $stmt->execute();
+  */
  ?>
