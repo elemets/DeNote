@@ -16,6 +16,9 @@
   body > p {
     text-align: center;
   }
+  h3 {
+  font-size: 1vw;
+  }
   .centered-categories {
     position: absolute;
     top: 50%;
@@ -92,6 +95,11 @@
   }
   .glyphicon {
   padding: 0px 10px;
+  }
+  @media screen and (max-width: 768px){
+    h3 {
+      font-size: 19px;
+    }
   }
 </style>
 
