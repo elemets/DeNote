@@ -19,7 +19,7 @@ if(isset($_POST['btn'])){
 }
   $pdf->Output('example_009.pdf', 'F');
   $data = file_get_contents($pdf);
-  $type = filetype (string $filename);
+  $type = filetype ($filename);
   $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`) VALUES (?,?,?,?,?,?,?)");
   $stmt->bindParam(1, 'example_009');
   $stmt->bindParam(2, $type);
