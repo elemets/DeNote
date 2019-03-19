@@ -22,7 +22,7 @@
     <h1>Code</h1>
     <br>
     <p>The <a href="https://getbootstrap.com/">Bootstrap toolkit</a> is used under the <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">MIT License</a>.</p>
-    <p>Comment functionality provided by <a href="https://www.htmlcommentbox.com/">HTML Comment Box</a>.</p>
+
 
     <h1>Images in the user home page</h1>
     <br>
