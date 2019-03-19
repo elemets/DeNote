@@ -1,5 +1,4 @@
 <?php
-
 require_once('../Notes Upload Page/tcpdf/examples/tcpdf_include.php');
 require_once('../Notes Upload Page/tcpdf/tcpdf.php');
 session_start();
@@ -12,9 +11,11 @@ require_once('config.inc.php');
 
  $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 if(isset($_POST['btn'])){
-    $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
+    foreach($_FILES['requiredFiles']['name'] as $key=>$val){
+    $data = file_get_contents($_FILES['requiredFiles']['tmp_name'][$key]);
     $pdf->AddPage();
     $pdf->Image('@'.$data);
   }
+}
   $pdf->Output('example_009.pdf', 'I');
  ?>
