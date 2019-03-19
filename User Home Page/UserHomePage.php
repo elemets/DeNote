@@ -20,6 +20,9 @@
     body > p {
       text-align: center;
     }
+    h2 {
+    font-size: 1.65vw;
+    }
     .centered {
       position: absolute;
       top: 50%;
@@ -33,6 +36,11 @@
     }
     .col-sm-3 {
       padding-bottom: 30px;
+    }
+    @media screen and (max-width: 768px){
+    	h2 {
+    		font-size: 27px;
+    	}
     }
 
   </style>

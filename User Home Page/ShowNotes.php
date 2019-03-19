@@ -44,7 +44,7 @@
     }
     @media screen and (max-width: 768px){
       h2 {
-        font-size: 30px;
+        font-size: 27px;
       }
     }
     less than 768
