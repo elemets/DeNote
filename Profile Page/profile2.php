@@ -21,7 +21,7 @@ h2 {
 font-size: 1.65vw;
 }
 h3 {
-font-size: 1.10vw;
+font-size: 1.20vw;
 }
 .centered {
   position: absolute;
