@@ -12,7 +12,7 @@
 <head>
   <title>Note Preview Page</title>
   <style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     body {
     padding-top: 50px;
     }
@@ -105,18 +105,18 @@
           $row = $stat->fetch();
           $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
           $username = $conn2->query($syn)->fetch_object()->Username;
-          
+
           echo '<h1><u>';
           echo $row['TitleNote'];
           echo '</u></h1>';
-          
+
           echo '<h2>';
           echo "Author: " . $username;
           echo '</h2>';
-          
+
           echo '<h2>';
           echo "Date: " . $row['DateOfPublish'];
-          echo '</h2><br>';
+          echo '</h2>';
           ?>
       </div>
     </div>
@@ -124,7 +124,7 @@
     <div class="row">
       <?php
         $id = "view.php?id=" . $_GET['id'];
-        
+
         if ($row['dataType'] == "application/pdf")
         {
         ?>
@@ -180,7 +180,7 @@
         <?php
           $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
                   $stat->execute();
-          
+
           $stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND type = 1" );
           $stat2->execute();
           $counterLikes = 0;
@@ -188,7 +188,7 @@
           {
             $counterLikes++;
           }
-          
+
           if(($row = $stat->fetch()) != null)
           {
             $typeVote = $row['type'];
@@ -218,7 +218,7 @@
       $userIDmain = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
       if(isset($_POST['btn4']))
       {
-      
+
            $query = "INSERT INTO `Votes`(`NoteID`, `UserID`,  `type`) VALUES ('$notes', '$userIDmain' , -1)";
          	     $conn->query($query);
                   header('Location: '.$_SERVER['REQUEST_URI']);
@@ -235,8 +235,8 @@
         <?php
           $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
                   $stat->execute();
-          
-          
+
+
           $stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND type = -1" );
           $stat2->execute();
           $counterLikes = 0;
@@ -244,11 +244,11 @@
           {
             $counterLikes++;
           }
-          
+
           if(($row = $stat->fetch()) != null)
           {
           	$typeVote = $row['type'];
-          
+
             if($typeVote == -1)
             {
             ?>
@@ -292,19 +292,19 @@
       $stat = $conn->prepare("SELECT * FROM Comments WHERE NoteID = ? ");
                 $stat->bindParam(1, $notes);
                 $stat->execute();
-      
+
                     while($row = $stat->fetch()){
       $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
       $usernameOfTheCommenter = $conn2->query($syn)->fetch_object()->Username;
       ?>
     <h4>
-      Author: 
+      Author:
     </h4>
     <h5>
       <?php echo $usernameOfTheCommenter?>
     </h5>
     <h4>
-      Date: 
+      Date:
     </h4>
     <h5>
       <?php echo $row['CommentDate']?>
@@ -327,7 +327,7 @@
     <br>
     <?php
       }//while
-    
+
       	if(isset($_POST['commentbtn']) && trim($_POST["commentBox"]) != "")
       	{
       $CommentBox = $_POST["commentBox"];
