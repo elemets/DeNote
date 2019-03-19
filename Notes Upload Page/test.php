@@ -23,13 +23,10 @@ if(isset($_POST['btn'])){
   $type = 'application/pdf';
   $filename = 'example_009';
   echo $type;
-  $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`) VALUES (?,?,?,?,?,?,?)");
+  $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`) VALUES (?,?,?)");
   $stmt->bindParam(1, $filename);
   $stmt->bindParam(2, $type);
   $stmt->bindParam(3, $data);
-  $stmt->bindParam(4, '321');
-  $stmt->bindParam(5, '127');
-  $stmt->bindParam(6, 'COMP');
-  $stmt->bindParam(7, 'alabala');
+
   $stmt->execute();
  ?>
