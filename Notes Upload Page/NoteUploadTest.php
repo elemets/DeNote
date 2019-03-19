@@ -24,10 +24,9 @@ session_start();
     if(isset($_POST['btn'])){
         $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
         $pdf->AddPage();
-        echo $data;
         $pdf->Image('@'.$data);
       }
-    //  $pdf->Output('example_009.pdf', 'I');
+      $pdf->Output('example_009.pdf', 'I');
      ?>
      <form method="post" enctype="multipart/form-data">
        <div class="form-group">
