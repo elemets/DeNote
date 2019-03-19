@@ -147,7 +147,7 @@
       ?>
     <div class="col-sm-2"></div>
     <div class="col-sm-8">
-      <img src="<?php echo $id ?>" style="width:100%;">
+      <img src="<?php echo $id ?>" style="width:100%; padding-top: 20px;">
     </div>
     <div class="col-sm-2"></div>
   </div>
