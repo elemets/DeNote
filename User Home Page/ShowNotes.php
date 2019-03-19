@@ -16,9 +16,6 @@
     body > p {
     text-align: center;
     }
-    h2 {
-    font-size: 1.75vw;
-    }
     .centered {
     position: absolute;
     top: 50%;
