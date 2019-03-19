@@ -273,7 +273,10 @@
 
   <!-- COMMENTS -->
   <div class="row">
-    <div class="col-sm-1"><h2>Comments</h2></div>
+    <div class="col-sm-12"><h2>Comments</h2></div>
+  <div>
+
+    <div class="row">
     <form action="" method="post">
     <div class="row">
       <div class="col-sm-11">
