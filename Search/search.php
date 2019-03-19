@@ -17,7 +17,7 @@
     text-align: center;
   }
   h3 {
-  font-size: 1.15vmin;
+  font-size: 1.35vmin;
   }
   .centered-categories {
     position: absolute;
