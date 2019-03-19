@@ -281,12 +281,19 @@
 
 
   <!-- COMMENTS -->
-  <div class="comments">
-    <h2>Comments</h2>
+  <div class="row comments">
+    <div class="col-sm-1"><h2>Comments</h2></div>
     <form action="" method="post">
-      <textArea maxlength="50" name="commentBox">
-      </textArea>
+    <div class="row">
+      <div class="col-sm-11">
+      <textArea style="width: 100%; height: 100%;" name="commentBox"></textArea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-11">
       <button type="submit" method="post" value="Comment" name="commentbtn">Comment</button>
+      </div>
+    </div>
     </form>
     <?php
       $stat = $conn->prepare("SELECT * FROM Comments WHERE NoteID = ? ");
@@ -343,6 +350,7 @@
                       header('Location: '.$_SERVER['REQUEST_URI']);
       	}
       ?>
+  </div>
   </div>
 </body>
 
