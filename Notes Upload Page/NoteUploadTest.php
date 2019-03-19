@@ -22,9 +22,8 @@ session_start();
 
      $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
     if(isset($_POST['btn'])){
-      foreach ($_FILES['requiredFiles']['name'] as $key => $value) {
+        $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
         $pdf->AddPage();
-        $imgdata = file_get_contents($_FILES['requiredFile']['tmp_name'][$key]);
         echo $imgdata;
         $pdf->Image('@'.$imgdata);
       }
@@ -36,7 +35,7 @@ session_start();
       <label for="sectionID"> Section:</label>
       <input type="textbox" name="sectionName"/>
       <label for="uploadedFile"> Choose file:</label>
-      <input type="file" name="requiredFiles[]" multiple/>
+      <input type="file" name="requiredFile" multiple/>
       <label for="Unit"> Section:</label>
       <select name="courses" placeholder="parentID">
               <option>AHCP</option>
