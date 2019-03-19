@@ -35,6 +35,6 @@ if(isset($_POST['btn'])){
   $stmt->bindParam(5, $userID);
   $stmt->bindParam(6, $unitID);
   $stmt->bindParam(7, $titleNote);
-  $stmt->bindParam(7, $unitYear);
+  $stmt->bindParam(8, $unitYear);
   $stmt->execute();
  ?>
