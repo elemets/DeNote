@@ -121,12 +121,23 @@ $userYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE UserID ='$userI
 
   if(isset($_POST['btnDelete']))
   {
+    $stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
+    $stat->bindParam(1, $_GET['id']);
+    $stat->execute();
+    while($row = $stat->fetch())
+    {
+      $NoteID = $row['NoteID'];
+      $deleteQuery = "DELETE FROM `Notes` WHERE NoteID = '$NoteID'";
+      $conn->query($deleteQuery);
+    }
     $deleteQuery = "DELETE FROM `Notes` WHERE UserID = '$userID'";
     $result = $conn->query($deleteQuery);
     $deleteFollow = "DELETE FROM `Followers` WHERE FollowerUserID = '$userID'";
     $result = $conn->query($deleteFollow);
     $deleteFollowed = "DELETE FROM `Followers` WHERE FollowedUserID = '$userID'";
     $result = $conn->query($deleteFollowed);
+    $deleteComment = "DELETE FROM `Notes` WHERE UserID = '$userID'";
+    $result = $conn->query($deleteComment);
     $deleteUser = "DELETE FROM `Users` WHERE UserID = '$userID'";
     $result = $conn->query($deleteUser);
     header('Location: Profile.php');
