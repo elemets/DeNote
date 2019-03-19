@@ -6,19 +6,9 @@ session_start();
 $id = $_SESSION['id'];
 // Include the main TCPDF library (search for installation path).
 require_once('tcpdf_include.php');
-include "../../header.php";
-include "../../take-png.php";
 
 
 // TAKING LOGOS AND BACKGROUNDS FROM THE DATABASE
-	//take industry number
-		$take_industry_num = "SELECT * FROM Clients WHERE ID = '" . $id . "';";
-	    $take_industry_num_result = mysqli_query($conn, $take_industry_num) or die("Cannot fetch information from Clients.");
-	    while ($row_take_industry_num = mysqli_fetch_array($take_industry_num_result)) {
-	        extract($row_take_industry_num);
-	        $industry_num = $row_take_industry_num['industry'];
-	    }
-	//------------------------------------------------------------------------------
 
 
 
@@ -31,7 +21,7 @@ include "../../take-png.php";
 	            $logo_img_exists = 1;
 	        }
 	    }
-	    
+
 	    if ($logo_img_exists == 1) {
 	        $check_logo_img_result = mysqli_query($conn, $check_logo_img) or die("Cannot fetch information from Login.");
 	        while ($row_check_logo_img = mysqli_fetch_array($check_logo_img_result)) {
@@ -42,7 +32,7 @@ include "../../take-png.php";
 	        if ($industry_num == 0) {
 	            $custom_logo_img = "../../../Login-screen/Logos/your-logo-here-White.png";
 	        }
-	        
+
 	        elseif ($industry_num == 1) {
 	            $custom_logo_img = "../../../Login-screen/Logos/your-logo-here-Orange.png";
 	        } elseif ($industry_num == 2) {
@@ -66,7 +56,7 @@ include "../../take-png.php";
 	            $background_img_exists = 1;
 	        }
 	    }
-	    
+
 	    if ($background_img_exists == 1) {
 	        $check_background_img_result = mysqli_query($conn, $check_background_img) or die("Cannot fetch information from Login.");
 	        while ($row_check_background_img = mysqli_fetch_array($check_background_img_result)) {
@@ -74,12 +64,12 @@ include "../../take-png.php";
 	            $custom_background_img = "data:image/jpeg;base64," . base64_encode($row_check_background_img['background_img']);
 	        }
 	    }
-	    
+
 	    else {
-	        
+
 	        if ($industry_num == 0) {
 	            $custom_background_img = "../../../Login-screen/Screens/PhoneBackground-images/Tourist-Boards.png";
-	        } 
+	        }
 	        elseif ($industry_num == 1) {
 	            $custom_background_img = "../../../Login-screen/Screens/PhoneBackground-images/Retail.png";
 	        } elseif ($industry_num == 2) {
@@ -105,7 +95,7 @@ include "../../take-png.php";
 	            $logo_img_side_menu_exists = 1;
 	        }
 	    }
-	    
+
 	    if ($logo_img_side_menu_exists == 1) {
 	        $check_logo_img_side_menu_result = mysqli_query($conn, $check_logo_img_side_menu) or die("Cannot fetch information from Login.");
 	        while ($row_check_logo_img_side_menu = mysqli_fetch_array($check_logo_img_side_menu_result)) {
@@ -116,7 +106,7 @@ include "../../take-png.php";
 	        if ($industry_num == 0) {
 	            $custom_logo_img_side_menu = "../../../SideMenu/Logos/your-logo-here-White.png";
 	        }
-	        
+
 	        elseif ($industry_num == 1) {
 	            $custom_logo_img_side_menu = "../../../SideMenu/Logos/your-logo-here-Orange.png";
 	        } elseif ($industry_num == 2) {
@@ -142,7 +132,7 @@ include "../../take-png.php";
 	            $logo_img_near_me_exists = 1;
 	        }
 	    }
-	    
+
 	    if ($logo_img_near_me_exists == 1) {
 	        $check_logo_img_near_me_result = mysqli_query($conn, $check_logo_img_near_me) or die("Cannot fetch information from Near Me.");
 	        while ($row_check_logo_img_near_me = mysqli_fetch_array($check_logo_img_near_me_result)) {
@@ -153,7 +143,7 @@ include "../../take-png.php";
 	        if ($industry_num == 0) {
 	            $custom_logo_img_near_me = "../../../NearMe/Logos/your-logo-here-White.png";
 	        }
-	        
+
 	        elseif ($industry_num == 1) {
 	            $custom_logo_img_near_me = "../../../NearMe/Logos/your-logo-here-Orange.png";
 	        } elseif ($industry_num == 2) {
@@ -180,7 +170,7 @@ include "../../take-png.php";
 	            $background_img_profile_exists = 1;
 	        }
 	    }
-	    
+
 	    if ($background_img_profile_exists == 1) {
 	        $check_background_img_profile_result = mysqli_query($conn, $check_background_img_profile) or die("Cannot fetch information from Near Me.");
 	        while ($row_check_background_img_profile = mysqli_fetch_array($check_background_img_profile_result)) {
@@ -191,7 +181,7 @@ include "../../take-png.php";
 	        if ($industry_num == 0) {
 	            $custom_background_img_profile = "../../../Profile/Backgrounds/Tourist-Boards.png";
 	        }
-	        
+
 	        elseif ($industry_num == 1) {
 	            $custom_background_img_profile = "../../../Profile/Backgrounds/Retail.png";
 	        } elseif ($industry_num == 2) {
@@ -362,7 +352,7 @@ include "../../take-png.php";
 	$scanner_main_to_crop = imagecreatefrompng($path_scanner_main);
 	$cropped_scanner_main = imagecropauto($scanner_main_to_crop, IMG_CROP_DEFAULT);
 
-	if ($cropped_scanner_main !== false) { 
+	if ($cropped_scanner_main !== false) {
 	    imagedestroy($scanner_main_to_crop);
 	    $scanner_main_to_crop = $cropped_scanner_main;
 	}
@@ -378,7 +368,7 @@ include "../../take-png.php";
 	$scanner_bars_to_crop = imagecreatefrompng($path_scanner_bars);
 	$cropped_scanner_bars = imagecropauto($scanner_bars_to_crop, IMG_CROP_DEFAULT);
 
-	if ($cropped_scanner_bars !== false) { 
+	if ($cropped_scanner_bars !== false) {
 	    imagedestroy($scanner_bars_to_crop);
 	    $scanner_bars_to_crop = $cropped_scanner_bars;
 	}
@@ -513,7 +503,7 @@ $pdf->Image('../../../Choose-industry/Phone/Phone-frame/PhoneFrame.png',142,59,5
 
 
 	$pdf->SetFont('helvetica', 'B', 12);
-	$pdf->SetTextColor(3, 123, 174); 
+	$pdf->SetTextColor(3, 123, 174);
 
 //set heading for profile
 $pdf->SetY(165);
