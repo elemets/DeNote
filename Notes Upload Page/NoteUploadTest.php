@@ -40,11 +40,6 @@
        </div>
      </form>
 
-    <?php
-    $stat = $conn->prepare("SELECT * FROM `Notes`");
-    $stat->execute();
-     ?>
-
 </body>
 <footer>
 </footer>
