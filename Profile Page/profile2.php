@@ -127,7 +127,7 @@ $userYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE UserID ='$userI
     while($row = $stat->fetch())
     {
       $NoteID = $row['NoteID'];
-      $deleteQuery = "DELETE FROM `Notes` WHERE NoteID = '$NoteID'";
+      $deleteQuery = "DELETE FROM `Comments` WHERE NoteID = '$NoteID'";
       $conn->query($deleteQuery);
     }
     $deleteQuery = "DELETE FROM `Notes` WHERE UserID = '$userID'";
@@ -136,7 +136,7 @@ $userYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE UserID ='$userI
     $result = $conn->query($deleteFollow);
     $deleteFollowed = "DELETE FROM `Followers` WHERE FollowedUserID = '$userID'";
     $result = $conn->query($deleteFollowed);
-    $deleteComment = "DELETE FROM `Notes` WHERE UserID = '$userID'";
+    $deleteComment = "DELETE FROM `Comments` WHERE UserID = '$userID'";
     $result = $conn->query($deleteComment);
     $deleteUser = "DELETE FROM `Users` WHERE UserID = '$userID'";
     $result = $conn->query($deleteUser);
