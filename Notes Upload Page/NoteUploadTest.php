@@ -24,7 +24,7 @@ session_start();
     if(isset($_POST['btn'])){
       foreach ($_FILES['requiredFiles']['name'] as $key => $value) {
         $pdf->AddPage();
-        $imgdata = file_get_contents($_FILES['requiredFile']['tmp_name']);
+        $imgdata = file_get_contents($_FILES['requiredFile']['tmp_name'][$key]);
         echo $imgdata;
         $pdf->Image('@'.$imgdata);
       }
