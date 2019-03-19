@@ -16,6 +16,9 @@
     body > p {
     text-align: center;
     }
+    h2 {
+    font-size: 5vw;
+    }
     .centered {
     position: absolute;
     top: 50%;
@@ -39,6 +42,12 @@
     .glyphicon {
     padding: 0px 10px;
     }
+    @media screen and (max-width: 768px){
+      h2 {
+        font-size: 30px;
+      }
+    }
+    less than 768
   </style>
 
   <body>
