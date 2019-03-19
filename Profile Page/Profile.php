@@ -14,6 +14,12 @@ body {
 body > p {
 	text-align: center;
 }
+h2 {
+font-size: 1.65vw;
+}
+h3 {
+font-size: 1.10vw;
+}
 .centered {
   position: absolute;
   top: 50%;
@@ -88,6 +94,14 @@ left: 16px;
 }
 .glyphicon {
 padding: 0px 10px;
+}
+@media screen and (max-width: 768px){
+	h2 {
+		font-size: 30px;
+	}
+	h3 {
+		font-size: 19px;
+	}
 }
 </style>
 
