@@ -17,7 +17,7 @@
     text-align: center;
     }
     h2 {
-    font-size: 1.75vw;
+    font-size: 1.65vw;
     }
     .centered {
     position: absolute;
