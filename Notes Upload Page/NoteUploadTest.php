@@ -27,7 +27,7 @@ session_start();
         echo $data;
         $pdf->Image('@'.$data);
       }
-      $pdf->Output('example_009.pdf', 'I');
+    //  $pdf->Output('example_009.pdf', 'I');
      ?>
      <form method="post" enctype="multipart/form-data">
        <div class="form-group">
@@ -43,7 +43,7 @@ session_start();
            <option>ARGY</option>
            <option>BIOL</option>
            <option>BMAN</option>
-      
+
          </select>
        </div>
        <div class="form-group">
