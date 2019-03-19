@@ -15,7 +15,7 @@ body > p {
 	text-align: center;
 }
 h1 {
-font-size: 2vw;
+font-size: 4vw;
 }
 h2 {
 font-size: 1.65vw;
