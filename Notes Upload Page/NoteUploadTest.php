@@ -13,7 +13,6 @@ session_start();
 </head>
 <body>
     <?php
-    $targetPath = "../uploads/";
     require_once('config.inc.php');
     // Connect to the database
      $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
@@ -25,9 +24,9 @@ session_start();
     if(isset($_POST['btn'])){
       foreach ($_FILES['requiredFiles']['name'] as $key => $value) {
         $pdf->AddPage();
-        $fileName = basename($_FILES['requiredFiles']['name'][$key]);
-        $fileNamePath = $targetPath . $fileName;
-        $pdf->Image($fileNamePath, 0,0,209,200);
+        $imgdata = file_get_contents($_FILES['requiredFile']['tmp_name']);
+        echo $imgdata;
+        $pdf->Image('@'.$imgdata);
       }
       $pdf->Output('example_009.pdf', 'I');
 
