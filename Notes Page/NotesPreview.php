@@ -77,15 +77,6 @@
     .like-dislike:hover {
     color: #505050 !important;
     }
-    .comments {
-    margin-left: 20px
-    }
-    #HCB_comment_box .submit {
-    background:none; /* Clear twitter bootstrap style. */
-    background-color:green;
-    border:1px solid darkgreen;
-    color: red;
-    }
   </style>
 </head>
 
@@ -281,7 +272,7 @@
 
 
   <!-- COMMENTS -->
-  <div class="row comments">
+  <div class="row">
     <div class="col-sm-1"><h2>Comments</h2></div>
     <form action="" method="post">
     <div class="row">
