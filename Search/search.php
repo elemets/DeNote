@@ -104,7 +104,7 @@
       font-size: 27px;
     }
     h3 {
-      font-size: 19px;
+      font-size: 17px;
     }
   }
 </style>
