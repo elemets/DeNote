@@ -22,11 +22,18 @@ if(isset($_POST['btn'])){
   $data = file_get_contents('example_009.pdf');
   $type = 'application/pdf';
   $filename = 'example_009';
+  $sectionNumber = '321';
+  $userID = '127';
+  $unitID = 'COMP';
+  $titleNote = 'dsadas'
   echo $type;
-  $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`) VALUES (?,?,?)");
+  $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`) VALUES (?,?,?,?,?,?,?)");
   $stmt->bindParam(1, $filename);
   $stmt->bindParam(2, $type);
   $stmt->bindParam(3, $data);
-
+  $stmt->bindParam(4, $sectionNumber);
+  $stmt->bindParam(5, $userID);
+  $stmt->bindParam(6, $unitID);
+  $stmt->bindParam(7, $titleNote);
   $stmt->execute();
  ?>
