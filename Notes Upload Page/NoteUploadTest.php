@@ -13,7 +13,7 @@ session_start();
 </head>
 <body>
     <?php
-    $targetPath = "../uploads";
+    $targetPath = "../uploads/";
     require_once('config.inc.php');
     // Connect to the database
      $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
