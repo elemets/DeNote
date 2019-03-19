@@ -17,7 +17,7 @@ if(isset($_POST['btn'])){
     $pdf->Image('@'.$data);
   }
 }
-  $pdf->Output('example_009.pdf', 'F');
+  $pdf->Output('example_009.pdf', 'I');
   $data = file_get_contents($pdf);
   $type = filetype ($filename);
   $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`) VALUES (?,?,?,?,?,?,?)");
