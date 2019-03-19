@@ -400,8 +400,12 @@ padding: 0px 10px;
 			$note = $_POST["note"];
 			if ($note != "---")
 			{
+                                $noteIDADM = $conn2->query("SELECT NoteID FROM Notes WHERE `TitleNote` = '$note'")->fetch_object()->NoteID;
+				$deleteQuery = "DELETE FROM `Comments` WHERE NoteID = '$noteIDADM'";
+                                $conn->query($deleteQuery);
 				$stat = $conn2->prepare("DELETE FROM `Notes` WHERE `TitleNote` = '$note'");
 				$stat->execute();
+
 				echo "DELETED";
 				header('Location: '.$_SERVER['REQUEST_URI']);
 			}
