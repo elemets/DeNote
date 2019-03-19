@@ -100,7 +100,7 @@ padding: 0px 10px;
 }
 @media screen and (max-width: 768px){
   h1 {
-		font-size: 40px;
+		font-size: 35px;
 	}
 	h2 {
 		font-size: 30px;
