@@ -14,6 +14,9 @@ body {
 body > p {
 	text-align: center;
 }
+h1 {
+font-size: 2vw;
+}
 h2 {
 font-size: 1.65vw;
 }
@@ -96,6 +99,9 @@ left: 16px;
 padding: 0px 10px;
 }
 @media screen and (max-width: 768px){
+  h1 {
+		font-size: 40px;
+	}
 	h2 {
 		font-size: 30px;
 	}
@@ -119,7 +125,7 @@ padding: 0px 10px;
 <div class="row">
 <div class="col-sm-3 col-center" Style="max-width: 350px;">
 <img src="squareElementOrange.png" style="width:100%" class="img-circle">
-			<div class="centered"><h1 style="color: #fff; font-size: 40px;">
+			<div class="centered"><h1 style="color: #fff;">
 				<?php echo $_SESSION['username']; ?></h1>
 				<h2 style="color: #fff;"><?php echo $userYear; ?></h2>
 			</div>
