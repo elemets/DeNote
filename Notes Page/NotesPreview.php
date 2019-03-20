@@ -55,6 +55,10 @@
     display: inline;
     }
     }
+    .col-center {
+	float: none;
+	margin: 0 auto;
+}
     @supports (-webkit-overflow-scrolling: touch) {
     .desktop-pdf{
     display: none;
@@ -288,7 +292,7 @@
   </div>
 
   <div class="row">
-      <div class="col-sm-2">
+      <div class="col-sm-2 col-center">
           <img src="squareElementOrange.png" style="width:75px; height:75px;" class="img-circle">
 			     <div class="centered"><h5 style="color: #fff;">
 				    <?php echo $_SESSION['username']; ?></h5>
