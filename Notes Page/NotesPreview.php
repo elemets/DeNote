@@ -26,6 +26,9 @@
     width: 0;
     }
     }
+    .col-sm-1 {
+	margin-bottom: 30px;
+}
     .centered {
   position: absolute;
   top: 50%;
