@@ -358,7 +358,7 @@
             </div>
         </div>
       <div class="col-sm-11 col-xs-9">
-        <h4 style="padding-top: 10px;"> Date: <?php echo $reverseArray[$index]['CommentDate']?> </h4>
+        <h4 style="padding-top: 8px; padding-bottom: 3px;"> Date: <?php echo $reverseArray[$index]['CommentDate']?> </h4>
         <h3> <?php echo $reverseArray[$index]['Content'] ?> </h3>
       </div>
 
