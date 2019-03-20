@@ -90,7 +90,7 @@
             $titleNote = $_POST["title"];
             $unitID = $_POST["UnitID"];
           }
-          else if(izeof($_FILES['requiredFiles']['name'], 0) == 1){
+          else if(sizeof($_FILES['requiredFiles']['name'], 0) == 1){
             $name = $_FILES['requiredFiles']['name'][0];
             $type = $_FILES['requiredFiles']['type'][0];
             $data = file_get_contents($_FILES['requiredFiles']['tmp_name'][0]);
