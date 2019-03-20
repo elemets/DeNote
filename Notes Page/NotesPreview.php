@@ -322,7 +322,7 @@
             </div>
         </div>
       <div class="col-sm-11">
-        <h4> Date: <?php echo $row['CommentDate']?> </h4><br><br>
+        <h4> Date: <?php echo $row['CommentDate']?> </h4><br>
         <h3> <?php echo $row['Content'] ?> </h3>
       </div>
 
