@@ -289,7 +289,7 @@
 
   <div class="row">
       <div class="col-sm-2">
-          <img src="squareElementOrange.png" class="img-circle">
+          <img src="squareElementOrange.png" style="width: 100%;" class="img-circle">
 			     <div class="centered"><h5 style="color: #fff;">
 				    <?php echo $_SESSION['username']; ?></h5>
 			    </div>
