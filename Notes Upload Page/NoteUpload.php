@@ -74,7 +74,7 @@
 
         if(isset($_POST['btn']))
         {
-          if (sizeof($_FILES['requiredFiles']['name'], 0) > 1)
+          if (sizeof($_FILES['requiredFiles']['name'], 0) > 1 && validateUpload2())
           {
             $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
             foreach($_FILES['requiredFiles']['name'] as $key=>$val){
@@ -116,7 +116,7 @@
 <?php
           }
           else
-        {
+        {f $_FILES['requiredFiles']['name']
         ?>
         <div class="fixed-top" style="padding-top: 0px">
           <div class="alert alert-danger alert-dismissible" role="alert">
@@ -223,8 +223,8 @@
               $("#requiredFile").on('change', function(event) {
                   var file = event.target.files[0];
 
-                  if(!(file.type.match('image/jp.*') || file.type.match('application/pdf'))) {
-                      alert("Only JPG and PDF files are allowed!");
+                  if(!(file.type.match('image/jp.*') || file.type.match('application/pdf') || (file.type.match('image/png'))) {
+                      alert("Only JPG, PNG and PDF files are allowed!");
                       $("#file-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
 
                       return;
@@ -259,10 +259,20 @@
             return false;
           else if((trim($type) == "image/jpeg") || (trim($type) == "application/pdf") || (trim($type) == "image/png"))
             return true;
+          else if()
           else
             return false;
         }
+        function validateUpload2()
+        {
+          foreach($_FILES['requiredFiles']['name'] as $key=>$val)
+          {
+            if ($_FILES['requiredFiles']['type'][$key] != "image/jpeg" || $_FILES['requiredFiles']['type'][$key] != "image/png" || $_FILES['requiredFiles']['type'][$key] != "image/jpg")
+              return false;
+          }//foreach
 
+          return true;
+        }
         function uploadFile($name, $type, $data, $sectionNumber, $userID, $unitID, $titleNote, $unitYear)
         {
           global $conn;
