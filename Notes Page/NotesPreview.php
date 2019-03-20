@@ -88,15 +88,7 @@
     color: #505050 !important;
     }
   </style>
-  <script type="text/javascript">
-    $(function(){
 
-      var heightOfProfile = $("#profile_image").height();
-
-      $("#comment_box").height(heightOfProfile);
-
-    )};
-  </script>
 </head>
 
 <body>
@@ -382,6 +374,18 @@
       ?>
   </div>
   </div>
+  <script type="text/javascript">
+  $(function(){
+
+    var heightOfProfile = $('#profile_image').height();
+
+    $('#comment_box').height(heightOfProfile);
+
+  )};
+
+  </script>
+
+
 </body>
 
 <footer>
