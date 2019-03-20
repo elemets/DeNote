@@ -74,7 +74,7 @@
 
         if(isset($_POST['btn']))
         {
-          if (sizeof($_FILES['requiredFiles']['name'], 0) > 1 && validateUpload2($_FILES['requiredFiles']['name']))
+          if (sizeof($_FILES['requiredFiles']['name'], 0) > 1 && validateProperPict($_FILES['requiredFiles']['name']))
           {
             $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
             foreach($_FILES['requiredFiles']['name'] as $key=>$val){
@@ -97,6 +97,11 @@
             $sectionNumber = $_POST["sectionNumber"];
             $titleNote = $_POST["title"];
             $unitID = $_POST["UnitID"];
+          }
+          else {
+            $unitID = "----";
+            $sectionNumber = '';
+            $type = 'wrong';
           }
 
           if(validateUpload($unitID, $sectionNumber, $type) && isset($_POST['box']))
@@ -262,7 +267,7 @@
           else
             return false;
         }
-        function validateUpload2($file)
+        function validateProperPict($file)
         {
           foreach($file as $key=>$val)
           {
