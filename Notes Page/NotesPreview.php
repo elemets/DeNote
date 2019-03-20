@@ -288,16 +288,14 @@
   </div>
 
   <div class="row">
-      <div class="col-sm-1">
-          <div>
+      <div class="col-sm-2">
           <img src="squareElementOrange.png" style="width:75px; height:75px;" class="img-circle">
 			     <div class="centered"><h5 style="color: #fff;">
 				    <?php echo $_SESSION['username']; ?></h5>
 			    </div>
-        </div>
       </div>
     <form action="" method="post">
-      <div class="col-sm-11">
+      <div class="col-sm-10">
       <textArea style="width: 100%; height: 100%;" name="commentBox"></textArea>
       </div>
   </div>
