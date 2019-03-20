@@ -26,9 +26,6 @@
     width: 0;
     }
     }
-    .col-sm-1 {
-	margin-bottom: 30px;
-}
     .centered {
   position: absolute;
   top: 50%;
@@ -36,9 +33,7 @@
   transform: translate(-50%, -50%);
 	text-align: center;
 }
-    .bottom-buffer {
-		margin-bottom:20px;
-    }
+
     @media screen and (min-width: 768px) {
     .mobile-pdf{
     display: none;
