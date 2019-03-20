@@ -39,7 +39,7 @@
     }
     @media screen and (max-width: 768px){
     	h2 {
-    		font-size: 22px;
+    		font-size: 25px;
     	}
     }
 

@@ -100,10 +100,10 @@ padding: 0px 10px;
 		font-size: 35px;
 	}
 	h2 {
-		font-size: 22px;
+		font-size: 25px;
 	}
 	h3 {
-		font-size: 17px;
+		font-size: 12px;
 	}
 }
 </style>

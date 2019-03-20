@@ -101,10 +101,10 @@
   }
   @media screen and (max-width: 768px){
     h2 {
-      font-size: 22px;
+      font-size: 25px;
     }
     h3 {
-      font-size: 17px;
+      font-size: 12px;
     }
   }
 </style>
