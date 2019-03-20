@@ -378,7 +378,7 @@
 
     var img = document.getElementById('profile_image');
 
-    var heightOfProfile = img.clientHeight;
+    var heightOfProfile = img.clientHeight + 30;
 
     console.log(heightOfProfile);
 
