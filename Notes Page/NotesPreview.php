@@ -367,8 +367,8 @@
         ?>
       <div class="row">
       <form action="" method="post">
-        <div class="col-sm-9 col-xs-9"></div>
-        <div class="col-sm-3 col-xs-3">
+        <div class="col-sm-10 col-xs-10"></div>
+        <div class="col-sm-2 col-xs-2">
         <button  type="submit" class="btn btn-default btn-block btn-sm dislike-btn submit-font" method="post" value="<?php echo $reverseArray[$index]['CommentID']?>" name="deleteComment"> Delete</button>
       </div>
       </form>
