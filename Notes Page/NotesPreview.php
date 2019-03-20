@@ -293,7 +293,7 @@
     <?php
 
 
-      echo $_SESSION[username];
+      echo $_SESSION['username'];
       $stat = $conn->prepare("SELECT * FROM Comments WHERE NoteID = ? ");
                 $stat->bindParam(1, $notes);
                 $stat->execute();
