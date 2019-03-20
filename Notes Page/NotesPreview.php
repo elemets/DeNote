@@ -394,13 +394,13 @@
     function() {
     var img = document.getElementById('profile_image');
 
-    var heightOfProfile = img.clientHeight + 32;
+    var heightOfProfile = img.clientHeight;
 
     console.log(heightOfProfile);
 
     $('#comment_box').height(heightOfProfile);
 
-  }, 2000)
+  }, 200)
 );
 
 
