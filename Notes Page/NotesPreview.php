@@ -279,7 +279,7 @@
     <div class="col-sm-8">
       <a href="<?php echo $id ?>" class="btn btn-block submit-btn submit-font" role="button" download="<?php echo $row['TitleNote'] ?>"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
     </div>
-    <div class"col-sm-2"></div>
+    <div class"col-sm-2" style="padding-bottom:20px;"></div>
   </div>
 
 
