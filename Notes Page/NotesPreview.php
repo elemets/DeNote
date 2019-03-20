@@ -34,7 +34,7 @@
 	text-align: center;
 }
     h5 {
-      font-size: 1vw;
+      font-size: 0.8vw;
     }
     @media screen and (min-width: 768px) {
     .mobile-pdf{
