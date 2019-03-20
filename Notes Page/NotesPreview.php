@@ -289,14 +289,14 @@
   </div>
 
   <div class="row">
-      <div id="profile_image" class="col-sm-1 col-xs-1" >
+      <div id="profile_image" class="col-sm-1 col-xs-3" >
           <img src="squareElementOrange.png" style="width: 100%;" class="img-circle" >
 			     <div class="centered"><h5 style="color: #fff;">
 				    <?php echo $_SESSION['username']; ?></h5>
 			    </div>
       </div>
     <form action="" method="post">
-      <div class="col-sm-11 col-xs-11">
+      <div class="col-sm-11 col-xs-9">
       <textArea style="width: 100%;" name="commentBox" id="comment_box"></textArea>
       </div>
   </div>
@@ -331,13 +331,13 @@
         $color = $colorYellow;
       ?>
       <div class="row">
-        <div class="col-sm-1 col-xs-1">
+        <div class="col-sm-1 col-xs-3">
             <img src="<?php echo $color?>" style="width:100%" class="img-circle">
              <div class="centered"><h5 style="color: #fff;">
               <?php echo $usernameOfTheCommenter?></h5>
             </div>
         </div>
-      <div class="col-sm-11 col-xs-11">
+      <div class="col-sm-11 col-xs-9">
         <h4> Date: <?php echo $reverseArray[$index]['CommentDate']?> </h4><br>
         <h3> <?php echo $reverseArray[$index]['Content'] ?> </h3>
       </div>
