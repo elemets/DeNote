@@ -74,7 +74,7 @@
 
         if(isset($_POST['btn']))
         {
-          if (sizeof($_FILES['requiredFiles']['name'], 0) > 1 && validateProperPict($_FILES['requiredFiles']['name']))
+          if (sizeof($_FILES['requiredFiles']['name'], 0) > 1 && validateProperPict($_FILES['requiredFiles']['type']))
           {
             $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
             foreach($_FILES['requiredFiles']['name'] as $key=>$val){
@@ -272,7 +272,7 @@
           $count = 0;
           foreach($file as $key=>$val)
           {
-            if ($file[$key] != "image/jpeg" || $file[$key] != "image/png" || $file[$key] != "image/jpg")
+            if (trim($file[$key]) != "image/jpeg" || trim($file[$key]) != "image/png" || trim($file[$key]) != "image/jpg")
               $count++;
           }//foreach
 
