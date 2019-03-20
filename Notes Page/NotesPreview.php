@@ -291,7 +291,7 @@
     </div>
     </form>
     <?php
-      $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
+      $syn = "SELECT Username FROM Users WHERE UserID =" . $usernameIDmain;
       $username = $conn2->query($syn)->fetch_object()->Username;
 
       echo $username;
@@ -300,7 +300,7 @@
                 $stat->execute();
 
                     while($row = $stat->fetch()){
-      $syn = "SELECT Username FROM Users WHERE UserID =" . $usernameIDmain;
+      $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
       $usernameOfTheCommenter = $conn2->query($syn)->fetch_object()->Username;
       ?>
     <h4>
