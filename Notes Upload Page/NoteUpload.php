@@ -81,7 +81,7 @@
 
               $filename = $_FILES['requiredFiles']['name'][$key];
               $filePath = $_FILES['requiredFiles']['tmp_name'][$key];
-              $exif = exif_read_data($_FILES['file']['tmp_name'][$key]);
+              $exif = exif_read_data($_FILES['requiredFiles']['tmp_name'][$key]);
               if (!empty($exif['Orientation'])) {
                   $imageResource = imagecreatefromjpeg($filePath); // provided that the image is jpeg. Use relevant function otherwise
                   switch ($exif['Orientation']) {
