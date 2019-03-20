@@ -305,7 +305,7 @@
   <div class="row">
       <div class='col-sm-9'></div>
       <div class="col-sm-3">
-      <button type="submit" class="btn btn-default btn-block btn-sm submit-btn submit-font bottom-buffer" method="post" value="Comment" name="commentbtn">Comment</button>
+      <button type="submit" class="btn btn-default btn-block btn-sm submit-btn submit-font" method="post" value="Comment" name="commentbtn">Comment</button>
       </div>
     </div>
     </form>
