@@ -98,10 +98,10 @@
     		font-size: 12px;
     	}
       h4 {
-        font-size: 12px;
+        font-size: 8px;
       }
       h5 {
-        font-size: 12px;
+        font-size: 6px;
       }
     }
   </style>
