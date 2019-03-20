@@ -311,7 +311,7 @@
 
       $stat = $conn->prepare("SELECT * FROM Comments WHERE NoteID = ? ");
                 $stat->bindParam(1, $notes);
-		$stat->execute()
+		$stat->execute();
 		$reverseArray = array();
 
       while($row = $stat->fetch())
