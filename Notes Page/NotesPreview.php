@@ -285,7 +285,7 @@
 
   <!-- COMMENTS -->
   <div class="row">
-    <div class="col-sm-12 col-xs-12 style="padding-bottom: 10px;""><h2>Comments</h2></div>
+    <div class="col-sm-12 col-xs-12" style="padding-bottom: 10px;"><h2>Comments</h2></div>
   </div>
 
   <div class="row">
