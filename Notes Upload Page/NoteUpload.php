@@ -78,7 +78,28 @@
           {
             $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
             foreach($_FILES['requiredFiles']['name'] as $key=>$val){
-              $data = file_get_contents($_FILES['requiredFiles']['tmp_name'][$key]);
+
+              $filename = $_FILES['requiredFiles']['name'][$key];
+              $filePath = $_FILES['requiredFiles']['tmp_name'][$key];
+              $exif = exif_read_data($_FILES['file']['tmp_name'][$key]);
+              if (!empty($exif['Orientation'])) {
+                  $imageResource = imagecreatefromjpeg($filePath); // provided that the image is jpeg. Use relevant function otherwise
+                  switch ($exif['Orientation']) {
+                      case 3:
+                      $image = imagerotate($imageResource, 180, 0);
+                      break;
+                      case 6:
+                      $image = imagerotate($imageResource, -90, 0);
+                      break;
+                      case 8:
+                      $image = imagerotate($imageResource, 90, 0);
+                      break;
+                      default:
+                      $image = $imageResource;
+                  }
+              }
+
+              $data = file_get_contents($image);
               $pdf->AddPage();
               $pdf->Image('@'.$data);
             }
