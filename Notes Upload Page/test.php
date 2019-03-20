@@ -11,6 +11,7 @@ require_once('config.inc.php');
 
  $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 if(isset($_POST['btn'])){
+    echo sizeof($_FILES['requiredFiles']['name'], 0);
     foreach($_FILES['requiredFiles']['name'] as $key=>$val){
     $data = file_get_contents($_FILES['requiredFiles']['tmp_name'][$key]);
     $pdf->AddPage();
