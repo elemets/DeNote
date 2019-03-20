@@ -397,7 +397,7 @@
 
     $('#comment_box').height(heightOfProfile);
 
-  }));
+  });
 
 
 </script>
