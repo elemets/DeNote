@@ -376,8 +376,9 @@
   </div>
   <script type="text/javascript">
 
+    var img = document.getElementById('profile_image');
 
-    var heightOfProfile = $('#profile_image').clientHeight;
+    var heightOfProfile = img.clientHeight;
 
     console.log(heightOfProfile);
 
