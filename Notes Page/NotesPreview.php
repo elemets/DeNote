@@ -388,7 +388,10 @@
 </footer>
 <script type="text/javascript">
 
-  $(document).ready(function() {
+  $(document).ready(
+
+    setTimeOut(
+    function() {
     var img = document.getElementById('profile_image');
 
     var heightOfProfile = img.clientHeight + 32;
@@ -397,7 +400,8 @@
 
     $('#comment_box').height(heightOfProfile);
 
-  });
+  }, 2000)
+);
 
 
 </script>
