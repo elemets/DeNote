@@ -310,7 +310,7 @@
 
   <div class="row">
       <div id="profile_image" class="col-sm-1 col-xs-3" >
-          <img src="squareElementOrange.png" style="width: 100%;" class="img-circle" >
+          <img src="squareElementOrange.png" style="width: 100%;" class="img-circle">
 			     <div class="centered"><h5 style="color: #fff;">
 				    <?php echo $_SESSION['username']; ?></h5>
 			    </div>
@@ -358,7 +358,7 @@
             </div>
         </div>
       <div class="col-sm-11 col-xs-9">
-        <h4> Date: <?php echo $reverseArray[$index]['CommentDate']?> </h4>
+        <h4 style="padding-top: 10px;"> Date: <?php echo $reverseArray[$index]['CommentDate']?> </h4>
         <h3> <?php echo $reverseArray[$index]['Content'] ?> </h3>
       </div>
 
