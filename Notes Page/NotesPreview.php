@@ -382,7 +382,7 @@
 
     console.log(heightOfProfile);
 
-    $('#comment_box').height(30);
+    $('#comment_box').height(heightOfProfile);
 
 
   </script>
