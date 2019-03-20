@@ -316,7 +316,7 @@
       ?>
       <div class="row">
         <div class="col-sm-1">
-            <img src="squareElementOrange.png" style="width:100%" class="img-circle">
+            <img src="squareElementYellow.png" style="width:100%" class="img-circle">
              <div class="centered"><h5 style="color: #fff;">
               <?php echo $usernameOfTheCommenter?></h5>
             </div>
