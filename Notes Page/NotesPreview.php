@@ -36,6 +36,9 @@
     h5 {
       font-size: 0.8vw;
     }
+    h3 {
+      text-transform: none !important;
+    }
     @media screen and (min-width: 768px) {
     .mobile-pdf{
     display: none;
@@ -96,6 +99,7 @@
     	}
     	h3 {
     		font-size: 12px;
+        text-transform: none !important;
     	}
       h4 {
         font-size: 8px;
