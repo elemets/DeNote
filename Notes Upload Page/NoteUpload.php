@@ -245,6 +245,7 @@
 
         function uploadFile($name, $type, $data, $sectionNumber, $userID, $unitID, $titleNote, $unitYear)
         {
+          global $conn;
           $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`, `UnitYear`) VALUES (?,?,?,?,?,?,?,?)");
           $stmt->bindParam(1, $name);
           $stmt->bindParam(2, $type);
