@@ -388,13 +388,16 @@
 </footer>
 <script type="text/javascript">
 
-  var img = document.getElementById('profile_image');
+  $(document.ready(function() {
+    var img = document.getElementById('profile_image');
 
-  var heightOfProfile = img.clientHeight + 32;
+    var heightOfProfile = img.clientHeight + 32;
 
-  console.log(heightOfProfile);
+    console.log(heightOfProfile);
 
-  $('#comment_box').height(heightOfProfile);
+    $('#comment_box').height(heightOfProfile);
+
+  }));
 
 
 </script>
