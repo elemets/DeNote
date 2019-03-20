@@ -2,6 +2,8 @@
 <html lang="en">
   <?php
     session_start();
+    require_once('../Notes Upload Page/tcpdf/examples/tcpdf_include.php');
+    require_once('../Notes Upload Page/tcpdf/tcpdf.php');
     if($_SESSION["username"] == null)
     {
     	header('Location: ../index.html');
@@ -31,16 +33,14 @@
   <style>
     .bottom-buffer {
     margin-bottom:20px !important;
-    }
-    .submit-btn {
-    background-color: #660099 !important;
-    }
-    .submit-font {
+    }require_once('../Notes Upload Page/tcpdf/examples/tcpdf_include.php');
+require_once('../Notes Upload Page/tcpdf/tcpdf.php');
     color:#ffffff !important;
     }
     .submit-font:hover {
     color:#ecaa33 !important;
-    }
+    }require_once('../Notes Upload Page/tcpdf/examples/tcpdf_include.php');
+require_once('../Notes Upload Page/tcpdf/tcpdf.php');
     .form-top-left{
     width : 75% !important;
     }
@@ -48,9 +48,8 @@
     min-height: 100% !important;  /* Fallback for browsers do NOT support vh unit */
     min-height: 100vh; /* These two lines are counted as one :-)       */
     align-items: center !important;
-    }
-    body {
-    padding-top: 50px;
+    }require_once('../Notes Upload Page/tcpdf/examples/tcpdf_include.php');
+require_once('../Notes Upload Page/tcpdf/tcpdf.php');
     }
     label {
     color: #212529;
@@ -65,19 +64,37 @@
         // Connect to the database
          $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
          $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
-
          $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+         $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
+         $unitYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->YearOfStudent;
 
         if(isset($_POST['btn']))
         {
-          $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
-          $unitYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->YearOfStudent;
-          $name = $_FILES['requiredFile']['name'];
-          $type = $_FILES['requiredFile']['type'];
-          $titleNote = $_POST["title"];
-          $unitID = $_POST["UnitID"];
-          $sectionNumber = $_POST["sectionNumber"];
-          $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
+          if (sizeof($_FILES['requiredFiles']['name'], 0) > 1)
+          {
+            $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+            foreach($_FILES['requiredFiles']['name'] as $key=>$val){
+              $data = file_get_contents($_FILES['requiredFiles']['tmp_name'][$key]);
+              $pdf->AddPage();
+              $pdf->Image('@'.$data);
+            }
+            $pdf->Output(trim($_POST["title"]) . ".pdf", 'F');
+            $name=$_POST["title"];
+            $type = 'application/pdf';
+            $data = file_get_contents(trim($_POST["title"]) . ".pdf");
+            $sectionNumber = $_POST["sectionNumber"];
+            $titleNote = $_POST["title"];
+            $unitID = $_POST["UnitID"];
+          }
+          else {
+            $name = $_FILES['requiredFiles']['name'][0];
+            $type = $_FILES['requiredFiles']['type'][0];
+            $data = file_get_contents($_FILES['requiredFiles']['tmp_name'][0]);
+            $sectionNumber = $_POST["sectionNumber"];
+            $titleNote = $_POST["title"];
+            $unitID = $_POST["UnitID"];
+          }
 
           if(validateUpload($unitID, $sectionNumber, $type) && isset($_POST['box']))
           {
@@ -185,7 +202,7 @@
                 <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID" pattern="[^<>;]+">
               </div>
               <div id="file-id" class="form-group">
-                <input type="file" id="requiredFile" name="requiredFile" accept=".pdf,.png,.jpg">
+                <input type="file" id="requiredFile" name="requiredFiles[]" accept=".pdf,.png,.jpg" multiple>
               </div>
               <div class="form-group">
                 <input type="checkbox" name="box" value="tik the Box"> I confirm that the file complies with the <a href="./TermsAndConditions.html">Terms and Conditions</a><br>
