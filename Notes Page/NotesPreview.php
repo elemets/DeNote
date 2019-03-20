@@ -103,6 +103,9 @@
       h5 {
         font-size: 6px;
       }
+      .fontChange {
+        font-size: 12px;
+      }
     }
   </style>
 
@@ -320,7 +323,7 @@
   <div class="row">
       <div class="col-sm-9 col-xs-9"></div>
       <div class="col-sm-3 col-xs-3">
-      <button type="submit" class="btn btn-default btn-block submit-btn submit-font" method="post" value="Comment" name="commentbtn">Post</button>
+      <button type="submit" class="btn btn-default btn-block submit-btn submit-font fontChange" method="post" value="Comment" name="commentbtn">Post</button>
       </div>
     </div>
     </form>
@@ -369,7 +372,7 @@
       <form action="" method="post">
         <div class="col-sm-10 col-xs-9"></div>
         <div class="col-sm-2 col-xs-3">
-        <button  type="submit" class="btn btn-default btn-block dislike-btn submit-font" method="post" value="<?php echo $reverseArray[$index]['CommentID']?>" name="deleteComment"> Delete</button>
+        <button  type="submit" class="btn btn-default btn-block dislike-btn submit-font fontChange" method="post" value="<?php echo $reverseArray[$index]['CommentID']?>" name="deleteComment"> Delete</button>
       </div>
       </form>
     </div>
