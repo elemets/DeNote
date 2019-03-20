@@ -33,7 +33,9 @@
   transform: translate(-50%, -50%);
 	text-align: center;
 }
-
+    h5 {
+      font-size: 1vw;
+    }
     @media screen and (min-width: 768px) {
     .mobile-pdf{
     display: none;
