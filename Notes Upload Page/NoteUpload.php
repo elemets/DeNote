@@ -269,13 +269,20 @@
         }
         function validateProperPict($file)
         {
+          $count = 0;
           foreach($file as $key=>$val)
           {
             if ($file[$key] != "image/jpeg" || $file[$key] != "image/png" || $file[$key] != "image/jpg")
-              return false;
+              count++;
           }//foreach
 
-          return true;
+          if ($count != 0)
+          {
+            return false;
+          }
+          else {
+            return true;
+          }
         }
         function uploadFile($name, $type, $data, $sectionNumber, $userID, $unitID, $titleNote, $unitYear)
         {
