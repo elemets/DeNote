@@ -94,6 +94,7 @@
           $stat->bindParam(1, $id);
           $stat->execute();
           $row = $stat->fetch();
+          $usernameIDmain = $row['UserID'];
           $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
           $username = $conn2->query($syn)->fetch_object()->Username;
 
@@ -291,7 +292,7 @@
     </form>
     <?php
       $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
-          $username = $conn2->query($syn)->fetch_object()->Username;
+      $username = $conn2->query($syn)->fetch_object()->Username;
 
       echo $username;
       $stat = $conn->prepare("SELECT * FROM Comments WHERE NoteID = ? ");
@@ -299,7 +300,7 @@
                 $stat->execute();
 
                     while($row = $stat->fetch()){
-      $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
+      $syn = "SELECT Username FROM Users WHERE UserID =" . $usernameIDmain;
       $usernameOfTheCommenter = $conn2->query($syn)->fetch_object()->Username;
       ?>
     <h4>
