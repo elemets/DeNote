@@ -26,6 +26,9 @@
     width: 0;
     }
     }
+    .bottom-buffer {
+		margin-bottom:20px;
+    }
     @media screen and (min-width: 768px) {
     .mobile-pdf{
     display: none;
@@ -277,23 +280,27 @@
     <div class="col-sm-12"><h2>Comments</h2></div>
   </div>
 
-    <div class="row">
+  <div class="row">
+      <div class="col-sm-1">
+          <img src="squareElementOrange.png" style="width:100%" class="img-circle">
+			     <div class="centered"><h1 style="color: #fff;">
+				    <?php echo $_SESSION['username']; ?></h1>
+			    </div>
+      </div>
     <form action="" method="post">
-    <div class="row">
       <div class="col-sm-11">
       <textArea style="width: 100%; height: 100%;" name="commentBox"></textArea>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-11">
-      <button type="submit" method="post" value="Comment" name="commentbtn">Comment</button>
+  </div>
+  <div class="row">
+      <div class='col-sm-9'></div>
+      <div class="col-sm-3">
+      <button type="submit" class="btn btn-default btn-block btn-sm submit-btn submit-font bottom-buffer" method="post" value="Comment" name="commentbtn">Comment</button>
       </div>
     </div>
     </form>
     <?php
 
-
-      echo $_SESSION['username'];
       $stat = $conn->prepare("SELECT * FROM Comments WHERE NoteID = ? ");
                 $stat->bindParam(1, $notes);
                 $stat->execute();
