@@ -316,7 +316,7 @@
 
       while($row = $stat->fetch())
       {
-	$reverseArray.push($row);
+	array_push($reverseArray, $row);
       }
       $reverseArray = array_reverse($reverseArray);
       for( $index = 0; $index < sizeof($reverseArray); $index++)
