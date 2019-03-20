@@ -272,11 +272,11 @@
           $count = 0;
           foreach($file as $key=>$val)
           {
-            if (trim($file[$key]) != "image/jpeg" || trim($file[$key]) != "image/png" || trim($file[$key]) != "image/jpg")
+            if (trim($file[$key]) == "image/jpeg" || trim($file[$key]) == "image/png" || trim($file[$key]) == "image/jpg")
               $count++;
           }//foreach
 
-          if ($count != 0)
+          if ($count != sizeof($file))
           {
             return false;
           }
