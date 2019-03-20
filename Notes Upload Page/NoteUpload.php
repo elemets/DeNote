@@ -259,7 +259,6 @@
             return false;
           else if((trim($type) == "image/jpeg") || (trim($type) == "application/pdf") || (trim($type) == "image/png"))
             return true;
-          else if()
           else
             return false;
         }
