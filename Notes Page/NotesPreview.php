@@ -319,7 +319,7 @@
 	$reverseArray.push($row);
       }
       $reverseArray = array_reverse($reverseArray);
-      for(int index = 0; index < sizeof(reverseArray); index++)
+      for( $index = 0; $index < sizeof(reverseArray); $index++)
       {
       $colorYellow =  "squareElementYellow.png";
       $colorOrange = "squareElementOrange.png";
