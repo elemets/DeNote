@@ -388,7 +388,7 @@
 </footer>
 <script type="text/javascript">
 
-  $(document.ready(function() {
+  $(document).ready(function() {
     var img = document.getElementById('profile_image');
 
     var heightOfProfile = img.clientHeight + 32;
