@@ -375,13 +375,13 @@
   </div>
   </div>
   <script type="text/javascript">
-  $(function(){
+  function(){
 
     var heightOfProfile = $('#profile_image').height();
 
     $('#comment_box').height(heightOfProfile);
 
-  )};
+  };
 
   </script>
 
