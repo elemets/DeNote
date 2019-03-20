@@ -390,7 +390,7 @@
 
   $(document).ready(
 
-    setTimeOut(
+    setTimeout(
     function() {
     var img = document.getElementById('profile_image');
 
