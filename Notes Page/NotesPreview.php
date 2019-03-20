@@ -326,23 +326,24 @@
         <h3> <?php echo $row['Content'] ?> </h3>
       </div>
 
+    </div>
 
       <?php
         if($userIDmain == $row['UserID'] || $userIDmain == -1)
         {
         ?>
-
+      <div class="row">
       <form action="" method="post">
         <div class='col-sm-9'></div>
         <div class='col-sm-3'>
         <button  type="submit" class="btn btn-default btn-block btn-sm submit-btn submit-font" method="post" value="<?php echo $row['CommentID']?>" name="deleteComment"> Delete</button>
       </div>
       </form>
+    </div>
       <?php
         }//if
         ?>
     <br>
-  </div>
     <?php
       }//while
 
