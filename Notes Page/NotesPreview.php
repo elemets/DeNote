@@ -312,13 +312,20 @@
                 $stat->bindParam(1, $notes);
                 $stat->execute();
 
-                    while($row = $stat->fetch()){
+      while($row = $stat->fetch())
+      {
+      $colorYellow =  squareElementYellow.png;
+      $colorOrange = squareElementOrange.png;
       $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
       $usernameOfTheCommenter = $conn2->query($syn)->fetch_object()->Username;
+      if ($usernameOfTheCommenter ==  $_SESSION['username'])
+        $color = $colorOrange;
+      else
+        $color = $colorYellow;
       ?>
       <div class="row">
         <div class="col-sm-1">
-            <img src="squareElementYellow.png" style="width:100%" class="img-circle">
+            <img src="<?php echo $color?>" style="width:100%" class="img-circle">
              <div class="centered"><h5 style="color: #fff;">
               <?php echo $usernameOfTheCommenter?></h5>
             </div>
