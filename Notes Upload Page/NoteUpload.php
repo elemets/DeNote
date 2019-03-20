@@ -10,7 +10,7 @@
     }
     ?>
   <?php
-    //include "../Header - Footer/header.php";
+    include "../Header - Footer/header.php";
     ?>
   <title>Upload Page</title>
   <script type="text/javascript">
@@ -276,7 +276,6 @@
               $count++;
           }//foreach
 
-          echo $count;
           if ($count != sizeof($file))
           {
             return false;
