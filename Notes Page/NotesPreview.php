@@ -88,6 +88,15 @@
     color: #505050 !important;
     }
   </style>
+  <script type="text/javascript">
+    function(){(
+
+      var heightOfProfile = getElementById("#profile_image").height();
+
+      $("#comment_box").css("height", heightOfProfile);
+
+    )};
+  </script>
 </head>
 
 <body>
@@ -288,7 +297,7 @@
   </div>
 
   <div class="row">
-      <div class="col-sm-1">
+      <div class="col-sm-1" id="profile_image">
           <img src="squareElementOrange.png" style="width: 100%;" class="img-circle">
 			     <div class="centered"><h5 style="color: #fff;">
 				    <?php echo $_SESSION['username']; ?></h5>
@@ -296,7 +305,7 @@
       </div>
     <form action="" method="post">
       <div class="col-sm-11">
-      <textArea style="width: 100%; height: 100%;" name="commentBox"></textArea>
+      <textArea style="width: 100%; height: 100%;" name="commentBox" id="comment_box"></textArea>
       </div>
   </div>
   <div class="row">
