@@ -93,7 +93,7 @@
 
       var heightOfProfile = $("#profile_image").height();
 
-      $("#comment_box").css("height", heightOfProfile);
+      $("#comment_box").style("height", heightOfProfile);
 
     )};
   </script>
