@@ -13,6 +13,25 @@ require_once('config.inc.php');
 if(isset($_POST['btn'])){
     echo sizeof($_FILES['requiredFiles']['name'], 0);
     foreach($_FILES['requiredFiles']['name'] as $key=>$val){
+      $filename = $_FILES['requiredFiles']['name'][$key];
+      $filePath = $_FILES['requiredFiles']['tmp_name'][$key];=
+      $exif = exif_read_data($_FILES['requiredFiles']['tmp_name'][$key]);
+      if (!empty($exif['Orientation'])) {
+          $imageResource = imagecreatefromjpeg($filePath); // provided that the image is jpeg. Use relevant function otherwise
+          switch ($exif['Orientation']) {
+              case 3:
+              $image = imagerotate($imageResource, 180, 0);
+              break;
+              case 6:
+              $image = imagerotate($imageResource, -90, 0);
+              break;
+              case 8:
+              $image = imagerotate($imageResource, 90, 0);
+              break;
+              default:
+              $image = $imageResource;
+          }
+      }
     $data = file_get_contents($_FILES['requiredFiles']['tmp_name'][$key]);
     $pdf->AddPage();
     $pdf->Image('@'.$data);
