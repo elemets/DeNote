@@ -312,13 +312,18 @@
       $stat = $conn->prepare("SELECT * FROM Comments WHERE NoteID = ? ");
                 $stat->bindParam(1, $notes);
 		$stat->execute()
-                $stat = array_reverse($stat);
+		$reverseArray = array();
 
       while($row = $stat->fetch())
       {
+	$reverseArray.push($row)
+      }
+      $reverseArray = array_reverse($reverseArray);
+      for(int index = 0; index < sizeof(reverseArray); index++)
+      {
       $colorYellow =  "squareElementYellow.png";
       $colorOrange = "squareElementOrange.png";
-      $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
+      $syn = "SELECT Username FROM Users WHERE UserID =" . $reverseArray[$index]['UserID'];
       $usernameOfTheCommenter = $conn2->query($syn)->fetch_object()->Username;
       if ($usernameOfTheCommenter ==  $_SESSION['username'])
         $color = $colorOrange;
@@ -333,21 +338,21 @@
             </div>
         </div>
       <div class="col-sm-11">
-        <h4> Date: <?php echo $row['CommentDate']?> </h4><br>
-        <h3> <?php echo $row['Content'] ?> </h3>
+        <h4> Date: <?php echo $reverseArray[index]['CommentDate']?> </h4><br>
+        <h3> <?php echo $reverseArray[index]['Content'] ?> </h3>
       </div>
 
     </div>
 
       <?php
-        if($userIDmain == $row['UserID'] || $userIDmain == -1)
+        if($userIDmain == $reverseArray[$index]['UserID'] || $userIDmain == -1)
         {
         ?>
       <div class="row">
       <form action="" method="post">
         <div class='col-sm-9'></div>
         <div class='col-sm-3'>
-        <button  type="submit" class="btn btn-default btn-block btn-sm submit-btn submit-font" method="post" value="<?php echo $row['CommentID']?>" name="deleteComment"> Delete</button>
+        <button  type="submit" class="btn btn-default btn-block btn-sm submit-btn submit-font" method="post" value="<?php echo $reverseArray[$index]['CommentID']?>" name="deleteComment"> Delete</button>
       </div>
       </form>
     </div>
