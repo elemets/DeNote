@@ -274,8 +274,10 @@
           {
             if (trim($file[$key]) != "image/jpeg" || trim($file[$key]) != "image/png" || trim($file[$key]) != "image/jpg")
               $count++;
+              echo trim($file[$key]);
           }//foreach
 
+          echo $count;
           if ($count != 0)
           {
             return false;
