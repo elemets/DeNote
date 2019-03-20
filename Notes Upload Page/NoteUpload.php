@@ -116,7 +116,7 @@
 <?php
           }
           else
-        {f $_FILES['requiredFiles']['name']
+        {
         ?>
         <div class="fixed-top" style="padding-top: 0px">
           <div class="alert alert-danger alert-dismissible" role="alert">
@@ -259,7 +259,6 @@
             return false;
           else if((trim($type) == "image/jpeg") || (trim($type) == "application/pdf") || (trim($type) == "image/png"))
             return true;
-          else if()
           else
             return false;
         }
