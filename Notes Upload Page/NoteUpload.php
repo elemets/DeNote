@@ -33,23 +33,26 @@
   <style>
     .bottom-buffer {
     margin-bottom:20px !important;
-    }require_once('../Notes Upload Page/tcpdf/examples/tcpdf_include.php');
-require_once('../Notes Upload Page/tcpdf/tcpdf.php');
+    }
+    .submit-btn {
+    background-color: #660099 !important;
+    }
+    .submit-font {
     color:#ffffff !important;
     }
     .submit-font:hover {
     color:#ecaa33 !important;
-    }require_once('../Notes Upload Page/tcpdf/examples/tcpdf_include.php');
-require_once('../Notes Upload Page/tcpdf/tcpdf.php');
+    }
     .form-top-left{
     width : 75% !important;
     }
     .formcenter {
     min-height: 100% !important;  /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh; /* These two lines are counted as one :-)       */
+    min-height: 100vh; /* These two lines are counted as one 🙂       */
     align-items: center !important;
-    }require_once('../Notes Upload Page/tcpdf/examples/tcpdf_include.php');
-require_once('../Notes Upload Page/tcpdf/tcpdf.php');
+    }
+    body {
+    padding-top: 50px;
     }
     label {
     color: #212529;
