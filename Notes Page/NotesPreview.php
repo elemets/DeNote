@@ -87,6 +87,23 @@
     .like-dislike:hover {
     color: #505050 !important;
     }
+    @media screen and (max-width: 768px){
+      h1 {
+    		font-size: 35px;
+    	}
+    	h2 {
+    		font-size: 25px;
+    	}
+    	h3 {
+    		font-size: 12px;
+    	}
+      h4 {
+        font-size: 12px;
+      }
+      h5 {
+        font-size: 12px;
+      }
+    }
   </style>
 
 </head>
