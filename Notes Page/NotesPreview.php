@@ -91,7 +91,7 @@
   <script type="text/javascript">
     function(){(
 
-      var heightOfProfile = getElementById("#profile_image").height();
+      var heightOfProfile = $("#profile_image").height();
 
       $("#comment_box").css("height", heightOfProfile);
 
