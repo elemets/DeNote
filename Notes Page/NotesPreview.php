@@ -283,8 +283,8 @@
   <div class="row">
       <div class="col-sm-1">
           <img src="squareElementOrange.png" style="width:100%" class="img-circle">
-			     <div class="centered"><h1 style="color: #fff;">
-				    <?php echo $_SESSION['username']; ?></h1>
+			     <div class="centered"><h5 style="color: #fff;">
+				    <?php echo $_SESSION['username']; ?></h5>
 			    </div>
       </div>
     <form action="" method="post">
