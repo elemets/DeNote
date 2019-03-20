@@ -70,7 +70,6 @@
 
         if(isset($_POST['btn']))
         {
-
           $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
           $unitYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->YearOfStudent;
           $name = $_FILES['requiredFile']['name'];
@@ -78,20 +77,13 @@
           $titleNote = $_POST["title"];
           $unitID = $_POST["UnitID"];
           $sectionNumber = $_POST["sectionNumber"];
+          $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
 
           if(validateUpload($unitID, $sectionNumber, $type) && isset($_POST['box']))
           {
-          $data = file_get_contents($_FILES['requiredFile']['tmp_name']);
-          $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`, `UnitYear`) VALUES (?,?,?,?,?,?,?,?)");
-          $stmt->bindParam(1, $name);
-          $stmt->bindParam(2, $type);
-          $stmt->bindParam(3, $data);
-          $stmt->bindParam(4, $sectionNumber);
-          $stmt->bindParam(5, $userID);
-          $stmt->bindParam(6, $unitID);
-          $stmt->bindParam(7, $titleNote);
-          $stmt->bindParam(8, $unitYear);
-          $stmt->execute();
+            uploadFile($name, $type, $data, $sectionNumber, $userID, $unitID, $titleNote, $unitYear);
+
+
 ?>
           <div class="fixed-top" style="padding-top: 0px">
           <div class="alert alert-success alert-dismissible" role="alert">
@@ -214,7 +206,7 @@
                   if(!(file.type.match('image/jp.*') || file.type.match('application/pdf'))) {
                       alert("Only JPG and PDF files are allowed!");
                       $("#file-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
-                      
+
                       return;
                   }
 
@@ -249,6 +241,20 @@
             return true;
           else
             return false;
+        }
+
+        function uploadFile($name, $type, $data, $sectionNumber, $userID, $unitID, $titleNote, $unitYear)
+        {
+          $stmt = $conn->prepare("INSERT INTO Notes (`FileName`,`dataType`,`Data`, `SectionNumber`, `UserID`, `UnitID`, `TitleNote`, `UnitYear`) VALUES (?,?,?,?,?,?,?,?)");
+          $stmt->bindParam(1, $name);
+          $stmt->bindParam(2, $type);
+          $stmt->bindParam(3, $data);
+          $stmt->bindParam(4, $sectionNumber);
+          $stmt->bindParam(5, $userID);
+          $stmt->bindParam(6, $unitID);
+          $stmt->bindParam(7, $titleNote);
+          $stmt->bindParam(8, $unitYear);
+          $stmt->execute();
         }
 
          ?>
