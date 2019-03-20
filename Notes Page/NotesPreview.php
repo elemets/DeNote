@@ -314,34 +314,35 @@
       $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
       $usernameOfTheCommenter = $conn2->query($syn)->fetch_object()->Username;
       ?>
-    <h4>
-      Author:
-    </h4>
-    <h5>
-      <?php echo $usernameOfTheCommenter?>
-    </h5>
-    <h4>
-      Date:
-    </h4>
-    <h5>
-      <?php echo $row['CommentDate']?>
-    </h5>
-    <?php
-      if($userIDmain == $row['UserID'] || $userIDmain == -1)
-      {
-      ?>
-    <form action="" method="post">
-      <button  type="submit" method="post" value="<?php echo $row['CommentID']?>" name="deleteComment"> Delete</button>
-    </form>
-    <?php
-      }//if
-      ?>
-    <h>
-    <strong>
-    <?php echo $row['Content'] ?>
-    </strong>
-    <h>
+      <div class="row">
+        <div class="col-sm-1">
+            <img src="squareElementOrange.png" style="width:100%" class="img-circle">
+             <div class="centered"><h5 style="color: #fff;">
+              <?php echo $usernameOfTheCommenter?></h5>
+            </div>
+        </div>
+      <div class="col-sm-11">
+        <h4> Date: <?php echo $row['CommentDate']?> </h4>
+        <h3> <?php echo $row['Content'] ?> </h3>
+      </div>
+
+
+      <?php
+        if($userIDmain == $row['UserID'] || $userIDmain == -1)
+        {
+        ?>
+
+      <form action="" method="post">
+        <div class='col-sm-9'></div>
+        <div class='col-sm-3'>
+        <button  type="submit" class="btn btn-default btn-block btn-sm submit-btn submit-font" method="post" value="<?php echo $row['CommentID']?>" name="deleteComment"> Delete</button>
+      </div>
+      </form>
+      <?php
+        }//if
+        ?>
     <br>
+  </div>
     <?php
       }//while
 
