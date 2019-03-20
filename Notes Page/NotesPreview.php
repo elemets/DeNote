@@ -290,6 +290,10 @@
     </div>
     </form>
     <?php
+      $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
+          $username = $conn2->query($syn)->fetch_object()->Username;
+
+      echo $username;
       $stat = $conn->prepare("SELECT * FROM Comments WHERE NoteID = ? ");
                 $stat->bindParam(1, $notes);
                 $stat->execute();
