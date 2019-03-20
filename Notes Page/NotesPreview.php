@@ -396,11 +396,9 @@
 
     var heightOfProfile = img.clientHeight;
 
-    console.log(heightOfProfile);
-
     $('#comment_box').height(heightOfProfile);
 
-  }, 200)
+  }, 350)
 );
 
 
