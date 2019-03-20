@@ -126,7 +126,7 @@
             <form method="post" enctype="multipart/form-data">
               <div class="form-group">
                 <label for="title"> Note Name</label>
-                <input type="textbox" class="form-control" name="title" placeholder="Title">
+                <input type="textbox" class="form-control" name="title" placeholder="Title" pattern="[^<>;]+">
               </div>
               <div class="form-group">
                 <label for="unit"> Unit</label>
@@ -190,7 +190,7 @@
               </div>
               <div class="form-group">
                 <label for="sectionID"> Section ID</label>
-                <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID">
+                <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID" pattern="[^<>;]+">
               </div>
               <div id="file-id" class="form-group">
                 <input type="file" id="requiredFile" name="requiredFile" accept=".pdf,.png,.jpg">
