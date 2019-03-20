@@ -273,14 +273,15 @@
           foreach($file as $key=>$val)
           {
             if ($file[$key] != "image/jpeg" || $file[$key] != "image/png" || $file[$key] != "image/jpg")
-              count++;
+              $count++;
           }//foreach
 
           if ($count != 0)
           {
             return false;
           }
-          else {
+          else
+          {
             return true;
           }
         }
