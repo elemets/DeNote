@@ -314,8 +314,8 @@
 
       while($row = $stat->fetch())
       {
-      $colorYellow =  squareElementYellow.png;
-      $colorOrange = squareElementOrange.png;
+      $colorYellow =  "squareElementYellow.png";
+      $colorOrange = "squareElementOrange.png";
       $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
       $usernameOfTheCommenter = $conn2->query($syn)->fetch_object()->Username;
       if ($usernameOfTheCommenter ==  $_SESSION['username'])
