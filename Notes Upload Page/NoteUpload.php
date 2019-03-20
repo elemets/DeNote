@@ -116,7 +116,7 @@
 <?php
           }
           else
-        {f $_FILES['requiredFiles']['name']
+        {
         ?>
         <div class="fixed-top" style="padding-top: 0px">
           <div class="alert alert-danger alert-dismissible" role="alert">
