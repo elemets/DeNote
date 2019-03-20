@@ -288,8 +288,8 @@
     <div class="col-sm-12"><h2>Comments</h2></div>
   </div>
 
-  <div class="row" id="profile_image">
-      <div class="col-sm-1" >
+  <div class="row" >
+      <div id="profile_image" class="col-sm-1" >
           <img src="squareElementOrange.png" style="width: 100%;" class="img-circle" >
 			     <div class="centered"><h5 style="color: #fff;">
 				    <?php echo $_SESSION['username']; ?></h5>
