@@ -104,7 +104,7 @@
         font-size: 6px;
       }
       .fontChange {
-        font-size: 12px;
+        font-size: 8px;
       }
     }
   </style>
