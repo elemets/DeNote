@@ -374,18 +374,7 @@
       ?>
   </div>
   </div>
-  <script type="text/javascript">
 
-    var img = document.getElementById('profile_image');
-
-    var heightOfProfile = img.clientHeight + 32;
-
-    console.log(heightOfProfile);
-
-    $('#comment_box').height(heightOfProfile);
-
-
-  </script>
 
 
 </body>
@@ -397,5 +386,16 @@
       ?>
   </div>
 </footer>
+<script type="text/javascript">
 
+  var img = document.getElementById('profile_image');
+
+  var heightOfProfile = img.clientHeight + 32;
+
+  console.log(heightOfProfile);
+
+  $('#comment_box').height(heightOfProfile);
+
+
+</script>
 </html>
