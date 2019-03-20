@@ -74,7 +74,7 @@
 
         if(isset($_POST['btn']))
         {
-          if (sizeof($_FILES['requiredFiles']['name'], 0) > 1 && validateUpload2())
+          if (sizeof($_FILES['requiredFiles']['name'], 0) > 1 && validateUpload2($_FILES['requiredFiles']['name']))
           {
             $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
             foreach($_FILES['requiredFiles']['name'] as $key=>$val){
@@ -263,11 +263,11 @@
           else
             return false;
         }
-        function validateUpload2()
+        function validateUpload2($file)
         {
-          foreach($_FILES['requiredFiles']['name'] as $key=>$val)
+          foreach($file as $key=>$val)
           {
-            if ($_FILES['requiredFiles']['type'][$key] != "image/jpeg" || $_FILES['requiredFiles']['type'][$key] != "image/png" || $_FILES['requiredFiles']['type'][$key] != "image/jpg")
+            if ($file[$key] != "image/jpeg" || $file[$key] != "image/png" || $file[$key] != "image/jpg")
               return false;
           }//foreach
 
