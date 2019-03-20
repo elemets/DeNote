@@ -285,24 +285,24 @@
 
   <!-- COMMENTS -->
   <div class="row">
-    <div class="col-sm-12"><h2>Comments</h2></div>
+    <div class="col-sm-12 col-xs-12"><h2>Comments</h2></div>
   </div>
 
-  <div class="row" >
-      <div id="profile_image" class="col-sm-1" >
+  <div class="row">
+      <div id="profile_image" class="col-sm-1 col-xs-1" >
           <img src="squareElementOrange.png" style="width: 100%;" class="img-circle" >
 			     <div class="centered"><h5 style="color: #fff;">
 				    <?php echo $_SESSION['username']; ?></h5>
 			    </div>
       </div>
     <form action="" method="post">
-      <div class="col-sm-11">
+      <div class="col-sm-11 col-xs-11">
       <textArea style="width: 100%;" name="commentBox" id="comment_box"></textArea>
       </div>
   </div>
   <div class="row">
-      <div class='col-sm-9'></div>
-      <div class="col-sm-3">
+      <div class="col-sm-9 col-xs-9"></div>
+      <div class="col-sm-3 col-xs-3">
       <button type="submit" class="btn btn-default btn-block btn-sm submit-btn submit-font" method="post" value="Comment" name="commentbtn">Comment</button>
       </div>
     </div>
@@ -331,13 +331,13 @@
         $color = $colorYellow;
       ?>
       <div class="row">
-        <div class="col-sm-1">
+        <div class="col-sm-1 col-xs-1">
             <img src="<?php echo $color?>" style="width:100%" class="img-circle">
              <div class="centered"><h5 style="color: #fff;">
               <?php echo $usernameOfTheCommenter?></h5>
             </div>
         </div>
-      <div class="col-sm-11">
+      <div class="col-sm-11 col-xs-11">
         <h4> Date: <?php echo $reverseArray[$index]['CommentDate']?> </h4><br>
         <h3> <?php echo $reverseArray[$index]['Content'] ?> </h3>
       </div>
@@ -350,8 +350,8 @@
         ?>
       <div class="row">
       <form action="" method="post">
-        <div class='col-sm-9'></div>
-        <div class='col-sm-3'>
+        <div class="col-sm-9 col-xs-9"></div>
+        <div class="col-sm-3 col-xs-3">
         <button  type="submit" class="btn btn-default btn-block btn-sm submit-btn submit-font" method="post" value="<?php echo $reverseArray[$index]['CommentID']?>" name="deleteComment"> Delete</button>
       </div>
       </form>
