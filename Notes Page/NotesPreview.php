@@ -389,7 +389,7 @@
     <?php
       }//while
 
-      	if(isset($_POST['commentbtn']) && trim($_POST["commentBox"]) != "")
+      	if(isset($_POST['commentbtn']) && trim($_POST["commentBox"]) != '')
       	{
       $CommentBox = $_POST["commentBox"];
       $query50 = "INSERT INTO `Comments`(`NoteID`, `UserID`,  `Content`) VALUES ('$notes', '$userIDmain' , '$CommentBox')";
