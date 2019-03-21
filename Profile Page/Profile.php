@@ -148,7 +148,7 @@ padding: 0px 10px;
 					</div>
 
 					<div class="col-sm-12" style="padding-top: 10px; padding-bottom: 30px; color: black;">
-						<div class="pull-right" style="width: 100%;">
+						<div class="pull-right" style="width: 75%;">
 						<h4 style="color: black;">Delete Note:</h4>
 						<form method="post" class"form-inline">
 							<select name="note">
