@@ -321,7 +321,7 @@
       </div>
     <form action="" method="post">
       <div class="col-sm-11 col-xs-9">
-      <textArea style="width: 100%;" name="commentBox" id="comment_box"></textArea>
+      <input type="textbox" style="width: 100%;" name="commentBox" id="comment_box" pattern="[^<>;]+" ></input>
       </div>
   </div>
   <div class="row">
