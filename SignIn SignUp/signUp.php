@@ -81,12 +81,12 @@ $message = "";
 
     		  <div class="form-group">
             <label for="username">Username (cannot contain < ; >)</label>
-            <input type="textbox" class="form-control form-element" name="username" placeholder="Username" pattern="[^<>;]+">
+            <input type="textbox" class="form-control form-element" name="username" placeholder="Username" pattern="[^<>;]+" required>
           </div>
 
           <div class="form-group">
             <label for="email">University Email</label>
-            <input type="email" class="form-control form-element" name="email" placeholder="University Email">
+            <input type="email" class="form-control form-element" name="email" placeholder="University Email" required>
           </div>
 
           <div class="form-group">
@@ -103,7 +103,7 @@ $message = "";
           <!-- Password validation based on www.w3schools.com/howto/howto_js_password_validation.asp -->
           <div class="form-group">
             <label for="password">Password (8+ characters, cannot contain < ; >)</label>
-    			  <input type="password" class="form-control form-element" name="password" placeholder="Password" pattern="[a-zA-Z0-9!?@#$%*-/+_]{8,}">
+    			  <input type="password" class="form-control form-element" name="password" placeholder="Password" pattern="[a-zA-Z0-9!?@#$%*-/+_]{8,}" required>
           </div>
 
           <br>
