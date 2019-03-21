@@ -143,11 +143,11 @@
             <form method="post" enctype="multipart/form-data">
               <div class="form-group">
                 <label for="title"> Note Name</label>
-                <input type="textbox" class="form-control" name="title" placeholder="Title" pattern="[^<>;]+">
+                <input type="textbox" class="form-control" name="title" placeholder="Title" pattern="[^<>;]+" required>
               </div>
               <div class="form-group">
                 <label for="unit"> Unit</label>
-                <select class="form-control" name="UnitID" placeholder="Unit">
+                <select class="form-control" name="UnitID" placeholder="Unit" required>
                   <option>----</option>
                   <option>AHCP</option>
                   <option>AMER</option>
