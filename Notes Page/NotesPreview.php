@@ -355,12 +355,14 @@
         $color = $colorYellow;
       ?>
       <div class="row">
+        <a <?php echo "href='../Profile Page/profile2.php?id=".$reverseArray[$index]['UserID']; ?> >
         <div class="col-sm-1 col-xs-3">
             <img src="<?php echo $color?>" style="width:100%" class="img-circle">
              <div class="centered"><h5 style="color: #fff;">
               <?php echo $usernameOfTheCommenter?></h5>
             </div>
         </div>
+        </a>
       <div class="col-sm-11 col-xs-9">
         <h4 style="padding-top: 8px; padding-bottom: 3px;"> Date: <?php echo $reverseArray[$index]['CommentDate']?> </h4>
         <h3> <?php echo $reverseArray[$index]['Content'] ?> </h3>
