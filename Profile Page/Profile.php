@@ -121,7 +121,10 @@ padding: 0px 10px;
 	$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
 	$userYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE UserID ='$userID'")->fetch_object()->YearOfStudent;// YearOfStudent query
    ?>
-
+<script src="path/to/jquery.js"></script>
+<script src="path/to/popper.js"></script>
+<script src="path/to/bootstrap.js"></script>
+<script src="path/to/bootstrap-confirmation.js"></script>
 <script>
 $('[data-toggle=confirmation]').confirmation({
   rootSelector: '[data-toggle=confirmation]',
@@ -441,10 +444,7 @@ $('[data-toggle=confirmation]').confirmation({
   </div>
 <!-- Followers Section End -->
 </div>
-<script src="path/to/jquery.js"></script>
-<script src="path/to/popper.js"></script>
-<script src="path/to/bootstrap.js"></script>
-<script src="path/to/bootstrap-confirmation.js"></script>
+
 </body>
 <?php
 require_once("../Header - Footer/footer.html");
