@@ -171,7 +171,7 @@
       <?php
         $stat = $conn->prepare("SELECT * FROM Notes");
          	$stat->execute();
-        
+
          	while($row = $stat->fetch())
         {
         	$noteID = $row['NoteID'];
@@ -186,7 +186,7 @@
         		else
         				$counterDislikes++;
         	}
-        
+
         ?>
       <div class="col-sm-2 col-xs-6">
         <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
@@ -276,7 +276,7 @@
             <option><?php echo $row['TitleNote'];?></option>
             <?php
               }
-              
+
               ?>
           </select>
           <input type="submit" class="btn btn-sm delete-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
@@ -287,7 +287,7 @@
       $stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
        	$stat->bindParam(1, $userID);
        	$stat->execute();
-      
+
        	while($row = $stat->fetch())
       {
       	$noteID = $row['NoteID'];
@@ -302,7 +302,7 @@
       		else
       				$counterDislikes++;
       	}
-      
+
       ?>
     <div class="col-sm-2 col-xs-6">
       <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
@@ -325,6 +325,14 @@
     </div>
     <?php
       }
+      if ($stat->rowCount() == 0)
+      {
+      ?>
+    <div class="col-sm-12">
+      <h4 style="padding-bottom: 15px; color: black;"> Nothing found in Unit ID</h4>
+    </div>
+    <?php
+      }
       ?>
   </div>
   <!-- My notes Section End -->
@@ -339,7 +347,7 @@
           $links = array();
           while($row = $stat->fetch())
       {
-      
+
             $FollowedUserID = $row['FollowedUserID'];
             $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowedUserID'];
             $username = $conn2->query($syn)->fetch_object()->Username;
@@ -411,7 +419,7 @@
     <?php
       }
       }
-      
+
       if(isset($_POST['deleteBtn']))
       {
       $note = $_POST["note"];
@@ -422,7 +430,7 @@
                                  $conn->query($deleteQuery);
       $stat = $conn2->prepare("DELETE FROM `Notes` WHERE `TitleNote` = '$note'");
       $stat->execute();
-      
+
       echo "DELETED";
       header('Location: '.$_SERVER['REQUEST_URI']);
       }
@@ -436,5 +444,3 @@
   require_once("../Header - Footer/footer.html");
   ?>
 </html>
-
-
