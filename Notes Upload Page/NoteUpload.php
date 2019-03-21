@@ -207,13 +207,13 @@
               </div>
               <div class="form-group">
                 <label for="sectionID"> Section ID</label>
-                <input type="number" class="form-control form-element" name="sectionNumber" placeholder="Please enter the Section ID" pattern="[^<>;]+">
+                <input type="number" class="form-control form-element" name="sectionNumber" placeholder="Please enter the Section ID" pattern="[^<>;]+" required>
               </div>
               <div id="file-id" class="form-group">
-                <input type="file" id="requiredFile" name="requiredFiles[]" accept=".pdf,.png,.jpg" multiple>
+                <input type="file" id="requiredFile" name="requiredFiles[]" accept=".pdf,.png,.jpg" multiple required>
               </div>
               <div class="form-group">
-                <input type="checkbox" name="box" value="tik the Box"> I confirm that the file complies with the <a href="./TermsAndConditions.html">Terms and Conditions</a><br>
+                <input type="checkbox" name="box" value="tik the Box" required> I confirm that the file complies with the <a href="./TermsAndConditions.html">Terms and Conditions</a><br>
               </div>
               <div class="form-group">
                 <input type="submit" class="btn btn-default btn-lg submit-btn btn-block submit-font bottom-buffer" value="Submit" name="btn">
