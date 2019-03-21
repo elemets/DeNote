@@ -32,33 +32,34 @@
   </script>
   <style>
     .bottom-buffer {
-    margin-bottom:20px !important;
+      margin-bottom:20px !important;
     }
     .submit-btn {
-    background-color: #660099 !important;
+      background-color: #660099 !important;
     }
     .submit-font {
-    color:#ffffff !important;
+      color:#ffffff !important;
     }
     .submit-font:hover {
-    color:#ecaa33 !important;
+      color:#ecaa33 !important;
     }
     .form-top-left{
-    width : 75% !important;
+      width : 75% !important;
     }
     .formcenter {
-    min-height: 100% !important;  /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh; /* These two lines are counted as one 🙂       */
-    align-items: center !important;
+      min-height: 100% !important;  /* Fallback for browsers do NOT support vh unit */
+      min-height: 100vh; /* These two lines are counted as one 🙂       */
+      align-items: center !important;
     }
     body {
-    padding-top: 50px;
+      padding-top: 50px;
     }
     label {
-    color: #212529;
-    font: 400 15px Lato, sans-serif;
+      color: #212529;
+      font: 400 15px Lato, sans-serif;
     }
   </style>
+
 
   <body>
     <div id="top">
@@ -68,10 +69,10 @@
          $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
          $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
          $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+        
          $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
          $unitYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->YearOfStudent;
-
+        
         if(isset($_POST['btn']))
         {
           if (sizeof($_FILES['requiredFiles']['name'], 0) > 1 && validateProperPict($_FILES['requiredFiles']['type']))
@@ -103,39 +104,38 @@
             $sectionNumber = '';
             $type = 'wrong';
           }
-
+        
           if(validateUpload($unitID, $sectionNumber, $type) && isset($_POST['box']))
           {
             uploadFile($name, $type, $data, $sectionNumber, $userID, $unitID, $titleNote, $unitYear);
-
-
-?>
-          <div class="fixed-top" style="padding-top: 0px">
-          <div class="alert alert-success alert-dismissible" role="alert">
-             You have successfully uploaded a file.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
+        
+        
+        ?>
+      <div class="fixed-top" style="padding-top: 0px">
+        <div class="alert alert-success alert-dismissible" role="alert">
+          You have successfully uploaded a file.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-<?php
-          }
-          else
+      </div>
+      <?php
+        }
+        else
         {
         ?>
-        <div class="fixed-top" style="padding-top: 0px">
-          <div class="alert alert-danger alert-dismissible" role="alert">
-            <strong>Error:</strong> Check that you have chosen an accepted file (PDF/ PNG/ JPEG) and completed each field.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
+      <div class="fixed-top" style="padding-top: 0px">
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <strong>Error:</strong> Check that you have chosen an accepted file (PDF/ PNG/ JPEG) and completed each field.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+      </div>
       <?php
         }
          }
         ?>
-
       <div class="container">
         <div class="form-content">
           <h2 style="padding-top:30px;">Upload</h2>
@@ -222,39 +222,37 @@
           </div>
         </div>
       </div>
-
-            <script type="text/javascript">
-            $(function(){
-              $("#requiredFile").on('change', function(event) {
-                  var file = event.target.files[0];
-
-                  if(!(file.type.match('image/jp.*') || file.type.match('application/pdf') || (file.type.match('image/png'))) {
-                      alert("Only JPG, PNG and PDF files are allowed!");
+      <script type="text/javascript">
+        $(function(){
+          $("#requiredFile").on('change', function(event) {
+              var file = event.target.files[0];
+        
+              if(!(file.type.match('image/jp.*') || file.type.match('application/pdf') || (file.type.match('image/png'))) {
+                  alert("Only JPG, PNG and PDF files are allowed!");
+                  $("#file-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
+        
+                  return;
+              }
+        
+              var fileReader = new FileReader();
+              fileReader.onload = function(e) {
+                  var int32View = new Uint8Array(e.target.result);
+        
+                  // for JPG is 0xFF 0xD8 0xFF 0xE0 (see https://en.wikipedia.org/wiki/List_of_file_signatures)
+                  if(int32View.length>4 && int32View[0]==0xFF && int32View[1]==0xD8 && int32View[2]==0xFF && int32View[3]==0xE0
+                     || int32View[0]==0x25 && int32View[1]==0x50 && int32View[2]==0x44 && int32View[3]==0x46
+                     && int32View[4]==0x2d) {
+                      //alert("ok!");
+                  } else {
+                      alert("Only JPG and PDF files are allowed!");
                       $("#file-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
-
                       return;
                   }
-
-                  var fileReader = new FileReader();
-                  fileReader.onload = function(e) {
-                      var int32View = new Uint8Array(e.target.result);
-
-                      // for JPG is 0xFF 0xD8 0xFF 0xE0 (see https://en.wikipedia.org/wiki/List_of_file_signatures)
-                      if(int32View.length>4 && int32View[0]==0xFF && int32View[1]==0xD8 && int32View[2]==0xFF && int32View[3]==0xE0
-                         || int32View[0]==0x25 && int32View[1]==0x50 && int32View[2]==0x44 && int32View[3]==0x46
-                         && int32View[4]==0x2d) {
-                          //alert("ok!");
-                      } else {
-                          alert("Only JPG and PDF files are allowed!");
-                          $("#file-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
-                          return;
-                      }
-                  };
-                  fileReader.readAsArrayBuffer(file);
-              });
-            });
-            </script>
-
+              };
+              fileReader.readAsArrayBuffer(file);
+          });
+        });
+      </script>
       <?php
         function validateUpload($Unit, $Number,$type)
         {
@@ -275,7 +273,7 @@
             if (trim($file[$key]) == "image/jpeg" || trim($file[$key]) == "image/png" || trim($file[$key]) == "image/jpg")
               $count++;
           }//foreach
-
+        
           if ($count != sizeof($file))
           {
             return false;
@@ -299,7 +297,7 @@
           $stmt->bindParam(8, $unitYear);
           $stmt->execute();
         }
-
+        
          ?>
     </div>
   </body>
