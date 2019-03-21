@@ -121,12 +121,13 @@ padding: 0px 10px;
 	$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
 	$userYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE UserID ='$userID'")->fetch_object()->YearOfStudent;// YearOfStudent query
    ?>
-<?php
-echo '$('[data-toggle=confirmation]').confirmation({
+
+<script>
+$('[data-toggle=confirmation]').confirmation({
   rootSelector: '[data-toggle=confirmation]',
   // other options
-});';
-?>
+});
+</script>
 <div class="row">
 <div class="col-sm-3 col-center" Style="max-width: 350px;">
 <img src="squareElementOrange.png" style="width:100%" class="img-circle">
