@@ -64,7 +64,10 @@ function register($username, $password, $email, $year)
       return true;
     } else {
       // SQL Error
-      return false;
+        $message =" Something unexpected has occured";
+
+        return false;
+      }
     }
 
 }
