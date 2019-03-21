@@ -77,7 +77,7 @@ $message = "";
     	  </div>
 
         <div class="form-body">
-    		  <form class="form-horizontal" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" novalidate>
+    		  <form class="form-horizontal" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" >
 
     		  <div class="form-group">
             <label for="username">Username (cannot contain < ; >)</label>
