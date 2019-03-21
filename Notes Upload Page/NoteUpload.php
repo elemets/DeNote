@@ -125,7 +125,7 @@
         ?>
         <div class="fixed-top" style="padding-top: 0px">
           <div class="alert alert-danger alert-dismissible" role="alert">
-            <strong>Error:</strong> Check that you have chosen an accepted file and completed each field.
+            <strong>Error:</strong> Check that you have chosen an accepted file (PDF/ PNG/ JPEG) and completed each field.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
