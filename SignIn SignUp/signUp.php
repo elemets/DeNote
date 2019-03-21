@@ -140,10 +140,10 @@ $message = "";
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-    </div>';
+    </div>
 
-  }<?php 
-}?>
+  }
+}
 
 
 
