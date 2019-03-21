@@ -204,7 +204,7 @@ if($row = $stat->fetch() != null)
 else
 {
 ?>
-  <input type="submit" class="btn btn-default btn-block btn-sm submit-btn submit-font bottom-buffer" method="post" value="Follow me" name="btn">
+  <input type="submit" class="btn btn-default btn-block btn-sm submit-btn submit-font bottom-buffer" method="post" value="Follow" name="btn">
 <?php } ?>
 </form>
 </div>
