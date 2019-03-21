@@ -282,8 +282,8 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")-
         while($row = $stat->fetch()){
           $FollowedUserID = $row['FollowedUserID'];
           $syn = "SELECT Username FROM Users WHERE UserID =" . $row['FollowedUserID'];
-          $username = $conn2->query($syn)->fetch_object()->Username;
-          array_push($usernameArray, $username);
+          $username40 = $conn2->query($syn)->fetch_object()->Username;
+          array_push($usernameArray, $username40);
           $link = "profile2.php?id=" . $FollowedUserID;
           array_push($links, $link);
           $count = $count + 1;
