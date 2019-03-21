@@ -44,12 +44,15 @@ function register($username, $password, $email, $year)
     $result = $conn->query($query);
 
 
-    if ($result->num_rows > 0) return false;
+    if ($result->num_rows > 0) {
+      $message =" Username already exists";
+}
+      return false;
 
     $query = "SELECT * FROM Users WHERE Email = '$email' LIMIT 1";
     $result = $conn->query($query);
     if ($result->num_rows > 0) {
-      $message ="Email already exists";
+      $message =" Email already exists";
 
       return false;
 }
