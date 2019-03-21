@@ -140,7 +140,7 @@
       </div>
       <?php
         $link = "Location: https://web.cs.manchester.ac.uk/a64508sa/Z3_Y1_Project/Profile%20Page/profile2.php?id=" . $userID;
-        
+
         if(isset($_POST['btnDelete']))
         {
           $stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
@@ -221,8 +221,9 @@
         $stat = $conn->prepare("SELECT * FROM Notes WHERE UserID = ?");
         $stat->bindParam(1, $_GET['id']);
         $stat->execute();
-        
-        while($row = $stat->fetch()){
+
+        while($row = $stat->fetch())
+        {
         $noteID = $row['NoteID'];
         $stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$noteID'");
         $stat2->execute();
@@ -257,6 +258,14 @@
       </div>
       <?php
         }
+        if ($stat->rowCount() == 0)
+        {
+          ?>
+        <div class="col-sm-12">
+          <h4 style="padding-bottom: 15px; color: black;">No Followings</h4>
+        </div>
+        <?php
+        }
         ?>
     </div>
     <!-- My notes Section End -->
@@ -282,7 +291,7 @@
       <div class="col-sm-12">
         <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"><?php echo $count; ?> Following</h3>
       </div>
-      <?php  
+      <?php
         for($counter = 0; $counter < $count; $counter++)
           {
         ?>
