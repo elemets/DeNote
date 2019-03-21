@@ -392,14 +392,14 @@
       	if(isset($_POST["commentbtn"]) && trim($_POST["commentBox"] != ""))
       	{
       $CommentBox = $_POST["commentBox"];
-      $query50 = "INSERT INTO "Comments"("NoteID", "UserID",  "Content") VALUES ("$notes", "$userIDmain" , "$CommentBox")";
+      $query50 = "INSERT INTO Comments("NoteID", "UserID",  "Content") VALUES ("$notes", "$userIDmain" , "$CommentBox")";
           	     $conn->query($query50);
                    header("Location: ".$_SERVER["REQUEST_URI"]);
               }
       	if(isset($_POST["deleteComment"]))
       	{
                       $idOfComm = $_POST["deleteComment"];
-      		$query = "DELETE FROM "Comments" WHERE CommentID = "$idOfComm"";
+      		$query = "DELETE FROM Comments WHERE CommentID = "$idOfComm"";
           	     	$result = $conn2->query($query);
                       header("Location: ".$_SERVER["REQUEST_URI"]);
       	}
