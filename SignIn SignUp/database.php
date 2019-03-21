@@ -38,7 +38,7 @@ function validate_user($username, $password)
 
 function register($username, $password, $email, $year)
 {
-    global $message = "";
+    global $message;
     global $conn;
     $query = "SELECT * FROM Users WHERE Username = '$username' LIMIT 1";
     $result = $conn->query($query);
