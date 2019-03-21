@@ -38,6 +38,7 @@ function validate_user($username, $password)
 
 function register($username, $password, $email, $year)
 {
+    global $message = "";
     global $conn;
     $query = "SELECT * FROM Users WHERE Username = '$username' LIMIT 1";
     $result = $conn->query($query);
@@ -47,8 +48,11 @@ function register($username, $password, $email, $year)
 
     $query = "SELECT * FROM Users WHERE Email = '$email' LIMIT 1";
     $result = $conn->query($query);
-    if ($result->num_rows > 0) return false;
+    if ($result->num_rows > 0) {
+      $message ="Email already exists"
 
+      return false;
+}
     $password_hash = crypt($password, $username);
     $query = "INSERT INTO `Users`(`Email`, `Username`, `PasswordHash`, `YearOfStudent`) VALUES ('$email', '$username', '$password_hash', '$year')";
     $result = $conn->query($query);
