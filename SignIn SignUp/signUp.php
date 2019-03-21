@@ -142,7 +142,9 @@ $message = "";
       </div>
     </div>
 
-  <?php} ?>
+  <?php
+  }?>
+
 }
 
 
