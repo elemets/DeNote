@@ -207,7 +207,7 @@
               </div>
               <div class="form-group">
                 <label for="sectionID"> Section ID</label>
-                <input type="textbox" class="form-control form-element" name="sectionNumber" placeholder="Section ID" pattern="[^<>;]+">
+                <input type="number" class="form-control form-element" name="sectionNumber" placeholder="Section ID" pattern="[^<>;]+">
               </div>
               <div id="file-id" class="form-group">
                 <input type="file" id="requiredFile" name="requiredFiles[]" accept=".pdf,.png,.jpg" multiple>
