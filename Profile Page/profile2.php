@@ -268,9 +268,7 @@ else
 
 <!-- My Following Section -->
 <div class="row">
-	<div class="col-sm-12">
-			<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"><?php echo $username; ?>'s Following</h3>
-		</div>
+
 
 <?php
 $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")->fetch_object()->UserID;//userID query
@@ -288,9 +286,12 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")-
           array_push($links, $link);
           $count = $count + 1;
          }
-
-
-         for($counter = 0; $counter < $count; $counter++)
+?>
+	<div class="col-sm-12">
+			<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"><?php echo $count; ?> Following</h3>
+		</div>
+<?php  
+       for($counter = 0; $counter < $count; $counter++)
          {
 ?>
 					<div class="col-sm-2 col-xs-6">
