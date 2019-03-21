@@ -122,10 +122,10 @@ padding: 0px 10px;
 	$userYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE UserID ='$userID'")->fetch_object()->YearOfStudent;// YearOfStudent query
    ?>
 <?php
-$('[data-toggle=confirmation]').confirmation({
+echo '$('[data-toggle=confirmation]').confirmation({
   rootSelector: '[data-toggle=confirmation]',
   // other options
-});
+});';
 ?>
 <div class="row">
 <div class="col-sm-3 col-center" Style="max-width: 350px;">
