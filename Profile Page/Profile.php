@@ -264,7 +264,7 @@ padding: 0px 10px;
 						<h3 style="font-size: 30px; padding-top: 30px; color: black;">My notes</h3>
 					</div>
 					<div class="col-sm-12" style="padding-top: 10px; padding-bottom: 30px; color: black;">
-						<div class="pull-right" style="width: 175px;">
+						<div class="pull-right" style="width: 100%;">
 						<h4 style="color: black;">Delete Note:</h4>
 						<form method="post" class"form-inline">
 							<select name="note">
