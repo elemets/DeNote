@@ -355,7 +355,7 @@
         $color = $colorYellow;
       ?>
       <div class="row">
-        <a <?php echo "href='../Profile Page/profile2.php?id=".$reverseArray[$index]['UserID']; ?> >
+        <a <?php echo "href='../Profile Page/profile2.php?id=".$reverseArray[$index]['UserID'] ."'>"; ?>
         <div class="col-sm-1 col-xs-3">
             <img src="<?php echo $color?>" style="width:100%" class="img-circle">
              <div class="centered"><h5 style="color: #fff;">
