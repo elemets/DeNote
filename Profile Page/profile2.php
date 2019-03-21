@@ -309,9 +309,6 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")-
 
 <!-- My Followers Section -->
 <div class="row">
-	<div class="col-sm-12">
-			<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"><?php echo $username; ?>'s Followers</h3>
-		</div>
 
 <?php
 $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")->fetch_object()->UserID;//userID query
@@ -331,7 +328,7 @@ $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$username'")-
          }
 ?>
 <div class="col-sm-12">
-			<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"><?php echo $username;echo $count; ?>'s Followers</h3>
+			<h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"><?php echo $count; ?> Followers</h3>
 		</div>
 <?php
          for($counter = 0; $counter < $count; $counter++)
