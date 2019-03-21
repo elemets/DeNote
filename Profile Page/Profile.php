@@ -434,12 +434,13 @@ padding: 0px 10px;
   </div>
 <!-- Followers Section End -->
 </div>
-</body>
-<?php
-require_once("../Header - Footer/footer.html");
-?>
 <script src="path/to/jquery.js"></script>
 <script src="path/to/popper.js"></script>
 <script src="path/to/bootstrap.js"></script>
 <script src="path/to/bootstrap-confirmation.js"></script>
+</body>
+<?php
+require_once("../Header - Footer/footer.html");
+?>
+
 </html>
