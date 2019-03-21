@@ -164,7 +164,7 @@ padding: 0px 10px;
 								}
 	?>
 					</select>
-							<input type="submit" class="btn btn-sm delete-btn submit-font bottom-buffer" value="Delete" name="deleteBtn">
+							<input type="submit" class="btn btn-sm delete-btn submit-font bottom-buffer" data-toggle="confirmation" value="Delete" name="deleteBtn">
 						</form>
 					</div>
 				</div>
