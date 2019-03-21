@@ -19,6 +19,9 @@
     h2 {
     font-size: 1.65vw;
     }
+    h3 {
+    font-size: 1.20vw;
+    }
     .centered {
     position: absolute;
     top: 50%;
@@ -45,6 +48,9 @@
     @media screen and (max-width: 768px){
       h2 {
         font-size: 25px;
+      }
+      h3 {
+        font-size: 12px;
       }
     }
     less than 768
@@ -81,23 +87,23 @@
           		}
 
           ?>
-        <div class="col-sm-3">
+        <div class="col-sm-3 col-xs-6">
           <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
           <img src="squareElement.png" style="width:100%">
           <div class="centered">
-            <h2 style="color: #fff;">
+            <h3 style="color: #fff;">
               <?php echo $row['TitleNote'];?>
-            </h2>
+            </h3>
           </div>
           <div class="bottom-right">
-            <h2 style="color: #fff;">
+            <h3 style="color: #fff;">
               <?php echo $counterDislikes; ?><span class="glyphicon glyphicon-thumbs-down"></span>
-            </h2>
+            </h3>
           </div>
           <div class="bottom-left">
-            <h2 style="color: #fff;">
+            <h3 style="color: #fff;">
               <span class="glyphicon glyphicon-thumbs-up"></span><?php echo $counterLikes; ?>
-            </h2>
+            </h3>
           </div>
           </a>
         </div>
