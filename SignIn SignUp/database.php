@@ -64,7 +64,7 @@ function register($username, $password, $email, $year)
       return true;
     } else {
       // SQL Error
-        $message =" Please Fill in the details correctly;
+        $message =" Please Fill in the details correctly";
 
         return false;
       }
