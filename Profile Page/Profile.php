@@ -121,7 +121,12 @@ padding: 0px 10px;
 	$userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
 	$userYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE UserID ='$userID'")->fetch_object()->YearOfStudent;// YearOfStudent query
    ?>
-
+<?php
+$('[data-toggle=confirmation]').confirmation({
+  rootSelector: '[data-toggle=confirmation]',
+  // other options
+});
+?>
 <div class="row">
 <div class="col-sm-3 col-center" Style="max-width: 350px;">
 <img src="squareElementOrange.png" style="width:100%" class="img-circle">
@@ -279,6 +284,7 @@ padding: 0px 10px;
 									<option><?php echo $row['TitleNote'];?></option>
 	<?php
 								}
+
 	?>
 							</select>
 							<input type="submit" class="btn btn-sm delete-btn submit-font bottom-buffer" data-toggle="confirmation" value="Delete" name="deleteBtn">
