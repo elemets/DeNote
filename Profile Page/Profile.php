@@ -428,13 +428,12 @@
       }
       if ($stat->rowCount() == 0)
       {
-        ?>
+    ?>
       <div class="col-sm-12">
         <h4 style="padding-bottom: 15px; color: black;">No Followers</h4>
       </div>
       <?php
       }
-      ?>
     } //else
 
       if(isset($_POST['deleteBtn']))
@@ -452,7 +451,7 @@
       header('Location: '.$_SERVER['REQUEST_URI']);
       }
       }
-      ?>
+    ?>
   </div>
   <!-- Followers Section End -->
   </div>
