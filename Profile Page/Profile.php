@@ -147,7 +147,7 @@ padding: 0px 10px;
 			      <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> All notes</h3>
 					</div>
 
-					<div class="col-sm-12" style="padding-top: 10px; padding-bottom: 30px; margin-right: 10px; color: black;">
+					<div class="col-sm-12" style="padding-top: 10px; padding-bottom: 30px; padding-right: 10px; color: black;">
 						<div class="pull-right" style="width: 100%;">
 						<h4 style="color: black;">Delete Note:</h4>
 						<form method="post" class"form-inline">
