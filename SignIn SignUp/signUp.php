@@ -82,9 +82,6 @@ $message = "";
     		  <div class="form-group">
             <label for="username">Username (cannot contain < ; >)</label>
             <input type="textbox" class="form-control form-element" name="username" placeholder="Username" pattern="[^<>;]+" required>
-            <div class="invalid-feedback">
-              Please choose a username.
-          </div>
           </div>
 
           <div class="form-group">
