@@ -132,7 +132,7 @@ session_start();
        header('Location: ../User Home Page/UserHomePage.php');
   	  } else {
 
-    echo '<div class="fixed-top" style="padding-top: 53px">
+    echo '<div class="fixed-top" style="margin-top: 53px">
     	<div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>Error:</strong> Please fill in all the fields correctly.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
