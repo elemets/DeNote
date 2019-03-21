@@ -79,7 +79,7 @@ session_start();
     		  <form class="form-horizontal" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 
     		  <div class="form-group">
-            <label for="username">Username (mustn't contain < ; >)</label>
+            <label for="username">Username (cannot contain < ; >)</label>
             <input type="textbox" class="form-control form-element" name="username" placeholder="Username" pattern="[^<>;]+">
           </div>
 
@@ -101,7 +101,7 @@ session_start();
 
           <!-- Password validation based on www.w3schools.com/howto/howto_js_password_validation.asp -->
           <div class="form-group">
-            <label for="password">Password (8+ characters, mustn't contain < ; >)</label>
+            <label for="password">Password (8+ characters, cannot contain < ; >)</label>
     			  <input type="password" class="form-control form-element" name="password" placeholder="Password" pattern="[a-zA-Z0-9!?@#$%*-/+_]{8,}">
           </div>
 
@@ -131,16 +131,16 @@ session_start();
        $_SESSION["username"] = $username;
        header('Location: ../User Home Page/UserHomePage.php');
   	  } else {
-
-    echo '<div class="fixed-top" style="margin-top: 53px">
+?>
+    <div class="fixed-top" style="margin-top: 53px">
     	<div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>Error:</strong> Please fill in all the fields correctly.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-    </div>';
-
+    </div>
+<?php
   }
 }?>
 
