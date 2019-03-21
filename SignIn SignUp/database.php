@@ -68,7 +68,7 @@ function register($username, $password, $email, $year)
 
         return false;
       }
-    
+
 
 }
 
