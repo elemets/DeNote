@@ -321,7 +321,7 @@
       </div>
     <form action="" method="post">
       <div class="col-sm-11 col-xs-9">
-      <textArea style="width: 100%;" name="commentBox" id="comment_box" pattern="[^<>;]+"></textArea>
+      <textArea style="width: 100%;" name="commentBox" id="comment_box"></textArea>
       </div>
   </div>
   <div class="row">
@@ -389,7 +389,7 @@
     <?php
       }//while
 
-      	if(isset($_POST["commentbtn"]) && ($_POST["commentBox"] != ""))
+      	if(isset($_POST["commentbtn"]) && trim($_POST["commentBox"] != ""))
       	{
       $CommentBox = $_POST["commentBox"];
       $query50 = "INSERT INTO `Comments`(`NoteID`, `UserID`,  `Content`) VALUES ('$notes', '$userIDmain' , '$CommentBox')";
@@ -428,7 +428,7 @@
 
     var heightOfProfile = img.clientHeight;
 
-    $('#comment_box').height(heightOfProfile);
+    $("#comment_box").height(heightOfProfile);
 
   }, 350)
 );
