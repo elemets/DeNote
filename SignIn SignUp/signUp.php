@@ -132,17 +132,17 @@ $message = "";
        $_SESSION["username"] = $username;
        header('Location: ../User Home Page/UserHomePage.php');
   	  } else {
-        echo '
+  ?>
     <div class="fixed-top" style="margin-top: 53px">
     	<div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Error:</strong><?php echo $message ?>.
+        <strong>Error:</strong> <?php echo $message ?>.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
     </div>';
 
-  }
+  }<?php 
 }?>
 
 
