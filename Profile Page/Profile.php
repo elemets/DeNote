@@ -329,7 +329,7 @@
       {
       ?>
     <div class="col-sm-12">
-      <h4 style="padding-bottom: 15px; color: black;"> Nothing found in Unit ID</h4>
+      <h4 style="padding-bottom: 15px; color: black;">No notes to dislay</h4>
     </div>
     <?php
       }
@@ -355,7 +355,7 @@
             $link = "profile2.php?id=" . $FollowedUserID;
             array_push($links, $link);
             $count = $count + 1;
-           }
+      }
       ?>
     <div class="col-sm-12">
       <h3 style="font-size: 30px; padding-top: 30px; padding-bottom: 15px; color: black;"> <?php echo $count;?> Following</h3>
@@ -375,6 +375,14 @@
       </a>
     </div>
     <?php
+      }
+      if ($stat->rowCount() == 0)
+      {
+        ?>
+      <div class="col-sm-12">
+        <h4 style="padding-bottom: 15px; color: black;">No Followings</h4>
+      </div>
+      <?php
       }
       ?>
   </div>
