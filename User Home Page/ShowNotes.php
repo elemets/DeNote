@@ -11,39 +11,39 @@
   <title>Page Title</title>
   <style>
     body {
-    padding-top: 50px;
+      padding-top: 50px;
     }
     body > p {
-    text-align: center;
+      text-align: center;
     }
     h2 {
-    font-size: 1.65vw;
+      font-size: 1.65vw;
     }
     h3 {
-    font-size: 1.20vw;
+      font-size: 1.20vw;
     }
     .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
     }
     .bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
     }
     .bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
     }
     .col-sm-3 {
-    margin-bottom: 30px;
+      margin-bottom: 30px;
     }
     .glyphicon {
-    padding: 0px 10px;
+      padding: 0px 10px;
     }
     @media screen and (max-width: 768px){
       h2 {

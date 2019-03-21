@@ -21,7 +21,7 @@
       text-align: center;
     }
     h2 {
-    font-size: 1.65vw;
+      font-size: 1.65vw;
     }
     .centered {
       position: absolute;
@@ -38,21 +38,18 @@
       padding-bottom: 30px;
     }
     @media screen and (max-width: 768px){
-    	h2 {
-    		font-size: 25px;
-    	}
+    h2 {
+      font-size: 25px;
     }
-
+    }
   </style>
 
+
   <body>
-
     <div id="top" class="container-fluid">
-
       <div class="row">
         <h1 style="margin-bottom:30px; padding-left: 15px;">Hello, <?php echo $_SESSION["username"]; ?></h1>
       </div>
-
       <div class="row">
         <?php
           require_once('config.inc.php');
@@ -64,7 +61,7 @@
             	$stat->bindParam(1, $UnitYear);
             	$stat->execute();
                  $UnitIDInField = array();
-
+          
           while($row = $stat->fetch()){
           if (!in_array($row['UnitID'], $UnitIDInField))
                {
@@ -78,7 +75,6 @@
           </div>
           </a>
         </div>
-
         <?php
           array_push($UnitIDInField, $row['UnitID']);
           }
@@ -91,5 +87,4 @@
   <?php
     require_once("../Header - Footer/footer.html");
     ?>
-
 </html>
