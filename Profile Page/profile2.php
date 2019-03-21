@@ -262,7 +262,7 @@
         {
           ?>
         <div class="col-sm-12">
-          <h4 style="padding-bottom: 15px; color: black;">No Followings</h4>
+          <h4 style="padding-bottom: 15px; color: black;">No Notes to display</h4>
         </div>
         <?php
         }
@@ -307,6 +307,14 @@
       </div>
       <?php
         }//for
+        if ($stat->rowCount() == 0)
+        {
+          ?>
+        <div class="col-sm-12">
+          <h4 style="padding-bottom: 15px; color: black;">No Followings</h4>
+        </div>
+        <?php
+        }
         ?>
     </div>
     <!-- My Following Section End-->
