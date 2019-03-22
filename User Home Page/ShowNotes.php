@@ -42,9 +42,6 @@
     .col-sm-3 {
       margin-bottom: 30px;
     }
-    h3.glyphicon {
-      padding: 0px 10px;
-    }
     @media screen and (max-width: 768px){
       h2 {
         font-size: 25px;

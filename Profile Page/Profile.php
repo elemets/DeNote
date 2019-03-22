@@ -95,7 +95,7 @@
   .submit-font:hover {
     color:#ecaa33;
   }
-  .glyphicon {
+  .glyphicon-thumbs-up, .glyphicon-thumbs-down {
     padding: 0px 10px;
   }
   @media screen and (max-width: 768px){
