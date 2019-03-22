@@ -325,7 +325,7 @@
     <div class="row">
     <div class="col-sm-9 col-xs-9"></div>
     <div class="col-sm-3 col-xs-3">
-    <button type="submit" class="btn btn-default btn-block submit-btn submit-font fontChange" method="post" value="Comment" name="commentbtn">Post</button>
+    <button type="submit" Style="padding-top: 10px;"class="btn btn-default btn-block submit-btn submit-font fontChange" method="post" value="Comment" name="commentbtn">Post</button>
     </div>
     </div>
     </form>
