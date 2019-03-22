@@ -9,7 +9,7 @@
     }
     ?>
   <title>Page Title</title>
-  <!--<style>
+  <style>
     body {
       padding-top: 50px;
     }
@@ -42,9 +42,6 @@
     .col-sm-3 {
       margin-bottom: 30px;
     }
-    .glyphicon {
-      padding: 0px 10px;
-    }
     @media screen and (max-width: 768px){
       h2 {
         font-size: 25px;
@@ -53,8 +50,7 @@
         font-size: 12px;
       }
     }
-    less than 768
-  </style>-->
+  </style>
 
   <body>
     <div id="top" class="container-fluid">
