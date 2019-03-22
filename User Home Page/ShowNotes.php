@@ -20,7 +20,7 @@
       font-size: 1.65vw;
     }
     h3 {
-      font-size: 1.20vw;
+      font-size: 1.65vw;
     }
     .centered {
       position: absolute;
