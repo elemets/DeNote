@@ -45,5 +45,5 @@
       </div>
     </nav>
 
-    <link rel="icon" href="../logo_purple.png">
+    <link rel="icon" href="logo_purple.png">
   </head>
