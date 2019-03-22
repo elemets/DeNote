@@ -10,7 +10,7 @@
     {
     	header('Location: ../Profile Page/Profile.php');
     }
-    require_once("../Header - Footer/header.php");
+    require_once("../Header - Footer/header.html");
     ?>
       <title>Page Title</title>
   <style>
