@@ -10,7 +10,7 @@
     }
     ?>
   <?php
-    include "../Header - Footer/header.html";
+    include "../Header - Footer/header.php";
     ?>
   <title>Upload Page</title>
   <link rel="icon" href="Header - Footer/logo_purple.png">
