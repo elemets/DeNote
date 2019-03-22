@@ -14,7 +14,6 @@
 
   <head id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-    <link rel="icon" href="logo_purple.png" type="image/x-icon">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -46,4 +45,5 @@
       </div>
     </nav>
 
+    <link rel="icon" href="logo_purple.ico">
   </head>
