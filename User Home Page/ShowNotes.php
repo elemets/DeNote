@@ -9,7 +9,7 @@
     }
     ?>
   <title>Page Title</title>
-  <style>
+  <!--<style>
     body {
       padding-top: 50px;
     }
@@ -54,7 +54,7 @@
       }
     }
     less than 768
-  </style>
+  </style>-->
 
   <body>
     <div id="top" class="container-fluid">
