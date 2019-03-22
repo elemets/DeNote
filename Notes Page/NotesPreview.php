@@ -319,7 +319,7 @@
       </div>
       <form action="" method="post">
         <div class="col-sm-11 col-xs-9">
-          <input type="textbox" style="width: 100%;" name="commentBox" id="comment_box" pattern="[^<>;^\x22]+" ></input>
+          <input type="textbox" style="width: 100%;" name="commentBox" id="comment_box" pattern="[^<>;^'\x22]+" ></input>
         </div>
     </div>
     <div class="row">
