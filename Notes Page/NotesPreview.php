@@ -132,15 +132,15 @@
             $usernameIDmain = $row['UserID'];
             $syn = "SELECT Username FROM Users WHERE UserID =" . $row['UserID'];
             $username = $conn2->query($syn)->fetch_object()->Username;
-            
+
             echo '<h1><u>';
             echo $row['TitleNote'];
             echo '</u></h1>';
-            
+
             echo '<h2>';
             echo "Author: " . $username;
             echo '</h2>';
-            
+
             echo '<h2>';
             echo "Date: " . $row['DateOfPublish'];
             echo '</h2>';
@@ -150,7 +150,7 @@
       <div class="row">
         <?php
           $id = "view.php?id=" . $_GET['id'];
-          
+
           if ($row['dataType'] == "application/pdf")
           {
           ?>
@@ -204,7 +204,7 @@
           <?php
             $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
                     $stat->execute();
-            
+
             $stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND type = 1" );
             $stat2->execute();
             $counterLikes = 0;
@@ -212,7 +212,7 @@
             {
               $counterLikes++;
             }
-            
+
             if(($row = $stat->fetch()) != null)
             {
               $typeVote = $row['type'];
@@ -242,7 +242,7 @@
         $userIDmain = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;//userID query
         if(isset($_POST['btn4']))
         {
-        
+
              $query = "INSERT INTO `Votes`(`NoteID`, `UserID`,  `type`) VALUES ('$notes', '$userIDmain' , -1)";
            	     $conn->query($query);
                     header('Location: '.$_SERVER['REQUEST_URI']);
@@ -259,8 +259,8 @@
           <?php
             $stat = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND UserID = '$userIDmain'");
                     $stat->execute();
-            
-            
+
+
             $stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$notes' AND type = -1" );
             $stat2->execute();
             $counterLikes = 0;
@@ -268,11 +268,11 @@
             {
               $counterLikes++;
             }
-            
+
             if(($row = $stat->fetch()) != null)
             {
             	$typeVote = $row['type'];
-            
+
               if($typeVote == -1)
               {
               ?>
@@ -319,7 +319,7 @@
       </div>
       <form action="" method="post">
         <div class="col-sm-11 col-xs-9">
-          <input type="textbox" style="width: 100%;" name="commentBox" id="comment_box" pattern="[^<>;^'\x22]+" ></input>
+          <input type="textbox" style="width: 100%;" name="commentBox" id="comment_box" pattern="[^<>;^\x22]+" ></input>
         </div>
     </div>
     <div class="row">
@@ -334,7 +334,7 @@
                 $stat->bindParam(1, $notes);
       $stat->execute();
       $reverseArray = array();
-      
+
       while($row = $stat->fetch())
       {
       array_push($reverseArray, $row);
@@ -385,7 +385,7 @@
     <br>
     <?php
       }//while
-      
+
       	if(isset($_POST["commentbtn"]) && trim($_POST["commentBox"] != ""))
       	{
       $CommentBox = $_POST["commentBox"];
@@ -416,18 +416,18 @@
 
   <script type="text/javascript">
     $(document).ready(
-    
+
       setTimeout(
       function() {
       var img = document.getElementById('profile_image');
-    
+
       var heightOfProfile = img.clientHeight;
-    
+
       $("#comment_box").height(heightOfProfile);
-    
+
     }, 350)
     );
-    
-    
+
+
   </script>
 </html>
