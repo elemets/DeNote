@@ -95,9 +95,6 @@
   .submit-font:hover {
     color:#ecaa33;
   }
-  .glyphicon-thumbs-up, .glyphicon-thumbs-down {
-    padding: 0px 10px;
-  }
   @media screen and (max-width: 768px){
   h1 {
     font-size: 35px;
@@ -198,12 +195,12 @@
         </div>
         <div class="bottom-right">
           <h3 style="color: #fff;">
-            <?php echo $counterDislikes; ?><span class="glyphicon glyphicon-thumbs-down"></span>
+            <?php echo $counterDislikes; ?><span style="padding: 0px 10px;" class="glyphicon glyphicon-thumbs-down"></span>
           </h3>
         </div>
         <div class="bottom-left">
           <h3 style="color: #fff;">
-            <span class="glyphicon glyphicon-thumbs-up"></span><?php echo $counterLikes; ?>
+            <span style="padding: 0px 10px;" class="glyphicon glyphicon-thumbs-up"></span><?php echo $counterLikes; ?>
           </h3>
         </div>
         </a>
@@ -313,12 +310,12 @@
       </div>
       <div class="bottom-right">
         <h3 style="color: #fff;">
-          <?php echo $counterDislikes; ?><span class="glyphicon glyphicon-thumbs-down"></span>
+          <?php echo $counterDislikes; ?><span style="padding: 0px 10px;" class="glyphicon glyphicon-thumbs-down"></span>
         </h3>
       </div>
       <div class="bottom-left">
         <h3 style="color: #fff;">
-          <span class="glyphicon glyphicon-thumbs-up"></span><?php echo $counterLikes; ?>
+          <span style="padding: 0px 10px;" class="glyphicon glyphicon-thumbs-up"></span><?php echo $counterLikes; ?>
         </h3>
       </div>
       </a>
