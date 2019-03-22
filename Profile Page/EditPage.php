@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="icon" href="Header - Footer/logo_purple.png">
   </head>
   <style>
     a {
@@ -113,12 +114,12 @@
       {
       $oldUsername = $_SESSION['username'];
       $newUsername = $oldUsername;
-      
+
       if (isset($_POST['box']))
       {
       $newUsername = $_POST["newUsername"];
       }
-      
+
       $confirmPassword = $_POST["ConfirmNewPassword"];
         $newPassword = $_POST["newPassword"];
       if ($confirmPassword == $newPassword)
@@ -129,7 +130,7 @@
       $valid = False;
       }
        $newYear = $_POST["newYear"];
-      
+
        if(edit($newUsername, $newPassword, $newYear, $oldUsername) && !exist($newUsername) && $valid) {
           echo "I am working";
       $_SESSION["username"] = $newUsername;

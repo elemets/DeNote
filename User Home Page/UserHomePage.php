@@ -13,6 +13,7 @@
     require_once("../Header - Footer/header.php");
     ?>
   <title>Page Title</title>
+  <link rel="icon" href="Header - Footer/logo_purple.png">
   <style>
     body {
       padding-top: 50px;
@@ -61,7 +62,7 @@
             	$stat->bindParam(1, $UnitYear);
             	$stat->execute();
                  $UnitIDInField = array();
-          
+
           while($row = $stat->fetch()){
           if (!in_array($row['UnitID'], $UnitIDInField))
                {

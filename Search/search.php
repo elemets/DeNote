@@ -9,6 +9,7 @@
     }
     ?>
   <title>Profile</title>
+  <link rel="icon" href="Header - Footer/logo_purple.png">
   <style>
     body {
       padding-top: 50px;
@@ -191,9 +192,9 @@
           $stat->execute();
           while($row = $stat->fetch())
           {
-          
-          
-          
+
+
+
           $noteID = $row['NoteID'];
             		$stat2 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$noteID'");
             		$stat2->execute();
@@ -206,7 +207,7 @@
             			else
             				$counterDislikes++;
             		}
-          
+
           ?>
         <div class="col-sm-2 col-xs-6">
           <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>
@@ -230,15 +231,15 @@
         </div>
         <?php
           }
-          
+
           $stat2 = $conn->prepare("SELECT * FROM Notes WHERE SectionNumber LIKE '%$searchWord%'");
           $stat2->execute();
           while($row = $stat2->fetch())
           {
-          
-          
-          
-          
+
+
+
+
           $noteID = $row['NoteID'];
             		$stat3 = $conn->prepare("SELECT * FROM `Votes` WHERE NoteID = '$noteID'");
             		$stat3->execute();
@@ -251,7 +252,7 @@
             			else
             				$counterDislikes++;
             		}
-          
+
           ?>
         <div class="col-sm-2 col-xs-6">
           <a <?php echo "href='../Notes Page/NotesPreview.php?id=".$row['NoteID']."'>"; ?>

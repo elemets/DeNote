@@ -11,6 +11,7 @@
 
   <head>
     <title>Note Preview Page</title>
+    <link rel="icon" href="Header - Footer/logo_purple.png">
     <style>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       body {

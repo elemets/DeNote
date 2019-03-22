@@ -9,6 +9,7 @@
   }
   ?>
 <title>Profile</title>
+<link rel="icon" href="Header - Footer/logo_purple.png">
 <style>
   body {
     padding-top: 50px;

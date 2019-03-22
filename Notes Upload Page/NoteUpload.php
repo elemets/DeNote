@@ -13,6 +13,7 @@
     include "../Header - Footer/header.php";
     ?>
   <title>Upload Page</title>
+  <link rel="icon" href="Header - Footer/logo_purple.png">
   <script type="text/javascript">
     $(function(){
       var current = window.location.pathname;
@@ -69,10 +70,10 @@
          $conn = new PDO("mysql:host=$database_host;dbname=$database_name", $database_user, $database_pass);
          $conn2 = new mysqli($database_host, $database_user, $database_pass, "2018_comp10120_z3");
          $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        
+
          $userID = $conn2->query("SELECT UserID FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->UserID;
          $unitYear = $conn2->query("SELECT YearOfStudent FROM Users WHERE Username ='$_SESSION[username]'")->fetch_object()->YearOfStudent;
-        
+
         if(isset($_POST['btn']))
         {
           if (sizeof($_FILES['requiredFiles']['name'], 0) > 1 && validateProperPict($_FILES['requiredFiles']['type']))
@@ -104,12 +105,12 @@
             $sectionNumber = '';
             $type = 'wrong';
           }
-        
+
           if(validateUpload($unitID, $sectionNumber, $type) && isset($_POST['box']))
           {
             uploadFile($name, $type, $data, $sectionNumber, $userID, $unitID, $titleNote, $unitYear);
-        
-        
+
+
         ?>
       <div class="fixed-top" style="padding-top: 0px">
         <div class="alert alert-success alert-dismissible" role="alert">
@@ -226,18 +227,18 @@
         $(function(){
           $("#requiredFile").on('change', function(event) {
               var file = event.target.files[0];
-        
+
               if(!(file.type.match('image/jp.*') || file.type.match('application/pdf') || (file.type.match('image/png'))) {
                   alert("Only JPG, PNG and PDF files are allowed!");
                   $("#file-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
-        
+
                   return;
               }
-        
+
               var fileReader = new FileReader();
               fileReader.onload = function(e) {
                   var int32View = new Uint8Array(e.target.result);
-        
+
                   // for JPG is 0xFF 0xD8 0xFF 0xE0 (see https://en.wikipedia.org/wiki/List_of_file_signatures)
                   if(int32View.length>4 && int32View[0]==0xFF && int32View[1]==0xD8 && int32View[2]==0xFF && int32View[3]==0xE0
                      || int32View[0]==0x25 && int32View[1]==0x50 && int32View[2]==0x44 && int32View[3]==0x46
@@ -273,7 +274,7 @@
             if (trim($file[$key]) == "image/jpeg" || trim($file[$key]) == "image/png" || trim($file[$key]) == "image/jpg")
               $count++;
           }//foreach
-        
+
           if ($count != sizeof($file))
           {
             return false;
@@ -297,7 +298,7 @@
           $stmt->bindParam(8, $unitYear);
           $stmt->execute();
         }
-        
+
          ?>
     </div>
   </body>

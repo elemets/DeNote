@@ -9,6 +9,7 @@
     }
     ?>
   <title>Page Title</title>
+  <link rel="icon" href="Header - Footer/logo_purple.png">
   <style>
     body {
       padding-top: 50px;
