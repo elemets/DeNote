@@ -324,7 +324,7 @@
     </div>
     <div class="row">
     <div class="col-sm-9 col-xs-9"></div>
-    <div class="col-sm-3 col-xs-3" Style="padding-top: 10px;">
+    <div class="col-sm-3 col-xs-3" Style="padding-top: 5px;">
     <button type="submit" class="btn btn-default btn-block submit-btn submit-font fontChange" method="post" value="Comment" name="commentbtn">Post</button>
     </div>
     </div>
